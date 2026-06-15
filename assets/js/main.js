@@ -130,6 +130,7 @@
         image: btn.getAttribute("data-image") || PRODUCT_IMAGE,
         href: "product.html"
       });
+      if (btn.hasAttribute("data-buy-now")) { window.location.href = "checkout.html"; return; }
       toast("Added to cart — " + variant);
     });
   });

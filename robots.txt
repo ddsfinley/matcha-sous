@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Funnel / non-indexable pages
+Disallow: /cart.html
+Disallow: /checkout.html
+Disallow: /order-confirmation.html
+
+Sitemap: https://matchasous.com/sitemap.xml

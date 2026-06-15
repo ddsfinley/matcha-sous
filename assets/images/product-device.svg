@@ -36,7 +36,7 @@
     <clipPath id="dv-bodyclip"><path d="M260 320 C246 395 248 440 250 478 C252 560 300 648 340 672 C360 690 440 690 460 672 C500 648 548 560 550 478 C552 440 554 395 540 320 A140 42 0 0 1 260 320 Z"/></clipPath>
   </defs>
 
-  <rect width="800" height="1000" fill="url(#dv-bg)"/>
+  <!-- transparent background so the device floats cleanly on any section -->
 
   <!-- contact shadow -->
   <ellipse cx="400" cy="788" rx="186" ry="24" fill="#1c211c" opacity="0.16"/>
