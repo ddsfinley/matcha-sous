@@ -12,7 +12,7 @@
   var Cart = window.MSCart;
 
   /* ---- product image map (used for cart thumbnails) ---- */
-  var PRODUCT_IMAGE = "assets/images/product-device.svg";
+  var PRODUCT_IMAGE = "assets/images/device-side.jpg";
 
   /* ---------- Toast ---------- */
   var toastEl;
