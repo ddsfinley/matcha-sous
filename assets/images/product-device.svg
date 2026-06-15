@@ -1,0 +1,115 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Matcha Sous hands-free matcha mixer: brushed steel pitcher with pouring spout on its powered base">
+  <defs>
+    <radialGradient id="dv-bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#f7f3ea"/>
+      <stop offset="0.6" stop-color="#efe8d9"/>
+      <stop offset="1" stop-color="#e3dccb"/>
+    </radialGradient>
+    <linearGradient id="dv-steel" x1="250" y1="300" x2="552" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b9bfc3"/>
+      <stop offset="0.18" stop-color="#eef1f2"/>
+      <stop offset="0.38" stop-color="#c4cacd"/>
+      <stop offset="0.6" stop-color="#dfe3e5"/>
+      <stop offset="0.82" stop-color="#a9afb3"/>
+      <stop offset="1" stop-color="#cdd2d5"/>
+    </linearGradient>
+    <linearGradient id="dv-mouth" x1="0" y1="278" x2="0" y2="362" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b4044"/>
+      <stop offset="1" stop-color="#5d6469"/>
+    </linearGradient>
+    <radialGradient id="dv-inner" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#6a7176"/>
+      <stop offset="1" stop-color="#2d3236"/>
+    </radialGradient>
+    <linearGradient id="dv-base" x1="0" y1="676" x2="0" y2="772" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3a3d40"/>
+      <stop offset="1" stop-color="#141517"/>
+    </linearGradient>
+    <radialGradient id="dv-pad" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#26282b"/>
+      <stop offset="1" stop-color="#0e0f10"/>
+    </radialGradient>
+    <linearGradient id="dv-panel" x1="0" y1="704" x2="0" y2="752" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b1c1e"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <clipPath id="dv-bodyclip"><path d="M260 320 C246 395 248 440 250 478 C252 560 300 648 340 672 C360 690 440 690 460 672 C500 648 548 560 550 478 C552 440 554 395 540 320 A140 42 0 0 1 260 320 Z"/></clipPath>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#dv-bg)"/>
+
+  <!-- contact shadow -->
+  <ellipse cx="400" cy="788" rx="186" ry="24" fill="#1c211c" opacity="0.16"/>
+
+  <!-- base -->
+  <path d="M250 676 A150 30 0 0 0 550 676 L550 752 Q550 770 532 770 L268 770 Q250 770 250 752 Z" fill="url(#dv-base)"/>
+  <!-- ribbed pad top -->
+  <ellipse cx="400" cy="676" rx="150" ry="30" fill="url(#dv-pad)"/>
+  <g stroke="#3a3d40" stroke-width="2" opacity="0.7" fill="none">
+    <ellipse cx="400" cy="676" rx="118" ry="23"/>
+    <ellipse cx="400" cy="676" rx="86" ry="17"/>
+    <ellipse cx="400" cy="676" rx="54" ry="11"/>
+  </g>
+  <!-- glowing control panel -->
+  <rect x="292" y="704" width="216" height="50" rx="9" fill="url(#dv-panel)" stroke="#2c2e31" stroke-width="1.5"/>
+  <g fill="#7fd9ec" font-family="Jost, Arial, sans-serif" font-weight="500" opacity="0.95">
+    <!-- power -->
+    <g stroke="#7fd9ec" stroke-width="2.2" fill="none" stroke-linecap="round">
+      <circle cx="322" cy="729" r="7.5" opacity="0.9"/>
+      <line x1="322" y1="722" x2="322" y2="729"/>
+    </g>
+    <text x="356" y="735" font-size="18" text-anchor="middle">1</text>
+    <text x="392" y="735" font-size="18" text-anchor="middle">2</text>
+    <text x="428" y="735" font-size="18" text-anchor="middle">3</text>
+    <!-- timer -->
+    <g stroke="#7fd9ec" stroke-width="2.2" fill="none" stroke-linecap="round">
+      <circle cx="462" cy="729" r="8"/>
+      <line x1="462" y1="729" x2="462" y2="724"/>
+      <line x1="462" y1="729" x2="466" y2="731"/>
+    </g>
+    <!-- start / rotate -->
+    <g stroke="#7fd9ec" stroke-width="2.2" fill="none" stroke-linecap="round">
+      <path d="M484 723 A8 8 0 1 1 480 723"/>
+      <path d="M484 720 l1.5 4 -4.5 0.5 z" fill="#7fd9ec" stroke="none"/>
+    </g>
+  </g>
+
+  <!-- pitcher body -->
+  <path d="M260 320 C246 395 248 440 250 478 C252 560 300 648 340 672 C360 690 440 690 460 672 C500 648 548 560 550 478 C552 440 554 395 540 320 A140 42 0 0 1 260 320 Z" fill="url(#dv-steel)"/>
+  <!-- brushed highlights + shading clipped to body -->
+  <g clip-path="url(#dv-bodyclip)">
+    <ellipse cx="318" cy="470" rx="26" ry="220" fill="#ffffff" opacity="0.34"/>
+    <ellipse cx="372" cy="470" rx="10" ry="220" fill="#ffffff" opacity="0.22"/>
+    <ellipse cx="520" cy="490" rx="40" ry="230" fill="#5a6064" opacity="0.32"/>
+    <ellipse cx="476" cy="500" rx="16" ry="230" fill="#7d8388" opacity="0.22"/>
+  </g>
+
+  <!-- pour spout (left) -->
+  <path d="M266 300 Q230 305 228 322 Q232 340 270 340 Q256 320 266 300 Z" fill="url(#dv-steel)"/>
+  <path d="M252 314 Q238 318 238 324 Q244 330 260 330 Q250 322 252 314 Z" fill="#7a8084" opacity="0.7"/>
+
+  <!-- mouth / opening -->
+  <ellipse cx="400" cy="320" rx="140" ry="42" fill="url(#dv-mouth)"/>
+  <ellipse cx="400" cy="322" rx="120" ry="33" fill="url(#dv-inner)"/>
+  <!-- rim highlight -->
+  <ellipse cx="400" cy="320" rx="140" ry="42" fill="none" stroke="#f1f4f5" stroke-width="2.4" opacity="0.7"/>
+  <!-- measurement ticks on inner wall -->
+  <g stroke="#d7dbdd" stroke-width="2" opacity="0.55" stroke-linecap="round">
+    <line x1="436" y1="336" x2="460" y2="338"/>
+    <line x1="440" y1="348" x2="462" y2="350"/>
+    <line x1="443" y1="360" x2="463" y2="362"/>
+  </g>
+  <g fill="#aeb3b6" font-family="Jost, Arial, sans-serif" font-size="9" opacity="0.7">
+    <text x="468" y="340">120</text>
+    <text x="470" y="352">80</text>
+    <text x="471" y="364">40</text>
+  </g>
+  <!-- whisk hint at base of interior -->
+  <ellipse cx="392" cy="346" rx="44" ry="13" fill="#1d2124" opacity="0.85"/>
+  <g stroke="#0f1113" stroke-width="1.6" opacity="0.8">
+    <line x1="360" y1="346" x2="350" y2="346"/><line x1="372" y1="350" x2="366" y2="352"/>
+    <line x1="392" y1="352" x2="392" y2="355"/><line x1="412" y1="350" x2="418" y2="352"/>
+    <line x1="424" y1="346" x2="434" y2="346"/>
+  </g>
+  <circle cx="392" cy="345" r="6" fill="#2b3033"/>
+</svg>

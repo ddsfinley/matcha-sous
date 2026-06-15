@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Matcha Sous">
+  <defs>
+    <linearGradient id="fav-gold" x1="14" y1="10" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e3d2ad"/>
+      <stop offset="0.5" stop-color="#c2a36b"/>
+      <stop offset="1" stop-color="#9c7e45"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#2f3a30"/>
+  <path d="M44 19 A20 20 0 1 1 40 47" stroke="url(#fav-gold)" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M40 47 q5 3 9 0.5" stroke="url(#fav-gold)" stroke-width="3.6" stroke-linecap="round" fill="none" opacity="0.85"/>
+</svg>
