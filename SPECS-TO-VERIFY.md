@@ -8,7 +8,7 @@ notes where it appears so you can find and edit it fast.
 ## Product specifications
 | Claim (placeholder) | Where it appears | Verified? |
 |---------------------|------------------|-----------|
-| Price **$149.00**, compare-at **$189.00** ("Save $40") | everywhere | ☐ |
+| Launch price **$148.50** (10% off the **$165.00** regular price) | everywhere | ☐ |
 | **Food-grade 304 stainless steel** pitcher | product, index, how-it-works, faq | ☐ |
 | **Contactless magnetic whisk** drive | product, index, how-it-works | ☐ |
 | **3 speeds** + **built-in timer** (auto-stop) | product, index, how-it-works | ☐ |
@@ -49,9 +49,10 @@ notes where it appears so you can find and edit it fast.
 | Support hours | Mon–Fri, 9–5 PT | ☐ |
 
 ## How to change the price everywhere
-The price string `$149` / `149` appears in page copy, the `data-price` attributes
-on add-to-cart buttons, and the Product JSON-LD. Search and replace:
+The price appears as `$148.50` (launch) and `$165` (regular) in page copy, the
+`data-price="148.50"` attributes on add-to-cart buttons, and the Product JSON-LD
+(`"price": "148.50"`). Find every occurrence with:
 
 ```bash
-grep -rln "149" --include=*.html .
+grep -rln "148.50\|165" --include=*.html .
 ```

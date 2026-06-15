@@ -125,7 +125,7 @@
       Cart.add({
         id: btn.getAttribute("data-id") || "matcha-sous",
         title: btn.getAttribute("data-title") || "Matcha Sous Mixer",
-        price: parseFloat(btn.getAttribute("data-price")) || 149,
+        price: parseFloat(btn.getAttribute("data-price")) || 148.50,
         variant: variant,
         image: btn.getAttribute("data-image") || PRODUCT_IMAGE,
         href: "product.html"
