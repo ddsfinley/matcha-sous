@@ -117,21 +117,19 @@
   /* ---------- Add to cart ---------- */
   $$("[data-add-to-cart]").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      var variant = "Onyx";
-      var pressed = $('.swatch[aria-pressed="true"]');
-      if (pressed) variant = pressed.getAttribute("data-variant");
       var qtyInput = $("[data-pdp-qty]");
       var qty = qtyInput ? Math.max(1, parseInt(qtyInput.value, 10) || 1) : 1;
       Cart.add({
         id: btn.getAttribute("data-id") || "matcha-sous",
         title: btn.getAttribute("data-title") || "Matcha Sous Mixer",
         price: parseFloat(btn.getAttribute("data-price")) || 148.50,
-        variant: variant,
+        variant: "",
+        qty: qty,
         image: btn.getAttribute("data-image") || PRODUCT_IMAGE,
         href: "product.html"
       });
       if (btn.hasAttribute("data-buy-now")) { window.location.href = "checkout.html"; return; }
-      toast("Added to cart — " + variant);
+      toast("Added to cart");
     });
   });
 
@@ -159,7 +157,7 @@
           '<a class="thumb" href="product.html"><img src="' + it.image + '" alt="' + it.title + '" loading="lazy"></a>' +
           '<div class="cart-line-info">' +
             '<h3 class="serif">' + it.title + '</h3>' +
-            '<p class="variant">Finish: ' + it.variant + '</p>' +
+            (it.variant ? '<p class="variant">Finish: ' + it.variant + '</p>' : '') +
             '<div class="qty" data-line-qty>' +
               '<button type="button" data-qty-minus aria-label="Decrease quantity">&minus;</button>' +
               '<input type="number" min="1" value="' + it.qty + '" aria-label="Quantity">' +
@@ -213,7 +211,7 @@
         return '' +
           '<div class="mini-line">' +
             '<div class="thumb"><img src="' + it.image + '" alt="' + it.title + '"><span class="q">' + it.qty + '</span></div>' +
-            '<div class="nm"><b>' + it.title + '</b><br><span>Finish: ' + it.variant + '</span></div>' +
+            '<div class="nm"><b>' + it.title + '</b>' + (it.variant ? '<br><span>Finish: ' + it.variant + '</span>' : '') + '</div>' +
             '<div class="serif">' + money(it.price * it.qty) + '</div>' +
           '</div>';
       }).join("");
@@ -234,7 +232,7 @@
       var lines = $("#confirm-lines");
       if (lines) {
         lines.innerHTML = order.items.map(function (it) {
-          return '<div class="o-row"><span>' + it.title + ' &times; ' + it.qty + ' <span class="muted">(' + it.variant + ')</span></span><span>' + money(it.price * it.qty) + '</span></div>';
+          return '<div class="o-row"><span>' + it.title + ' &times; ' + it.qty + (it.variant ? ' <span class="muted">(' + it.variant + ')</span>' : '') + '</span><span>' + money(it.price * it.qty) + '</span></div>';
         }).join("");
       }
       if ($("#confirm-total")) $("#confirm-total").textContent = money(order.total);
