@@ -1,8 +1,9 @@
 name: Deploy storefront to GitHub Pages
 
 on:
-  push:
-    branches: ["claude/keen-rubin-t7kvvg"]
+  # Auto-deploy is disabled until GitHub Pages is available for this repo
+  # (make the repo public, or enable Pages on a paid plan). Trigger manually
+  # from the Actions tab, or re-add the `push` trigger once Pages is enabled.
   workflow_dispatch:
 
 permissions:
