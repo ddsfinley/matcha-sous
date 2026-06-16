@@ -25,7 +25,7 @@ notes where it appears so you can find and edit it fast.
 |---------------------|-------|-----------|
 | **Free express shipping**, dispatched in **1–2 business days** | global trust bar, product, shipping page | ☐ |
 | **30-night trial** | global, product, shipping page | ☐ |
-| **2-year warranty** | global, product, shipping page | ☐ |
+| **1-year warranty** | global, product, shipping page | ☐ |
 | Delivery time estimates (US / international) | shipping-returns | ☐ |
 
 ## Social proof (placeholder / illustrative)
