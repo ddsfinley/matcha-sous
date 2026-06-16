@@ -1,0 +1,16 @@
+<section class="section bg-cream">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Shop</span><h1 class="display">{{ collection.title }}</h1></div>
+    <div class="feature-grid">
+      {%- for product in collection.products -%}
+        <a class="feature" href="{{ product.url }}">
+          {%- if product.featured_image -%}<img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" style="border-radius:8px;margin-bottom:14px" loading="lazy">{%- endif -%}
+          <h3 class="serif">{{ product.title }}</h3>
+          <p class="muted">{{ product.price | money }}</p>
+        </a>
+      {%- else -%}
+        <p class="muted">No products yet.</p>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

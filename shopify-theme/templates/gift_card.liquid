@@ -1,0 +1,20 @@
+{% layout none %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ shop.name }} gift card</title>
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
+</head>
+<body>
+  <section class="section bg-cream center">
+    <div class="container narrow">
+      <img class="enso" src="{{ 'logo.svg' | asset_url }}" width="64" height="64" alt="" style="margin:0 auto 18px">
+      <span class="eyebrow">Gift card</span>
+      <h1 class="display">{{ gift_card.balance | money }}</h1>
+      <p class="muted">Use code <strong>{{ gift_card.code | format_code }}</strong> at checkout.</p>
+    </div>
+  </section>
+</body>
+</html>

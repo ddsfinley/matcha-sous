@@ -1,0 +1,11 @@
+<section class="section bg-cream">
+  <div class="container narrow">
+    <div class="section-head"><h1 class="display">{{ blog.title }}</h1></div>
+    {%- for article in blog.articles -%}
+      <article style="padding:18px 0;border-bottom:1px solid var(--line)">
+        <h3 class="serif"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+        <p class="muted">{{ article.excerpt_or_content | strip_html | truncatewords: 40 }}</p>
+      </article>
+    {%- endfor -%}
+  </div>
+</section>
