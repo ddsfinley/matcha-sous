@@ -39,7 +39,7 @@
 
   {{ content_for_header }}
 </head>
-<body>
+<body class="tmpl-{{ request.page_type }}">
 
   <div class="announce">New launch — 10% off · Free express shipping &amp; a 30-night trial · <a href="/pages/how-it-works">See how it works &rarr;</a></div>
 
@@ -85,6 +85,26 @@
   </div>
 
   <main>{{ content_for_layout }}</main>
+
+  <section class="section nl">
+    <div class="container narrow nl-inner">
+      <span class="eyebrow">Join the ritual</span>
+      <h2 class="display">Get 10% off your first mixer</h2>
+      <p class="muted" style="margin-top:8px">Recipes, launch news and the occasional offer — straight to your inbox.</p>
+      {%- form 'customer', id: 'newsletter-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter, prospect">
+        {%- if form.posted_successfully? -%}
+          <p class="nl-note" style="color:var(--forest); font-size:1rem">Thank you — you're on the list. Watch your inbox for your code.</p>
+        {%- else -%}
+          <div class="nl-form">
+            <input type="email" name="contact[email]" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary">Sign up</button>
+          </div>
+          <p class="nl-note">No spam. Unsubscribe anytime.</p>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="container">

@@ -71,6 +71,12 @@
           </div>
         {%- endform -%}
 
+        <div class="secure-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+          Secure checkout
+          <span class="pays"><span>VISA</span><span>MC</span><span>AMEX</span><span>PAYPAL</span><span>APPLE&nbsp;PAY</span></span>
+        </div>
+
         <ul class="pdp-assure">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> Free express shipping · dispatched in 1–2 business days</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v9l5 3"/><circle cx="12" cy="12" r="9"/></svg> 30-night ritual trial — love it or return it</li>
@@ -153,3 +159,10 @@
   ]
 }
 </script>
+
+<div class="sticky-atc" aria-hidden="false">
+  <div class="sa-info"><b>{{ product.title }}</b><span class="p">{{ product.price | money }}</span></div>
+  <button type="submit" form="product-form" name="add" class="btn btn-primary"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>
+    {%- if product.selected_or_first_available_variant.available -%}Add to cart{%- else -%}Sold out{%- endif -%}
+  </button>
+</div>
