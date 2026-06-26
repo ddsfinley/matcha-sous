@@ -1,6 +1,6 @@
 ---
 title: "How to Choose Matcha: Grades, Color & Taste Guide"
-meta_description: "How to choose matcha with confidence: ceremonial vs culinary grades, what color and taste reveal about quality, and how to avoid low-grade powder. A practical buyer's guide."
+meta_description: "How to choose matcha with confidence: ceremonial vs culinary grades, plus what color, taste, and origin reveal about real quality. A practical buyer's guide."
 target_keyword: "how to choose matcha"
 handle: "how-to-choose-matcha"
 ---
@@ -46,9 +46,9 @@ Warning signs of low-grade matcha include sharp, chalky bitterness, a dusty or s
 
 ## Origin and Freshness
 
-- **Origin:** Japan is the benchmark for matcha, with Uji (Kyoto) and Nishio (Aichi) among the most respected regions. Look for clear single-origin labeling. Vague or unstated origins are a yellow flag.
-- **Freshness:** Matcha is perishable and fades fast once exposed to air, light, and heat. Look for a harvest or best-by date, buy smaller quantities you'll use within a few weeks of opening, and store the tin sealed in a cool, dark place (the fridge is fine if airtight).
-- **Packaging:** Quality matcha comes in opaque, airtight, often resealable tins or pouches, never a clear container that lets light degrade it.
+- **Origin:** Japan is the benchmark for matcha, with Uji (Kyoto) and Nishio (Aichi) among the most respected regions. Clear single-origin labeling is a good sign; vague origins are a yellow flag.
+- **Freshness:** Matcha is perishable and fades once exposed to air, light, and heat. Look for a harvest or best-by date, buy smaller quantities, and store the tin sealed in a cool, dark place.
+- **Packaging:** Quality matcha comes in opaque, airtight tins or pouches, never a clear container that lets light degrade it.
 
 ## Matching Matcha to How You Drink It
 

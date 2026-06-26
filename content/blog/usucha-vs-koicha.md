@@ -1,6 +1,6 @@
 ---
 title: "Usucha vs Koicha: The Two Styles of Matcha Explained"
-meta_description: "Usucha vs koicha: learn the difference between thin and thick matcha, the ratios, preparation, and which style suits you. A clear, practical guide for matcha lovers."
+meta_description: "Usucha vs koicha: the difference between thin and thick matcha, with ratios, preparation steps, and which style suits you. A clear, practical guide."
 target_keyword: "usucha vs koicha"
 handle: "usucha-vs-koicha"
 ---

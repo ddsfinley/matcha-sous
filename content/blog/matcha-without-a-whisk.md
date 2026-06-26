@@ -1,6 +1,6 @@
 ---
 title: "How to Make Matcha Without a Whisk: 5 Easy Methods"
-meta_description: "No chasen? Here's how to make matcha without a whisk using a frother, jar, or spoon, and get a smooth, lump-free cup every time. Simple methods that actually work."
+meta_description: "No chasen? Here's how to make matcha without a whisk using a frother, jar, or spoon, for a smooth, lump-free cup every time. 5 methods that work."
 target_keyword: "matcha without a whisk"
 handle: "matcha-without-a-whisk"
 ---
