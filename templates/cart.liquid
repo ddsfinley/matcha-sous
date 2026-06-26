@@ -42,8 +42,26 @@
           <button type="submit" name="update" class="btn btn-outline btn-block" style="margin-top:16px">Update cart</button>
           <button type="submit" name="checkout" class="btn btn-primary btn-block btn-lg" style="margin-top:10px">Checkout</button>
           <p class="muted center" style="margin-top:14px; font-size:0.8rem">Free express shipping · 30-night trial · 1-year warranty</p>
+          <div class="secure-row" style="justify-content:center; margin-top:12px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            Secure checkout
+            <span class="pays"><span>VISA</span><span>MC</span><span>AMEX</span><span>PAYPAL</span></span>
+          </div>
         </aside>
       </form>
+
+      {%- assign upsell = all_products['matcha-starter-tin'] -%}
+      {%- if upsell != blank and upsell.available -%}
+        <div class="upsell">
+          <div class="u-thumb">{% if upsell.featured_image %}<img src="{{ upsell.featured_image | image_url: width: 160 }}" alt="{{ upsell.title | escape }}" loading="lazy">{% endif %}</div>
+          <div class="u-info"><b>Complete your ritual — add {{ upsell.title }}</b><span>{{ upsell.price | money }}</span></div>
+          <form action="{{ routes.cart_add_url }}" method="post">
+            <input type="hidden" name="id" value="{{ upsell.selected_or_first_available_variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            <button type="submit" class="btn btn-outline">Add</button>
+          </form>
+        </div>
+      {%- endif -%}
     {%- endif -%}
   </div>
 </section>

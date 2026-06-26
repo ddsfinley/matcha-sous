@@ -586,3 +586,31 @@ h3.display { font-size: clamp(1.5rem, 3vw, 2.1rem); }
   .btn { width: 100%; }
   .hero-cta .btn { width: 100%; }
 }
+
+/* ============================================================
+   Shopify add-ons: newsletter, sticky ATC, trust row, upsell
+   ============================================================ */
+.nl { background: var(--cream-deep); }
+.nl-inner { max-width: 640px; margin-inline: auto; text-align: center; }
+.nl-form { display: flex; gap: 10px; max-width: 460px; margin: 20px auto 0; }
+.nl-form input { flex: 1; padding: 14px 16px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--white); }
+.nl-form input:focus { outline: none; border-color: var(--gold-deep); box-shadow: 0 0 0 3px rgba(194,163,107,0.15); }
+.nl-note { font-size: 0.8rem; color: var(--stone); margin-top: 12px; }
+@media (max-width: 560px) { .nl-form { flex-direction: column; } .nl-form .btn { width: 100%; } }
+
+.secure-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--stone); }
+.secure-row svg { width: 16px; height: 16px; color: var(--forest); flex: none; }
+.secure-row .pays { display: flex; gap: 6px; flex-wrap: wrap; }
+.secure-row .pays span { border: 1px solid var(--line); border-radius: 4px; padding: 3px 7px; font-size: 0.6rem; letter-spacing: 0.08em; }
+
+.sticky-atc { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; display: none; align-items: center; justify-content: space-between; gap: 12px; background: var(--paper); border-top: 1px solid var(--line); padding: 10px clamp(16px, 5vw, 24px); box-shadow: 0 -6px 20px rgba(28,33,28,0.10); }
+.sticky-atc .sa-info { display: flex; flex-direction: column; line-height: 1.15; }
+.sticky-atc .sa-info b { font-weight: 400; font-size: 0.9rem; }
+.sticky-atc .sa-info .p { font-family: var(--font-display); font-size: 1.15rem; }
+.sticky-atc .btn { white-space: nowrap; padding-block: 0.9em; }
+@media (max-width: 880px) { .sticky-atc { display: flex; } body.tmpl-product { padding-bottom: 76px; } }
+
+.upsell { display: flex; gap: 16px; align-items: center; padding: 18px; border: 1px dashed var(--line); border-radius: var(--radius-lg); margin-top: 24px; background: var(--paper); }
+.upsell .u-thumb { width: 64px; height: 64px; border-radius: var(--radius); overflow: hidden; background: var(--cream-deep); flex: none; }
+.upsell .u-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.upsell .u-info { flex: 1; } .upsell .u-info b { font-weight: 400; } .upsell .u-info span { display: block; color: var(--stone); font-size: 0.85rem; }

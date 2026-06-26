@@ -59,3 +59,15 @@ Settings → Payments (Shopify Payments or PayPal/Stripe) → then place a test 
 - Buttons assume product handle **`matcha-sous`** and the page handles above. Change them in `layout/theme.liquid` + `templates/index.liquid` if you use different handles.
 - Cart/checkout are native Shopify — no custom JS cart.
 - Design system is `assets/styles.css`; UI behavior is `assets/theme.js`.
+
+## Add-ons in this theme (v1.1)
+- **Email signup** (site-wide, above the footer): submits to Shopify **Customers**, tagged
+  `newsletter, prospect`. To send the welcome/10%-off email + abandoned-cart flows, connect
+  **Shopify Email** (free) or **Klaviyo** and target that tag. No setup needed for capture itself.
+- **Mobile sticky Add-to-cart**: shows on phones on the product page — no setup.
+- **Secure-checkout / payment badges**: on the product page and cart — no setup.
+- **Cart upsell ("Complete your ritual")**: appears automatically **only if** you create a
+  second product with the URL handle **`matcha-starter-tin`** (e.g. a starter matcha tin or
+  gift add-on). To use a different product, change the handle in `templates/cart.liquid`.
+- **Analytics/pixels**: not added (you're doing GA4 later). When ready: Shopify → Settings →
+  Customer events, or give us the IDs to hard-wire into the theme.
