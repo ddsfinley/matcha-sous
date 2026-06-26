@@ -13,6 +13,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   {{ 'styles.css' | asset_url | stylesheet_tag }}
+
+  {%- assign og_image = 'box.jpg' | asset_url | prepend: 'https:' -%}
+  {%- if template contains 'product' and product.featured_image -%}{%- assign og_image = product.featured_image | image_url: width: 1200 | prepend: 'https:' -%}{%- endif -%}
+  <meta property="og:site_name" content="{{ shop.name }}">
+  <meta property="og:type" content="{% if template contains 'product' %}product{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  {%- if page_description -%}<meta property="og:description" content="{{ page_description | escape }}">{%- endif -%}
+  <meta property="og:image" content="{{ og_image }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title | escape }}">
+  {%- if page_description -%}<meta name="twitter:description" content="{{ page_description | escape }}">{%- endif -%}
+  <meta name="twitter:image" content="{{ og_image }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "name": {{ shop.name | json }}, "url": {{ shop.url | json }}, "logo": {{ 'box.jpg' | asset_url | prepend: 'https:' | json }}, "slogan": "Behind every great matcha.", "sameAs": ["https://instagram.com/matchasous", "https://tiktok.com/@matchasous", "https://youtube.com/@matchasous"] },
+      { "@type": "WebSite", "name": {{ shop.name | json }}, "url": {{ shop.url | json }} }
+    ]
+  }
+  </script>
+
   {{ content_for_header }}
 </head>
 <body>
