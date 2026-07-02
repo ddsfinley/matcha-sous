@@ -6,7 +6,7 @@
 <title>Wholesale — Matcha Sous MS-01 for Cafés &amp; Hotels</title>
 <meta name="description" content="Put the Matcha Sous MS-01 behind your bar: consistent matcha at service volume, no barista technique required. Wholesale and hospitality enquiries.">
 <link rel="canonical" href="https://matchasous.com/wholesale.html">
-<meta name="theme-color" content="#ece1cd">
+<meta name="theme-color" content="#f6f2e9">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Matcha Sous">
@@ -16,8 +16,8 @@
 <meta property="og:image" content="https://matchasous.com/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preload" href="assets/fonts/fraunces-latin-300-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 
 <script type="application/ld+json">
@@ -33,9 +33,14 @@
 </head>
 <body>
 
+<div class="announce">Free shipping · 30-day returns · 1-year warranty</div>
+
 <header class="top">
   <div class="wrap">
-    <a class="wordmark" href="index.html">MATCHA SOUS<i>.</i></a>
+    <a class="brand" href="index.html" aria-label="Matcha Sous — home">
+      <img src="assets/img/logo.svg" alt="" width="32" height="32">
+      <span class="wordmark">Matcha Sous</span>
+    </a>
     <nav class="nav" aria-label="Primary">
       <a href="index.html#gallery">Gallery</a>
       <a href="index.html#compare">Compare</a>
@@ -48,44 +53,32 @@
 
 <main>
   <section class="pagehero">
-    <div class="wrap">
-      <span class="kicker">Wholesale &amp; hospitality</span>
-      <h1 class="disp">Consistency, at service volume.</h1>
-      <p class="lede">A matcha program is only as good as its slowest hour. The MS-01 holds <b>café-quality texture bowl after bowl</b> — about thirty seconds each, no barista technique to train, no drift across a shift.</p>
+    <div class="wrap inner">
+      <span class="eyebrow">Wholesale &amp; hospitality</span>
+      <h1 class="display">Consistency, <em>at service volume.</em></h1>
+      <p class="lead">A matcha program is only as good as its slowest hour. The MS-01 holds <b>café-quality texture bowl after bowl</b> — about thirty seconds each, no barista technique to train, no drift across a shift.</p>
     </div>
   </section>
 
   <section class="tight">
     <div class="wrap">
-      <div class="index">
-        <div class="row">
-          <span class="no">01</span>
-          <h3>For the bar</h3>
-          <p>Runs on USB-C in a footprint smaller than a scale. Presets mean any hire pours the house standard on day one.</p>
-        </div>
-        <div class="row">
-          <span class="no">02</span>
-          <h3>For the menu</h3>
-          <p>Straight bowls, iced pours and latte bases from one instrument — 40–120 ml, 18 speeds, timed to finish while milk steams.</p>
-        </div>
-        <div class="row">
-          <span class="no">03</span>
-          <h3>For the operator</h3>
-          <p>Stainless vessel, contactless drive, nothing to recalibrate. Volume pricing from 5 units; demo units for qualified accounts.</p>
-        </div>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><h3>For the bar</h3><p>Runs on USB-C in a footprint smaller than a scale. Presets mean any hire pours the house standard on day one.</p></div>
+        <div class="step"><span class="num">02</span><h3>For the menu</h3><p>Straight bowls, iced pours and latte bases from one instrument — 40–120 ml, 18 speeds, timed to finish while milk steams.</p></div>
+        <div class="step"><span class="num">03</span><h3>For the operator</h3><p>Stainless vessel, contactless drive, nothing to recalibrate. Volume pricing from 5 units; demo units for qualified accounts.</p></div>
       </div>
     </div>
   </section>
 
-  <section aria-label="Enquiry form">
-    <div class="wrap" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px)">
+  <section class="bg-paper" aria-label="Enquiry form">
+    <div class="wrap ws-grid">
       <div>
         <div class="head" style="margin-bottom:26px">
-          <span class="kicker">Enquire</span>
-          <h2 class="disp">Tell us about the room.</h2>
-          <p class="lede" style="font-size:14.5px">Send the form and we reply within one business day — or write directly to <a class="textlink" href="mailto:wholesale@matchasous.com">wholesale@matchasous.com</a>.</p>
+          <span class="eyebrow">Enquire</span>
+          <h2 class="display">Tell us about the room.</h2>
+          <p class="lead" style="font-size:1rem">Send the form and we reply within one business day — or write directly to <a class="textlink" href="mailto:wholesale@matchasous.com">wholesale@matchasous.com</a>.</p>
         </div>
-        <form class="form" id="wsform">
+        <form class="form formcard" id="wsform">
           <div class="two">
             <div><label for="name">Name</label><input id="name" name="Name" required></div>
             <div><label for="company">Company / venue</label><input id="company" name="Company" required></div>
@@ -100,13 +93,15 @@
             </div>
           </div>
           <div><label for="msg">Your matcha program</label><textarea id="msg" name="Message" rows="5" placeholder="Volume per day, timeline, locations…"></textarea></div>
-          <button class="btn fill" type="submit">Send enquiry</button>
+          <button class="btn btn-primary btn-block" type="submit">Send enquiry</button>
           <p class="formnote">Submitting opens a pre-filled email from your mail app — nothing is stored on this site.</p>
         </form>
       </div>
-      <figure class="fig" style="align-self:start">
-        <span class="frame"><img src="assets/img/fig-04-kit.webp" alt="The MS-01 case and contents, as supplied to trade accounts" width="1200" height="1000" loading="lazy"></span>
-        <figcaption><span>Fig. 04</span><span>Trade supply · full case</span></figcaption>
+      <figure class="stage" style="align-self:start">
+        <span class="media-frame">
+          <img src="assets/img/photo-kit.webp" alt="The MS-01 case and contents, as supplied to trade accounts" width="1200" height="1000" loading="lazy">
+          <span class="media-tag">Trade supply · full case</span>
+        </span>
       </figure>
     </div>
   </section>
@@ -115,7 +110,13 @@
 <footer>
   <div class="wrap">
     <div class="cols">
-      <a class="wordmark" href="index.html">MATCHA SOUS<i>.</i></a>
+      <div>
+        <a class="brand" href="index.html" aria-label="Matcha Sous — home">
+          <img src="assets/img/logo.svg" alt="" width="32" height="32">
+          <span class="wordmark">Matcha Sous</span>
+        </a>
+        <p class="tag">Behind every great matcha — the precision electric whisk for perfectly smooth bowls, every time.</p>
+      </div>
       <nav class="fnav" aria-label="Footer">
         <a href="index.html#gallery">Gallery</a>
         <a href="index.html#compare">Compare</a>
@@ -126,8 +127,8 @@
       </nav>
     </div>
     <div class="fine">
-      <span>Behind every great matcha.</span>
       <span>© 2026 Matcha Sous · Model MS-01</span>
+      <span>VISA · MC · AMEX · PAYPAL · APPLE PAY</span>
     </div>
   </div>
 </footer>
@@ -140,7 +141,10 @@ document.getElementById('wsform').addEventListener('submit',function(e){
   location.href='mailto:wholesale@matchasous.com?subject='+encodeURIComponent('Wholesale enquiry — MS-01')+'&body='+encodeURIComponent(b);
 });
 </script>
-<style>@media (max-width:860px){section[aria-label="Enquiry form"] .wrap{grid-template-columns:1fr !important}}</style>
+<style>
+.ws-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px)}
+@media (max-width:860px){.ws-grid{grid-template-columns:1fr}}
+</style>
 
 </body>
 </html>
