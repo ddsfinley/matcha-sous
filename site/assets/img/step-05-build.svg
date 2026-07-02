@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="Cartoon iced matcha latte being built: green matcha pouring over ice and milk">
+  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- glass -->
+    <path d="M46 42 h58 l-6 78 q-1 8 -9 8 h-28 q-8 0 -9 -8 Z" fill="#ffffff"/>
+    <!-- milk layer -->
+    <path d="M50 84 h50 l-3 36 q-1 6 -7 6 h-30 q-6 0 -7 -6 Z" fill="#f6f2e9" stroke="none"/>
+    <!-- matcha layer on top -->
+    <path d="M48 58 h54 l-2 26 h-50 Z" fill="#8fae5a" stroke="none"/>
+    <!-- ice cubes -->
+    <rect x="56" y="62" width="16" height="16" rx="4" fill="#dfe9ee" transform="rotate(-8 64 70)"/>
+    <rect x="80" y="66" width="15" height="15" rx="4" fill="#dfe9ee" transform="rotate(10 87 73)"/>
+    <path d="M46 42 h58" />
+  </g>
+  <!-- milk pour -->
+  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M96 26 l22 -8 6 12 -16 8 Z" fill="#ece5d6"/>
+  </g>
+  <path d="M100 34 q2 10 -6 16" stroke="#8fae5a" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <g stroke="#c2a36b" stroke-width="4" stroke-linecap="round"><path d="M30 60 v10 M25 65 h10"/></g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="Cartoon sieve sprinkling matcha powder into a bowl">
+  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- sieve tilted -->
+    <g transform="rotate(-14 62 44)">
+      <path d="M30 44 a32 14 0 0 0 64 0 Z" fill="#ece5d6"/>
+      <ellipse cx="62" cy="44" rx="32" ry="14" fill="#f6f2e9"/>
+      <path d="M50 40 q12 -8 24 0" stroke-width="4" stroke="#8fae5a" fill="none"/>
+      <line x1="94" y1="40" x2="122" y2="30"/>
+    </g>
+  </g>
+  <!-- falling powder -->
+  <g fill="#8fae5a">
+    <circle cx="52" cy="72" r="3.4"/><circle cx="64" cy="80" r="2.8"/><circle cx="57" cy="90" r="3.2"/>
+    <circle cx="70" cy="94" r="2.6"/><circle cx="61" cy="103" r="2.8"/>
+  </g>
+  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- bowl -->
+    <path d="M34 112 a30 16 0 0 0 60 0 Z" fill="#c2a36b"/>
+    <ellipse cx="64" cy="112" rx="30" ry="7" fill="#8fae5a" stroke-width="4"/>
+  </g>
+  <g stroke="#c2a36b" stroke-width="4" stroke-linecap="round"><path d="M116 82 v10 M111 87 h10"/></g>
+</svg>
