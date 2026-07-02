@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction C — Darkroom · Matcha Sous MS-01</title>
+<meta name="description" content="Design direction C: midnight editorial identity for the Matcha Sous MS-01 precision electric matcha whisk.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/fraunces-latin-300-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/img/hero-darkroom.webp" as="image">
+<style>
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-latin-300-italic.woff2') format('woff2');font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-latin-300-normal.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Archivo';src:url('../assets/fonts/archivo-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Archivo';src:url('../assets/fonts/archivo-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+
+:root{
+  --bg:#161210; --deep:#0d0a08; --bone:#e9e1d2; --dim:rgba(233,225,210,.58);
+  --brass:#b08d57; --brass-dim:rgba(176,141,87,.45); --line:rgba(233,225,210,.12);
+  --disp:'Fraunces',Georgia,serif; --util:'Archivo',system-ui,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{
+  background:radial-gradient(120% 90% at 50% 0%,var(--bg) 0%,var(--deep) 78%);
+  color:var(--dim);font-family:var(--util);font-size:15px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px);text-align:center}
+
+.top{display:flex;justify-content:space-between;align-items:center;height:64px;border-bottom:1px solid var(--line);max-width:1080px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+.wordmark{font-family:var(--disp);font-weight:500;font-size:16px;letter-spacing:.26em;color:var(--bone)}
+.top small{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass)}
+
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:clamp(44px,7vh,84px) 0 30px;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--brass)}
+.eyebrow::before,.eyebrow::after{content:"";height:1px;width:clamp(30px,8vw,110px);background:var(--brass-dim)}
+h1{font-family:var(--disp);font-weight:300;font-style:italic;color:var(--bone);font-size:clamp(2.7rem,6vw,5.2rem);line-height:1.08;letter-spacing:-0.01em;max-width:16ch;margin:0 auto 28px}
+.sub{max-width:52ch;margin:0 auto 42px}
+.sub b{color:var(--bone);font-weight:500}
+.cta{display:flex;justify-content:center;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:clamp(44px,7vh,72px)}
+.btn{background:var(--brass);color:#14100c;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;padding:17px 36px;transition:.25s}
+.btn:hover{background:#c29e66}
+.quiet{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);border-bottom:1px solid var(--brass-dim);padding-bottom:4px}
+.quiet:hover{color:var(--bone)}
+
+.stage{position:relative;width:min(100%,400px);margin:0 auto}
+.stage img{display:block;width:100%;height:auto;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+.corner{position:absolute;width:18px;height:18px;border:1px solid var(--brass-dim);pointer-events:none}
+.k-tl{top:-9px;left:-9px;border-right:0;border-bottom:0}
+.k-tr{top:-9px;right:-9px;border-left:0;border-bottom:0}
+.k-bl{bottom:-9px;left:-9px;border-right:0;border-top:0}
+.k-br{bottom:-9px;right:-9px;border-left:0;border-top:0}
+.stage figcaption{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);margin-top:16px}
+
+.plate{max-width:760px;margin:clamp(48px,8vh,88px) auto 0;border:1px solid var(--brass-dim);outline:1px solid var(--line);outline-offset:5px;padding:26px clamp(18px,3vw,40px)}
+.plate .no{font-family:var(--disp);font-style:italic;font-weight:300;color:var(--brass);font-size:19px;margin-bottom:14px;display:block}
+.plate ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 0}
+.plate li{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);padding-inline:16px;border-right:1px solid var(--line)}
+.plate li:last-child{border-right:0}
+.plate li b{color:var(--bone);font-weight:500}
+
+.tagline{padding:36px 0 48px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(233,225,210,.32)}
+@media (max-width:640px){ .plate li{border-right:0;padding-inline:10px} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <span class="wordmark">MATCHA SOUS</span>
+  <small>Precision electric whisk</small>
+</header>
+
+<main class="wrap">
+  <p class="eyebrow">Model MS-01</p>
+  <h1>Every cup, developed to the&nbsp;same density.</h1>
+  <p class="sub">A practiced wrist gets there some mornings. A calibrated vortex gets there every morning — <b>dense, café-quality foam in about thirty seconds</b>, from the first pour of the day to the last.</p>
+  <div class="cta">
+    <!-- TODO: replace with hosted checkout URL -->
+    <a class="btn" href="https://checkout.matchasous.com/ms-01">Buy — $150</a>
+    <a class="quiet" href="#plate">Wholesale enquiries</a>
+  </div>
+
+  <figure class="stage">
+    <span class="corner k-tl"></span><span class="corner k-tr"></span><span class="corner k-bl"></span><span class="corner k-br"></span>
+    <img src="../assets/img/hero-darkroom.webp" alt="Matcha Sous MS-01 in low light: stainless vessel on its powered base" width="1050" height="1400" fetchpriority="high">
+    <figcaption>Plate I — MS-01, studio, no retouch</figcaption>
+  </figure>
+
+  <section class="plate" id="plate" aria-label="Specifications">
+    <span class="no">№ MS-01</span>
+    <ul>
+      <li><b>18</b> speeds</li>
+      <li><b>3</b> presets</li>
+      <li><b>40–120</b> ml</li>
+      <li>Vortex whisk</li>
+      <li>Stainless</li>
+      <li><b>USB-C</b></li>
+      <li>~<b>30</b> s / bowl</li>
+    </ul>
+  </section>
+
+  <p class="tagline">Direction C — “Darkroom” · Fraunces italic + Archivo · espresso / bone / brass</p>
+</main>
+
+</body>
+</html>

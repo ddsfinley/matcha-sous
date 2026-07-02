@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction B — Sumi · Matcha Sous MS-01</title>
+<meta name="description" content="Design direction B: ink-forward Japanese modernist identity for the Matcha Sous MS-01 precision electric matcha whisk.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/shippori-mincho-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/zen-kaku-gothic-new-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/img/hero-sumi.webp" as="image">
+<style>
+@font-face{font-family:'Shippori Mincho';src:url('../assets/fonts/shippori-mincho-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Shippori Mincho';src:url('../assets/fonts/shippori-mincho-latin-700-normal.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Zen Kaku Gothic New';src:url('../assets/fonts/zen-kaku-gothic-new-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Zen Kaku Gothic New';src:url('../assets/fonts/zen-kaku-gothic-new-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+
+:root{
+  --ink:#131110; --ink-2:#1a1715; --paper:#ede6d8; --dim:rgba(237,230,216,.6);
+  --line:rgba(237,230,216,.16); --line-soft:rgba(237,230,216,.09); --vermilion:#c93a22;
+  --disp:'Shippori Mincho',Georgia,serif; --util:'Zen Kaku Gothic New',system-ui,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--dim);font-family:var(--util);font-weight:400;font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:inherit;text-decoration:none}
+
+.page{display:grid;grid-template-columns:76px 1fr;min-height:100vh}
+/* vertical rail */
+.rail{border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding-block:28px}
+.rail .v{writing-mode:vertical-rl;letter-spacing:.42em;font-size:11px;text-transform:uppercase;color:var(--dim)}
+.rail .seal-mini{width:12px;height:12px;background:var(--vermilion)}
+
+.main{padding:clamp(24px,4vw,64px) clamp(24px,5vw,84px);display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:clamp(40px,7vh,90px)}
+.wordmark{font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:.3em;color:var(--paper)}
+.top small{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(36px,6vw,96px);align-items:center;flex:1}
+h1{font-family:var(--disp);font-weight:500;color:var(--paper);font-size:clamp(2.6rem,5.2vw,4.6rem);line-height:1.16;letter-spacing:.005em;margin-bottom:30px;max-width:14ch}
+.sub{max-width:42ch;margin-bottom:44px}
+.sub b{color:var(--paper);font-weight:500}
+.cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn{font-size:12px;letter-spacing:.26em;text-transform:uppercase;padding:17px 34px;font-weight:500;transition:.25s}
+.btn.fill{background:var(--vermilion);color:var(--paper)}
+.btn.fill:hover{background:#da4a30}
+.btn.ghost{border:1px solid var(--line);color:var(--paper)}
+.btn.ghost:hover{border-color:var(--dim)}
+
+.stage{position:relative;justify-self:end;width:min(100%,430px)}
+.stage .frame{position:relative;border:1px solid var(--line);padding:10px;background:var(--ink-2)}
+.stage img{display:block;width:100%;height:auto;filter:contrast(1.02)}
+.stage figcaption{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);padding-top:12px}
+/* hanko seal */
+.seal{position:absolute;top:-20px;left:-20px;width:64px;height:64px;background:var(--vermilion);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.seal svg{width:36px;height:36px}
+
+.plate{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(40px,7vh,80px);padding:18px 0;display:flex;flex-wrap:wrap;gap:8px 0;justify-content:space-between}
+.plate span{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
+.plate span b{color:var(--paper);font-weight:500}
+.plate .no{font-family:var(--disp);color:var(--vermilion);letter-spacing:.1em}
+
+.tagline{padding-top:22px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(237,230,216,.35)}
+@media (max-width:900px){
+  .page{grid-template-columns:1fr}
+  .rail{display:none}
+  .hero{grid-template-columns:1fr}
+  .stage{justify-self:start;order:-1;width:min(100%,340px);margin-left:20px}
+  h1{max-width:none}
+  .plate{gap:8px 22px;justify-content:flex-start}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <aside class="rail" aria-hidden="true">
+    <span class="seal-mini"></span>
+    <span class="v">MATCHA SOUS — PRECISION ELECTRIC WHISK — MS-01</span>
+    <span class="v" style="letter-spacing:.3em">EST. 2026</span>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <span class="wordmark">MATCHA SOUS</span>
+      <small>MS-01 · First edition</small>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>The chasen’s hand, made&nbsp;constant.</h1>
+        <p class="sub">Eight hundred years of technique, held to one standard: an 18-speed vortex traces the whisk-stroke faster and steadier than any wrist. <b>Fine, even foam in thirty seconds</b> — the same bowl, every time.</p>
+        <div class="cta">
+          <!-- TODO: replace with hosted checkout URL -->
+          <a class="btn fill" href="https://checkout.matchasous.com/ms-01">Buy — $150</a>
+          <a class="btn ghost" href="#plate">Specifications</a>
+        </div>
+      </div>
+
+      <figure class="stage">
+        <span class="seal" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M29 12 A12 12 0 1 1 26.5 29" stroke="#ede6d8" stroke-width="3.4" stroke-linecap="round"/><path d="M26.5 29 q3.4 2 6 .6" stroke="#ede6d8" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="frame">
+          <img src="../assets/img/hero-sumi.webp" alt="Matcha Sous MS-01 seen from above: the whisking vessel, vortex whisk and control panel" width="1050" height="1400" fetchpriority="high">
+        </span>
+        <figcaption><span>Fig. 01</span><span>Plan view · 40–120 ml</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="plate" id="plate" aria-label="Specifications">
+      <span class="no">№ MS-01</span>
+      <span><b>18</b> speeds</span>
+      <span><b>3</b> presets</span>
+      <span><b>40–120</b> ml</span>
+      <span>Vortex whisk</span>
+      <span>Stainless</span>
+      <span><b>USB-C</b></span>
+      <span>~<b>30</b> s</span>
+    </section>
+
+    <p class="tagline">Direction B — “Sumi” · Shippori Mincho + Zen Kaku Gothic · ink / paper / vermilion</p>
+  </div>
+</div>
+
+</body>
+</html>
