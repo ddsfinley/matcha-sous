@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="Happy cartoon Matcha Sous whisking a green vortex">
-  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- vessel -->
-    <path d="M42 44 q0 -8 8 -8 h50 q8 0 8 8 v22 q0 26 -33 26 q-33 0 -33 -26 Z" fill="#ece5d6"/>
-    <!-- vortex -->
-    <ellipse cx="75" cy="52" rx="26" ry="9" fill="#8fae5a"/>
-    <path d="M75 52 a16 12 0 1 1 -16 12 a11 8 0 1 0 11 -8 a6 5 0 1 1 -6 5" fill="none" stroke="#6d8a3e"/>
-    <!-- base with face -->
-    <rect x="34" y="94" width="82" height="34" rx="12" fill="#2f3a30" stroke="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="The Matcha Sous character happily whisking a swirl of green">
+  <!-- motion arcs -->
+  <g stroke="#c2a36b" stroke-width="3.4" stroke-linecap="round" fill="none">
+    <path d="M28 52 q-7 10 0 20"/><path d="M122 52 q7 10 0 20"/>
   </g>
-  <!-- face + presets on base -->
-  <circle cx="62" cy="108" r="3.4" fill="#f6f2e9"/>
-  <circle cx="88" cy="108" r="3.4" fill="#f6f2e9"/>
-  <path d="M68 117 q7 6 14 0" stroke="#f6f2e9" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <g fill="#c2a36b"><circle cx="47" cy="122" r="2.6"/><circle cx="75" cy="124" r="2.6"/><circle cx="103" cy="122" r="2.6"/></g>
-  <!-- motion + sparkles -->
-  <g stroke="#c2a36b" stroke-width="4" stroke-linecap="round" fill="none">
-    <path d="M26 58 q-6 8 0 16"/><path d="M124 58 q6 8 0 16"/>
-    <path d="M122 30 v10 M117 35 h10"/>
+  <g stroke="#2f3a30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- cup -->
+    <path d="M46 42 q0 -6 6 -6 h46 q6 0 6 6 v20 q0 22 -29 22 q-29 0 -29 -22 Z" fill="#ece5d6"/>
+    <!-- surface + swirl -->
+    <ellipse cx="75" cy="46" rx="23" ry="8" fill="#8fae5a"/>
+    <path d="M75 46 a10 5 0 1 1 -10 5 a6 3 0 1 0 6 -3" fill="none" stroke="#55702c" stroke-width="4.2"/>
+    <!-- base -->
+    <rect x="40" y="90" width="70" height="32" rx="14" fill="#2f3a30" stroke="none"/>
+  </g>
+  <!-- face on base -->
+  <circle cx="66" cy="103" r="3" fill="#f6f2e9"/>
+  <circle cx="84" cy="103" r="3" fill="#f6f2e9"/>
+  <path d="M68 111 q7 5.6 14 0" stroke="#f6f2e9" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+  <circle cx="56" cy="110" r="2.8" fill="#d98e73" opacity=".4"/>
+  <circle cx="94" cy="110" r="2.8" fill="#d98e73" opacity=".4"/>
+  <!-- sparkles -->
+  <g stroke="#c2a36b" stroke-width="3.4" stroke-linecap="round">
+    <path d="M120 26 v9 M115.5 30.5 h9"/>
+    <path d="M30 30 v7 M26.5 33.5 h7"/>
   </g>
 </svg>

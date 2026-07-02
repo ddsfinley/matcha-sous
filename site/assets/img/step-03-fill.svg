@@ -1,20 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="Cartoon kettle pouring hot water into the Matcha Sous vessel with fill lines">
-  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- kettle -->
-    <path d="M78 30 h34 a12 12 0 0 1 12 12 v14 a12 12 0 0 1 -12 12 h-34 a12 12 0 0 1 -12 -12 v-14 a12 12 0 0 1 12 -12 Z" fill="#c2a36b"/>
-    <path d="M66 44 l-16 6 8 10" fill="#c2a36b"/>
-    <path d="M84 30 q11 -12 22 0" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="A round kettle character pouring a neat arc of water into the cup, right to the fill line">
+  <g stroke="#2f3a30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- kettle body -->
+    <circle cx="96" cy="52" r="26" fill="#c2a36b"/>
+    <path d="M96 22 q0 -8 8 -8" fill="none"/>
+    <circle cx="106" cy="13" r="3.4" fill="#2f3a30" stroke="none"/>
+    <path d="M72 46 l-14 6 8 9" fill="#c2a36b"/>
+    <path d="M118 40 q12 6 6 18" fill="none"/>
   </g>
-  <!-- water stream + steam -->
-  <path d="M52 62 q-6 12 2 20 q7 8 1 18" stroke="#9fb8c4" stroke-width="6" stroke-linecap="round" fill="none"/>
-  <path d="M118 22 q6 -8 0 -14" stroke="#9a9d92" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- vessel with etched marks -->
-    <path d="M30 100 q0 26 24 26 q24 0 24 -26 v-14 h-48 Z" fill="#ece5d6"/>
-    <path d="M30 86 h48" />
-    <line x1="66" y1="96" x2="74" y2="96" stroke-width="4"/>
-    <line x1="66" y1="106" x2="74" y2="106" stroke-width="4"/>
-    <line x1="66" y1="116" x2="74" y2="116" stroke-width="4"/>
+  <!-- kettle face -->
+  <circle cx="90" cy="52" r="2.8" fill="#2f3a30"/>
+  <circle cx="106" cy="52" r="2.8" fill="#2f3a30"/>
+  <path d="M94 60 q5 4 10 0" stroke="#2f3a30" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <circle cx="84" cy="60" r="3.2" fill="#d98e73" opacity=".45"/>
+  <circle cx="113" cy="60" r="3.2" fill="#d98e73" opacity=".45"/>
+  <!-- pour arc -->
+  <path d="M58 56 q-16 10 -12 30" stroke="#a9c4d1" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <g stroke="#2f3a30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- cup with ticks -->
+    <path d="M26 92 q0 28 26 28 q26 0 26 -28 v-4 h-52 Z" fill="#ece5d6"/>
+    <line x1="68" y1="98" x2="74" y2="98" stroke-width="3"/>
+    <line x1="68" y1="106" x2="74" y2="106" stroke-width="3"/>
+    <line x1="68" y1="114" x2="74" y2="114" stroke-width="3"/>
   </g>
-  <path d="M36 100 a18 8 0 0 0 36 0 Z" fill="#9fb8c4"/>
+  <path d="M32 92 a20 7 0 0 0 40 0 Z" fill="#a9c4d1"/>
 </svg>

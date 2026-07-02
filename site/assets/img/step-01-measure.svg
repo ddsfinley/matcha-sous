@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="Cartoon kitchen scale weighing a little pile of matcha">
-  <g stroke="#2f3a30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- scale body -->
-    <rect x="30" y="88" width="90" height="34" rx="10" fill="#c2a36b"/>
-    <rect x="46" y="99" width="30" height="13" rx="4" fill="#f6f2e9" stroke-width="4"/>
-    <circle cx="102" cy="105" r="6" fill="#f6f2e9" stroke-width="4"/>
-    <!-- plate -->
-    <line x1="75" y1="88" x2="75" y2="78"/>
-    <rect x="37" y="66" width="76" height="12" rx="6" fill="#ece5d6"/>
-    <!-- matcha mound -->
-    <path d="M55 66 Q75 40 95 66 Z" fill="#8fae5a"/>
-    <path d="M64 58 Q75 48 86 58" stroke="#6d8a3e" stroke-width="4" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none" role="img" aria-label="A happy matcha tin beside a spoon heaping green powder">
+  <g stroke="#2f3a30" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- tin body -->
+    <rect x="34" y="52" width="52" height="58" rx="14" fill="#c2a36b"/>
+    <rect x="30" y="42" width="60" height="16" rx="8" fill="#ece5d6"/>
+    <!-- spoon with mound -->
+    <path d="M108 44 a13 10 0 1 0 0.1 0 Z" fill="#ece5d6"/>
+    <path d="M100 38 q8 -10 16 -1" fill="#8fae5a" stroke="none"/>
+    <path d="M96 40 q12 -14 24 -1" fill="none"/>
+    <line x1="118" y1="52" x2="128" y2="66"/>
   </g>
-  <!-- reading + sparkles -->
-  <text x="61" y="110" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2f3a30" text-anchor="middle">2g</text>
-  <g stroke="#c2a36b" stroke-width="4" stroke-linecap="round">
-    <path d="M117 46 v12 M111 52 h12"/>
-    <path d="M32 38 v8 M28 42 h8"/>
-  </g>
+  <!-- falling pinches -->
+  <g fill="#8fae5a"><circle cx="104" cy="66" r="2.6"/><circle cx="110" cy="76" r="2.2"/><circle cx="104" cy="86" r="2.4"/></g>
+  <!-- tin face -->
+  <circle cx="50" cy="76" r="2.8" fill="#2f3a30"/>
+  <circle cx="70" cy="76" r="2.8" fill="#2f3a30"/>
+  <path d="M54 85 q6 5 12 0" stroke="#2f3a30" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+  <circle cx="43" cy="84" r="3.4" fill="#d98e73" opacity=".45"/>
+  <circle cx="77" cy="84" r="3.4" fill="#d98e73" opacity=".45"/>
 </svg>
