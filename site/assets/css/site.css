@@ -148,7 +148,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .compare .row-label small{display:block;color:var(--stone);font-size:.8rem}
 .compare .cell{display:flex;gap:10px;align-items:flex-start;font-size:.93rem}
 .compare .cell svg{width:17px;height:17px;flex:none;margin-top:3px}
-.compare .cell.no{color:var(--stone)}.compare .cell.no svg{color:#b98a82}
+.compare .cell.no{color:var(--stone)}.compare .cell.no svg{color:var(--gold)}
 .compare .cell.yes svg{color:var(--gold-soft)}
 .cmp-tag{display:none;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin-bottom:4px}
 .compare .col-us .cmp-tag{color:var(--gold-soft)}
