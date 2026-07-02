@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warm 3 — Bone & Brass · Matcha Sous MS-01</title>
+<meta name="description" content="Warm-palette option 3: Bone & Brass — for the Matcha Sous MS-01 site.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/fraunces-latin-300-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/img/hero-bone.webp" as="image">
+<style>
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-latin-300-italic.woff2') format('woff2');font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:'Fraunces';src:url('../assets/fonts/fraunces-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Archivo';src:url('../assets/fonts/archivo-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Archivo';src:url('../assets/fonts/archivo-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+:root{
+  --bg:#f5efe4; --panel:#ede5d5; --ink:#2b241c; --dim:rgba(43,36,28,.68); --faint:rgba(43,36,28,.42);
+  --line:rgba(43,36,28,.18); --line-soft:rgba(43,36,28,.09); --acc:#8f6420; --acc-hi:#7a5417; --acc-text:#f7f1e4;
+  --disp:'Fraunces',Georgia,serif; --util:'Archivo',system-ui,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--dim);font-family:var(--util);font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:clamp(20px,4.5vw,52px)}
+.top{border-bottom:1px solid var(--line-soft)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.wordmark{font-family:var(--disp);font-weight:500;font-size:16px;letter-spacing:.3em;color:var(--ink)}
+.wordmark i{font-style:normal;color:var(--acc)}
+.topmeta{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
+.hero{position:relative}
+.rail{position:absolute;left:clamp(4px,1vw,10px);top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.rail .v{writing-mode:vertical-rl;letter-spacing:.42em;font-size:10px;text-transform:uppercase;color:var(--faint)}
+.rail .sq{width:10px;height:10px;background:var(--acc)}
+@media (max-width:1330px){.rail{display:none}}
+.grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(36px,6vw,96px);align-items:center;padding-block:clamp(48px,9vh,110px)}
+.kicker{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--acc);display:block;margin-bottom:20px;font-weight:500}
+h1{font-family:var(--disp);font-style:italic;font-weight:300;color:var(--ink);font-size:clamp(2.6rem,5.6vw,4.8rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:28px;max-width:15ch}
+.lede{max-width:46ch;margin-bottom:42px}
+.lede b{color:var(--ink);font-weight:500}
+.cta{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:17px 34px;transition:.25s}
+.btn.fill{background:var(--acc);color:var(--acc-text)}
+.btn.fill:hover{background:var(--acc-hi)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--dim)}
+.meta-strip{display:flex;gap:clamp(18px,3vw,42px);flex-wrap:wrap;margin-top:46px}
+.m b{display:block;font-family:var(--disp);font-weight:300;font-style:italic;font-size:1.7rem;color:var(--ink);line-height:1.2}
+.m span{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
+.fig{position:relative;justify-self:end;width:min(100%,440px)}
+.frame{display:block;position:relative;border:1px solid var(--line);padding:10px;background:var(--panel)}
+.fig img{display:block;width:100%;height:auto}
+.fig figcaption{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--faint);padding-top:12px}
+.seal{position:absolute;top:-18px;left:-18px;width:60px;height:60px;background:var(--acc);display:grid;place-items:center;box-shadow:0 14px 30px rgba(60,44,30,.28);z-index:2}
+.seal svg{width:34px;height:34px}
+.plate{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;display:flex;flex-wrap:wrap;gap:10px 0;justify-content:space-between;margin-block:clamp(20px,4vh,44px)}
+.plate span{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
+.plate span b{color:var(--ink);font-weight:500}
+.plate .no{font-family:var(--disp);font-style:italic;color:var(--acc);text-transform:none}
+.tagline{padding-bottom:52px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.fig{justify-self:start;order:-1;width:min(100%,340px);margin-left:18px}h1{max-width:none}.plate{justify-content:flex-start;gap:10px 26px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="wordmark">MATCHA SOUS<i>.</i></span>
+  <span class="topmeta">MS-01 · Warm option 3 — Bone & Brass</span>
+</div></header>
+<main class="hero">
+  <div class="rail" aria-hidden="true"><span class="sq"></span><span class="v">MATCHA SOUS — PRECISION ELECTRIC WHISK — MODEL MS-01</span></div>
+  <div class="wrap grid">
+    <div>
+      <span class="kicker">Precision electric matcha whisk · MS-01</span>
+      <h1>The chasen’s hand, made&nbsp;constant.</h1>
+      <p class="lede">An 18-speed vortex reproduces the whisk-stroke faster and steadier than any wrist — <b>dense, café-quality foam in about thirty seconds</b>, identical at bowl one and bowl one&nbsp;thousand.</p>
+      <div class="cta">
+        <a class="btn fill" href="https://checkout.matchasous.com/ms-01">Buy — $150</a>
+        <a class="btn ghost" href="#plate">See the instrument</a>
+      </div>
+      <div class="meta-strip">
+        <div class="m"><b>~30 s</b><span>per bowl</span></div>
+        <div class="m"><b>18</b><span>speeds</span></div>
+        <div class="m"><b>3</b><span>presets</span></div>
+        <div class="m"><b>40–120</b><span>ml</span></div>
+      </div>
+    </div>
+    <figure class="fig">
+      <span class="seal" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M29 12 A12 12 0 1 1 26.5 29" stroke="#f5eedd" stroke-width="3.4" stroke-linecap="round"/><path d="M26.5 29 q3.4 2 6 .6" stroke="#f5eedd" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+      <span class="frame"><img src="../assets/img/hero-bone.webp" alt="Matcha Sous MS-01 from above: stainless vessel, vortex whisk and control panel" width="1050" height="1400" fetchpriority="high"></span>
+      <figcaption><span>Fig. 01</span><span>Plan view · vortex whisk</span></figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <div class="plate" id="plate">
+      <span class="no">№ MS-01</span><span><b>18</b> speeds</span><span><b>3</b> presets</span><span><b>40–120</b> ml</span><span>Vortex whisk</span><span>Stainless</span><span><b>USB-C</b></span><span>~<b>30</b> s</span>
+    </div>
+    <p class="tagline">Warm option 3 — “Bone & Brass” · bone / espresso / brass</p>
+  </div>
+</main>
+</body>
+</html>
