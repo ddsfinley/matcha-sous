@@ -243,3 +243,22 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .founder cite{display:block;margin-top:20px;font-style:normal;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--stone)}
 .story p+p{margin-top:14px}
 .story .pull{font-family:var(--disp);font-style:italic;font-size:1.35rem;color:var(--ink);border-left:2px solid var(--gold);padding-left:18px;margin-top:22px}
+
+/* ---------- journal / articles ---------- */
+.article{max-width:760px;margin-inline:auto}
+.article .meta{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);margin-bottom:26px}
+.article h2{font-family:var(--disp);font-size:clamp(1.5rem,2.6vw,2rem);margin:38px 0 12px}
+.article h3{font-size:1.05rem;font-weight:400;margin:26px 0 8px}
+.article p{color:var(--stone);margin-bottom:14px}
+.article b,.article strong{color:var(--ink);font-weight:400}
+.article ul,.article ol{margin:6px 0 18px 20px;color:var(--stone);display:grid;gap:8px}
+.article a{color:var(--gold-deep);border-bottom:1px solid var(--gold-soft)}
+.article table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:.92rem}
+.article th,.article td{border:1px solid var(--line);padding:10px 12px;text-align:left;color:var(--stone)}
+.article th{color:var(--ink);font-weight:400;background:var(--paper)}
+.jlist{max-width:840px}
+.jlist a.jrow{display:block;padding:24px 4px;border-bottom:1px solid var(--line)}
+.jlist a.jrow:first-of-type{border-top:1px solid var(--line)}
+.jlist .jrow h2{font-family:var(--disp);font-size:1.5rem;margin-bottom:6px;transition:color .3s var(--ease)}
+.jlist .jrow:hover h2{color:var(--gold-deep)}
+.jlist .jrow p{color:var(--stone);font-size:.95rem;max-width:66ch}

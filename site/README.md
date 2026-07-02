@@ -1,4 +1,4 @@
-# Matcha Sous MS-01 — site v2 (Direction B × C type)
+# Matcha Sous — site v2 (Direction B × C type)
 
 Static, no framework. Ink/paper/vermilion identity (Direction B) set in
 Fraunces italic + Archivo (Direction C pairing). Lives in `/site`; the legacy
@@ -6,14 +6,14 @@ storefront at the repo root is untouched.
 
 ## Pages
 - `index.html` — single scrolling product page: hero → why → gallery (figures)
-  → by-hand-vs-MS-01 comparison → method → **order area** → engraved spec plate → Q&A
+  → by-hand-vs-Matcha Sous comparison → method → **order area** → engraved spec plate → Q&A
 - `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
 - `faq.html` — FAQ & support (native `<details>`, zero JS) + matching FAQPage JSON-LD
 - `wholesale.html` — hospitality pitch + enquiry form (composes a mailto; no backend)
 - `proposals/` — Stage-1 design directions (kept for the record, noindex)
 
 ## Launch checklist
-1. **Checkout**: replace `https://checkout.matchasous.com/ms-01` (marked `TODO`)
+1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
 2. Deploy `/site` contents at the **domain root** of matchasous.com — canonicals,
    OG URLs, `sitemap.xml` and `robots.txt` already point there.
