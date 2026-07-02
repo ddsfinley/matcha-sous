@@ -235,3 +235,11 @@ footer .fnav{display:flex;gap:clamp(16px,3vw,34px);flex-wrap:wrap}
 footer .fnav a{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,242,233,.66);transition:color .3s var(--ease)}
 footer .fnav a:hover{color:var(--cream)}
 footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,242,233,.5)}
+
+/* ---------- founder note / story ---------- */
+.founder{text-align:center;max-width:780px;margin-inline:auto}
+.founder blockquote{font-family:var(--disp);font-style:italic;font-weight:500;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.35;color:var(--ink)}
+.founder blockquote::before{content:"“";display:block;font-size:3rem;color:var(--gold);line-height:.6;margin-bottom:14px}
+.founder cite{display:block;margin-top:20px;font-style:normal;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--stone)}
+.story p+p{margin-top:14px}
+.story .pull{font-family:var(--disp);font-style:italic;font-size:1.35rem;color:var(--ink);border-left:2px solid var(--gold);padding-left:18px;margin-top:22px}

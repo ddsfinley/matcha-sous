@@ -7,6 +7,7 @@ storefront at the repo root is untouched.
 ## Pages
 - `index.html` — single scrolling product page: hero → why → gallery (figures)
   → by-hand-vs-MS-01 comparison → method → **order area** → engraved spec plate → Q&A
+- `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
 - `faq.html` — FAQ & support (native `<details>`, zero JS) + matching FAQPage JSON-LD
 - `wholesale.html` — hospitality pitch + enquiry form (composes a mailto; no backend)
 - `proposals/` — Stage-1 design directions (kept for the record, noindex)
