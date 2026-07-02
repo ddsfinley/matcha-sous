@@ -7,6 +7,8 @@ storefront at the repo root is untouched.
 ## Pages
 - `index.html` — single scrolling product page: hero → why → gallery (figures)
   → by-hand-vs-Matcha Sous comparison → method → **order area** → engraved spec plate → Q&A
+- `how-to-use.html` — the full method: weigh, sift, fill, whisk, build (ice/milk), sweeten + care (HowTo schema)
+- `journal/` — SEO article hub + 4 posts (Article schema)
 - `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
 - `faq.html` — FAQ & support (native `<details>`, zero JS) + matching FAQPage JSON-LD
 - `wholesale.html` — hospitality pitch + enquiry form (composes a mailto; no backend)
