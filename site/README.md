@@ -1,8 +1,9 @@
 # Matcha Sous — site
 
-Static, no framework. Cream / forest / champagne-gold identity set in
-Cormorant Garamond (display) + Jost (utility). Lives in `/site`; the legacy
-storefront at the repo root is untouched.
+Static, no framework. Ink & bone identity drawn from the wordmark: deep
+aubergine-ink ground, warm bone type, linen accents. Cormorant Garamond
+(display) + Jost (utility). Lives in `/site`; the legacy storefront at the
+repo root is untouched.
 
 ## Pages
 - `index.html` — single scrolling product page: hero → why → gallery (figures)
@@ -16,28 +17,34 @@ storefront at the repo root is untouched.
 
 ## Brand
 
-**The mark** is an M/S monogram woven into a shield ("vessel"), drawn as a
-single continuous stroke, with a matcha leaf resting in the valley of the M.
-Rationale: leaf (the tea) + vessel (the craft) + M/S (the name). That is the
-whole story — no puzzle-piece symbolism. The leaf carries a single midrib
-vein; at very small sizes it reads as a solid leaf, by design.
+**The mark** is the stacked wordmark — MATCHA in tracked caps over SOUS in a
+custom display face whose letterforms carry vortex slashes (the whisk's
+motion, cut into the type). The slashed **O** doubles as the standalone
+glyph: favicon, touch icon, stamps. A soft circle-glow arc is the secondary
+motif (CTA band, OG card).
 
-**Files** (all production vector art, generated from one geometry):
-- `assets/img/logo.svg` — primary mark, forest on transparent (for light
-  backgrounds: header, documents)
-- `assets/img/logo-cream.svg` — cream variant (for dark backgrounds: footer,
-  dark packaging)
-- `favicon.svg` — bare-shield submark on a forest tile, stroke weight and
-  S-gaps optically boosted for 16 px
-- `apple-touch-icon.png` — 180×180 flattened tile
+**Files**:
+- `assets/img/wordmark.png` — keyed transparent bone lockup (266×94, ~2×
+  header display size). Cut from the supplied art; **raster** — request the
+  master vector file from the logo's designer before any print use.
+- `favicon.svg` — slashed-O glyph on an ink tile
+- `apple-touch-icon.png` — 180×180 ink tile + O
 - `assets/img/logo-512.png` — square lockup for Organization structured data
+- `assets/img/og.jpg` — 1200×630 social card (wordmark + glow arc + tagline)
+
+**Palette** (sampled from the wordmark art):
+ink `#1A1322` (page) / `#140E1B` (deep) / panel `#221A2E` / `#2A2138`,
+bone `#EDE4D8` (type, primary CTAs), bright `#F6F0E5`,
+linen `#D9CAB0` / `#C4B493` (accents: eyebrows, numerals, rules),
+muted `#A79D98` (secondary text), mat `#E7DDCC` (photo frames).
 
 **Usage rules**
-1. Leaf green `#8DB23D` is a **mark color only** — ~2.2:1 contrast on cream,
-   so never use it for text or buttons. Dark forest `#24311E` does that work.
-2. Below ~24 px, use the bare shield (favicon art), not the full leaf mark.
-3. Palette: forest `#24311E` / `#2F3A30`, cream `#F6F2E9`, paper `#FBF9F3`,
-   gold `#C2A36B` / `#A6884F`, leaf `#8DB23D` (mark only).
+1. Bone on ink is the identity: type and primary buttons are bone; the
+   comparison table's "Matcha Sous" column inverts to a bone panel.
+2. Linen is the only accent family — no greens, no golds brighter than
+   `#E6DCC8`.
+3. Photography mounts in bone mats (`--mat`) so warm product photos sit like
+   prints on a dark wall; never place photos borderless on raw ink.
 
 **Tagline hierarchy** (one voice, three jobs):
 1. **"Behind every great matcha."** — the primary line. It is printed on the
