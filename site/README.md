@@ -58,6 +58,17 @@ only as the deep aubergine.
    logo's native staging).
 4. Photography mounts in warm mats (`--mat`); never borderless on lilac.
 
+**Voice** (per the packaging design brief): the story is **quiet expertise
+and consistency, never time-saving**. The product is a sous — it handles the
+technical work so the bowl, the pour and the moment stay the user's. Category
+line: **"The Original Hands-Free Matcha Mixer"** (product title, page titles,
+Product schema). Working copy: "Controlled vortex motion mixes matcha and
+water with consistent, hands-free precision. Start the cycle and let your
+sous handle the rest." Never frame the chasen as the slow alternative — the
+sous works beside the tradition. Avoid: matcha-leaf/bamboo/whisk/bowl
+graphics, vortex symbols, MS monograms, badges, promo language, spec-heavy
+front sections. Speed figures (~30 s) are facts for spec contexts only.
+
 **Tagline hierarchy** (one voice, three jobs):
 1. **"Behind every great matcha."** — the primary line. It is printed on the
    box; it anchors the hero eyebrow ("Behind every great matcha is a
@@ -73,6 +84,9 @@ only as the deep aubergine.
    the zip — the theme currently wears the retired forest/gold identity.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
+1b. **Price**: the site sells at $150; the packaging brief anticipates
+   $179–199 retail. Reconcile before launch (price appears in buy box, nav,
+   CTAs, Product schema and meta description).
 2. Deploy `/site` contents at the **domain root** of matchasous.com — canonicals,
    OG URLs, `sitemap.xml` and `robots.txt` already point there.
 3. Submit `sitemap.xml` in Google Search Console.

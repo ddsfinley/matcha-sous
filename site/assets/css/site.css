@@ -13,11 +13,11 @@
 @font-face{font-family:'Jost';src:url('../fonts/jost-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
 
 :root{
-  --bone-page:#f7f4ee; --paper:#fdfbf7; --bone-deep:#f0ebe2;
+  --bone-page:#f6f4f0; --paper:#fcfbf8; --bone-deep:#efece7;
   --aub:#1a1322; --aub-deep:#140e1b; --aub-ink:#251d30;
   --bone:#ede4d8; --bone-bright:#f6f0e5;
   --copper:#b0714f; --copper-deep:#96593a; --copper-soft:#d9b49e;
-  --stone:#6f6862; --mat:#efe9df;
+  --stone:#6f6862; --mat:#eeeae3;
   --line:rgba(26,19,34,.14); --line-soft:rgba(26,19,34,.07);
   --disp:'Cormorant Garamond',Georgia,serif; --util:Jost,system-ui,sans-serif;
   --radius:4px; --radius-lg:10px; --w:1240px;
@@ -49,7 +49,7 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 
 /* ---------- announce + header ---------- */
 .announce{background:var(--aub-deep);color:var(--bone);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:.72em 1em}
-.top{position:sticky;top:0;z-index:40;background:rgba(247,244,238,.88);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line-soft)}
+.top{position:sticky;top:0;z-index:40;background:rgba(246,244,240,.88);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line-soft)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
 .brand{display:inline-flex;align-items:center;gap:12px}
 .brand img{height:44px;width:auto}
