@@ -70,13 +70,15 @@ graphics, vortex symbols, MS monograms, badges, promo language, spec-heavy
 front sections. Speed figures (~30 s) are facts for spec contexts only.
 
 **Tagline hierarchy** (one voice, three jobs):
-1. **"Behind every great matcha."** — the primary line. It is printed on the
-   box; it anchors the hero eyebrow ("Behind every great matcha is a
-   Matcha Sous"), the footer, the OG card and the Organization `slogan`.
-2. **"The sous chef for matcha"** — the descriptor, used inside sentences
-   ("Meet the sous chef for matcha").
-3. **"Crafted in ceremony"** — reserved for the stamp/badge lockup on
-   packaging and print; not used as a headline on the site.
+1. **"Behind every great matcha is a Sous."** — the primary line (hero
+   eyebrow, footer, OG card, Organization `slogan`). Capital S: *a Sous* is
+   the product as a noun, echoing "behind every great chef is a sous." The
+   full sentence should sit near the wordmark, which closes the analogy.
+2. **"Behind every great matcha."** — the short/stamp form, as printed on
+   the box; use standalone where space is tight.
+3. **"The sous chef for matcha"** — the descriptor, used inside sentences
+   ("Meet the sous chef for matcha"). "Crafted in ceremony" stays reserved
+   for packaging stamps only.
 
 ## Launch checklist
 0. **Shopify port (deferred)**: once this design is declared final, reskin
