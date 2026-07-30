@@ -1,9 +1,9 @@
 # Matcha Sous — site
 
-Static, no framework. Ink & bone identity drawn from the wordmark: deep
-aubergine-ink ground, warm bone type, linen accents. Cormorant Garamond
-(display) + Jost (utility). Lives in `/site`; the legacy storefront at the
-repo root is untouched.
+Static, no framework. Bone & aubergine identity: bright warm ground, the
+wordmark's deep aubergine carrying type, buttons and feature bands, copper
+only at small scale. Cormorant Garamond (display) + Jost (utility). Lives in
+`/site`; the legacy storefront at the repo root is untouched.
 
 ## Pages
 - `index.html` — single scrolling product page: hero → why → gallery (figures)
@@ -32,19 +32,27 @@ motif (CTA band, OG card).
 - `assets/img/logo-512.png` — square lockup for Organization structured data
 - `assets/img/og.jpg` — 1200×630 social card (wordmark + glow arc + tagline)
 
-**Palette** (sampled from the wordmark art):
-ink `#1A1322` (page) / `#140E1B` (deep) / panel `#221A2E` / `#2A2138`,
-bone `#EDE4D8` (type, primary CTAs), bright `#F6F0E5`,
-linen `#D9CAB0` / `#C4B493` (accents: eyebrows, numerals, rules),
-muted `#A79D98` (secondary text), mat `#E7DDCC` (photo frames).
+**Palette** (bright ground, aubergine anchor, copper hints):
+page `#F7F4EE` / paper `#FDFBF7` / warm alt `#F0EBE2` / lilac tint `#EFE9F0`,
+aubergine `#2B1F38` / deep `#221933` (buttons, footer, announce, CTA band,
+compare column, `.bg-deep`), body text `#2A2135`,
+plum `#6D5987` (numerals, icons, heading italics),
+bone `#EDE4D8` (type on aubergine surfaces),
+copper `#B0714F` / deep `#96593A` / soft `#D9B49E` — **small scale only**,
+stone `#6F6579` (secondary text), mat `#EFE9DF` (photo frames).
 
 **Usage rules**
-1. Bone on ink is the identity: type and primary buttons are bone; the
-   comparison table's "Matcha Sous" column inverts to a bone panel.
-2. Linen is the only accent family — no greens, no golds brighter than
-   `#E6DCC8`.
-3. Photography mounts in bone mats (`--mat`) so warm product photos sit like
-   prints on a dark wall; never place photos borderless on raw ink.
+1. The ground stays bright; aubergine appears as confident anchors — the
+   announce bar, buttons, the "Matcha Sous" compare column, the founder band
+   (`.bg-deep`), the CTA band and the footer — plus a lilac whisper in
+   gradients. Body text itself is aubergine-tinted, never plain black.
+2. Copper is a seasoning, not a color field: eyebrows, text links, the Q&A
+   "+", thin rules, the live dot, focus rings, the compare ribbon. Never
+   fill a large surface or a primary button with copper.
+3. The header uses `wordmark-ink.png` on light ground; the footer keeps the
+   bone `wordmark.png` on aubergine. Favicon/touch icon stay ink-tiled (the
+   logo's native staging).
+4. Photography mounts in warm mats (`--mat`); never borderless on lilac.
 
 **Tagline hierarchy** (one voice, three jobs):
 1. **"Behind every great matcha."** — the primary line. It is printed on the
