@@ -68,6 +68,9 @@ only as the deep aubergine.
    packaging and print; not used as a headline on the site.
 
 ## Launch checklist
+0. **Shopify port (deferred)**: once this design is declared final, reskin
+   `shopify-theme/` to match it (palette, wordmark, copy, $150) and rebuild
+   the zip — the theme currently wears the retired forest/gold identity.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
 2. Deploy `/site` contents at the **domain root** of matchasous.com — canonicals,
