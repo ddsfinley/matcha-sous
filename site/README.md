@@ -60,8 +60,8 @@ only as the deep aubergine.
 
 **Tagline hierarchy** (one voice, three jobs):
 1. **"Behind every great matcha."** — the primary line. It is printed on the
-   box; it anchors the hero eyebrow ("The electric whisk behind every great
-   matcha"), the footer, the OG card and the Organization `slogan`.
+   box; it anchors the hero eyebrow ("Behind every great matcha is a
+   Matcha Sous"), the footer, the OG card and the Organization `slogan`.
 2. **"The sous chef for matcha"** — the descriptor, used inside sentences
    ("Meet the sous chef for matcha").
 3. **"Crafted in ceremony"** — reserved for the stamp/badge lockup on
