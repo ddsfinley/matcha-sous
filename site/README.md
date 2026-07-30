@@ -34,8 +34,9 @@ motif (CTA band, OG card).
 
 **Palette** (bright ground, aubergine anchor, copper hints):
 page `#F7F4EE` / paper `#FDFBF7` / warm alt `#F0EBE2`,
-aubergine `#2B1F38` / deep `#221933` (buttons, footer, announce, CTA band,
-compare column, `.bg-deep`, numerals, feature icons), body text `#2A2135`,
+aubergine `#1A1322` — the logo background, **exact** — / deep `#140E1B`
+(buttons, footer, announce, CTA band, compare column, `.bg-deep`, numerals,
+feature icons), body text `#251D30`,
 bone `#EDE4D8` (type on aubergine surfaces),
 copper `#B0714F` / deep `#96593A` / soft `#D9B49E` — **small scale only**
 (eyebrows, links, heading italics, plate numbers, rules, markers),
