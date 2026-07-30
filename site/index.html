@@ -26,7 +26,6 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/photo-plan.webp" as="image">
 <link rel="stylesheet" href="assets/css/site.css">
 
 <script type="application/ld+json">
@@ -111,17 +110,26 @@
           <a class="btn btn-outline btn-lg" href="#method">See how it works</a>
         </div>
       </div>
-      <figure class="stage hero-stage">
-        <span class="media-frame">
-          <img src="assets/img/photo-plan.webp" alt="Matcha Sous from above: stainless vessel with etched fill guides and the vortex whisk, seated on its powered base" width="1050" height="1400" fetchpriority="high">
-          <span class="media-tag">Plan view · vortex whisk</span>
-        </span>
-        <span class="badge"><span class="dot"></span><span><small>Now whisking</small><b>Preset II · 0:30</b></span></span>
-        <span class="callout c1"><span class="cdot"></span>Vortex whisk — the chasen’s rhythm</span>
-        <span class="callout c2"><span class="cdot"></span>18 speeds · 3 presets</span>
-        <span class="callout c3"><span class="cdot"></span>Etched 40–120&nbsp;ml guides</span>
-        <span class="callout c4"><span class="cdot"></span>USB-C · whisper quiet</span>
-      </figure>
+      <div class="hero-viz">
+        <div class="viz-col left">
+          <span class="callout"><span class="cdot"></span>Vortex whisk — the chasen’s rhythm</span>
+          <span class="callout"><span class="cdot"></span>Etched 40–120&nbsp;ml guides</span>
+        </div>
+        <div class="vortex" role="img" aria-label="The Matcha Sous vortex, mid-whisk">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="varc a1" cx="100" cy="100" r="70"/>
+            <circle class="varc a2" cx="100" cy="100" r="54"/>
+            <circle class="varc a3" cx="100" cy="100" r="38"/>
+            <circle class="varc a4" cx="100" cy="100" r="20"/>
+            <circle class="vdot" cx="100" cy="100" r="4"/>
+          </svg>
+          <span class="badge"><span class="dot"></span><span><small>Now whisking</small><b>Preset II · 0:30</b></span></span>
+        </div>
+        <div class="viz-col right">
+          <span class="callout"><span class="cdot"></span>18 speeds · 3 presets</span>
+          <span class="callout"><span class="cdot"></span>USB-C · whisper quiet</span>
+        </div>
+      </div>
     </div>
   </section>
 
