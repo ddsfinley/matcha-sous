@@ -46,7 +46,7 @@ only as the deep aubergine.
 
 **Usage rules**
 1. The ground stays bright; aubergine appears as confident anchors — the
-   announce bar, buttons, the "Matcha Sous" compare column, the founder band
+   cinematic hero, the mood band, the announce bar, buttons, the "Matcha Sous" compare column, the founder band
    (`.bg-deep`), the CTA band and the footer. Body text itself is
    aubergine-tinted, never plain black — that is the only purple on light
    ground; never tint surfaces lavender or lilac.
