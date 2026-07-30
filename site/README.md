@@ -33,19 +33,22 @@ motif (CTA band, OG card).
 - `assets/img/og.jpg` — 1200×630 social card (wordmark + glow arc + tagline)
 
 **Palette** (bright ground, aubergine anchor, copper hints):
-page `#F7F4EE` / paper `#FDFBF7` / warm alt `#F0EBE2` / lilac tint `#EFE9F0`,
+page `#F7F4EE` / paper `#FDFBF7` / warm alt `#F0EBE2`,
 aubergine `#2B1F38` / deep `#221933` (buttons, footer, announce, CTA band,
-compare column, `.bg-deep`), body text `#2A2135`,
-plum `#6D5987` (numerals, icons, heading italics),
+compare column, `.bg-deep`, numerals, feature icons), body text `#2A2135`,
 bone `#EDE4D8` (type on aubergine surfaces),
-copper `#B0714F` / deep `#96593A` / soft `#D9B49E` — **small scale only**,
-stone `#6F6579` (secondary text), mat `#EFE9DF` (photo frames).
+copper `#B0714F` / deep `#96593A` / soft `#D9B49E` — **small scale only**
+(eyebrows, links, heading italics, plate numbers, rules, markers),
+stone `#6F6862` (warm-grey secondary text — deliberately no violet cast),
+mat `#EFE9DF` (photo frames). No pastel purples anywhere: purple exists
+only as the deep aubergine.
 
 **Usage rules**
 1. The ground stays bright; aubergine appears as confident anchors — the
    announce bar, buttons, the "Matcha Sous" compare column, the founder band
-   (`.bg-deep`), the CTA band and the footer — plus a lilac whisper in
-   gradients. Body text itself is aubergine-tinted, never plain black.
+   (`.bg-deep`), the CTA band and the footer. Body text itself is
+   aubergine-tinted, never plain black — that is the only purple on light
+   ground; never tint surfaces lavender or lilac.
 2. Copper is a seasoning, not a color field: eyebrows, text links, the Q&A
    "+", thin rules, the live dot, focus rings, the compare ribbon. Never
    fill a large surface or a primary button with copper.
