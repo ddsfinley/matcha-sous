@@ -116,6 +116,37 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 .badge b{font-weight:400;font-size:.9rem}
 
 
+/* ---------- moments (editorial triptych) ---------- */
+.moments{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,32px)}
+.moment{border:1px solid var(--line-soft);border-radius:var(--radius-lg);padding:clamp(28px,3.4vw,44px);min-height:280px;display:flex;flex-direction:column;background:var(--paper)}
+.moment .mnum{font-family:var(--disp);font-weight:500;font-size:clamp(2.1rem,3.2vw,2.9rem);color:var(--aub);line-height:1}
+.moment h3{font-family:var(--disp);font-size:1.35rem;margin:auto 0 8px;padding-top:34px}
+.moment p{font-size:.95rem;color:var(--stone)}
+.moment.dusk{background:var(--aub);border-color:transparent}
+.moment.dusk .mnum,.moment.dusk h3{color:var(--bone-bright)}
+.moment.dusk p{color:rgba(237,228,216,.7)}
+@media (max-width:900px){.moments{grid-template-columns:1fr}.moment{min-height:0}.moment h3{padding-top:20px}}
+
+/* ---------- light mood variant ---------- */
+.mood--light::after{background:linear-gradient(180deg,rgba(246,244,240,.38),rgba(246,244,240,.08) 45%,rgba(246,244,240,.42))}
+.mood--light .mood-line{color:var(--aub-deep)}
+.mood--light .mood-line em{color:var(--copper-deep)}
+
+/* ---------- manifesto: 4-up numbered ---------- */
+.steps.four{grid-template-columns:repeat(4,1fr)}
+.steps.four .step::after{display:none}
+@media (max-width:1000px){.steps.four{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.steps.four{grid-template-columns:1fr}}
+
+/* ---------- journal strip (home) ---------- */
+.jhome{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,32px)}
+.jhome a{display:block;padding:28px 26px;border:1px solid var(--line-soft);border-radius:var(--radius-lg);background:var(--paper);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.jhome a:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.jhome h3{font-family:var(--disp);font-size:1.3rem;margin-bottom:8px}
+.jhome p{font-size:.9rem;color:var(--stone)}
+.jhome .go{display:inline-block;margin-top:14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper)}
+@media (max-width:900px){.jhome{grid-template-columns:1fr}}
+
 /* ---------- trust bar ---------- */
 .trust{background:var(--paper);border-bottom:1px solid var(--line-soft)}
 .trust .row{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(18px,4.5vw,60px);padding-block:24px}
