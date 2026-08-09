@@ -71,7 +71,12 @@ it and do not compete with it** — the Sous is an alternative for volume,
 Comparisons read as two tools/one craft: same check marker in both columns,
 no scoring visuals, no "easier" badges. Avoid: matcha-leaf/bamboo/whisk/bowl
 graphics, vortex symbols, MS monograms, badges, promo language, spec-heavy
-front sections. Speed figures (~30 s) are facts for spec contexts only.
+front sections. Speed figures (~30 s) are facts for spec contexts only. **Wording rule:
+whisking is ceremony — zen and calm for the matcha community — never
+"labor," "effort," "chore," "guesswork," "wrist work," or anything that
+frames the practice as a burden. The Sous is framed around convenience and
+on-the-go moments ("for mornings that move quickly"), never as rescue from
+the whisk.**
 
 **Tagline hierarchy** (one voice, three jobs):
 1. **"Behind every great matcha is a Sous."** — the primary line (the hero
