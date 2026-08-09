@@ -186,6 +186,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .compare .ch{padding:24px 22px;border-bottom:1px solid var(--line)}
 .compare .ch:nth-last-child(-n+3){border-bottom:0}
 .compare .col-them{background:var(--bone-deep)}
+#compare{background:var(--bone-page)}
 .compare .col-us{background:var(--aub);color:var(--bone);position:relative}
 .compare .col-us h3,.compare .col-us .name{color:var(--bone-bright)}
 .compare .col-head .label{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-deep)}
