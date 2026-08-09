@@ -70,8 +70,8 @@ graphics, vortex symbols, MS monograms, badges, promo language, spec-heavy
 front sections. Speed figures (~30 s) are facts for spec contexts only.
 
 **Tagline hierarchy** (one voice, three jobs):
-1. **"Behind every great matcha is a Sous."** — the primary line (hero
-   eyebrow, footer, OG card, Organization `slogan`). Capital S: *a Sous* is
+1. **"Behind every great matcha is a Sous."** — the primary line (the hero
+   headline itself, footer, OG card, Organization `slogan`). Capital S: *a Sous* is
    the product as a noun, echoing "behind every great chef is a sous." The
    full sentence should sit near the wordmark, which closes the analogy.
 2. **"Behind every great matcha."** — the short/stamp form, as printed on
