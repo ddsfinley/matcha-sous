@@ -104,6 +104,12 @@ second and subordinate; also a candidate for the box interior.
    band, "The counter is the new café.") is a placeholder — a regraded product
    shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
    line at the same time. The dark band's `mood-ritual.webp` is also a regrade.
+1d. **Unverified product claims**: "contactless magnetic drive" and
+   "backlit" controls are not confirmed by the box or supplied photos —
+   confirm with the manufacturer or reword. Box-verified facts: 18 speed
+   levels, 3 preset programs, 40–120 ml capacity, hands-free preparation,
+   easy-clean design, 6 W low power; included: mixer base, matcha cup,
+   power adapter, USB-C cable, user manual; marks FCC, CE, RoHS.
 2. Deploy `/site` contents at the **domain root** of matchasous.com — canonicals,
    OG URLs, `sitemap.xml` and `robots.txt` already point there.
 3. Submit `sitemap.xml` in Google Search Console.
