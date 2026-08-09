@@ -100,6 +100,10 @@ second and subordinate; also a candidate for the box interior.
 1b. **Price**: the site sells at $150; the packaging brief anticipates
    $179–199 retail. Reconcile before launch (price appears in buy box, nav,
    CTAs, Product schema and meta description).
+1c. **Lifestyle photography**: `assets/img/mood-counter.webp` (the light mood
+   band, "The counter is the new café.") is a placeholder — a regraded product
+   shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
+   line at the same time. The dark band's `mood-ritual.webp` is also a regrade.
 2. Deploy `/site` contents at the **domain root** of matchasous.com — canonicals,
    OG URLs, `sitemap.xml` and `robots.txt` already point there.
 3. Submit `sitemap.xml` in Google Search Console.
