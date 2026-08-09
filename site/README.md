@@ -76,7 +76,9 @@ whisking is ceremony — zen and calm for the matcha community — never
 "labor," "effort," "chore," "guesswork," "wrist work," or anything that
 frames the practice as a burden. The Sous is framed around convenience and
 on-the-go moments ("for mornings that move quickly"), never as rescue from
-the whisk.**
+the whisk.** House line for the dark mood band: **"The ceremony,
+preserved. The Sous, in service of it."** — ceremony first, the Sous
+second and subordinate; also a candidate for the box interior.
 
 **Tagline hierarchy** (one voice, three jobs):
 1. **"Behind every great matcha is a Sous."** — the primary line (the hero
