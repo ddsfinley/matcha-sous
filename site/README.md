@@ -65,7 +65,11 @@ line: **"The Original Hands-Free Matcha Mixer"** (product title, page titles,
 Product schema). Working copy: "Controlled vortex motion mixes matcha and
 water with consistent, hands-free precision. Start the cycle and let your
 sous handle the rest." Never frame the chasen as the slow alternative — the
-sous works beside the tradition. Avoid: matcha-leaf/bamboo/whisk/bowl
+sous works beside the tradition. Positioning vs hand whisking: **we respect
+it and do not compete with it** — the Sous is an alternative for volume,
+"for the days that pour more matcha than hand whisking can keep up with."
+Comparisons read as two tools/one craft: same check marker in both columns,
+no scoring visuals, no "easier" badges. Avoid: matcha-leaf/bamboo/whisk/bowl
 graphics, vortex symbols, MS monograms, badges, promo language, spec-heavy
 front sections. Speed figures (~30 s) are facts for spec contexts only.
 
