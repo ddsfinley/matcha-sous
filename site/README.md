@@ -104,9 +104,8 @@ second and subordinate; also a candidate for the box interior.
    band, "The counter is the new café.") is a placeholder — a regraded product
    shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
    line at the same time. The dark band's `mood-ritual.webp` is also a regrade.
-1d. **Claim verification**: contactless magnetic drive — **confirmed by the
-   founder**. Still unconfirmed: "backlit" controls (removed from about.html;
-   check before reintroducing). Box-verified facts: 18 speed
+1d. **Claim verification**: contactless magnetic drive and backlit touch
+   controls — both **confirmed by the founder**. Box-verified facts: 18 speed
    levels, 3 preset programs, 40–120 ml capacity, hands-free preparation,
    easy-clean design, 6 W low power; included: mixer base, matcha cup,
    power adapter, USB-C cable, user manual; marks FCC, CE, RoHS.
