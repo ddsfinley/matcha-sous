@@ -111,7 +111,7 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 .media-frame img{width:100%}
 .media-frame video{width:100%;display:block}
 .vid-still{display:none}
-.cycle{max-width:420px;margin:clamp(30px,4vh,46px) auto 0}
+.cycle{max-width:470px;margin:clamp(30px,4vh,46px) auto 0}
 .cycle video{width:100%;display:block;border-radius:var(--radius-lg);background:var(--aub-deep);box-shadow:var(--shadow-md)}
 .cycle figcaption{margin-top:14px;text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
 @media (prefers-reduced-motion:reduce){.media-frame video{display:none}.vid-still{display:block}}
