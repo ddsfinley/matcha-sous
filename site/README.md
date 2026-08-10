@@ -81,6 +81,12 @@ the whisk.** House line for the dark mood band: **"The ceremony,
 preserved. The Sous, in service of it."** — ceremony first, the Sous
 second and subordinate; also a candidate for the box interior.
 
+**Layout signature**: homepage sections are numbered in roman (I–VI) with a
+hairline rule above and the headline set left, not centred — `.head--idx`.
+The "easy to lose" section uses `.split` (heading left, numbered items right).
+Centred heads are reserved for the hero and the two full-bleed bands, so the
+page reads as an editorial index rather than a stack of identical blocks.
+
 **Tagline hierarchy** (one voice, three jobs):
 1. **"Behind every great matcha is a Sous."** — the primary line (the hero
    headline itself, footer, OG card, Organization `slogan`). Capital S: *a Sous* is
@@ -125,7 +131,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=10**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=11**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 

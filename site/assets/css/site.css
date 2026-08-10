@@ -162,9 +162,32 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .bg-deep h1,.bg-deep h2,.bg-deep h3{color:var(--bone-bright)}
 .bg-deep .lead,.bg-deep .muted{color:rgba(237,228,216,.68)}
 .bg-deep .eyebrow{color:var(--copper-soft)}
-.head{max-width:640px;margin-bottom:clamp(34px,5vh,58px)}
+/* ---------- editorial section heads ---------- */
+.head{max-width:640px;margin-bottom:clamp(34px,5vh,58px);position:relative}
 .head.center{margin-inline:auto;text-align:center}
 .head p{margin-top:16px}
+/* numbered, rule-topped heads: the page's signature device */
+.head--idx{max-width:none;display:grid;grid-template-columns:auto 1fr;gap:0 clamp(20px,3vw,44px);align-items:start;border-top:1px solid var(--line);padding-top:22px}
+.head--idx .idx{font-family:var(--disp);font-size:clamp(1.1rem,1.6vw,1.45rem);color:var(--copper);line-height:1;padding-top:6px;font-variant-numeric:oldstyle-nums}
+.head--idx .head-body{max-width:44ch}
+.head--idx h2.display{font-size:clamp(2.3rem,5vw,4rem);letter-spacing:-.02em}
+.head--idx .lead{margin-top:14px}
+@media (max-width:640px){
+  .head--idx{grid-template-columns:1fr;gap:10px}
+  .head--idx .idx{padding-top:0}
+}
+/* asymmetric editorial split: heading left, content right */
+.split{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(26px,4vw,72px);align-items:start;border-top:1px solid var(--line);padding-top:26px}
+.split .idx{font-family:var(--disp);font-size:clamp(1.1rem,1.6vw,1.45rem);color:var(--copper);display:block;margin-bottom:14px}
+.split h2.display{font-size:clamp(2.3rem,4.6vw,3.6rem);letter-spacing:-.02em}
+.split .lead{margin-top:16px}
+.split-body{display:grid;gap:clamp(22px,3vh,36px)}
+.split-item{display:grid;grid-template-columns:auto 1fr;gap:0 20px;border-bottom:1px solid var(--line-soft);padding-bottom:clamp(18px,2.4vh,26px)}
+.split-item:last-child{border-bottom:0;padding-bottom:0}
+.split-item b{font-family:var(--disp);font-weight:500;font-size:1.9rem;color:var(--aub);line-height:.9}
+.split-item h3{font-family:var(--disp);font-size:1.35rem;margin-bottom:6px}
+.split-item p{font-size:.95rem;color:var(--stone)}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:26px}}
 
 /* feature cards */
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,32px)}
