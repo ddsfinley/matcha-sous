@@ -116,10 +116,11 @@ second and subordinate; also a candidate for the box interior.
 
 ## Video
 
-`assets/vid/cycle.mp4` (3.6 MB, H.264 only — VP9 encoded larger at this
-bitrate), 26.7 s at 700×1104 — the full mixing
-cycle, re-encoded from the founder's 860×1280 master (the earlier 432×576
-upload is superseded), cropped 3:4, audio stripped. Autoplays muted, inline and looping as Fig. 02 in the gallery. Encoded near the source's native height so the browser downscales rather
+`assets/vid/cycle.mp4` (3.3 MB, H.264 only), 25.9 s at 760×1226 — the full mixing cycle,
+built from the founder's two original 1080×1920 HDR clips (IMG_2071_3/_4):
+tone-mapped HLG→bt709, joined with the concat filter at CFR 30 (the demuxer
+mis-times these variable-frame-rate files), sped 1.25×, cropped to the tall
+gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping as Fig. 02 in the gallery. Encoded near the source's native height so the browser downscales rather
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
