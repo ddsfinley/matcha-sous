@@ -116,10 +116,11 @@ second and subordinate; also a candidate for the box interior.
 
 ## Video
 
-`assets/vid/vortex.mp4` (743 KB) + `.webm` (443 KB), 5.0 s seamless ping-pong
+`assets/vid/vortex.mp4` (287 KB) + `.webm` (218 KB) at 560×746, 5.0 s seamless ping-pong
 loop built from the founder's 1.27 s clip: HLG HDR tone-mapped to SDR bt709,
 0.5× speed, cropped 3:4 into the cup, warm-graded. Autoplays muted and inline
-in the gallery with `assets/img/vortex-poster.webp` as the poster; a still
+in the gallery (tile capped at 340 px wide via `.fig-vid`) with
+`assets/img/vortex-poster.webp` as the poster; a still
 replaces it under `prefers-reduced-motion`. Source clip kept out of the repo —
 re-encode from the original if the crop or grade needs changing.
 
