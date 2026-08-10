@@ -109,6 +109,9 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 .stage{position:relative}
 .media-frame{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--mat);box-shadow:var(--shadow-md)}
 .media-frame img{width:100%}
+.media-frame video{width:100%;display:block}
+.vid-still{display:none}
+@media (prefers-reduced-motion:reduce){.media-frame video{display:none}.vid-still{display:block}}
 .media-tag{position:absolute;bottom:14px;left:14px;background:rgba(26,19,34,.85);color:var(--bone);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px)}
 .badge{position:absolute;z-index:3;bottom:7%;left:-3%;background:#fff;border:1px solid var(--line-soft);color:var(--aub-deep);border-radius:var(--radius-lg);padding:14px 18px;box-shadow:0 30px 70px rgba(26,19,34,.2);display:flex;align-items:center;gap:12px}
 .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 4px rgba(176,113,79,.18);flex:none}

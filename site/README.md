@@ -114,6 +114,15 @@ second and subordinate; also a candidate for the box interior.
 3. Submit `sitemap.xml` in Google Search Console.
 4. Emails `care@` / `wholesale@matchasous.com` must exist (or edit them).
 
+## Video
+
+`assets/vid/vortex.mp4` (743 KB) + `.webm` (443 KB), 5.0 s seamless ping-pong
+loop built from the founder's 1.27 s clip: HLG HDR tone-mapped to SDR bt709,
+0.5× speed, cropped 3:4 into the cup, warm-graded. Autoplays muted and inline
+in the gallery with `assets/img/vortex-poster.webp` as the poster; a still
+replaces it under `prefers-reduced-motion`. Source clip kept out of the repo —
+re-encode from the original if the crop or grade needs changing.
+
 ## Performance notes (budget: Lighthouse mobile 90+, LCP < 2.5 s)
 - Self-hosted woff2 subsets (~15–29 KB each), preloaded per page, `font-display: swap`
 - One small CSS file, no JS on home/FAQ (Q&A uses native `<details>`); ~10 lines of JS on wholesale only
