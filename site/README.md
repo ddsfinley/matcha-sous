@@ -116,22 +116,13 @@ second and subordinate; also a candidate for the box interior.
 
 ## Video
 
-`assets/vid/vortex.mp4` (287 KB) + `.webm` (218 KB) at 560×746, 5.0 s seamless ping-pong
-loop built from the founder's 1.27 s clip: HLG HDR tone-mapped to SDR bt709,
-0.5× speed, cropped 3:4 into the cup, warm-graded. Autoplays muted and inline
-in the gallery (tile capped at 340 px wide via `.fig-vid`) with
-`assets/img/vortex-poster.webp` as the poster. Source clip kept out of the repo —
-re-encode from the original if the crop or grade needs changing.
-
-`assets/vid/cycle.mp4` (2.4 MB, H.264 only — VP9 encoded larger at this
-bitrate, so no WebM twin), 26.7 s at 690×920 — the full mixing
+`assets/vid/cycle.mp4` (1.2 MB, H.264 only — VP9 encoded larger at this
+bitrate), 26.7 s at 520×694 — the full mixing
 cycle, re-encoded from the founder's 860×1280 master (the earlier 432×576
-upload is superseded), cropped 3:4, audio stripped. Sits under the three method
-steps as a click-to-play player (`preload="none"`, so it costs nothing until
-someone presses play). Source is only 432×576, so keep its display width
+upload is superseded), cropped 3:4, audio stripped. Autoplays muted, inline and looping as Fig. 02 in the gallery. Source is only 432×576, so keep its display width
 modest (currently 470 px).
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=8**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=9**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
