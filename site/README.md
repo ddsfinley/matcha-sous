@@ -116,11 +116,12 @@ second and subordinate; also a candidate for the box interior.
 
 ## Video
 
-`assets/vid/cycle.mp4` (1.2 MB, H.264 only — VP9 encoded larger at this
-bitrate), 26.7 s at 520×694 — the full mixing
+`assets/vid/cycle.mp4` (3.6 MB, H.264 only — VP9 encoded larger at this
+bitrate), 26.7 s at 700×1104 — the full mixing
 cycle, re-encoded from the founder's 860×1280 master (the earlier 432×576
-upload is superseded), cropped 3:4, audio stripped. Autoplays muted, inline and looping as Fig. 02 in the gallery. Source is only 432×576, so keep its display width
-modest (currently 470 px).
+upload is superseded), cropped 3:4, audio stripped. Autoplays muted, inline and looping as Fig. 02 in the gallery. Encoded near the source's native height so the browser downscales rather
+than upscales; mild unsharp applied. The source is inherently soft (motion
+blur + phone compression), so do not enlarge the tile further.
 
 **Cache-busting**: stylesheet links carry `?v=N` (currently **v=10**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
