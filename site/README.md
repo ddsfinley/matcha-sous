@@ -124,7 +124,7 @@ in the gallery (tile capped at 340 px wide via `.fig-vid`) with
 replaces it under `prefers-reduced-motion`. Source clip kept out of the repo —
 re-encode from the original if the crop or grade needs changing.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=3**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=4**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
