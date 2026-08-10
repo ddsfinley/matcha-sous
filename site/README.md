@@ -6,8 +6,9 @@ only at small scale. Cormorant Garamond (display) + Jost (utility). Lives in
 `/site`; the legacy storefront at the repo root is untouched.
 
 ## Pages
-- `index.html` — single scrolling product page: hero → why → gallery (figures)
-  → by-hand-vs-Matcha Sous comparison → method → **order area** → engraved spec plate → Q&A
+- `index.html` — single scrolling page: hero → ceremony band → **order area** →
+  spec plate → principles → origin → presets → why → gallery → the chasen &
+  the Sous → daylight band → method → Q&A → invitation → Journal → letter
 - `how-to-use.html` — the full method: weigh, sift, fill, whisk, build (ice/milk), sweeten + care (HowTo schema)
 - `journal/` — SEO article hub + 4 posts (Article schema)
 - `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
