@@ -124,6 +124,10 @@ in the gallery (tile capped at 340 px wide via `.fig-vid`) with
 replaces it under `prefers-reduced-motion`. Source clip kept out of the repo —
 re-encode from the original if the crop or grade needs changing.
 
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=3**).
+GitHub Pages caches CSS aggressively — **bump N on every `site.css`
+change**, or edits will not reach returning visitors.
+
 ## Performance notes (budget: Lighthouse mobile 90+, LCP < 2.5 s)
 - Self-hosted woff2 subsets (~15–29 KB each), preloaded per page, `font-display: swap`
 - One small CSS file, no JS on home/FAQ (Q&A uses native `<details>`); ~10 lines of JS on wholesale only
