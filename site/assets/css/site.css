@@ -110,11 +110,9 @@ h1 em,h2 em{font-style:italic;color:var(--copper)}
 .media-frame{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--mat);box-shadow:var(--shadow-md)}
 .media-frame img{width:100%}
 .media-frame video{width:100%;display:block}
-.vid-still{display:none}
 .cycle{max-width:470px;margin:clamp(30px,4vh,46px) auto 0}
 .cycle video{width:100%;display:block;border-radius:var(--radius-lg);background:var(--aub-deep);box-shadow:var(--shadow-md)}
 .cycle figcaption{margin-top:14px;text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
-@media (prefers-reduced-motion:reduce){.media-frame video{display:none}.vid-still{display:block}}
 .media-tag{position:absolute;bottom:14px;left:14px;background:rgba(26,19,34,.85);color:var(--bone);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px)}
 .badge{position:absolute;z-index:3;bottom:7%;left:-3%;background:#fff;border:1px solid var(--line-soft);color:var(--aub-deep);border-radius:var(--radius-lg);padding:14px 18px;box-shadow:0 30px 70px rgba(26,19,34,.2);display:flex;align-items:center;gap:12px}
 .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 4px rgba(176,113,79,.18);flex:none}
@@ -186,21 +184,14 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .gallery figure{display:flex;flex-direction:column;margin:0}
 .gallery .media-frame{display:block;aspect-ratio:4/3}
 .gallery .media-frame img,.gallery .media-frame video{width:100%;height:100%;object-fit:cover;display:block}
-/* Fig. 02 spans both rows so Fig. 03 stacks under Fig. 01; the portrait video
-   is mounted in its warm mat rather than cropped to fit the tall slot */
-.gallery figure:nth-child(2){grid-row:span 2}
-.gallery figure:nth-child(2) .media-frame{aspect-ratio:auto;flex:1;display:grid;place-items:center;padding:clamp(14px,2vw,26px)}
-.gallery figure:nth-child(2) .media-frame img,
-.gallery figure:nth-child(2) .media-frame video{width:auto;max-width:100%;height:auto;max-height:100%;object-fit:contain;border-radius:2px}
-.gallery figure:nth-child(2) .media-tag{bottom:22px;left:22px}
+/* every tile is the same 4:3 box, so Fig. 03 sits directly beneath Fig. 01;
+   the portrait video is mounted inside its mat rather than cropped */
+.gallery figure:nth-child(2) .media-frame{display:grid;place-items:center;background:var(--mat)}
+.gallery figure:nth-child(2) .media-frame video{width:auto;height:100%;max-width:100%;object-fit:contain;border-radius:2px}
 .gallery figure{margin:0}
 .gallery figcaption{display:flex;justify-content:space-between;gap:12px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);padding-top:12px}
 @media (max-width:640px){
   .gallery{grid-template-columns:1fr}
-  .gallery figure:nth-child(2){grid-row:auto}
-  .gallery figure:nth-child(2) .media-frame{aspect-ratio:3/4;flex:none;padding:0;display:block}
-  .gallery figure:nth-child(2) .media-frame img,
-  .gallery figure:nth-child(2) .media-frame video{width:100%;height:100%;object-fit:cover}
 }
 
 /* compare */

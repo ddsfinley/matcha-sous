@@ -120,8 +120,7 @@ second and subordinate; also a candidate for the box interior.
 loop built from the founder's 1.27 s clip: HLG HDR tone-mapped to SDR bt709,
 0.5× speed, cropped 3:4 into the cup, warm-graded. Autoplays muted and inline
 in the gallery (tile capped at 340 px wide via `.fig-vid`) with
-`assets/img/vortex-poster.webp` as the poster; a still
-replaces it under `prefers-reduced-motion`. Source clip kept out of the repo —
+`assets/img/vortex-poster.webp` as the poster. Source clip kept out of the repo —
 re-encode from the original if the crop or grade needs changing.
 
 `assets/vid/cycle.mp4` (2.4 MB, H.264 only — VP9 encoded larger at this
@@ -132,7 +131,7 @@ steps as a click-to-play player (`preload="none"`, so it costs nothing until
 someone presses play). Source is only 432×576, so keep its display width
 modest (currently 470 px).
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=7**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=8**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
