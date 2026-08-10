@@ -122,7 +122,7 @@ cycle, re-encoded from the founder's 860×1280 master (the earlier 432×576
 upload is superseded), cropped 3:4, audio stripped. Autoplays muted, inline and looping as Fig. 02 in the gallery. Source is only 432×576, so keep its display width
 modest (currently 470 px).
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=9**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=10**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
