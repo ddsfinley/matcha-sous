@@ -186,18 +186,21 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .gallery figure{display:flex;flex-direction:column;margin:0}
 .gallery .media-frame{display:block;aspect-ratio:4/3}
 .gallery .media-frame img,.gallery .media-frame video{width:100%;height:100%;object-fit:cover;display:block}
-/* Fig. 02 spans both rows so Fig. 03 stacks under Fig. 01; the wide case
-   photo is mounted in its warm mat rather than cropped to fit the tall slot */
+/* Fig. 02 spans both rows so Fig. 03 stacks under Fig. 01; the portrait video
+   is mounted in its warm mat rather than cropped to fit the tall slot */
 .gallery figure:nth-child(2){grid-row:span 2}
 .gallery figure:nth-child(2) .media-frame{aspect-ratio:auto;flex:1;display:grid;place-items:center;padding:clamp(14px,2vw,26px)}
-.gallery figure:nth-child(2) .media-frame img{height:auto;max-height:100%;object-fit:contain;border-radius:2px}
+.gallery figure:nth-child(2) .media-frame img,
+.gallery figure:nth-child(2) .media-frame video{width:auto;max-width:100%;height:auto;max-height:100%;object-fit:contain;border-radius:2px}
+.gallery figure:nth-child(2) .media-tag{bottom:22px;left:22px}
 .gallery figure{margin:0}
 .gallery figcaption{display:flex;justify-content:space-between;gap:12px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);padding-top:12px}
 @media (max-width:640px){
   .gallery{grid-template-columns:1fr}
   .gallery figure:nth-child(2){grid-row:auto}
-  .gallery figure:nth-child(2) .media-frame{aspect-ratio:4/3;flex:none;padding:0;display:block}
-  .gallery figure:nth-child(2) .media-frame img{height:100%;object-fit:cover}
+  .gallery figure:nth-child(2) .media-frame{aspect-ratio:3/4;flex:none;padding:0;display:block}
+  .gallery figure:nth-child(2) .media-frame img,
+  .gallery figure:nth-child(2) .media-frame video{width:100%;height:100%;object-fit:cover}
 }
 
 /* compare */

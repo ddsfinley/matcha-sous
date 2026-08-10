@@ -132,7 +132,7 @@ steps as a click-to-play player (`preload="none"`, so it costs nothing until
 someone presses play). Source is only 432×576, so keep its display width
 modest (currently 470 px).
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=6**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=7**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
