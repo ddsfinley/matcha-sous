@@ -6,10 +6,11 @@ only at small scale. Cormorant Garamond (display) + Jost (utility). Lives in
 `/site`; the legacy storefront at the repo root is untouched.
 
 ## Pages
-- `index.html` — editorial-first single page: hero → ceremony band →
-  principles → origin → what's at stake → presets → gallery → daylight band → Journal → method → **order area** → spec plate →
-  Q&A → invitation → letter. Commerce sits about two-thirds down on purpose;
-  the sticky header's Buy button carries purchase intent above it.
+- `index.html` — single scrolling page: hero → ceremony band → **order area**
+  → spec plate → principles → origin → how it works → presets → gallery →
+  daylight band → Journal → method → Q&A → invitation → letter. The ceremony
+  band sits between the hero and the buy box so the page opens on imagery
+  before price.
 - `how-to-use.html` — the full method: weigh, sift, fill, whisk, build (ice/milk), sweeten + care (HowTo schema)
 - `journal/` — SEO article hub + 4 posts (Article schema)
 - `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
