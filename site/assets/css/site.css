@@ -16,7 +16,7 @@
   --bone-page:#f6f4f0; --paper:#fcfbf8; --bone-deep:#efece7;
   --aub:#1a1322; --aub-deep:#140e1b; --aub-ink:#251d30;
   --bone:#ede4d8; --bone-bright:#f6f0e5;
-  --copper:#b0714f; --copper-deep:#96593a; --copper-soft:#d9b49e; --copper-bright:#e2914f;
+  --copper:#b0714f; --copper-deep:#96593a; --copper-soft:#d9b49e; --copper-bright:#cf9268;
   --stone:#6f6862; --mat:#eeeae3;
   --line:rgba(26,19,34,.14); --line-soft:rgba(26,19,34,.07);
   --disp:'Cormorant Garamond',Georgia,serif; --util:Jost,system-ui,sans-serif;
@@ -91,7 +91,7 @@ body{padding-top:var(--announce-h)}
 .hero .eyebrow{color:var(--copper-soft)}
 .hero h1{margin:0 auto 22px;font-size:clamp(2.6rem,5.4vw,4.6rem);color:var(--bone-bright);text-wrap:balance}
 @media (min-width:900px){.hero h1 .l1{white-space:nowrap}}
-.hero h1 em{color:var(--copper-bright);font-weight:600}
+.hero h1 em{color:var(--copper-bright)}
 .hero .lead{margin:0 auto 34px;max-width:52ch;color:rgba(237,228,216,.72)}
 .hero .lead b{color:var(--bone-bright)}
 .hero .cta{justify-content:center}
@@ -169,18 +169,12 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .head.center{margin-inline:auto;text-align:center}
 .head p{margin-top:16px}
 /* numbered, rule-topped heads: the page's signature device */
-.head--idx{max-width:none;display:grid;grid-template-columns:auto 1fr;gap:0 clamp(20px,3vw,44px);align-items:start;border-top:1px solid var(--line);padding-top:22px}
-.head--idx .idx{font-family:var(--disp);font-size:clamp(1.1rem,1.6vw,1.45rem);color:var(--copper);line-height:1;padding-top:6px;font-variant-numeric:oldstyle-nums}
+.head--idx{max-width:none;border-top:1px solid var(--line);padding-top:22px}
 .head--idx .head-body{max-width:44ch}
 .head--idx h2.display{font-size:clamp(2.3rem,5vw,4rem);letter-spacing:-.02em}
 .head--idx .lead{margin-top:14px}
-@media (max-width:640px){
-  .head--idx{grid-template-columns:1fr;gap:10px}
-  .head--idx .idx{padding-top:0}
-}
 /* asymmetric editorial split: heading left, content right */
 .split{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(26px,4vw,72px);align-items:start;border-top:1px solid var(--line);padding-top:26px}
-.split .idx{font-family:var(--disp);font-size:clamp(1.1rem,1.6vw,1.45rem);color:var(--copper);display:block;margin-bottom:14px}
 .split h2.display{font-size:clamp(2.3rem,4.6vw,3.6rem);letter-spacing:-.02em}
 .split .lead{margin-top:16px}
 .split-body{display:grid;gap:clamp(22px,3vh,36px)}
