@@ -39,7 +39,8 @@ aubergine `#1A1322` — the logo background, **exact** — / deep `#140E1B`
 (buttons, footer, announce, CTA band, compare column, `.bg-deep`, numerals,
 feature icons), body text `#251D30`,
 bone `#EDE4D8` (type on aubergine surfaces),
-copper `#B0714F` / deep `#96593A` / soft `#D9B49E` — **small scale only**
+copper `#B0714F` / deep `#96593A` / soft `#D9B49E` / bright `#E2914F`
+(the hero's "Sous." only) — **small scale only**
 (eyebrows, links, heading italics, plate numbers, rules, markers),
 stone `#6F6862` (warm-grey secondary text — deliberately no violet cast),
 mat `#EFE9DF` (photo frames). No pastel purples anywhere: purple exists
@@ -131,7 +132,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=12**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=13**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 

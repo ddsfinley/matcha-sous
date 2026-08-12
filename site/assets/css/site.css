@@ -16,7 +16,7 @@
   --bone-page:#f6f4f0; --paper:#fcfbf8; --bone-deep:#efece7;
   --aub:#1a1322; --aub-deep:#140e1b; --aub-ink:#251d30;
   --bone:#ede4d8; --bone-bright:#f6f0e5;
-  --copper:#b0714f; --copper-deep:#96593a; --copper-soft:#d9b49e;
+  --copper:#b0714f; --copper-deep:#96593a; --copper-soft:#d9b49e; --copper-bright:#e2914f;
   --stone:#6f6862; --mat:#eeeae3;
   --line:rgba(26,19,34,.14); --line-soft:rgba(26,19,34,.07);
   --disp:'Cormorant Garamond',Georgia,serif; --util:Jost,system-ui,sans-serif;
@@ -87,10 +87,11 @@ body{padding-top:var(--announce-h)}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(44% 58% at 80% 92%,rgba(237,228,216,.09),transparent 65%);pointer-events:none}
 .hero::after{content:"";position:absolute;right:-14%;bottom:-46%;width:58vw;max-width:860px;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(237,228,216,.13);pointer-events:none}
 .hero .wrap{position:relative;z-index:1;padding-block:clamp(64px,10vh,120px)}
-.hero .intro-copy{max-width:820px;margin-inline:auto}
+.hero .intro-copy{max-width:1000px;margin-inline:auto}
 .hero .eyebrow{color:var(--copper-soft)}
-.hero h1{margin:0 auto 22px;font-size:clamp(3rem,6.6vw,5.5rem);color:var(--bone-bright)}
-.hero h1 em{color:var(--copper-soft)}
+.hero h1{margin:0 auto 22px;font-size:clamp(2.6rem,5.4vw,4.6rem);color:var(--bone-bright);text-wrap:balance}
+@media (min-width:900px){.hero h1 .l1{white-space:nowrap}}
+.hero h1 em{color:var(--copper-bright);font-weight:600}
 .hero .lead{margin:0 auto 34px;max-width:52ch;color:rgba(237,228,216,.72)}
 .hero .lead b{color:var(--bone-bright)}
 .hero .cta{justify-content:center}
