@@ -214,36 +214,6 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
   .gallery figure:nth-child(2) .media-frame{aspect-ratio:3/4;flex:none}
 }
 
-/* compare */
-.compare{display:grid;grid-template-columns:1.15fr 1fr 1fr;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--paper);color:var(--aub-ink)}
-.compare .ch{padding:24px 22px;border-bottom:1px solid var(--line)}
-.compare .ch:nth-last-child(-n+3){border-bottom:0}
-.compare .col-them{background:var(--bone-deep)}
-#compare{background:var(--bone-page)}
-.compare .col-us{background:var(--aub);color:var(--bone);position:relative}
-.compare .col-us h3,.compare .col-us .name{color:var(--bone-bright)}
-.compare .col-head .label{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-deep)}
-.compare .col-us .label{color:rgba(237,228,216,.82)}
-.compare .col-head .name{font-family:var(--disp);font-size:1.5rem;font-weight:500;color:var(--aub-deep)}
-.compare .col-us .col-head .name{color:var(--bone-bright)}
-.compare .ch.col-us{border-bottom-color:rgba(237,228,216,.3)}
-.compare .ribbon{position:absolute;top:12px;right:12px;background:var(--copper);color:#fff;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
-.compare .row-label{font-weight:400;color:var(--aub-deep)}
-.compare .row-label small{display:block;color:#5b544d;font-size:.85rem}
-.compare .cell{display:flex;gap:10px;align-items:flex-start;font-size:.98rem;font-weight:400}
-.compare .cell svg{width:17px;height:17px;flex:none;margin-top:3px}
-.compare .cell.no{color:#514a44}.compare .cell.no svg{color:var(--copper)}
-.compare .cell.yes{color:var(--bone-bright)}.compare .cell.yes svg{color:var(--copper-soft)}
-.cmp-tag{display:none;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#5b544d;margin-bottom:4px}
-.compare .col-us .cmp-tag{color:rgba(237,228,216,.82)}
-@media (max-width:860px){
-  .compare{grid-template-columns:1fr}
-  .compare .ch{border-bottom:1px solid var(--line) !important}
-  .compare .ch.col-us{border-bottom-color:rgba(237,228,216,.3) !important}
-  .compare .ch.hd-empty{display:none}
-  .cmp-tag{display:block}
-}
-
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,34px)}
 .step{position:relative}

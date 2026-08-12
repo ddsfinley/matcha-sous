@@ -7,8 +7,7 @@ only at small scale. Cormorant Garamond (display) + Jost (utility). Lives in
 
 ## Pages
 - `index.html` — editorial-first single page: hero → ceremony band →
-  principles → origin → what's at stake → presets → gallery → the chasen &
-  the Sous → daylight band → Journal → method → **order area** → spec plate →
+  principles → origin → what's at stake → presets → gallery → daylight band → Journal → method → **order area** → spec plate →
   Q&A → invitation → letter. Commerce sits about two-thirds down on purpose;
   the sticky header's Buy button carries purchase intent above it.
 - `how-to-use.html` — the full method: weigh, sift, fill, whisk, build (ice/milk), sweeten + care (HowTo schema)
@@ -70,10 +69,10 @@ Product schema). Working copy: "Controlled vortex motion mixes matcha and
 water with consistent, hands-free precision. Start the cycle and let your
 sous handle the rest." Never frame the chasen as the slow alternative — the
 sous works beside the tradition. Positioning vs hand whisking: **we respect
-it and do not compete with it** — the Sous is an alternative for volume,
-"for the days that pour more matcha than hand whisking can keep up with."
-Comparisons read as two tools/one craft: same check marker in both columns,
-no scoring visuals, no "easier" badges. Avoid: matcha-leaf/bamboo/whisk/bowl
+it and do not compete with it** — the Sous is an alternative for volume.
+The side-by-side comparison was removed from the homepage; if one returns,
+it reads as two tools/one craft — same marker in both columns, no scoring
+visuals, no "easier" badges. Avoid: matcha-leaf/bamboo/whisk/bowl
 graphics, vortex symbols, MS monograms, badges, promo language, spec-heavy
 front sections. Speed figures (~30 s) are facts for spec contexts only. **Wording rule:
 whisking is ceremony — zen and calm for the matcha community — never
@@ -134,7 +133,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=14**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=15**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
