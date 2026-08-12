@@ -62,7 +62,7 @@ only as the deep aubergine.
 **Voice** (per the packaging design brief): the story is **quiet expertise
 and consistency, never time-saving**. The product is a sous — it handles the
 technical work so the bowl, the pour and the moment stay the user's. Category
-line: **"The Original Hands-Free Matcha Mixer"** (product title, page titles,
+line: **"The Hands-Free Matcha Mixer"** (product title, page titles,
 Product schema). Working copy: "Controlled vortex motion mixes matcha and
 water with consistent, hands-free precision. Start the cycle and let your
 sous handle the rest." Never frame the chasen as the slow alternative — the
@@ -131,7 +131,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=11**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=12**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
