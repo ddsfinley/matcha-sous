@@ -394,3 +394,9 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 /* ---------- FAQ measure ---------- */
 #qa .qa{max-width:760px}
+
+/* showcase video: controls stay available but recede until hover/focus */
+.sc-lead video{background:var(--aub-deep)}
+.sc-lead video::-webkit-media-controls-panel{opacity:0;transition:opacity .3s var(--ease)}
+.sc-lead:hover video::-webkit-media-controls-panel,
+.sc-lead video:focus-within::-webkit-media-controls-panel{opacity:1}
