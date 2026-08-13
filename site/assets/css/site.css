@@ -54,8 +54,15 @@ h1 em,h2 em{font-style:normal;color:var(--copper)}
 .feature h3,.step .num,.step h3,.buybox h2,.price b,.article h2,.jlist .jrow h2,
 .demo-step figcaption b,.demo-step figcaption strong,.preset .pvol,.preset h3,
 .use b{letter-spacing:0}
-/* Light type on photography optically thins — hairline it back. */
-.mood-line,.cta-band h2{-webkit-text-stroke-width:.008em}
+/* Poiret is a light cut, so the display face carries a hairline stroke to
+   give it the wordmark's presence. Ceiling is ~.017em — past that the
+   thick/thin contrast flattens and it stops reading as the mark's face.
+   Light type on photography thins optically, so those surfaces take more. */
+.display,.mood-line,.moment .mnum,.moment h3,.jhome h3,.split-item b,
+.split-item h3,.feature h3,.step .num,.step h3,.buybox h2,.price b,.article h2,
+.jlist .jrow h2,.demo-step figcaption b,.demo-step figcaption strong,
+.preset .pvol,.preset h3,.use b{-webkit-text-stroke-width:.013em}
+.mood-line,.cta-band h2{-webkit-text-stroke-width:.016em}
 .eyebrow{font-size:.72rem;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--copper);display:inline-block;margin-bottom:18px}
 .lead{font-size:clamp(1.02rem,1.5vw,1.25rem);color:var(--stone)}
 .lead b{color:var(--aub-ink);font-weight:400}
@@ -119,7 +126,7 @@ body{padding-top:var(--announce-h)}
 /* Poiret is a light cut, and light type on a dark ground optically thins
    further. A hairline stroke restores the wordmark's presence without
    flattening the thick/thin contrast that makes it the wordmark's face. */
-.hero h1.hero-line{text-align:left;margin:0 0 clamp(14px,2vh,24px);font-size:clamp(2.4rem,4.5vw,4.1rem);font-weight:400;line-height:1.08;letter-spacing:.004em;color:var(--bone-bright);text-shadow:0 2px 30px rgba(20,14,27,.5);-webkit-text-stroke-width:.009em}
+.hero h1.hero-line{text-align:left;margin:0 0 clamp(14px,2vh,24px);font-size:clamp(2.4rem,4.5vw,4.1rem);font-weight:400;line-height:1.08;letter-spacing:.004em;color:var(--bone-bright);text-shadow:0 2px 30px rgba(20,14,27,.5);-webkit-text-stroke-width:.016em}
 @media (min-width:900px){.hero h1 .l1{white-space:nowrap}}
 .hero h1 em{color:var(--copper-bright)}
 .hero .lead{margin:0 0 30px;font-size:clamp(1.05rem,1.4vw,1.28rem);color:rgba(237,228,216,.82);text-shadow:0 1px 20px rgba(20,14,27,.6)}

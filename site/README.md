@@ -110,10 +110,13 @@ Three rules follow from Poiret being a light display cut:
    copper, which is also how the wordmark sets SOUS. Italic pull quotes
    (`.founder blockquote`, `.story .pull`, `.buybox .no`, `.plate .no`) use
    `--quote`, the one Cormorant Garamond italic file kept for the purpose.
-3. **Hairline the light-on-dark type.** Light type optically thins over
-   photography, so the hero statement, `.mood-line` and `.cta-band h2` carry
-   `-webkit-text-stroke-width:~.008em` — enough to restore presence, not
-   enough to flatten the thick/thin contrast that makes it the mark's face.
+3. **Hairline stroke on the display face.** Poiret is a light cut, so every
+   `--disp` selector carries `-webkit-text-stroke-width:.013em`, and the
+   light-on-dark surfaces that thin optically over photography — the hero
+   statement, `.mood-line`, `.cta-band h2` — carry `.016em`. **Ceiling is
+   ~.017em**: past that the thick/thin contrast flattens and it stops
+   reading as the mark's face. Ladder the values in a browser before
+   changing them.
 
 **Layout signature**: homepage section heads sit left under a hairline rule
 (`.head--idx`) — no numerals. The "how it works" section uses `.split`
@@ -166,7 +169,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=24**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=25**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
