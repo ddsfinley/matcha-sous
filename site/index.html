@@ -26,8 +26,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/photo-vortex.webp" as="image">
-<link rel="stylesheet" href="assets/css/site.css?v=22">
+<link rel="preload" href="assets/img/hero-bleed.webp" as="image" media="(min-width:761px)">
+<link rel="preload" href="assets/img/hero-bleed-sm.webp" as="image" media="(max-width:760px)">
+<link rel="stylesheet" href="assets/css/site.css?v=23">
 
 <script type="application/ld+json">
 {
@@ -101,19 +102,16 @@
 <main>
   <!-- ============ 1 · HERO — product first ============ -->
   <section class="hero" aria-label="Matcha Sous">
-    <div class="wrap">
+    <picture class="hero-media">
+      <source media="(max-width:760px)" srcset="assets/img/hero-bleed-sm.webp" width="1000" height="1300">
+      <img src="assets/img/hero-bleed.webp" alt="Matcha turning in a vivid green vortex inside the Matcha Sous cup" width="2400" height="1200" fetchpriority="high">
+    </picture>
+    <div class="wrap hero-inner">
       <h1 class="display hero-line"><span class="l1">Behind every great matcha</span><br>is a <em>Sous.</em></h1>
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="lead">Smooth, consistent matcha at the press of a button.</p>
-        <div class="cta">
-          <a class="btn btn-gold btn-lg" href="#order">Buy Matcha Sous</a>
-        </div>
+      <p class="lead">Smooth, consistent matcha at the press of a button.</p>
+      <div class="cta">
+        <a class="btn btn-gold btn-lg" href="#order">Buy Matcha Sous</a>
       </div>
-      <figure class="hero-shot">
-        <img src="assets/img/photo-vortex.webp" alt="Matcha Sous mixing: a vivid green vortex turning in the stainless cup" width="1050" height="1400" fetchpriority="high">
-      </figure>
-    </div>
     </div>
   </section>
 

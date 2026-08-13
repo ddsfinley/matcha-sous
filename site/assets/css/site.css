@@ -82,31 +82,43 @@ body{padding-top:var(--announce-h)}
 .textlink{display:inline-flex;align-items:center;gap:.5em;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);border-bottom:1px solid transparent;padding-bottom:2px;transition:all .4s var(--ease)}
 .textlink:hover{border-color:var(--copper)}
 
-/* ---------- hero (the logo's world: dark, cinematic) ---------- */
-.hero{position:relative;overflow:hidden;background:radial-gradient(120% 130% at 50% -20%,#2b2138 0%,var(--aub) 55%,var(--aub-deep) 100%);text-align:center;color:var(--bone)}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(44% 58% at 80% 92%,rgba(237,228,216,.09),transparent 65%);pointer-events:none}
-.hero::after{content:"";position:absolute;right:-14%;bottom:-46%;width:58vw;max-width:860px;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(237,228,216,.13);pointer-events:none}
-.hero .wrap{position:relative;z-index:1;padding-block:clamp(44px,6.5vh,78px)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:center;text-align:left}
-.hero-copy{max-width:40ch;min-width:0;align-self:start}
-.hero-grid{align-items:center}
+/* ---------- hero (full bleed: the type lives inside the photograph) ---------
+   The photograph is graded toward the brand aubergine and the scrims are that
+   same aubergine, so there is no seam between image and page — the reading
+   field is carved out of the picture rather than laid on top of it. */
+.hero{position:relative;overflow:hidden;padding:0;color:var(--bone);
+  background:radial-gradient(120% 130% at 50% -20%,#2b2138 0%,var(--aub) 55%,var(--aub-deep) 100%);
+  min-height:clamp(500px,80vh,760px);display:flex;align-items:center}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:58% 50%;display:block}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(20,14,27,.97) 0%,rgba(20,14,27,.9) 22%,rgba(20,14,27,.66) 40%,rgba(20,14,27,.24) 62%,rgba(20,14,27,0) 82%),
+    linear-gradient(270deg,rgba(20,14,27,.5) 0%,rgba(20,14,27,0) 14%),
+    linear-gradient(180deg,rgba(20,14,27,.42) 0%,rgba(20,14,27,0) 26%),
+    linear-gradient(0deg,rgba(20,14,27,.5) 0%,rgba(20,14,27,0) 22%)}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(56px,9vh,110px)}
+.hero-inner{text-align:left;max-width:var(--w);width:100%}
+.hero-inner>*{max-width:min(660px,62%)}
 .hero .descriptor{font-size:clamp(.86rem,1.2vw,1rem);letter-spacing:.14em;text-transform:uppercase;color:var(--copper-soft);margin-bottom:16px}
-.hero-shot{margin:0;aspect-ratio:1/1;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45)}
-.hero-shot img{width:100%;height:100%;object-fit:cover;display:block}
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;text-align:left;gap:26px}
-  .hero-copy{max-width:none}
-  .hero-shot{order:2;max-width:340px;margin-inline:auto}
-  .hero-copy{order:1}
-}
 .hero .eyebrow{color:var(--copper-soft)}
-.hero h1.hero-line{text-align:left;margin:0 0 clamp(12px,1.6vh,20px);font-size:clamp(2.6rem,7.2vw,5.8rem);font-weight:600;line-height:1.02;letter-spacing:-.025em;color:var(--bone-bright);max-width:none;text-wrap:balance}
-@media (min-width:760px){.hero h1 .l1{white-space:nowrap}}
+.hero h1.hero-line{text-align:left;margin:0 0 clamp(14px,2vh,24px);font-size:clamp(2.5rem,4.8vw,4.4rem);font-weight:600;line-height:1.03;letter-spacing:-.025em;color:var(--bone-bright);text-shadow:0 2px 30px rgba(20,14,27,.5)}
+@media (min-width:900px){.hero h1 .l1{white-space:nowrap}}
 .hero h1 em{color:var(--copper-bright)}
-.hero .lead{margin:0 0 26px;max-width:44ch;font-size:clamp(1.05rem,1.5vw,1.3rem);color:rgba(237,228,216,.72)}
+.hero .lead{margin:0 0 30px;font-size:clamp(1.05rem,1.4vw,1.28rem);color:rgba(237,228,216,.82);text-shadow:0 1px 20px rgba(20,14,27,.6)}
 .hero .lead b{color:var(--bone-bright)}
 .hero .cta{justify-content:flex-start}
-@media (max-width:900px){.hero .cta{justify-content:flex-start}}
+@media (max-width:760px){
+  /* Portrait art direction: type on the calm top third, vortex below it. */
+  .hero{min-height:clamp(560px,86vh,820px);align-items:flex-start}
+  .hero-media img{object-position:50% 62%}
+  .hero::before{background:
+    linear-gradient(180deg,var(--aub-deep) 0%,rgba(20,14,27,.93) 30%,rgba(20,14,27,.6) 48%,rgba(20,14,27,.2) 66%,rgba(20,14,27,.35) 100%)}
+  .hero-inner>*{max-width:none}
+  /* Break as "Behind every / great matcha / is a Sous." — the measure sets
+     the rag, so the statement can stay large. */
+  .hero h1.hero-line{font-size:clamp(2.4rem,10.6vw,3.8rem);max-width:6em}
+}
 .hero .btn-gold{background:var(--bone);color:var(--aub-deep)}
 .hero .btn-gold:hover{background:var(--bone-bright);color:var(--aub-deep)}
 .hero .btn-outline{color:var(--bone);border-color:rgba(237,228,216,.45)}

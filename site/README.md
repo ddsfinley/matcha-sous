@@ -7,7 +7,7 @@ only at small scale. Cormorant Garamond (display) + Jost (utility). Lives in
 
 ## Pages
 - `index.html` — journey-ordered single page (desire → understanding →
-  demonstration → differentiation → credibility → purchase): product-first
+  demonstration → differentiation → credibility → purchase): full-bleed
   hero → Fill·Press·Pour → product showcase → how it works → presets →
   origin → ceremony band + use cases → **purchase** → spec plate → FAQ →
   Journal → final CTA → letter.
@@ -84,10 +84,21 @@ the whisk.** House line for the dark mood band: **"The ceremony,
 preserved. The Sous, in service of it."** — ceremony first, the Sous
 second and subordinate; also a candidate for the box interior.
 
+**Hero**: full bleed — the type lives *inside* the photograph, no card and no
+frame. `assets/img/hero-bleed.webp` (2400×1200, landscape) and
+`hero-bleed-sm.webp` (1000×1300, portrait, art-directed via `<picture>` under
+760px) are graded from `action-01-vortex.jpg` and blended 14% toward the
+brand aubergine, so the stainless and the counter read as page ground. The
+reading field is then carved out with CSS scrims in that *same* aubergine —
+which is why there is no seam between image and page. Rebuild with
+`tools/hero_bleed.py` (point `UP` at the founder’s original uploads). Keep the photo bright: the scrims do the
+darkening, not the file. Both variants are preloaded behind matching `media`
+queries — the hero is the LCP element.
+
 **Layout signature**: homepage section heads sit left under a hairline rule
 (`.head--idx`) — no numerals. The "how it works" section uses `.split`
 (heading left, numbered items right).
-Centred heads are reserved for the hero and the two full-bleed bands, so the
+The hero and the two full-bleed bands break that rhythm, so the
 page reads as an editorial index rather than a stack of identical blocks.
 
 **Tagline hierarchy** (one voice, three jobs):
@@ -135,7 +146,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=22**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=23**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
