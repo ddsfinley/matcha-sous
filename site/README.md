@@ -6,11 +6,11 @@ only at small scale. Cormorant Garamond (display) + Jost (utility). Lives in
 `/site`; the legacy storefront at the repo root is untouched.
 
 ## Pages
-- `index.html` — single scrolling page: hero → ceremony band → **order area**
-  → spec plate → principles → origin → how it works → presets → gallery →
-  daylight band → Journal → method → Q&A → invitation → letter. The ceremony
-  band sits between the hero and the buy box so the page opens on imagery
-  before price.
+- `index.html` — journey-ordered single page (desire → understanding →
+  demonstration → differentiation → credibility → purchase): product-first
+  hero → Fill·Press·Pour → product showcase → how it works → presets →
+  origin → ceremony band + use cases → **purchase** → spec plate → FAQ →
+  Journal → final CTA → letter.
 - `how-to-use.html` — the full method: weigh, sift, fill, whisk, build (ice/milk), sweeten + care (HowTo schema)
 - `journal/` — SEO article hub + 4 posts (Article schema)
 - `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
@@ -134,7 +134,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=15**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=16**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 

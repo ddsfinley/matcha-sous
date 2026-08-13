@@ -26,8 +26,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/mood-vortex.webp" as="image">
-<link rel="stylesheet" href="assets/css/site.css?v=15">
+<link rel="preload" href="assets/img/photo-vortex.webp" as="image">
+<link rel="stylesheet" href="assets/css/site.css?v=16">
 
 <script type="application/ld+json">
 {
@@ -84,9 +84,8 @@
       <img src="assets/img/wordmark-ink.png" alt="" width="125" height="44">
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="#gallery">Gallery</a>
-      
-      <a href="how-to-use.html">How to use</a>
+      <a href="#order">Shop</a>
+      <a href="#how">How it works</a>
       <a href="about.html">Our story</a>
       <a href="journal/index.html">Journal</a>
       <a href="faq.html">FAQ</a>
@@ -96,104 +95,85 @@
   </div>
 </header>
 <nav class="subnav" aria-label="Sections">
-  <a href="#order">Order</a><a href="#gallery">Gallery</a><a href="#qa">Q&amp;A</a><a href="how-to-use.html">How to use</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="faq.html">FAQ</a><a href="wholesale.html">Wholesale</a>
+  <a href="#order">Shop</a><a href="#how">How it works</a><a href="#steps">Fill · Press · Pour</a><a href="#qa">FAQ</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="wholesale.html">Wholesale</a>
 </nav>
 
 <main>
-  <!-- ============ HERO ============ -->
-  <section class="hero" aria-label="Introduction">
-    <div class="wrap">
-      <div class="intro-copy">
+  <!-- ============ 1 · HERO — product first ============ -->
+  <section class="hero" aria-label="Matcha Sous">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
         <h1 class="display"><span class="l1">Behind every great matcha</span><br>is a <em>Sous.</em></h1>
-        <p class="lead">Begin the ritual — your Sous keeps the rhythm.</p>
+        <p class="descriptor">The Original Hands-Free Matcha Mixer.</p>
+        <p class="lead">Smooth, consistent matcha at the press of a button.</p>
+        <div class="cta">
+          <a class="btn btn-gold btn-lg" href="#order">Buy Matcha Sous</a>
+          <a class="btn btn-outline btn-lg" href="#steps">See how it works</a>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ MOOD ============ -->
-  <section class="mood" id="ritual" aria-label="The ritual">
-    <img src="assets/img/mood-vortex.webp" alt="Matcha whisking in the Matcha Sous vessel, the vortex seen from above" width="1400" height="786" fetchpriority="high">
-    <div class="mood-inner">
-      <p class="mood-line">The ceremony, preserved.<br><em>The Sous, in service of it.</em></p>
-    </div>
-  </section>
-
-  <!-- ============ ORDER ============ -->
-  <section id="order" class="bg-paper" aria-label="Place your order">
-    <div class="wrap order">
-      <figure class="stage">
-        <span class="media-frame">
-          <img src="assets/img/photo-case.webp" alt="Matcha Sous presentation case, ready to ship" width="1320" height="667" fetchpriority="high">
-          <span class="media-tag">Ships in the case</span>
-        </span>
+      <figure class="hero-shot">
+        <img src="assets/img/photo-vortex.webp" alt="Matcha Sous mixing: a vivid green vortex turning in the stainless cup" width="1050" height="1400" fetchpriority="high">
       </figure>
-      <div class="buybox">
-        <h2>Matcha Sous</h2>
-        <div class="price"><b>$150</b><span>free shipping</span></div>
-        <ul class="inc">
-          <li>Mixer base <span>backlit controls</span></li>
-          <li>Matcha cup <span>stainless · 40–120 ml</span></li>
-          <li>Power adapter <span>USB-C</span></li>
-          <li>USB-C cable</li>
-          <li>User manual</li>
-        </ul>
-        <!-- TODO: replace with your hosted checkout URL -->
-        <a class="btn btn-primary btn-lg btn-block" href="https://checkout.matchasous.com/matcha-sous">Buy now</a>
-        <div class="assure">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> Free shipping, dispatched in 1–2 business days</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v9l5 3"/><circle cx="12" cy="12" r="9"/></svg> 30-day returns — if it’s not for you, send it back</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> Backed by a 1-year warranty</span>
+    </div>
+  </section>
+
+  <!-- ============ 2 · DEMONSTRATION — fill. press. pour. ============ -->
+  <section id="steps" class="bg-paper" aria-label="How to use it">
+    <div class="wrap">
+      <div class="head head--idx"><div class="head-body">
+        <span class="eyebrow">Three moves</span>
+        <h2 class="display">Fill. Press. <em>Pour.</em></h2>
+      </div></div>
+      <div class="demo">
+        <figure class="demo-step">
+          <span class="media-frame"><img src="assets/img/photo-lines.webp" alt="Matcha and water filled to the etched line inside the stainless cup" width="1050" height="1400" loading="lazy"></span>
+          <figcaption><b>01</b><span><strong>Fill</strong>Matcha and water to the line.</span></figcaption>
+        </figure>
+        <figure class="demo-step">
+          <span class="media-frame"><img src="assets/img/photo-profile.webp" alt="The backlit controls on the Matcha Sous base" width="750" height="1000" loading="lazy"></span>
+          <figcaption><b>02</b><span><strong>Press</strong>Choose your preset.</span></figcaption>
+        </figure>
+        <figure class="demo-step">
+          <span class="media-frame"><img src="assets/img/photo-spout.webp" alt="The drawn pour spout on the stainless cup" width="1200" height="800" loading="lazy"></span>
+          <figcaption><b>03</b><span><strong>Pour</strong>Sous stops itself. You pour.</span></figcaption>
+        </figure>
+      </div>
+      <p class="demo-note">About thirty seconds, hands-free. <a class="textlink" href="how-to-use.html">The full method &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ============ 3 · SHOW THE PRODUCT ============ -->
+  <section id="gallery" aria-label="The product">
+    <div class="wrap">
+      <div class="showcase">
+        <figure class="sc-lead">
+          <span class="media-frame">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/img/cycle-poster.webp" width="760" height="1226" aria-label="A full mixing cycle in the Matcha Sous cup, seen from above">
+              <source src="assets/vid/cycle.mp4" type="video/mp4">
+            </video>
+            <span class="media-tag">One full cycle</span>
+          </span>
+        </figure>
+        <div class="sc-side">
+          <figure>
+            <span class="media-frame"><img src="assets/img/photo-profile.webp" alt="Matcha Sous on its powered base, stainless cup seated" width="750" height="1000" loading="lazy"></span>
+            <figcaption>Base &amp; cup · matte black, stainless</figcaption>
+          </figure>
+          <figure>
+            <span class="media-frame"><img src="assets/img/photo-lines.webp" alt="Etched 40, 80 and 120 ml guides above the whisk disc" width="1050" height="1400" loading="lazy"></span>
+            <figcaption>Etched 40 · 80 · 120&nbsp;ml</figcaption>
+          </figure>
+          <figure>
+            <span class="media-frame"><img src="assets/img/photo-kit.webp" alt="Everything included: mixer base, matcha cup, power adapter, USB-C cable and manual" width="1200" height="1000" loading="lazy"></span>
+            <figcaption>Everything included</figcaption>
+          </figure>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- ============ SPEC PLATE ============ -->
-  <section class="tight" id="specs" aria-label="Specifications">
-    <div class="wrap">
-      <div class="plate">
-        <span class="no">Matcha Sous</span>
-        <span><b>18</b> speeds</span>
-        <span><b>3</b> presets</span>
-        <span><b>40–120</b> ml</span>
-        <span>Vortex whisk</span>
-        <span>Food-grade stainless</span>
-        <span><b>USB-C</b></span>
-        <span>~<b>30</b> s / bowl</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TRUST ============ -->
-  <div class="trust">
-    <div class="wrap row">
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10c3-2.5 6 2.5 9 0s6 2.5 9 0M3 15c3-2.5 6 2.5 9 0s6 2.5 9 0"/></svg> Quiet expertise</span>
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="7.5"/></svg> Consistent by design</span>
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> Built to keep</span>
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4v3M4.5 11l2 2M19.5 11l-2 2M5 18a7 7 0 0 1 14 0M3 18h18"/></svg> Modern ritual</span>
-    </div>
-  </div>
-
-  <!-- ============ ORIGIN (one line, full story on /about) ============ -->
-  <section class="tight" aria-label="Where it began">
-    <div class="wrap order">
-      <div class="story">
-        <h2 class="display">Made for <em>your counter.</em></h2>
-        <p style="margin-top:16px">A hundred bowls a shift taught us how rarely two taste the same. So we built the one that does.</p>
-        <p style="margin-top:18px"><a class="textlink" href="about.html">Our story &rarr;</a></p>
-      </div>
-      <figure class="stage">
-        <span class="media-frame">
-          <img src="assets/img/photo-spout.webp" alt="The drawn pour spout and etched guides inside the stainless cup" width="1200" height="800" loading="lazy">
-          <span class="media-tag">Drawn spout · seamless wall</span>
-        </span>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ============ WHAT'S AT STAKE ============ -->
-  <section aria-label="How it works">
+  <!-- ============ 4 · HOW IT WORKS ============ -->
+  <section id="how" aria-label="How it works">
     <div class="wrap">
       <div class="split">
         <div>
@@ -202,174 +182,187 @@
           <p class="lead">Shaded for weeks, picked by hand, ground by stone. The last thirty seconds deserve the same care.</p>
         </div>
         <div class="split-body">
-          <div class="split-item"><b>01</b><div><h3>A vortex, not a blade</h3><p>A magnet turns a small disc beneath the cup. Nothing else ever touches the tea — no gears, no seals, nothing to wear out.</p></div></div>
-          <div class="split-item"><b>02</b><div><h3>The same agitation, every time</h3><p>Eighteen calibrated speeds hold the fast, shallow motion that builds microfoam. It never drifts with the morning.</p></div></div>
-          <div class="split-item"><b>03</b><div><h3>It ends on its own</h3><p>The timer closes the cycle at about thirty seconds. Walk away; come back to standing foam.</p></div></div>
-          <p class="muted" style="font-size:.95rem">Sift your matcha, keep the water near 80°C — the rest is handled.</p>
+          <div class="split-item"><b>01</b><div><h3>A vortex, not a blade</h3><p>A magnet turns the mixing disc beneath the cup. Nothing else touches the tea.</p></div></div>
+          <div class="split-item"><b>02</b><div><h3>The same agitation, every time</h3><p>Calibrated speeds hold the fast, shallow motion that builds microfoam.</p></div></div>
+          <div class="split-item"><b>03</b><div><h3>It ends on its own</h3><p>Press it and step away. Sous completes the cycle and stops.</p></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PRESETS ============ -->
+  <!-- ============ 5 · PRESETS ============ -->
   <section class="bg-paper" aria-label="The presets">
     <div class="wrap">
       <div class="head head--idx"><div class="head-body">
-        <span class="eyebrow">Presets I · II · III</span>
-        <h2 class="display">Three ways to <em>begin.</em></h2>
-        <p class="lead">Fill to a line — <b>40, 80, 120&nbsp;ml</b> — and press. Eighteen speeds sit behind the three.</p>
+        <span class="eyebrow">Three presets · eighteen speeds</span>
+        <h2 class="display">Repeatable control.</h2>
       </div></div>
-      <div class="moments">
-        <div class="moment">
-          <span class="mnum">I</span>
-          <h3>The gentle fold</h3>
-          <p>Thick koicha. Or honey folded in, without the foam.</p>
+      <div class="presets">
+        <div class="preset">
+          <span class="pvol">40<i>ml</i></span>
+          <h3>I · Thick &amp; slow</h3>
+          <p>Koicha-style tea, or folding syrup into a finished bowl.</p>
         </div>
-        <div class="moment dusk">
-          <span class="mnum">II</span>
-          <h3>The everyday bowl</h3>
-          <p>Usucha at full froth. Most mornings, this one.</p>
+        <div class="preset feature">
+          <span class="pvol">80<i>ml</i></span>
+          <h3>II · The everyday bowl</h3>
+          <p>Usucha at full froth. The one you'll press most mornings.</p>
         </div>
-        <div class="moment">
-          <span class="mnum">III</span>
-          <h3>The latte base</h3>
-          <p>A concentrate that stands up to milk and ice.</p>
+        <div class="preset">
+          <span class="pvol">120<i>ml</i></span>
+          <h3>III · Latte base</h3>
+          <p>A concentrate dense enough to stand up to milk and ice.</p>
         </div>
       </div>
-      <p style="margin-top:34px;text-align:center"><a class="textlink" href="how-to-use.html">Full method &amp; recipes &rarr;</a></p>
+      <p class="demo-note">Or dial any of eighteen speeds by hand.</p>
     </div>
   </section>
 
-  <!-- ============ GALLERY ============ -->
-  <section id="gallery" class="bg-paper" aria-label="Product gallery">
-    <div class="wrap">
-      <div class="gallery">
-        <!-- Awaiting new stills: whole machine on a counter (three-quarter),
-             controls lit, a pour in progress, a finished drink. 1050×1400 WebP. -->
-        <figure>
-          <span class="media-frame">
-            <img src="assets/img/photo-case.webp" alt="The Matcha Sous presentation case in deep olive with the gold spiral mark" width="1320" height="667" loading="lazy">
-            <span class="media-tag">The case</span>
-          </span>
-          <figcaption><span>Fig. 01</span><span>Presentation case</span></figcaption>
-        </figure>
-        <figure>
-          <span class="media-frame">
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/img/cycle-poster.webp" width="760" height="1226" aria-label="A full mixing cycle in the Matcha Sous cup, seen from above">
-              <source src="assets/vid/cycle.mp4" type="video/mp4">
-            </video>
-            <span class="media-tag">Mid-whisk · Preset II</span>
-          </span>
-          <figcaption><span>Fig. 02</span><span>One full cycle</span></figcaption>
-        </figure>
-        <figure>
-          <span class="media-frame">
-            <img src="assets/img/photo-kit.webp" alt="What ships with Matcha Sous: mixer base, matcha cup, power adapter, USB-C cable and user manual" width="1200" height="1000" loading="lazy">
-            <span class="media-tag">Full contents</span>
-          </span>
-          <figcaption><span>Fig. 03</span><span>Base · cup · adapter · cable · manual</span></figcaption>
-        </figure>
+  <!-- ============ 6 · ORIGIN ============ -->
+  <section class="tight" aria-label="Where it began">
+    <div class="wrap order">
+      <div class="story">
+        <span class="eyebrow">Our story</span>
+        <h2 class="display">Born behind a café bar. <em>Made for your counter.</em></h2>
+        <p style="margin-top:16px">A hundred bowls a shift taught us how rarely two taste the same. So we built the one that does — then refined it until it belonged at home.</p>
+        <p style="margin-top:18px"><a class="textlink" href="about.html">Our story &rarr;</a></p>
       </div>
+      <figure class="stage">
+        <span class="media-frame">
+          <img src="assets/img/mood-counter.webp" alt="Matcha Sous on a kitchen counter in morning light" width="1400" height="873" loading="lazy">
+        </span>
+      </figure>
     </div>
   </section>
 
-  <!-- ============ MOOD LIGHT ============ -->
-  <!-- PLACEHOLDER IMAGE: mood-counter.webp is a regraded product shot standing in
-       for real lifestyle photography. Replace with a home-counter scene — hands
-       pouring, a cup in morning light, the machine lived-with rather than posed.
-       Export 1400x786 WebP (16:9), warm/high-key so bone text stays readable over
-       the overlay, and update the alt text. Revisit the headline with the new shot. -->
-  <section class="mood mood--light" aria-label="At home">
-    <img src="assets/img/mood-counter.webp" alt="Matcha Sous on the counter in soft morning light" width="1400" height="873" loading="lazy">
+  <!-- ============ 7 · USE CASES ============ -->
+  <section class="mood" aria-label="What you can make">
+    <img src="assets/img/mood-vortex.webp" alt="Matcha mid-whisk in the Matcha Sous cup" width="1400" height="786" loading="lazy">
     <div class="mood-inner">
-      <p class="mood-line">The best cup of your day, <em>made at home.</em></p>
+      <p class="mood-line">The ceremony, preserved.<br><em>The Sous, in service of it.</em></p>
     </div>
   </section>
 
-  <!-- ============ JOURNAL ============ -->
-  <section aria-label="From the Journal">
+  <section aria-label="Four ways to drink it">
     <div class="wrap">
-      <div class="head">
+      <div class="head head--idx"><div class="head-body">
+        <span class="eyebrow">Four ways</span>
+        <h2 class="display">What you'll make.</h2>
+      </div></div>
+      <div class="uses">
+        <div class="use"><b>Straight</b><p>2&nbsp;g, 80&nbsp;ml at 80°C, Preset II. Fine standing foam.</p></div>
+        <div class="use"><b>Hot latte</b><p>3&nbsp;g on Preset III, then steamed milk over the top.</p></div>
+        <div class="use"><b>Iced</b><p>A 40&nbsp;ml concentrate poured over a full glass of ice.</p></div>
+        <div class="use"><b>Concentrate</b><p>Make it ahead. It keeps in the fridge through the week.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8 · PURCHASE ============ -->
+  <section id="order" class="bg-paper" aria-label="Buy Matcha Sous">
+    <div class="wrap order">
+      <figure class="stage">
+        <span class="media-frame">
+          <img src="assets/img/photo-profile.webp" alt="Matcha Sous, matte black base with stainless cup" width="750" height="1000" loading="lazy">
+        </span>
+        <span class="buy-thumb"><img src="assets/img/photo-case.webp" alt="The Matcha Sous presentation case" width="1320" height="667" loading="lazy"></span>
+      </figure>
+      <div class="buybox">
+        <h2>Matcha Sous</h2>
+        <p class="variant">First Edition · Matte Black / Stainless</p>
+        <div class="price"><b>$150</b><span>free shipping</span></div>
+        <ul class="inc">
+          <li>Matcha Sous mixer base <span>backlit controls</span></li>
+          <li>Stainless matcha cup <span>40–120 ml</span></li>
+          <li>Power adapter <span>USB-C</span></li>
+          <li>USB-C cable</li>
+          <li>User manual</li>
+        </ul>
+        <!-- TODO: replace with your hosted checkout URL -->
+        <a class="btn btn-primary btn-lg btn-block" href="https://checkout.matchasous.com/matcha-sous">Buy now</a>
+        <div class="assure">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> Free shipping, dispatched in 1–2 business days</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v9l5 3"/><circle cx="12" cy="12" r="9"/></svg> 30-day returns</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> 1-year warranty</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9 · SPEC PLATE ============ -->
+  <section class="tight" id="specs" aria-label="Specifications">
+    <div class="wrap">
+      <div class="plate">
+        <span><b>18</b> speeds</span>
+        <span><b>3</b> presets</span>
+        <span><b>40–120</b> ml</span>
+        <span><b>6 W</b> low power</span>
+        <span>Food-grade <b>stainless</b></span>
+        <span><b>USB-C</b></span>
+        <span><b>~30 s</b> / bowl</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 · FAQ ============ -->
+  <section id="qa" aria-label="Questions">
+    <div class="wrap">
+      <div class="head head--idx"><div class="head-body">
+        <span class="eyebrow">Before you buy</span>
+        <h2 class="display">Questions, answered.</h2>
+      </div></div>
+      <div class="qa">
+        <details><summary>How is Sous different from an electric frother?</summary><p class="a">A frother spins a whisk head through the liquid on a shaft. Sous turns a disc magnetically from beneath a sealed stainless cup — the vortex mixes from the bottom up, at a calibrated speed, for a set time. Nothing you hold, nothing that drifts.</p></details>
+        <details><summary>Do I need to sift my matcha?</summary><p class="a">Sifting always helps — it breaks the clumps pressing forms in the tin. Sous suspends the powder either way; sifted matcha simply gets there faster and finishes smoother.</p></details>
+        <details><summary>Can I use any matcha?</summary><p class="a">Yes. Ceremonial or culinary, any origin. Fill water to an etched 40, 80 or 120&nbsp;ml guide and choose the preset that suits the drink.</p></details>
+        <details><summary>Can it make hot and iced matcha?</summary><p class="a">Both. Whisk with a little water first — the upper speeds build a rich concentrate — then pour it over hot milk or a full glass of ice.</p></details>
+        <details><summary>How long does one cycle take?</summary><p class="a">About thirty seconds. The timer ends it for you.</p></details>
+        <details><summary>How do I clean it?</summary><p class="a">Rinse the stainless cup and wipe the base with a damp cloth. Do not submerge the base. No seals or sockets to mind.</p></details>
+        <details><summary>What comes with Matcha Sous?</summary><p class="a">The mixer base, the stainless matcha cup, a power adapter, a USB-C cable and the user manual — in the presentation case.</p></details>
+        <details><summary>What is the warranty?</summary><p class="a">One year against defects in materials and workmanship, plus 30-day returns. Write to <a href="mailto:care@matchasous.com">care@matchasous.com</a> and we will make it right.</p></details>
+        <details><summary>Can I still use a bamboo chasen?</summary><p class="a">Of course — many owners do, on the mornings that allow for it. Sous is there for the ones that don't.</p></details>
+      </div>
+      <p class="demo-note"><a class="textlink" href="faq.html">All questions &amp; support &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ============ 11 · JOURNAL ============ -->
+  <section class="bg-paper" aria-label="From the Journal">
+    <div class="wrap">
+      <div class="head head--idx"><div class="head-body">
         <span class="eyebrow">The Journal</span>
         <h2 class="display">For the ones who keep it.</h2>
-      </div>
+      </div></div>
       <div class="jhome">
         <a href="journal/how-to-make-a-matcha-latte.html"><h3>How to make a matcha latte</h3><p>Hot and iced, measured.</p><span class="go">Read &rarr;</span></a>
         <a href="journal/usucha-vs-koicha.html"><h3>Usucha &amp; koicha</h3><p>Thin tea, thick tea.</p><span class="go">Read &rarr;</span></a>
         <a href="journal/how-to-choose-matcha.html"><h3>Choosing your matcha</h3><p>What actually matters at the tin.</p><span class="go">Read &rarr;</span></a>
       </div>
-      <p style="margin-top:30px"><a class="textlink" href="journal/index.html">All entries &rarr;</a></p>
+      <p class="demo-note"><a class="textlink" href="journal/index.html">All entries &rarr;</a></p>
     </div>
   </section>
 
-  <!-- ============ METHOD ============ -->
-  <section class="tight" id="method" aria-label="Method">
-    <div class="wrap">
-      <div class="head head--idx"><div class="head-body">
-        <span class="eyebrow">Method</span>
-        <h2 class="display">Fill. Press. <em>Pour.</em></h2>
-        <p class="lead"><a class="textlink" href="how-to-use.html">The full guide &rarr;</a></p>
-      </div></div>
-      <div class="steps">
-        <div class="step"><span class="num">01</span><h3>Fill</h3><p>Sift 1–2 tsp. Water to the line.</p></div>
-        <div class="step"><span class="num">02</span><h3>Select</h3><p>Seat the cup. Choose a preset.</p></div>
-        <div class="step"><span class="num">03</span><h3>Pour</h3><p>It stops itself. You pour.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Q&A ============ -->
-  <section id="qa" aria-label="Questions and answers">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Q &amp; A</span>
-        <h2 class="display">Your questions, answered.</h2>
-      </div>
-      <div class="qa">
-        <details>
-          <summary>Do I have to give up my bamboo chasen?</summary>
-          <p class="a">Not at all — we’d rather you keep it. Matcha Sous reproduces the chasen’s fast, shallow agitation for the days that move quickly; many owners whisk by hand on slow mornings and let their Sous carry the busy ones.</p>
-        </details>
-        <details>
-          <summary>What matcha should I use?</summary>
-          <p class="a">Any good ceremonial or culinary matcha. Sift 1–2 tsp to help the vortex work fastest; the etched 40–120 ml guides take care of ratios.</p>
-        </details>
-        <details>
-          <summary>Can it build a latte base, hot and iced?</summary>
-          <p class="a">Yes. The upper speeds whip a small volume into a rich concentrate made to pour over milk or ice. Whisk with water first; add the rest after.</p>
-        </details>
-        <details>
-          <summary>How do I clean it?</summary>
-          <p class="a">Rinse the stainless cup and whisk by hand and wipe the base with a damp cloth. The drive is contactless, so there is no seal or socket to scrub.</p>
-        </details>
-      </div>
-      <p style="margin-top:30px"><a class="textlink" href="faq.html">All questions — FAQ &amp; support &rarr;</a></p>
-    </div>
-  </section>
-
-  <!-- ============ CTA ============ -->
+  <!-- ============ 12 · FINAL BRAND MOMENT ============ -->
   <section class="cta-band" aria-label="Buy">
     <div class="glow"></div>
     <div class="wrap inner">
       <span class="eyebrow">Tomorrow morning</span>
-      <h2 class="display">A better bowl, <em>waiting for you.</em></h2>
-      <p class="lead">Straight, iced, or long with milk.</p>
+      <h2 class="display">Press once. <em>Pour something better.</em></h2>
+      <p class="lead">Matcha Sous — $150, free shipping, 30-day returns.</p>
       <div class="cta" style="justify-content:center">
-        <a class="btn btn-gold btn-lg" href="#order">Buy now</a>
-        <a class="btn btn-outline btn-lg" href="faq.html">Read the FAQ</a>
+        <a class="btn btn-gold btn-lg" href="#order">Buy Matcha Sous</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ NEWSLETTER ============ -->
-  <section class="bg-paper tight" aria-label="Newsletter">
-    <div class="wrap" style="text-align:center;max-width:660px">
+  <!-- ============ 13 · LETTER ============ -->
+  <section class="tight" aria-label="Newsletter">
+    <div class="wrap" style="text-align:center;max-width:640px">
       <span class="eyebrow">Stay close</span>
       <h2 class="display">First pours, occasional letters.</h2>
       <p class="lead" style="margin:14px 0 26px">Recipes and launch news. Nothing else.</p>
       <!-- TODO: swap this mailto for your email provider's form (Mailchimp/Klaviyo embed) -->
-      <a class="btn btn-primary btn-lg" href="mailto:care@matchasous.com?subject=Subscribe%20me%20to%20the%20Matcha%20Sous%20letter&body=Please%20add%20me%20to%20the%20list.">Join the list</a>
-      <p class="muted" style="margin-top:14px;font-size:.8rem">One tap from your mail app. No spam, unsubscribe anytime.</p>
+      <a class="btn btn-outline" href="mailto:care@matchasous.com?subject=Subscribe%20me%20to%20the%20Matcha%20Sous%20letter&body=Please%20add%20me%20to%20the%20list.">Join the list</a>
     </div>
   </section>
 </main>
