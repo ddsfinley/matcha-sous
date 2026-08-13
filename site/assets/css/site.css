@@ -219,11 +219,11 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 /* numbered, rule-topped heads: the page's signature device */
 .head--idx{max-width:none;border-top:1px solid var(--line);padding-top:22px}
 .head--idx .head-body{max-width:44ch}
-.head--idx h2.display{font-size:clamp(2.3rem,5vw,4rem);letter-spacing:-.02em}
+.head--idx h2.display{font-size:clamp(2.3rem,5vw,4rem);letter-spacing:0}
 .head--idx .lead{margin-top:14px}
 /* asymmetric editorial split: heading left, content right */
 .split{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(26px,4vw,72px);align-items:start;border-top:1px solid var(--line);padding-top:26px}
-.split h2.display{font-size:clamp(2.3rem,4.6vw,3.6rem);letter-spacing:-.02em}
+.split h2.display{font-size:clamp(2.3rem,4.6vw,3.6rem);letter-spacing:0}
 .split .lead{margin-top:16px}
 .split-body{display:grid;gap:clamp(22px,3vh,36px)}
 .split-item{display:grid;grid-template-columns:auto 1fr;gap:0 20px;border-bottom:1px solid var(--line-soft);padding-bottom:clamp(18px,2.4vh,26px)}
