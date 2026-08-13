@@ -2,7 +2,7 @@
 
 Static, no framework. Bone & aubergine identity: bright warm ground, the
 wordmark's deep aubergine carrying type, buttons and feature bands, copper
-only at small scale. Cormorant Garamond (display) + Jost (utility). Lives in
+only at small scale. Poiret One (display) + Jost (utility). Lives in
 `/site`; the legacy storefront at the repo root is untouched.
 
 ## Pages
@@ -95,6 +95,26 @@ which is why there is no seam between image and page. Rebuild with
 darkening, not the file. Both variants are preloaded behind matching `media`
 queries — the hero is the LCP element.
 
+**Type** maps onto the two halves of the wordmark. **Poiret One** is the
+display face (`--disp`) — the closest free match to the mark's SOUS: a
+high-contrast geometric sans with circular bowls and thin joins. It carries
+every statement, heading and numeral. **Jost** is the utility face
+(`--util`) — geometric monoline, the same voice as the mark's tracked
+MATCHA — and carries body, nav, labels and eyebrows.
+
+Three rules follow from Poiret being a light display cut:
+1. **No negative tracking.** Its `@font-face` declares `font-weight:400 700`
+   against one file so a `font-weight:600` rule matches it rather than
+   synthesising a faux bold, and `.display` zeroes the base −.01em.
+2. **No italic** — the family has none, so `h1 em`/`h2 em` are upright
+   copper, which is also how the wordmark sets SOUS. Italic pull quotes
+   (`.founder blockquote`, `.story .pull`, `.buybox .no`, `.plate .no`) use
+   `--quote`, the one Cormorant Garamond italic file kept for the purpose.
+3. **Hairline the light-on-dark type.** Light type optically thins over
+   photography, so the hero statement, `.mood-line` and `.cta-band h2` carry
+   `-webkit-text-stroke-width:~.008em` — enough to restore presence, not
+   enough to flatten the thick/thin contrast that makes it the mark's face.
+
 **Layout signature**: homepage section heads sit left under a hairline rule
 (`.head--idx`) — no numerals. The "how it works" section uses `.split`
 (heading left, numbered items right).
@@ -146,7 +166,7 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=23**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=24**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
