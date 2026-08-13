@@ -135,9 +135,27 @@ gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping
 than upscales; mild unsharp applied. The source is inherently soft (motion
 blur + phone compression), so do not enlarge the tile further.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=20**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=21**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
+
+## Checking layout locally
+
+Chromium is available here, so layout can be verified rather than guessed:
+
+```python
+from playwright.sync_api import sync_playwright
+EXE = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+with sync_playwright() as pw:
+    b = pw.chromium.launch(executable_path=EXE, args=["--no-sandbox"])
+    pg = b.new_page(viewport={"width": 1440, "height": 900})
+    pg.goto("file:///home/user/bristol-dental-automation/site/index.html")
+    pg.screenshot(path="out.png")
+```
+
+Worth measuring on every hero change: horizontal overflow
+(`scrollWidth - clientWidth` should be 0) and whether the CTA is above the
+fold at 390×844.
 
 ## Performance notes (budget: Lighthouse mobile 90+, LCP < 2.5 s)
 - Self-hosted woff2 subsets (~15–29 KB each), preloaded per page, `font-display: swap`
