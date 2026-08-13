@@ -1,0 +1,35 @@
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="{{ routes.root_url }}" aria-label="{{ shop.name }} — home">
+      {%- if section.settings.logo != blank -%}
+        <img src="{{ section.settings.logo | image_url: width: 250 }}" alt="{{ shop.name }}" width="125" height="44">
+      {%- else -%}
+        <img src="{{ 'wordmark-ink.png' | asset_url }}" alt="{{ shop.name }}" width="125" height="44">
+      {%- endif -%}
+    </a>
+    <nav class="nav" aria-label="Primary">
+      {%- for link in section.settings.menu.links -%}
+        <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+      {%- endfor -%}
+      <a class="buy" href="{{ section.settings.buy_url | default: routes.all_products_collection_url }}">{{ section.settings.buy_label }}</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Sections">
+  {%- for link in section.settings.menu.links -%}
+    <a href="{{ link.url }}">{{ link.title }}</a>
+  {%- endfor -%}
+</nav>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Wordmark (dark, for light background)" },
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" },
+    { "type": "url", "id": "buy_url", "label": "Buy button link" },
+    { "type": "text", "id": "buy_label", "label": "Buy button label", "default": "Buy" }
+  ]
+}
+{% endschema %}

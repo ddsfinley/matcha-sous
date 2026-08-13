@@ -102,9 +102,10 @@ page reads as an editorial index rather than a stack of identical blocks.
    for packaging stamps only.
 
 ## Launch checklist
-0. **Shopify port (deferred)**: once this design is declared final, reskin
-   `shopify-theme/` to match it (palette, wordmark, copy, $150) and rebuild
-   the zip — the theme currently wears the retired forest/gold identity.
+0. **Shopify**: `shopify-theme/` is now an Online Store 2.0 theme carrying
+   this design (see `shopify-theme/SHOPIFY-SETUP.md`), packaged as
+   `matcha-sous-shopify-theme.zip`. Upload, then create the product and
+   select it in the Hero and Buy box sections to switch on real checkout.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
 1b. **Price**: the site sells at $150; the packaging brief anticipates

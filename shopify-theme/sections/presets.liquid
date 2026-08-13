@@ -1,0 +1,49 @@
+<section class="bg-paper" aria-label="The presets">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="display">{{ section.settings.heading }}</h2>
+    </div></div>
+    <div class="presets">
+      {%- for block in section.blocks -%}
+        <div class="preset{% if block.settings.feature %} feature{% endif %}" {{ block.shopify_attributes }}>
+          <span class="pvol">{{ block.settings.volume }}<i>ml</i></span>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="demo-note">{{ section.settings.note }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Presets",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Three presets · eighteen speeds" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Repeatable control." },
+    { "type": "text", "id": "note", "label": "Note", "default": "Or dial any of eighteen speeds by hand." }
+  ],
+  "blocks": [
+    {
+      "type": "preset",
+      "name": "Preset",
+      "settings": [
+        { "type": "text", "id": "volume", "label": "Volume", "default": "80" },
+        { "type": "text", "id": "title", "label": "Title", "default": "II · The everyday bowl" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Usucha at full froth." },
+        { "type": "checkbox", "id": "feature", "label": "Highlight in copper", "default": false }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Presets",
+    "blocks": [
+      { "type": "preset", "settings": { "volume": "40", "title": "I · Thick & slow", "text": "Koicha-style tea, or folding syrup into a finished bowl." } },
+      { "type": "preset", "settings": { "volume": "80", "title": "II · The everyday bowl", "text": "Usucha at full froth. The one you'll press most mornings.", "feature": true } },
+      { "type": "preset", "settings": { "volume": "120", "title": "III · Latte base", "text": "A concentrate dense enough to stand up to milk and ice." } }
+    ]
+  }]
+}
+{% endschema %}

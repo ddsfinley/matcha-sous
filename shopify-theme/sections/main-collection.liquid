@@ -1,0 +1,18 @@
+<section aria-label="{{ collection.title }}">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body"><h1 class="display">{{ collection.title }}</h1></div></div>
+    <div class="jhome">
+      {%- for product in collection.products -%}
+        <a href="{{ product.url }}">
+          {%- if product.featured_image -%}
+            <span class="media-frame" style="display:block;margin-bottom:14px"><img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title }}" width="800" height="800" loading="lazy"></span>
+          {%- endif -%}
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.price | money_without_trailing_zeros }}</p>
+          <span class="go">View &rarr;</span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}{ "name": "Collection" }{% endschema %}

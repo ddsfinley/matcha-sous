@@ -1,0 +1,20 @@
+<section aria-label="Search">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body"><h1 class="display">Search.</h1></div></div>
+    <form class="form" action="{{ routes.search_url }}" method="get">
+      <label for="q">What are you looking for?</label>
+      <input id="q" type="search" name="q" value="{{ search.terms | escape }}">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+    {%- if search.performed -%}
+      <div class="jlist" style="margin-top:34px">
+        {%- for item in search.results -%}
+          <a class="jrow" href="{{ item.url }}"><h2>{{ item.title }}</h2></a>
+        {%- else -%}
+          <p class="lead">No results for “{{ search.terms }}”.</p>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+{% schema %}{ "name": "Search" }{% endschema %}

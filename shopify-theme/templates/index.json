@@ -1,0 +1,79 @@
+{
+  "sections": {
+    "hero":      { "type": "hero" },
+    "demo":      { "type": "demo",
+      "blocks": {
+        "b1": { "type": "step", "settings": { "title": "Fill",  "text": "Matcha and water to the line.",  "fallback": "photo-lines.webp" } },
+        "b2": { "type": "step", "settings": { "title": "Press", "text": "Choose your preset.",            "fallback": "photo-profile.webp" } },
+        "b3": { "type": "step", "settings": { "title": "Pour",  "text": "Sous stops itself. You pour.",   "fallback": "photo-spout.webp" } }
+      },
+      "block_order": ["b1","b2","b3"] },
+    "showcase":  { "type": "showcase",
+      "blocks": {
+        "s1": { "type": "shot", "settings": { "fallback": "photo-profile.webp", "caption": "Base & cup · matte black, stainless" } },
+        "s2": { "type": "shot", "settings": { "fallback": "photo-lines.webp",   "caption": "Etched 40 · 80 · 120 ml" } },
+        "s3": { "type": "shot", "settings": { "fallback": "photo-kit.webp",     "caption": "Everything included" } }
+      },
+      "block_order": ["s1","s2","s3"] },
+    "how":       { "type": "how-it-works",
+      "blocks": {
+        "h1": { "type": "point", "settings": { "title": "A vortex, not a blade", "text": "A magnet turns the mixing disc beneath the cup. Nothing else touches the tea." } },
+        "h2": { "type": "point", "settings": { "title": "The same agitation, every time", "text": "Calibrated speeds hold the fast, shallow motion that builds microfoam." } },
+        "h3": { "type": "point", "settings": { "title": "It ends on its own", "text": "Press it and step away. Sous completes the cycle and stops." } }
+      },
+      "block_order": ["h1","h2","h3"] },
+    "presets":   { "type": "presets",
+      "blocks": {
+        "p1": { "type": "preset", "settings": { "volume": "40",  "title": "I · Thick & slow",        "text": "Koicha-style tea, or folding syrup into a finished bowl." } },
+        "p2": { "type": "preset", "settings": { "volume": "80",  "title": "II · The everyday bowl",  "text": "Usucha at full froth. The one you'll press most mornings.", "feature": true } },
+        "p3": { "type": "preset", "settings": { "volume": "120", "title": "III · Latte base",        "text": "A concentrate dense enough to stand up to milk and ice." } }
+      },
+      "block_order": ["p1","p2","p3"] },
+    "story":     { "type": "story" },
+    "band":      { "type": "mood-band" },
+    "uses":      { "type": "use-cases",
+      "blocks": {
+        "u1": { "type": "use", "settings": { "title": "Straight",    "text": "2 g, 80 ml at 80°C, Preset II. Fine standing foam." } },
+        "u2": { "type": "use", "settings": { "title": "Hot latte",   "text": "3 g on Preset III, then steamed milk over the top." } },
+        "u3": { "type": "use", "settings": { "title": "Iced",        "text": "A 40 ml concentrate poured over a full glass of ice." } },
+        "u4": { "type": "use", "settings": { "title": "Concentrate", "text": "Make it ahead. It keeps in the fridge through the week." } }
+      },
+      "block_order": ["u1","u2","u3","u4"] },
+    "buy":       { "type": "buy-box",
+      "blocks": {
+        "i1": { "type": "item", "settings": { "item": "Matcha Sous mixer base", "note": "backlit controls" } },
+        "i2": { "type": "item", "settings": { "item": "Stainless matcha cup",   "note": "40–120 ml" } },
+        "i3": { "type": "item", "settings": { "item": "Power adapter",          "note": "USB-C" } },
+        "i4": { "type": "item", "settings": { "item": "USB-C cable" } },
+        "i5": { "type": "item", "settings": { "item": "User manual" } }
+      },
+      "block_order": ["i1","i2","i3","i4","i5"] },
+    "specs":     { "type": "spec-plate",
+      "blocks": {
+        "x1": { "type": "spec", "settings": { "value": "18", "label": "speeds" } },
+        "x2": { "type": "spec", "settings": { "value": "3", "label": "presets" } },
+        "x3": { "type": "spec", "settings": { "value": "40–120", "label": "ml" } },
+        "x4": { "type": "spec", "settings": { "value": "6 W", "label": "low power" } },
+        "x5": { "type": "spec", "settings": { "value": "Stainless", "label": "food-grade" } },
+        "x6": { "type": "spec", "settings": { "value": "USB-C", "label": "" } },
+        "x7": { "type": "spec", "settings": { "value": "~30 s", "label": "per bowl" } }
+      },
+      "block_order": ["x1","x2","x3","x4","x5","x6","x7"] },
+    "faq":       { "type": "faq",
+      "blocks": {
+        "q1": { "type": "qa", "settings": { "q": "How is Sous different from an electric frother?", "a": "<p>A frother spins a whisk head through the liquid on a shaft. Sous turns a disc magnetically from beneath a sealed stainless cup — the vortex mixes from the bottom up, at a calibrated speed, for a set time.</p>" } },
+        "q2": { "type": "qa", "settings": { "q": "Do I need to sift my matcha?", "a": "<p>Sifting always helps — it breaks the clumps pressing forms in the tin. Sous suspends the powder either way; sifted matcha simply finishes smoother.</p>" } },
+        "q3": { "type": "qa", "settings": { "q": "Can I use any matcha?", "a": "<p>Yes. Ceremonial or culinary, any origin. Fill water to an etched 40, 80 or 120 ml guide.</p>" } },
+        "q4": { "type": "qa", "settings": { "q": "Can it make hot and iced matcha?", "a": "<p>Both. Whisk with a little water first — the upper speeds build a rich concentrate — then pour over hot milk or ice.</p>" } },
+        "q5": { "type": "qa", "settings": { "q": "How long does one cycle take?", "a": "<p>About thirty seconds. The timer ends it for you.</p>" } },
+        "q6": { "type": "qa", "settings": { "q": "How do I clean it?", "a": "<p>Rinse the stainless cup and wipe the base with a damp cloth. Do not submerge the base.</p>" } },
+        "q7": { "type": "qa", "settings": { "q": "What comes with Matcha Sous?", "a": "<p>The mixer base, the stainless matcha cup, a power adapter, a USB-C cable and the user manual — in the presentation case.</p>" } },
+        "q8": { "type": "qa", "settings": { "q": "What is the warranty?", "a": "<p>One year against defects in materials and workmanship, plus 30-day returns.</p>" } },
+        "q9": { "type": "qa", "settings": { "q": "Can I still use a bamboo chasen?", "a": "<p>Of course — many owners do, on the mornings that allow for it. Sous is there for the ones that don't.</p>" } }
+      },
+      "block_order": ["q1","q2","q3","q4","q5","q6","q7","q8","q9"] },
+    "journal":   { "type": "journal-strip" },
+    "closing":   { "type": "cta-band" }
+  },
+  "order": ["hero","demo","showcase","how","presets","story","band","uses","buy","specs","faq","journal","closing"]
+}

@@ -1,0 +1,56 @@
+<section id="steps" class="bg-paper" aria-label="{{ section.settings.heading | strip_html }}">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="display">{{ section.settings.heading }}</h2>
+    </div></div>
+    <div class="demo">
+      {%- for block in section.blocks -%}
+        <figure class="demo-step" {{ block.shopify_attributes }}>
+          <span class="media-frame">
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.image.alt | default: block.settings.title }}" width="900" height="1125" loading="lazy">
+            {%- else -%}
+              <img src="{{ block.settings.fallback | default: 'photo-lines.webp' | asset_url }}" alt="{{ block.settings.title }}" width="900" height="1125" loading="lazy">
+            {%- endif -%}
+          </span>
+          <figcaption><b>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</b><span><strong>{{ block.settings.title }}</strong>{{ block.settings.text }}</span></figcaption>
+        </figure>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}
+      <p class="demo-note">{{ section.settings.note }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Fill. Press. Pour.",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Three moves" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "Fill. Press. <em>Pour.</em>" },
+    { "type": "richtext", "id": "note", "label": "Note", "default": "<p>About thirty seconds, hands-free.</p>" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Fill" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Matcha and water to the line." },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "fallback", "label": "Bundled image filename", "default": "photo-lines.webp" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Fill. Press. Pour.",
+    "blocks": [
+      { "type": "step", "settings": { "title": "Fill", "text": "Matcha and water to the line.", "fallback": "photo-lines.webp" } },
+      { "type": "step", "settings": { "title": "Press", "text": "Choose your preset.", "fallback": "photo-profile.webp" } },
+      { "type": "step", "settings": { "title": "Pour", "text": "Sous stops itself. You pour.", "fallback": "photo-spout.webp" } }
+    ]
+  }]
+}
+{% endschema %}

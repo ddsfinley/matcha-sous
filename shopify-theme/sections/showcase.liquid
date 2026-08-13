@@ -1,0 +1,61 @@
+<section id="gallery" aria-label="The product">
+  <div class="wrap">
+    <div class="showcase">
+      <figure class="sc-lead">
+        <span class="media-frame">
+          {%- if section.settings.video != blank -%}
+            {{ section.settings.video | video_tag: image_size: '760x', autoplay: true, loop: true, muted: true, controls: false, class: 'loopvid' }}
+          {%- else -%}
+            <video class="loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="{{ 'cycle-poster.webp' | asset_url }}" width="640" height="1032" aria-label="A full mixing cycle in the Matcha Sous cup">
+              <source src="{{ 'matcha-sous-loop.mp4' | asset_url }}" type="video/mp4">
+            </video>
+          {%- endif -%}
+          <span class="media-tag">{{ section.settings.video_caption }}</span>
+        </span>
+      </figure>
+      <div class="sc-side">
+        {%- for block in section.blocks -%}
+          <figure {{ block.shopify_attributes }}>
+            <span class="media-frame">
+              {%- if block.settings.image != blank -%}
+                <img src="{{ block.settings.image | image_url: width: 1200 }}" alt="{{ block.settings.image.alt | default: block.settings.caption }}" width="1200" height="675" loading="lazy">
+              {%- else -%}
+                <img src="{{ block.settings.fallback | asset_url }}" alt="{{ block.settings.caption }}" width="1200" height="675" loading="lazy">
+              {%- endif -%}
+            </span>
+            <figcaption>{{ block.settings.caption }}</figcaption>
+          </figure>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product showcase",
+  "settings": [
+    { "type": "video", "id": "video", "label": "Looping video (optional — a bundled clip is used otherwise)" },
+    { "type": "text", "id": "video_caption", "label": "Video caption", "default": "One full cycle" }
+  ],
+  "blocks": [
+    {
+      "type": "shot",
+      "name": "Photograph",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "fallback", "label": "Bundled image filename", "default": "photo-profile.webp" },
+        { "type": "text", "id": "caption", "label": "Caption", "default": "Base & cup · matte black, stainless" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Product showcase",
+    "blocks": [
+      { "type": "shot", "settings": { "fallback": "photo-profile.webp", "caption": "Base & cup · matte black, stainless" } },
+      { "type": "shot", "settings": { "fallback": "photo-lines.webp", "caption": "Etched 40 · 80 · 120 ml" } },
+      { "type": "shot", "settings": { "fallback": "photo-kit.webp", "caption": "Everything included" } }
+    ]
+  }]
+}
+{% endschema %}

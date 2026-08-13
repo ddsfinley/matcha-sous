@@ -1,0 +1,31 @@
+{%- assign blog = blogs[section.settings.blog] -%}
+<section class="bg-paper" aria-label="From the Journal">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="display">{{ section.settings.heading }}</h2>
+    </div></div>
+    <div class="jhome">
+      {%- for article in blog.articles limit: 3 -%}
+        <a href="{{ article.url }}"><h3>{{ article.title }}</h3><p>{{ article.excerpt_or_content | strip_html | truncatewords: 12 }}</p><span class="go">Read &rarr;</span></a>
+      {%- else -%}
+        <a href="{{ routes.root_url }}"><h3>Your first entry</h3><p>Publish a blog post and it appears here.</p><span class="go">Read &rarr;</span></a>
+      {%- endfor -%}
+    </div>
+    {%- if blog != blank -%}
+      <p class="demo-note"><a class="textlink" href="{{ blog.url }}">All entries &rarr;</a></p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Journal strip",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Journal" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "For the ones who keep it." },
+    { "type": "text", "id": "blog", "label": "Blog handle", "default": "news" }
+  ],
+  "presets": [{ "name": "Journal strip" }]
+}
+{% endschema %}

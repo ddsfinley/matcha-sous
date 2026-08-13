@@ -1,0 +1,99 @@
+{%- assign p = section.settings.product | default: collections.all.products.first -%}
+<section id="order" class="bg-paper" aria-label="Buy">
+  <div class="wrap order">
+    <figure class="stage">
+      <span class="media-frame">
+        {%- if p != blank and p.featured_image -%}
+          <img src="{{ p.featured_image | image_url: width: 900 }}" alt="{{ p.featured_image.alt | default: p.title }}" width="750" height="1000" loading="lazy">
+        {%- else -%}
+          <img src="{{ 'photo-profile.webp' | asset_url }}" alt="Matcha Sous, matte black base with stainless cup" width="750" height="1000" loading="lazy">
+        {%- endif -%}
+      </span>
+      <span class="buy-thumb"><img src="{{ 'photo-case.webp' | asset_url }}" alt="The Matcha Sous presentation case" width="1320" height="667" loading="lazy"></span>
+    </figure>
+
+    <div class="buybox">
+      <h2>{% if p != blank %}{{ p.title }}{% else %}{{ section.settings.fallback_title }}{% endif %}</h2>
+      {%- if section.settings.variant_line != blank -%}<p class="variant">{{ section.settings.variant_line }}</p>{%- endif -%}
+
+      {%- if p != blank -%}
+        <div class="price"><b>{{ p.price | money_without_trailing_zeros }}</b><span>{{ section.settings.price_note }}</span></div>
+      {%- else -%}
+        <div class="price"><b>{{ section.settings.fallback_price }}</b><span>{{ section.settings.price_note }}</span></div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <ul class="inc">
+          {%- for block in section.blocks -%}
+            <li {{ block.shopify_attributes }}>{{ block.settings.item }}{% if block.settings.note != blank %} <span>{{ block.settings.note }}</span>{% endif %}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
+      {%- if p != blank -%}
+        {%- form 'product', p, id: 'buy-form' -%}
+          {%- if p.variants.size > 1 -%}
+            <div class="form" style="margin-bottom:18px">
+              <label for="variant">Option</label>
+              <select id="variant" name="id">
+                {%- for v in p.variants -%}
+                  <option value="{{ v.id }}"{% unless v.available %} disabled{% endunless %}>{{ v.title }} — {{ v.price | money_without_trailing_zeros }}</option>
+                {%- endfor -%}
+              </select>
+            </div>
+          {%- else -%}
+            <input type="hidden" name="id" value="{{ p.selected_or_first_available_variant.id }}">
+          {%- endif -%}
+          <button class="btn btn-primary btn-lg btn-block" type="submit" {% unless p.available %}disabled{% endunless %}>
+            {% if p.available %}{{ section.settings.cta_label }}{% else %}Sold out{% endif %}
+          </button>
+        {%- endform -%}
+      {%- else -%}
+        <a class="btn btn-primary btn-lg btn-block" href="{{ routes.all_products_collection_url }}">{{ section.settings.cta_label }}</a>
+      {%- endif -%}
+
+      <div class="assure">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> {{ section.settings.assure_1 }}</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v9l5 3"/><circle cx="12" cy="12" r="9"/></svg> {{ section.settings.assure_2 }}</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> {{ section.settings.assure_3 }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Buy box",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product" },
+    { "type": "text", "id": "fallback_title", "label": "Title if no product selected", "default": "Matcha Sous" },
+    { "type": "text", "id": "fallback_price", "label": "Price if no product selected", "default": "$150" },
+    { "type": "text", "id": "variant_line", "label": "Edition line", "default": "First Edition · Matte Black / Stainless" },
+    { "type": "text", "id": "price_note", "label": "Price note", "default": "free shipping" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Buy now" },
+    { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Free shipping, dispatched in 1–2 business days" },
+    { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "30-day returns" },
+    { "type": "text", "id": "assure_3", "label": "Assurance 3", "default": "1-year warranty" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Included item",
+      "settings": [
+        { "type": "text", "id": "item", "label": "Item", "default": "Matcha Sous mixer base" },
+        { "type": "text", "id": "note", "label": "Note", "default": "backlit controls" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Buy box",
+    "blocks": [
+      { "type": "item", "settings": { "item": "Matcha Sous mixer base", "note": "backlit controls" } },
+      { "type": "item", "settings": { "item": "Stainless matcha cup", "note": "40–120 ml" } },
+      { "type": "item", "settings": { "item": "Power adapter", "note": "USB-C" } },
+      { "type": "item", "settings": { "item": "USB-C cable", "note": "" } },
+      { "type": "item", "settings": { "item": "User manual", "note": "" } }
+    ]
+  }]
+}
+{% endschema %}

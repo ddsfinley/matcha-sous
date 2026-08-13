@@ -1,0 +1,18 @@
+<section aria-label="{{ blog.title }}">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body">
+      <span class="eyebrow">The Journal</span>
+      <h1 class="display">{{ blog.title }}</h1>
+    </div></div>
+    <div class="jlist">
+      {%- for article in blog.articles -%}
+        <a class="jrow" href="{{ article.url }}">
+          <h2>{{ article.title }}</h2>
+          <p>{{ article.excerpt_or_content | strip_html | truncatewords: 28 }}</p>
+        </a>
+      {%- endfor -%}
+    </div>
+    {%- if paginate.pages > 1 -%}<p class="demo-note">{{ paginate | default_pagination }}</p>{%- endif -%}
+  </div>
+</section>
+{% schema %}{ "name": "Blog" }{% endschema %}

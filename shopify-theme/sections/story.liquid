@@ -1,0 +1,36 @@
+<section class="tight" aria-label="Where it began">
+  <div class="wrap order">
+    <div class="story">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="display">{{ section.settings.heading }}</h2>
+      <div style="margin-top:16px">{{ section.settings.text }}</div>
+      {%- if section.settings.link != blank -%}
+        <p style="margin-top:18px"><a class="textlink" href="{{ section.settings.link }}">{{ section.settings.link_label }} &rarr;</a></p>
+      {%- endif -%}
+    </div>
+    <figure class="stage">
+      <span class="media-frame">
+        {%- if section.settings.image != blank -%}
+          <img src="{{ section.settings.image | image_url: width: 1400 }}" alt="{{ section.settings.image.alt | default: shop.name }}" width="1400" height="873" loading="lazy">
+        {%- else -%}
+          <img src="{{ 'mood-counter.webp' | asset_url }}" alt="Matcha Sous on a kitchen counter in morning light" width="1400" height="873" loading="lazy">
+        {%- endif -%}
+      </span>
+    </figure>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Origin story",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Our story" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "Born behind a café bar. <em>Made for your counter.</em>" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A hundred bowls a shift taught us how rarely two taste the same. So we built the one that does — then refined it until it belonged at home.</p>" },
+    { "type": "url", "id": "link", "label": "Link" },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "Our story" },
+    { "type": "image_picker", "id": "image", "label": "Image" }
+  ],
+  "presets": [{ "name": "Origin story" }]
+}
+{% endschema %}
