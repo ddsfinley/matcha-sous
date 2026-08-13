@@ -1,0 +1,37 @@
+<section class="tight" id="specs" aria-label="Specifications">
+  <div class="wrap">
+    <div class="plate">
+      {%- for block in section.blocks -%}
+        <span {{ block.shopify_attributes }}><b>{{ block.settings.value }}</b> {{ block.settings.label }}</span>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Spec plate",
+  "blocks": [
+    {
+      "type": "spec",
+      "name": "Spec",
+      "settings": [
+        { "type": "text", "id": "value", "label": "Value", "default": "18" },
+        { "type": "text", "id": "label", "label": "Label", "default": "speeds" }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Spec plate",
+    "blocks": [
+      { "type": "spec", "settings": { "value": "18", "label": "speeds" } },
+      { "type": "spec", "settings": { "value": "3", "label": "presets" } },
+      { "type": "spec", "settings": { "value": "40–120", "label": "ml" } },
+      { "type": "spec", "settings": { "value": "6 W", "label": "low power" } },
+      { "type": "spec", "settings": { "value": "Stainless", "label": "food-grade" } },
+      { "type": "spec", "settings": { "value": "USB-C", "label": "" } },
+      { "type": "spec", "settings": { "value": "~30 s", "label": "per bowl" } }
+    ]
+  }]
+}
+{% endschema %}

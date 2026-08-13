@@ -1,0 +1,23 @@
+<section class="mood{% if section.settings.light %} mood--light{% endif %}" aria-label="{{ section.settings.line_a | strip_html }}">
+  {%- if section.settings.image != blank -%}
+    <img src="{{ section.settings.image | image_url: width: 1600 }}" alt="{{ section.settings.image.alt | default: '' }}" width="1400" height="786" loading="lazy">
+  {%- else -%}
+    <img src="{{ 'mood-vortex.webp' | asset_url }}" alt="Matcha mid-whisk in the Matcha Sous cup" width="1400" height="786" loading="lazy">
+  {%- endif -%}
+  <div class="mood-inner">
+    <p class="mood-line">{{ section.settings.line_a }}<br><em>{{ section.settings.line_b }}</em></p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Full-width band",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "line_a", "label": "First line", "default": "The ceremony, preserved." },
+    { "type": "text", "id": "line_b", "label": "Second line (italic)", "default": "The Sous, in service of it." },
+    { "type": "checkbox", "id": "light", "label": "Light treatment", "default": false }
+  ],
+  "presets": [{ "name": "Full-width band" }]
+}
+{% endschema %}

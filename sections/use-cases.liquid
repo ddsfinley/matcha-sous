@@ -1,0 +1,42 @@
+<section aria-label="What you can make">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="display">{{ section.settings.heading }}</h2>
+    </div></div>
+    <div class="uses">
+      {%- for block in section.blocks -%}
+        <div class="use" {{ block.shopify_attributes }}><b>{{ block.settings.title }}</b><p>{{ block.settings.text }}</p></div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Use cases",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Four ways" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What you'll make." }
+  ],
+  "blocks": [
+    {
+      "type": "use",
+      "name": "Drink",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Straight" },
+        { "type": "text", "id": "text", "label": "Text", "default": "2 g, 80 ml at 80°C, Preset II." }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Use cases",
+    "blocks": [
+      { "type": "use", "settings": { "title": "Straight", "text": "2 g, 80 ml at 80°C, Preset II. Fine standing foam." } },
+      { "type": "use", "settings": { "title": "Hot latte", "text": "3 g on Preset III, then steamed milk over the top." } },
+      { "type": "use", "settings": { "title": "Iced", "text": "A 40 ml concentrate poured over a full glass of ice." } },
+      { "type": "use", "settings": { "title": "Concentrate", "text": "Make it ahead. It keeps in the fridge through the week." } }
+    ]
+  }]
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+<section aria-label="Cart">
+  <div class="wrap">
+    <div class="head head--idx"><div class="head-body"><h1 class="display">Your cart.</h1></div></div>
+    {%- if cart.item_count > 0 -%}
+      <form action="{{ routes.cart_url }}" method="post" novalidate>
+        <div class="qa">
+          {%- for item in cart.items -%}
+            <div class="split-item" style="align-items:center">
+              <b>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</b>
+              <div>
+                <h3>{{ item.product.title }}</h3>
+                <p>{{ item.variant.title | remove: 'Default Title' }} · {{ item.final_line_price | money }}</p>
+                <p><label for="q{{ forloop.index }}" class="muted">Qty</label>
+                  <input id="q{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0" style="width:5em;padding:8px;margin-left:8px">
+                  <a class="textlink" style="margin-left:14px" href="{{ item.url_to_remove }}">Remove</a>
+                </p>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:34px">
+          <p class="lead">Subtotal <b>{{ cart.total_price | money }}</b></p>
+          <div class="cta">
+            <button class="btn btn-outline" type="submit" name="update">Update</button>
+            <button class="btn btn-primary btn-lg" type="submit" name="checkout">Checkout</button>
+          </div>
+        </div>
+      </form>
+    {%- else -%}
+      <p class="lead">Your cart is empty.</p>
+      <p style="margin-top:22px"><a class="btn btn-primary" href="{{ routes.all_products_collection_url }}">Shop Matcha Sous</a></p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}{ "name": "Cart" }{% endschema %}

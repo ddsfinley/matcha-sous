@@ -2,9 +2,16 @@
   {
     "name": "theme_info",
     "theme_name": "Matcha Sous",
-    "theme_version": "1.0.0",
+    "theme_version": "2.0.0",
     "theme_author": "Matcha Sous",
     "theme_documentation_url": "https://matchasous.com",
-    "theme_support_url": "https://matchasous.com"
+    "theme_support_email": "care@matchasous.com"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      { "type": "image_picker", "id": "favicon", "label": "Favicon" },
+      { "type": "paragraph", "content": "Colours, type and layout are fixed in base.css so the identity stays consistent. Edit that file to change the palette." }
+    ]
   }
 ]

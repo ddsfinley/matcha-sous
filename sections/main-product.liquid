@@ -1,0 +1,51 @@
+<section class="bg-paper" aria-label="{{ product.title }}">
+  <div class="wrap order">
+    <figure class="stage">
+      <span class="media-frame">
+        {%- if product.featured_image -%}
+          <img src="{{ product.featured_image | image_url: width: 1000 }}" alt="{{ product.featured_image.alt | default: product.title }}" width="750" height="1000">
+        {%- else -%}
+          <img src="{{ 'photo-profile.webp' | asset_url }}" alt="{{ product.title }}" width="750" height="1000">
+        {%- endif -%}
+      </span>
+      {%- if product.images.size > 1 -%}
+        <span class="buy-thumb"><img src="{{ product.images[1] | image_url: width: 900 }}" alt="{{ product.title }}" width="1320" height="667" loading="lazy"></span>
+      {%- endif -%}
+    </figure>
+
+    <div class="buybox">
+      <h2>{{ product.title }}</h2>
+      {%- if product.metafields.custom.edition -%}<p class="variant">{{ product.metafields.custom.edition }}</p>{%- endif -%}
+      <div class="price"><b>{{ product.price | money_without_trailing_zeros }}</b><span>{{ section.settings.price_note }}</span></div>
+
+      {%- form 'product', product -%}
+        {%- if product.variants.size > 1 -%}
+          <div class="form" style="margin-bottom:18px">
+            <label for="pv">Option</label>
+            <select id="pv" name="id">
+              {%- for v in product.variants -%}
+                <option value="{{ v.id }}"{% unless v.available %} disabled{% endunless %}>{{ v.title }} — {{ v.price | money_without_trailing_zeros }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+        {%- else -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {%- endif -%}
+        <button class="btn btn-primary btn-lg btn-block" type="submit" {% unless product.available %}disabled{% endunless %}>
+          {% if product.available %}Add to cart{% else %}Sold out{% endif %}
+        </button>
+      {%- endform -%}
+
+      <div class="article" style="margin-top:26px">{{ product.description }}</div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": [
+    { "type": "text", "id": "price_note", "label": "Price note", "default": "free shipping" }
+  ]
+}
+{% endschema %}

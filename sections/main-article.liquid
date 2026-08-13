@@ -1,0 +1,9 @@
+<section aria-label="{{ article.title }}">
+  <div class="wrap article">
+    <p class="meta">{{ article.published_at | date: '%B %-d, %Y' }}</p>
+    <h1 class="display">{{ article.title }}</h1>
+    {{ article.content }}
+    <p style="margin-top:34px"><a class="textlink" href="{{ blog.url }}">All entries &rarr;</a></p>
+  </div>
+</section>
+{% schema %}{ "name": "Article" }{% endschema %}

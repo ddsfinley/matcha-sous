@@ -1,0 +1,36 @@
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="{{ routes.root_url }}" aria-label="{{ shop.name }} — home">
+          <img src="{{ 'wordmark.png' | asset_url }}" alt="{{ shop.name }}" width="136" height="48">
+        </a>
+        <p class="tag">{{ section.settings.tagline }}</p>
+      </div>
+      <nav class="fnav" aria-label="Footer">
+        {%- for link in section.settings.menu.links -%}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {%- endfor -%}
+        {%- if section.settings.email != blank -%}
+          <a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
+        {%- endif -%}
+      </nav>
+    </div>
+    <div class="fine">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}&trade;. All rights reserved.</span>
+      <span>{{ section.settings.payments }}</span>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "tagline", "label": "Tagline", "default": "Behind every great matcha is a Sous." },
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "footer" },
+    { "type": "text", "id": "email", "label": "Contact email", "default": "care@matchasous.com" },
+    { "type": "text", "id": "payments", "label": "Payment line", "default": "VISA · MC · AMEX · PAYPAL · APPLE PAY" }
+  ]
+}
+{% endschema %}
