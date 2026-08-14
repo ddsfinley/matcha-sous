@@ -159,24 +159,24 @@ page reads as an editorial index rather than a stack of identical blocks.
    select it in the Hero and Buy box sections to switch on real checkout.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
-1b. **Price**: **$179 preorder, $199 list.** The buy box opens straight on
-   the price — the product title and the "Matte Black / Stainless" line were
-   removed at the founder's request, so the section's accessible name comes
-   from `aria-label="Buy Matcha Sous"` on the `<section>`. It shows $179 with
-   $199 struck beside it, a copper `Preorder` label and the note "Preorder
-   price, held until the first run ships"; the CTA reads **Preorder**, not
-   Buy now. Product schema carries `price: 179.00` (the sellable price) and
-   `availability: PreOrder`. The price also appears in the CTA band, the five
-   Journal CTAs and the meta/OG descriptions; the Shopify buy-box
-   `fallback_price` matches. `proposals/` still shows $150 by design —
-   archived stage-1 records, noindex. **Grep `$1` before changing it again.**
-   The strikethrough is deliberately quiet (stone, no colour, no badge) —
-   the no-promo-language rule still applies.
-1b-i. **Ship window removed, needs restoring.** The assurance line said
-   "dispatched in 1–2 business days", which is false for a preorder, so it
-   is now just "Free shipping". **Put a real window back** ("ships March",
-   "ships within 8 weeks") once the run date is known — a preorder with no
-   stated date costs conversions and invites chargebacks.
+1b. **Price**: **$199, one price.** No preorder discount — the $20 off was
+   ~35% of net profit at a realistic CAC while being too small to move
+   anyone, and it broke the wholesale maths. The preorder benefit is instead
+   **first-run access + starter matcha in the box**, which costs a fraction
+   of $20 and is worth more. Landed cost is **$62**, so $199 is a 3.2x
+   multiple — barely inside the 3-4x DTC floor. **Do not discount below
+   $199 without redoing the unit economics**; at $179 the multiple is 2.9x
+   and a 50%-of-MSRP wholesale deal leaves $27.50/unit, which cannot fund a
+   stockist programme. If wholesale becomes a real channel, list should rise
+   to **$229-249** (at $249, keystone leaves $62.50 = 2x landed).
+   Price appears in: buy box, CTA band, five Journal CTAs, meta + OG
+   descriptions, Product schema `price`, Shopify `fallback_price`.
+   `proposals/` still shows $150 by design. **Grep `$1` before changing it.**
+1b-iii. **Starter matcha is in the included list but unspecified.** The line
+   reads "Starter matcha — enough to begin". **Grade, weight, origin and
+   whether it is a collab or private label are undecided**; fill them in
+   before launch, and note that a collab partner's name belongs in that line
+   (it is the credibility, so it should be visible).
 1b-0. **US shipping only, first run.** Stated in the buy box ("free US
    shipping" + "Free shipping across the US"), the CTA band, about,
    how-to-use, `stockists.html`, and as a Q&A on both the homepage and
@@ -243,7 +243,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=35**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=36**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
