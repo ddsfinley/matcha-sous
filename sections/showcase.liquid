@@ -6,8 +6,9 @@
           {%- if section.settings.video != blank -%}
             {{ section.settings.video | video_tag: image_size: '760x', autoplay: true, loop: true, muted: true, controls: false, class: 'loopvid' }}
           {%- else -%}
-            <video class="loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="{{ 'cycle-poster.webp' | asset_url }}" width="640" height="1032" aria-label="A full mixing cycle in the Matcha Sous cup">
-              <source src="{{ 'matcha-sous-loop.mp4' | asset_url }}" type="video/mp4">
+            <video class="loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="{{ 'cycle-poster.webp' | asset_url }}" width="1080" height="1440" aria-label="A full mixing cycle in the Matcha Sous cup">
+              <source src="{{ 'cycle-1080-v2.webm' | asset_url }}" type="video/webm">
+              <source src="{{ 'cycle-1080-v2.mp4' | asset_url }}" type="video/mp4">
             </video>
           {%- endif -%}
           <span class="media-tag">{{ section.settings.video_caption }}</span>
