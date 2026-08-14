@@ -177,6 +177,13 @@ page reads as an editorial index rather than a stack of identical blocks.
    is now just "Free shipping". **Put a real window back** ("ships March",
    "ships within 8 weeks") once the run date is known — a preorder with no
    stated date costs conversions and invites chargebacks.
+1b-0. **US shipping only, first run.** Stated in the buy box ("free US
+   shipping" + "Free shipping across the US"), the CTA band, about,
+   how-to-use, `stockists.html`, and as a Q&A on both the homepage and
+   `faq.html`. The Product offer carries `shippingDetails` (free, US) and
+   `areaServed: US`. **The stockists page said "worldwide" for one deploy** —
+   if the scope changes again, grep `worldwide|free shipping|international`
+   before announcing it.
 1b-ii. **Preorder cancellation** (founder's terms): cancellable any time
    before shipping, full refund, no reason required; the 30-day return takes
    over once it has shipped. Stated in the buy box assurances, the homepage
@@ -236,7 +243,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=34**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=35**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
