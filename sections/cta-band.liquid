@@ -2,9 +2,9 @@
 <section class="cta-band" aria-label="Buy">
   <div class="glow"></div>
   <div class="wrap inner">
-    <span class="eyebrow">{{ section.settings.eyebrow }}</span>
-    <h2 class="display">{{ section.settings.heading }}</h2>
-    <p class="lead">{{ section.settings.lead }}</p>
+    {%- if section.settings.eyebrow != blank -%}<span class="eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h2 class="display">{{ section.settings.heading }}</h2>{%- endif -%}
+    {%- if section.settings.lead != blank -%}<p class="lead">{{ section.settings.lead }}</p>{%- endif -%}
     <div class="cta" style="justify-content:center">
       <a class="btn btn-gold btn-lg" href="{% if p != blank %}{{ p.url }}{% else %}#order{% endif %}">{{ section.settings.cta_label }}</a>
     </div>
@@ -15,8 +15,8 @@
 {
   "name": "Closing CTA",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Every morning" },
-    { "type": "html", "id": "heading", "label": "Heading", "default": "A month in, <em>you won't remember the other way.</em>" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "" },
     { "type": "text", "id": "lead", "label": "Lead", "default": "$199 preorder, free US shipping, 1-year warranty." },
     { "type": "text", "id": "cta_label", "label": "Button label", "default": "Buy Matcha Sous" },
     { "type": "product", "id": "product", "label": "Product" }
