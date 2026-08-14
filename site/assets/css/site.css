@@ -421,12 +421,11 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 @media (max-width:860px){
   .showcase{grid-template-columns:1fr}
   /* the cut is exactly 3:4, so the frame matches it and nothing is cropped */
-  /* The cycle's master is 760 px wide. A phone at 3x renders 3 real pixels
-     per CSS pixel, so anything past ~253 CSS px upscales it. Capped and
-     centred: small on purpose, and sharp because of it. Needs to outrank
-     `.showcase figure{margin:0}`, hence the two-class selector. */
-  .showcase .sc-lead{max-width:270px;margin-inline:auto}
-  .sc-lead .media-tag{bottom:10px;left:10px;font-size:.6rem;padding:6px 11px}
+  /* The 270px cap here existed only because the old cut was a 760px master.
+     The current one is 1080px wide: full width inside .wrap is 350 CSS px on
+     a 390px phone, which is 1050 real pixels at 3x — under the source, so it
+     downsamples. Wider AND sharper; do not reinstate the cap without
+     checking the master's width first. */
 }
 
 /* ---------- presets ---------- */

@@ -186,13 +186,22 @@ adds a smaller, faster source for Chrome/Firefox; the MP4 covers Safari/iOS.
 **Verify with `readyState === 4` and a advancing `currentTime`, not a
 screenshot** — a screenshot only proves the poster rendered.
 
-**Do not enlarge the video tile** — a standing decision from the founder,
-independent of resolution. Small and sharp beats big and soft. Under 860px
-the tile is capped at **270 CSS px and centred**, which is 810 real pixels on
-a 3x iPhone against a 760 px master — near enough to native. On a 2x desktop
-the 568 px tile still upscales ~1.49x; fixing that needs either a
-higher-resolution master or a smaller desktop tile, and is not to be
-"fixed" by growing anything.
+**Tile size follows the master's width, not taste.** The 270px phone cap is
+gone: it existed only because the old cut was a 760px master. Against the
+current 1080px one the tile runs full width and still downsamples —
+350 CSS px on a 390px phone is 1050 real pixels at 3x. Measured:
+
+| viewport | tile | real px | vs 1080 master |
+|---|---|---|---|
+| 360 @3x | 320 | 960 | native |
+| 390 @3x | 350 | 1050 | native |
+| 430 @3x | 387 | 1161 | 1.07x |
+| 390 @4x | 350 | 1400 | 1.30x |
+| 768 @2x | 691 | 1382 | 1.28x |
+| 1440 @2x | 568 | 1136 | 1.05x |
+
+The founder does not want the **desktop** tile grown; 568 CSS px stays.
+Before changing any of these, check the master's width and redo the sum.
 
 **Wanted: a 1080p master.** The founder's 4K originals live in Drive but
 cannot be retrieved — the Drive connector caps downloads at 10 MB, the Drive
@@ -201,7 +210,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=30**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=31**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
