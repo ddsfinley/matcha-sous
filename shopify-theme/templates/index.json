@@ -4,13 +4,13 @@
     "demo":      { "type": "demo",
       "blocks": {
         "b1": { "type": "step", "settings": { "title": "Fill",  "text": "Matcha and water to the line.",  "fallback": "photo-lines.webp" } },
-        "b2": { "type": "step", "settings": { "title": "Press", "text": "Choose your preset.",            "fallback": "photo-profile.webp" } },
+        "b2": { "type": "step", "settings": { "title": "Press", "text": "Choose your preset.",            "fallback": "detail-instrument.webp" } },
         "b3": { "type": "step", "settings": { "title": "Pour",  "text": "Sous knows when to change pace.",   "fallback": "photo-spout.webp" } }
       },
       "block_order": ["b1","b2","b3"] },
     "showcase":  { "type": "showcase",
       "blocks": {
-        "s1": { "type": "shot", "settings": { "fallback": "photo-profile.webp", "caption": "Compact proportions, flush controls" } },
+        "s1": { "type": "shot", "settings": { "fallback": "detail-instrument.webp", "caption": "Compact proportions, flush controls" } },
         "s2": { "type": "shot", "settings": { "fallback": "photo-lines.webp",   "caption": "Etched 40 · 80 · 120 ml" } }
       },
       "block_order": ["s1","s2"] },

@@ -21,7 +21,7 @@
   --aub:#1a1322; --aub-deep:#140e1b; --aub-ink:#251d30;
   --bone:#ede4d8; --bone-bright:#f6f0e5;
   --copper:#b0714f; --copper-deep:#96593a; --copper-soft:#d9b49e; --copper-bright:#cf9268;
-  --stone:#6f6862; --mat:#eeeae3;
+  --stone:#635c56; --mat:#eeeae3;
   --line:rgba(26,19,34,.14); --line-soft:rgba(26,19,34,.07);
   --disp:'Poiret One','Cormorant Garamond',Georgia,serif; --util:Jost,system-ui,sans-serif;
   --quote:'Cormorant Garamond',Georgia,serif;
@@ -311,6 +311,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .inc li span{color:var(--stone);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 /* the last line read before the button: humility then certainty */
 .buybox .closer{margin:0 0 20px;color:var(--aub-ink);font-size:.95rem;line-height:1.5}
+.paynote{margin:12px 0 0;font-size:.84rem;line-height:1.5;color:var(--stone);text-align:center}
 .assure{display:grid;gap:10px;margin-top:20px}
 .assure span{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--stone)}
 .assure svg{width:18px;height:18px;color:var(--copper);flex:none}
@@ -462,7 +463,7 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .sc-lead .media-frame{aspect-ratio:3/4}
 .sc-side{display:grid;gap:clamp(18px,2.6vw,30px);align-content:space-between}
 .sc-side .media-frame{aspect-ratio:16/9}
-.showcase figcaption{padding-top:10px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
+.showcase figcaption{padding-top:10px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
 @media (min-width:861px){
   /* Two side tiles, not three: at 16/9 they stopped ~230px short of the lead
      frame and the column read unfinished. 3/2 makes two tiles plus a caption

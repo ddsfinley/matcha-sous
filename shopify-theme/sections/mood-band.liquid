@@ -2,7 +2,7 @@
   {%- if section.settings.image != blank -%}
     <img src="{{ section.settings.image | image_url: width: 1600 }}" alt="{{ section.settings.image.alt | default: '' }}" width="1400" height="786" loading="lazy">
   {%- else -%}
-    <img src="{{ 'mood-vortex.webp' | asset_url }}" alt="Matcha mid-whisk in the Matcha Sous cup" width="1400" height="786" loading="lazy">
+    <img src="{{ 'photo-spout.webp' | asset_url }}" alt="The brushed interior of the Matcha Sous vessel" width="1200" height="800" loading="lazy">
   {%- endif -%}
   <div class="mood-inner">
     <p class="mood-line">{{ section.settings.line_a }}<br><em>{{ section.settings.line_b }}</em></p>

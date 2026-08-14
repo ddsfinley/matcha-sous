@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# Superseded design explorations. Kept in the repo for reference, but they still
+# carry an obsolete $150 price and must never be indexed.
+Disallow: /proposals/
 
 Sitemap: https://matchasous.com/sitemap.xml

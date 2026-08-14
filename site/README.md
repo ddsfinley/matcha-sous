@@ -259,8 +259,18 @@ page reads as an editorial index rather than a stack of identical blocks.
    this design (see `shopify-theme/SHOPIFY-SETUP.md`), packaged as
    `matcha-sous-shopify-theme.zip`. Upload, then create the product and
    select it in the Hero and Buy box sections to switch on real checkout.
-1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
-   in `index.html` with the real hosted checkout URL.
+1. **Checkout**: the buy button is now a **working reservation**, not a dead
+   link. It opens a pre-filled email to `care@matchasous.com` and is labelled
+   "Reserve your Sous", with `Nothing is charged until your Sous ships.`
+   underneath. The previous `https://checkout.matchasous.com/matcha-sous`
+   placeholder did not resolve, so the single most important button on the
+   site did nothing when clicked. **There is exactly one place this action is
+   defined** — the `<!-- CHECKOUT: -->` comment in `index.html` inside
+   `#order`. When the hosted store is live, change that one `href` and set the
+   label back to "Shop Matcha Sous". Every other CTA on every page is an
+   anchor to `#order`, so nothing else needs touching.
+   The reservation copy also answers "when does it ship", which nothing on the
+   site did before: no date is claimed, but no money moves until one exists.
 1b. **Price**: **$199, one price.** No preorder discount — the $20 off was
    ~35% of net profit at a realistic CAC while being too small to move
    anyone, and it broke the wholesale maths. The preorder benefit is instead
@@ -299,10 +309,22 @@ page reads as an editorial index rather than a stack of identical blocks.
    $199 from a brand with no reviews a return policy is usually what
    substitutes for trust not yet earned. If disputes appear after launch,
    revisit this first.
-1c. **Lifestyle photography**: `assets/img/mood-counter.webp` (the light mood
-   band, "The counter is the new café.") is a placeholder — a regraded product
-   shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
-   line at the same time. The dark band's `mood-ritual.webp` is also a regrade.
+1c. **Photography is the biggest remaining gap, and it is a commercial one,
+   not a stylistic one.** `photo-profile.webp` and `mood-counter.webp` are
+   flash-lit phone shots: textured wall, brass rail, scratched counter, and a
+   terracotta sleeve that reads as a mismatched accessory. `photo-profile` was
+   the **primary buy-box image** — the frame a buyer stares at while deciding
+   whether to spend $199. Both are now **retired from the homepage** in favour
+   of `cycle-poster.webp` (top-down, machine plus finished matcha) and
+   `detail-instrument.webp` (top-down, clean). They remain in the repo.
+   The packaging shoot (`photo-kit`, `photo-case`) is genuinely good, which
+   proves the standard is reachable — the machine itself has simply never been
+   shot properly. **Still missing entirely: any photograph of a person, and any
+   photograph of the finished drink in a glass someone would want.** Zero of
+   the homepage images contain a human being. That, plus the absence of any
+   review, testimonial or press mention, means the site currently asks for $199
+   on typography alone. A day of proper product photography would move
+   conversion more than every other open item combined.
 1d. **Claim verification**: contactless magnetic drive and backlit touch
    controls — both **confirmed by the founder**. Box-verified facts: 18 speed
    levels, 3 preset programs, 40–120 ml capacity, hands-free preparation,
@@ -312,6 +334,34 @@ page reads as an editorial index rather than a stack of identical blocks.
    OG URLs, `sitemap.xml` and `robots.txt` already point there.
 3. Submit `sitemap.xml` in Google Search Console.
 4. Emails `care@` / `wholesale@matchasous.com` must exist (or edit them).
+   **`care@` now receives the reservations**, so it must exist before launch or
+   the buy button is dead again.
+5. `proposals/` is superseded design exploration that still shows **$150**.
+   Kept for reference, but `noindex` on every page *and* `Disallow: /proposals/`
+   in `robots.txt`. Do not link to it, and do not let it into the sitemap.
+
+## Editorial rules learned the hard way
+
+- **Say a thing once.** The homepage carried four sections making the same
+  argument: "The Experience", "The Chasen", "The Tea" and "Why Sous" each
+  ended on some form of *you choose the tea, Sous handles its part* — the
+  sentence appeared near-verbatim three times. The Chasen and The Tea are now
+  one section ("Keep the chasen. Choose the tea."), The Experience lost the
+  paragraph Why Sous already owned, and Why Sous is two paragraphs. That is
+  the real reason the page was ~13,000 px, not length for its own sake.
+- **The price goes above the philosophy.** The buy box used to be section 12
+  of 17, roughly 9,000 px down, behind seven consecutive prose blocks. It now
+  sits directly after Control, at about the halfway mark. Brand copy that
+  needs to convince someone still runs *after* the decision point, where it
+  serves the people who need it.
+- **Numbered lists must be one set.** "How Sous prepares matcha" listed
+  01 The faster stage, 02 The finishing stage, 03 Press start. Items 1 and 2
+  are stages of the machine's cycle; item 3 is a thing the owner does before
+  either, and its body copy was a slogan rather than a step. Removed.
+- **US spellings on a US-only store.** "Millilitres", "honour", "moulded",
+  "colour" were all live. Grep before shipping copy.
+- **One verb for one action.** "Buy now", "Preorder" and "Reserve your Sous"
+  all pointed at the same anchor. Three labels read as three offers.
 
 ## Video
 
