@@ -16,7 +16,7 @@
     <div class="buybox">
       <h2>{{ product.title }}</h2>
       {%- if product.metafields.custom.edition -%}<p class="variant">{{ product.metafields.custom.edition }}</p>{%- endif -%}
-      <div class="price"><b>{{ product.price | money_without_trailing_zeros }}</b><span>{{ section.settings.price_note }}</span></div>
+      <div class="price"><b>{{ product.price | money_without_trailing_zeros }}</b></div>
 
       {%- form 'product', product -%}
         {%- if product.variants.size > 1 -%}

@@ -1,5 +1,5 @@
 {%- assign p = section.settings.product | default: collections.all.products.first -%}
-<section id="order" class="bg-paper" aria-label="Buy">
+<section id="order" aria-label="Buy">
   <div class="wrap order">
     <figure class="stage">
       <span class="media-frame">
@@ -13,12 +13,17 @@
     </figure>
 
     <div class="buybox">
+      {%- if section.settings.eyebrow != blank -%}<p class="preorder">{{ section.settings.eyebrow }}</p>{%- endif -%}
       {%- if section.settings.variant_line != blank -%}<p class="variant">{{ section.settings.variant_line }}</p>{%- endif -%}
 
       {%- if p != blank -%}
-        <div class="price"><b>{{ p.price | money_without_trailing_zeros }}</b><span>{{ section.settings.price_note }}</span></div>
+        <div class="price"><b>{{ p.price | money_without_trailing_zeros }}</b></div>
       {%- else -%}
-        <div class="price"><b>{{ section.settings.fallback_price }}</b><span>{{ section.settings.price_note }}</span></div>
+        <div class="price"><b>{{ section.settings.fallback_price }}</b></div>
+      {%- endif -%}
+
+      {%- if section.settings.closer != blank -%}
+        <p class="closer">{{ section.settings.closer }}</p>
       {%- endif -%}
 
       {%- if section.blocks.size > 0 -%}
@@ -27,10 +32,6 @@
             <li {{ block.shopify_attributes }}>{{ block.settings.item }}{% if block.settings.note != blank %} <span>{{ block.settings.note }}</span>{% endif %}</li>
           {%- endfor -%}
         </ul>
-      {%- endif -%}
-
-      {%- if section.settings.closer != blank -%}
-        <p class="closer">{{ section.settings.closer }}</p>
       {%- endif -%}
 
       {%- if p != blank -%}
@@ -55,10 +56,11 @@
         <a class="btn btn-primary btn-lg btn-block" href="{{ routes.all_products_collection_url }}">{{ section.settings.cta_label }}</a>
       {%- endif -%}
 
+      {%- if section.settings.paynote != blank -%}<p class="paynote">{{ section.settings.paynote }}</p>{%- endif -%}
+
       <div class="assure">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> {{ section.settings.assure_1 }}</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v9l5 3"/><circle cx="12" cy="12" r="9"/></svg> {{ section.settings.assure_2 }}</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> {{ section.settings.assure_3 }}</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> {{ section.settings.assure_2 }}</span>
       </div>
     </div>
   </div>
@@ -70,32 +72,35 @@
   "settings": [
     { "type": "product", "id": "product", "label": "Product" },
     { "type": "text", "id": "fallback_price", "label": "Price if no product selected", "default": "$199" },
-    { "type": "text", "id": "variant_line", "label": "Edition line (blank to hide)", "default": "" },
-    { "type": "text", "id": "price_note", "label": "Price note", "default": "free US shipping" },
-    { "type": "text", "id": "closer", "label": "Line above the button", "default": "It cannot fix a bad matcha. It will not miss on a good one." },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow (blank to hide)", "default": "Meet your Sous" },
+    { "type": "text", "id": "variant_line", "label": "Descriptor line (blank to hide)", "default": "" },
+    { "type": "text", "id": "closer", "label": "Line above the spec list", "default": "A two-speed automatic matcha mixer designed to bring matcha and water together evenly, then change pace to refine the finish." },
     { "type": "text", "id": "cta_label", "label": "Button label", "default": "Reserve your Sous" },
-    { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Cancel any time before it ships" },
-    { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "Free shipping across the US" },
-    { "type": "text", "id": "assure_3", "label": "Assurance 3", "default": "1-year warranty" }
+    { "type": "text", "id": "paynote", "label": "Note under the button", "default": "Nothing is charged until your Sous ships. Cancel any time before then." },
+    { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Free US shipping" },
+    { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "One-year warranty" }
   ],
   "blocks": [
     {
       "type": "item",
       "name": "Included item",
       "settings": [
-        { "type": "text", "id": "item", "label": "Item", "default": "Matcha Sous mixer base" },
-        { "type": "text", "id": "note", "label": "Note", "default": "backlit controls" }
+        { "type": "text", "id": "item", "label": "Item", "default": "Stainless-steel vessel" },
+        { "type": "text", "id": "note", "label": "Note", "default": "" }
       ]
     }
   ],
   "presets": [{
     "name": "Buy box",
     "blocks": [
-      { "type": "item", "settings": { "item": "Matcha Sous mixer base", "note": "backlit controls" } },
-      { "type": "item", "settings": { "item": "Stainless matcha cup", "note": "40–120 ml" } },
-      { "type": "item", "settings": { "item": "Power adapter", "note": "USB-C" } },
-      { "type": "item", "settings": { "item": "USB-C cable", "note": "" } },
-      { "type": "item", "settings": { "item": "User manual", "note": "" } }
+      { "type": "item", "settings": { "item": "Stainless-steel vessel", "note": "" } },
+      { "type": "item", "settings": { "item": "Preset preparations", "note": "three" } },
+      { "type": "item", "settings": { "item": "Manual speed settings", "note": "eighteen" } },
+      { "type": "item", "settings": { "item": "Etched volume guides", "note": "40 / 80 / 120 ml" } },
+      { "type": "item", "settings": { "item": "Two-speed automatic cycle", "note": "" } },
+      { "type": "item", "settings": { "item": "Hands-free operation", "note": "" } },
+      { "type": "item", "settings": { "item": "Powered", "note": "USB-C" } },
+      { "type": "item", "settings": { "item": "Hand wash only", "note": "" } }
     ]
   }]
 }
