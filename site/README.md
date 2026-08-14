@@ -365,6 +365,30 @@ page reads as an editorial index rather than a stack of identical blocks.
 
 ## Video
 
+`assets/vid/cycle-1080-v2.webm` / `.mp4` (1080x1440, 7.93 s, 30 fps) is the
+showcase clip, cut from `Matcha_Sous_Video_1.mp4` (1080x1920, 11.89 s) with
+`crop=1080:1440:0:380,setpts=PTS/1.5` and `-r 30`, audio dropped.
+
+Two things that will bite if you redo this:
+
+- **Lock the frame rate.** `setpts=PTS/1.5` rewrites timestamps but does not
+  set an output rate. Left alone, VP9 emitted 45 fps (every source frame kept,
+  fine but nonstandard) while x264 defaulted to 25 fps and threw away a third
+  of the frames. `-r 30` gives both encoders the same, standard rate.
+- **The crop offset is 380 px, recovered by template-matching** the old
+  1080x1440 render against the 1080x1920 source, not guessed. The full frame
+  has dead grey above and below the cup; 380 is the offset that frames the cup
+  with the base and its timer.
+
+The poster (`assets/img/cycle-poster.webp`) is **frame 0 of the encoded
+video**, so there is no visible jump when playback starts. Regenerate it
+whenever the video changes. It doubles as the buy-box primary image, so a
+change there shows up in two places.
+
+Filenames carry `-v2` on purpose: videos are cached hard, and a same-named
+replacement can serve stale bytes for a long time. Version the filename
+rather than trusting revalidation.
+
 `assets/vid/cycle-1080.webm` (2.7 MB, VP9) + `cycle-1080.mp4` (4.8 MB, H.264
 Main) — **1080x1440, 30 fps, 11.9 s**, from the founder's 1080x1920 upload.
 3:4 crop at y=380 keeps the cup and the lit countdown on the base; mild warm
