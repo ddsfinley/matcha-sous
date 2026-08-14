@@ -36,7 +36,7 @@
               <label for="variant">Option</label>
               <select id="variant" name="id">
                 {%- for v in p.variants -%}
-                  <option value="{{ v.id }}"{% unless v.available %} disabled{% endunless %}>{{ v.title }} — {{ v.price | money_without_trailing_zeros }}</option>
+                  <option value="{{ v.id }}"{% unless v.available %} disabled{% endunless %}>{{ v.title }} · {{ v.price | money_without_trailing_zeros }}</option>
                 {%- endfor -%}
               </select>
             </div>
