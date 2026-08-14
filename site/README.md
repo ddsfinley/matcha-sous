@@ -135,6 +135,21 @@ Three rules follow from Poiret being a light display cut:
    reading as the mark's face. Ladder the values in a browser before
    changing them.
 
+**Microfoam is the elevation claim.** The `#how` section is framed upward
+("A good matcha, *at its best.*"), not as loss. What separates a great bowl
+from a merely good one is **texture**: a fine microfoam gives the tea body
+and softens astringency. Two things must stay accurate here —
+1. **Foam does not change the tea's chemistry.** It changes mouthfeel and
+   *perception*: fine bubbles soften first contact with the tongue, so
+   bitterness reads less sharp. Never write that foaming changes the flavour.
+2. **Foam is not universally "correct" in the tradition.** Urasenke whisks to
+   a full fine foam; Omotesenke deliberately leaves less. So the site argues
+   texture and mouthfeel, never that foam is the right way — that would
+   contradict the respect-the-ceremony rule.
+Supporting fact used in item 03: **over-whisking draws out bitterness**
+(~15 s is the usual guidance), which is a real argument for a timed cycle.
+Big, bubbly froth is under-whisked and coarse — the opposite of the goal.
+
 **The matcha-quality line** (founder's, and it is a positioning claim as much
 as a caveat): **Sous cannot fix a poor matcha — it brings a good one to its
 full flavour.** It says the machine is an amplifier, not a rescue, which is
