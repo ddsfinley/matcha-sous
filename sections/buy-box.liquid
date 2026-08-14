@@ -29,6 +29,10 @@
         </ul>
       {%- endif -%}
 
+      {%- if section.settings.closer != blank -%}
+        <p class="closer">{{ section.settings.closer }}</p>
+      {%- endif -%}
+
       {%- if p != blank -%}
         {%- form 'product', p, id: 'buy-form' -%}
           {%- if p.variants.size > 1 -%}
@@ -68,6 +72,7 @@
     { "type": "text", "id": "fallback_price", "label": "Price if no product selected", "default": "$199" },
     { "type": "text", "id": "variant_line", "label": "Edition line (blank to hide)", "default": "" },
     { "type": "text", "id": "price_note", "label": "Price note", "default": "free US shipping" },
+    { "type": "text", "id": "closer", "label": "Line above the button", "default": "It cannot fix a bad matcha. It will not miss on a good one." },
     { "type": "text", "id": "cta_label", "label": "Button label", "default": "Buy now" },
     { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Cancel any time before it ships" },
     { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "30-day returns" },
