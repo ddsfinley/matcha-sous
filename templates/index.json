@@ -17,8 +17,8 @@
       "block_order": ["s1","s2","s3"] },
     "how":       { "type": "how-it-works",
       "blocks": {
-        "h1": { "type": "point", "settings": { "title": "A vortex, not a blade", "text": "A magnet turns the mixing disc beneath the cup. Nothing else touches the tea." } },
-        "h2": { "type": "point", "settings": { "title": "The same agitation, every time", "text": "Calibrated speeds hold the fast, shallow motion that builds microfoam." } },
+        "h1": { "type": "point", "settings": { "title": "First, suspension", "text": "A fast vortex lifts the powder evenly through the water. A magnet turns the disc beneath a sealed cup, so nothing touches the tea." } },
+        "h2": { "type": "point", "settings": { "title": "Then, refinement", "text": "The vortex slows, working the larger bubbles down into a finer, more even foam." } },
         "h3": { "type": "point", "settings": { "title": "It ends on its own", "text": "Press it and step away. Sous completes the cycle and stops." } }
       },
       "block_order": ["h1","h2","h3"] },
