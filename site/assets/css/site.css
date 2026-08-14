@@ -42,7 +42,13 @@ img{display:block;max-width:100%;height:auto}
 .wrap{max-width:var(--w);margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}
 
 /* ---------- type ---------- */
-h1,h2,h3{font-weight:500;color:var(--aub-deep);line-height:1.1;letter-spacing:-.01em}
+h1,h2,h3{font-weight:500;color:var(--aub-deep);line-height:1.1;letter-spacing:-.01em;
+  /* balance evens the lines of a short block, so a heading never drops a
+     single word onto its own line */
+  text-wrap:balance}
+/* pretty only fixes the last line, which is what body copy needs; balance
+   would fight long paragraphs */
+p,li,figcaption,blockquote,.lead,.a,.empty{text-wrap:pretty}
 /* Poiret is a wide, airy face — it wants no negative tracking. */
 .display{font-family:var(--disp);letter-spacing:0}
 h1.display{font-size:clamp(2.5rem,5.4vw,4.4rem)}
@@ -222,8 +228,13 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .head p{margin-top:16px}
 /* numbered, rule-topped heads: the page's signature device */
 .head--idx{max-width:none;border-top:1px solid var(--line);padding-top:22px}
-.head--idx .head-body{max-width:44ch}
-.head--idx h2.display{font-size:clamp(2.3rem,5vw,4rem);letter-spacing:0}
+/* The 44ch was sized for the lead, but it also caged the much larger
+   heading, forcing two- and three-word heads to wrap and strand a single
+   word. Heading and lead now carry their own measures. */
+.head--idx .head-body{max-width:none}
+.head--idx .head-body>.lead{max-width:44ch}
+.head--idx h2.display{max-width:19ch}
+.head--idx h2.display{font-size:clamp(2.05rem,5vw,4rem);letter-spacing:0}
 .head--idx .lead{margin-top:14px}
 /* asymmetric editorial split: heading left, content right */
 .split{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(26px,4vw,72px);align-items:start;border-top:1px solid var(--line);padding-top:26px}
@@ -244,7 +255,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .feature svg{width:44px;height:44px;color:var(--aub);margin-bottom:18px}
 .feature h3{font-family:var(--disp);font-size:1.35rem;margin-bottom:10px}
 .feature p{font-size:.92rem;color:var(--stone)}
-@media (max-width:1000px){.features{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:1100px){.features{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.features{grid-template-columns:1fr}}
 
 /* gallery */
@@ -355,7 +366,9 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 
 /* ---------- subpage hero ---------- */
 .pagehero{background:linear-gradient(180deg,var(--paper),var(--bone-deep));border-bottom:1px solid var(--line-soft);padding-block:clamp(52px,8vh,100px);text-align:center}
-.pagehero .inner{max-width:680px;margin-inline:auto}
+.pagehero .inner{max-width:none}
+.pagehero .inner>.lead,.pagehero .inner>p{max-width:680px;margin-inline:auto}
+.pagehero h1.display{max-width:22ch;margin-inline:auto;font-size:clamp(1.85rem,8.2vw,4.4rem)}
 .pagehero p{margin-top:18px}
 
 /* ---------- forms ---------- */

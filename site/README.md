@@ -169,6 +169,25 @@ homepage Q&A "Can I use any matcha?" and `faq.html`'s "What matcha works
 best?" (+ its schema). Never let "works with any matcha" stand alone
 without it.
 
+**No orphaned words in headings.** Founder's rule: a heading must never drop
+a single word onto its own line. `text-wrap:balance` on `h1,h2,h3` plus
+`text-wrap:pretty` on body copy is only half of it — balance cannot rescue a
+two- or three-word heading that is being *forced* to wrap by a container
+narrower than the words need. Three real causes were fixed:
+1. `.head--idx .head-body{max-width:44ch}` was sized for the lead but caged
+   the much larger heading. Heading and lead now carry separate measures
+   (`h2.display` 19ch of its own font; the lead stays 44ch).
+2. `.pagehero .inner{max-width:680px}` capped the page-hero h1 below the
+   width its words needed. The cap moved to the lead; the h1 takes 22ch.
+3. Four feature cards at 1024px left each column too narrow for a two-word
+   head, so the 2-up breakpoint moved from 1000px to 1100px.
+`.pagehero h1` is `clamp(1.85rem,8.2vw,4.4rem)`: the small floor is what
+makes a three-word head fit a 360px phone, and the steep 8.2vw is what stops
+that floor flattening every phone to the same size.
+**Verify with `scratchpad/orphans.py`** — it walks every h1/h2/h3 on all 11
+pages at 9 widths and reports any whose last visual line holds one word.
+Currently zero. Re-run it after any type-size or container-width change.
+
 **Layout signature**: homepage section heads sit left under a hairline rule
 (`.head--idx`) — no numerals. The "how it works" section uses `.split`
 (heading left, numbered items right).
@@ -278,7 +297,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=37**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=38**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
