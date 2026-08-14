@@ -169,6 +169,16 @@ homepage Q&A "Can I use any matcha?" and `faq.html`'s "What matcha works
 best?" (+ its schema). Never let "works with any matcha" stand alone
 without it.
 
+**The hero lead is the counter-space line** (the founder's, verbatim):
+**"Does it count as taking up counter space if you use it every day?"**
+It replaced "Smooth, consistent matcha at the press of a button", which
+restated a spec in the most-read position on the site. This one does the
+opposite of the rest of the page: every other line describes the machine,
+this one describes the owner's life. It also answers the real objection to a
+$199 single-purpose appliance by refusing the premise rather than arguing
+with it, and it earns "Made to live on your counter" further down. Do not
+replace it with a benefit statement.
+
 **No orphaned words in headings.** Founder's rule: a heading must never drop
 a single word onto its own line. `text-wrap:balance` on `h1,h2,h3` plus
 `text-wrap:pretty` on body copy is only half of it — balance cannot rescue a
