@@ -5,16 +5,15 @@
       "blocks": {
         "b1": { "type": "step", "settings": { "title": "Fill",  "text": "Matcha and water to the line.",  "fallback": "photo-lines.webp" } },
         "b2": { "type": "step", "settings": { "title": "Press", "text": "Choose your preset.",            "fallback": "photo-profile.webp" } },
-        "b3": { "type": "step", "settings": { "title": "Pour",  "text": "Sous stops itself. You pour.",   "fallback": "photo-spout.webp" } }
+        "b3": { "type": "step", "settings": { "title": "Pour",  "text": "Sous knows when to change pace.",   "fallback": "photo-spout.webp" } }
       },
       "block_order": ["b1","b2","b3"] },
     "showcase":  { "type": "showcase",
       "blocks": {
-        "s1": { "type": "shot", "settings": { "fallback": "photo-profile.webp", "caption": "Base & cup · matte black, stainless" } },
-        "s2": { "type": "shot", "settings": { "fallback": "photo-lines.webp",   "caption": "Etched 40 · 80 · 120 ml" } },
-        "s3": { "type": "shot", "settings": { "fallback": "photo-kit.webp",     "caption": "Everything included" } }
+        "s1": { "type": "shot", "settings": { "fallback": "photo-profile.webp", "caption": "Compact proportions, flush controls" } },
+        "s2": { "type": "shot", "settings": { "fallback": "photo-lines.webp",   "caption": "Etched 40 · 80 · 120 ml" } }
       },
-      "block_order": ["s1","s2","s3"] },
+      "block_order": ["s1","s2"] },
     "how":       { "type": "how-it-works",
       "blocks": {
         "h1": { "type": "point", "settings": { "title": "First, suspension", "text": "A fast vortex lifts the powder evenly through the water. A magnet turns the disc beneath a sealed cup, so nothing touches the tea." } },
