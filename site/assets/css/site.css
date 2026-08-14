@@ -337,6 +337,17 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .stockists .textlink{margin-left:auto}
 .empty{color:var(--stone);max-width:52ch;border-top:1px solid var(--line);padding-top:20px}
 
+/* ---------- prose blocks (the longer narrative sections) ---------- */
+.prose{max-width:64ch}
+.prose p+p{margin-top:16px}
+.prose b{color:var(--aub-ink);font-weight:400}
+.mood-sub{margin-top:18px;max-width:52ch;color:rgba(237,228,216,.72);font-size:clamp(.95rem,1.3vw,1.1rem)}
+.mood--light .mood-sub{color:var(--stone)}
+/* the method now runs four steps, not three */
+.steps--4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.steps--4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.steps--4{grid-template-columns:1fr}}
+
 /* ---------- spec plate ---------- */
 .plate{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px clamp(18px,3vw,32px);display:flex;flex-wrap:wrap;gap:10px 0;justify-content:space-between;box-shadow:var(--shadow-sm)}
 .plate span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);padding-right:12px}

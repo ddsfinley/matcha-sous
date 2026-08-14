@@ -6,11 +6,11 @@ only at small scale. Poiret One (display) + Jost (utility). Lives in
 `/site`; the legacy storefront at the repo root is untouched.
 
 ## Pages
-- `index.html` — journey-ordered single page (desire → understanding →
-  demonstration → differentiation → credibility → purchase): full-bleed
-  hero → Fill·Press·Pour → product showcase → how it works → presets →
-  origin → ceremony band + use cases → **purchase** → spec plate → FAQ →
-  Journal → final CTA → letter.
+- `index.html` — rebuilt to the founder's full copy deck (17 sections):
+  hero → brand moment → the experience → how Sous prepares matcha →
+  the method (4 steps) → design → control → the chasen → the tea →
+  our story → why Sous → **product** → matcha your way → questions →
+  Journal → final CTA → email.
 - `how-to-use.html` — the full method: weigh, sift, fill, whisk, build (ice/milk), sweeten + care (HowTo schema)
 - `journal/` — SEO article hub + 4 posts (Article schema)
 - `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
@@ -353,7 +353,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=40**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=41**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
