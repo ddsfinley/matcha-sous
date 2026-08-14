@@ -129,9 +129,6 @@
     "story": {
       "type": "story"
     },
-    "band": {
-      "type": "mood-band"
-    },
     "uses": {
       "type": "use-cases",
       "blocks": {
@@ -389,15 +386,14 @@
   },
   "order": [
     "hero",
+    "how",
     "demo",
     "showcase",
-    "how",
     "presets",
-    "story",
-    "band",
-    "uses",
     "buy",
     "specs",
+    "uses",
+    "story",
     "faq",
     "journal",
     "closing"
