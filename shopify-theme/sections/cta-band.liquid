@@ -2,7 +2,7 @@
 <section class="cta-band" aria-label="Buy">
   <div class="glow"></div>
   <div class="wrap inner">
-    {%- if section.settings.eyebrow != blank -%}<span class="eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+    {%- if section.settings.eyebrow != blank -%}{%- if section.settings.eyebrow != blank -%}<span class="eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}{%- endif -%}
     {%- if section.settings.heading != blank -%}<h2 class="display">{{ section.settings.heading }}</h2>{%- endif -%}
     {%- if section.settings.lead != blank -%}<p class="lead">{{ section.settings.lead }}</p>{%- endif -%}
     <div class="cta" style="justify-content:center">

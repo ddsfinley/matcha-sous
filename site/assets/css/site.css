@@ -231,7 +231,10 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .head.center{margin-inline:auto;text-align:center}
 .head p{margin-top:16px}
 /* numbered, rule-topped heads: the page's signature device */
-.head--idx{max-width:none;border-top:1px solid var(--line);padding-top:22px}
+/* 22px was tuned for a rule sitting above an eyebrow. With the eyebrows gone the
+   hairline butts straight into a 64px heading, so the gap carries the space the
+   eyebrow used to occupy. */
+.head--idx{max-width:none;border-top:1px solid var(--line);padding-top:clamp(28px,3.4vw,44px)}
 /* The 44ch was sized for the lead, but it also caged the much larger
    heading, forcing two- and three-word heads to wrap and strand a single
    word. Heading and lead now carry their own measures. */

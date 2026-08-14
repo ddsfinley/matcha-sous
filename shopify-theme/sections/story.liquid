@@ -1,7 +1,7 @@
 <section class="tight" aria-label="Where it began">
   <div class="wrap order">
     <div class="story">
-      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      {%- if section.settings.eyebrow != blank -%}<span class="eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
       <h2 class="display">{{ section.settings.heading }}</h2>
       <div style="margin-top:16px">{{ section.settings.text }}</div>
       {%- if section.settings.link != blank -%}
@@ -24,7 +24,7 @@
 {
   "name": "Origin story",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Our story" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "" },
     { "type": "html", "id": "heading", "label": "Heading", "default": "Born behind the bar. <em>Made to live on your counter.</em>" },
     { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A hundred bowls a shift taught us how rarely two taste the same. So we built the one that does, then refined it until it belonged at home.</p>" },
     { "type": "url", "id": "link", "label": "Link" },
