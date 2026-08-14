@@ -68,7 +68,7 @@
         "q5": { "type": "qa", "settings": { "q": "How long does one cycle take?", "a": "<p>About thirty seconds. The timer ends it for you.</p>" } },
         "q6": { "type": "qa", "settings": { "q": "How do I clean it?", "a": "<p>Rinse the stainless cup and wipe the base with a damp cloth. Do not submerge the base.</p>" } },
         "q7": { "type": "qa", "settings": { "q": "What comes with Matcha Sous?", "a": "<p>The mixer base, the stainless matcha cup, a power adapter, a USB-C cable and the user manual — in the presentation case.</p>" } },
-        "q8": { "type": "qa", "settings": { "q": "What is the warranty?", "a": "<p>One year against defects in materials and workmanship, plus 30-day returns.</p>" } },
+        "q8": { "type": "qa", "settings": { "q": "What is the warranty?", "a": "<p>One year against manufacturing defects in materials and workmanship. We do not take returns for change of mind, so cancel before your unit ships if you are unsure.</p>" } },
         "q9": { "type": "qa", "settings": { "q": "Can I still use a bamboo chasen?", "a": "<p>Of course — many owners do, on the mornings that allow for it. Sous is there for the ones that don't.</p>" } }
       },
       "block_order": ["q1","q2","q3","q4","q5","q6","q7","q8","q9"] },

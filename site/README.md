@@ -191,10 +191,10 @@ machine, and this feeling is about the owner's life.
    - Close: *"Give it a month. Then try going back."*
    The interrogative is the ownable voice here. Almost nobody in DTC asks.
 
-**The close ties the claim to the guarantee.** "Give it a month" is exactly
-the 30-day return window named in the line beneath it, so the headline and
-the fine print now argue together: the return policy is the mechanism that
-makes the dare credible. Do not separate them.
+**The close was a dare tied to a 30-day return window. That window no longer
+exists**, so it became a prediction instead: *"A month in, you won't remember
+the other way."* Do not reinstate a trial framing ("give it a month", "try
+it") — there is nothing for the buyer to fall back on if they dislike it.
 
 **The hero lead is the counter-space line** (the founder's, verbatim):
 **"Does it count as taking up counter space if you use it every day?"**
@@ -275,11 +275,18 @@ page reads as an editorial index rather than a stack of identical blocks.
    `areaServed: US`. **The stockists page said "worldwide" for one deploy** —
    if the scope changes again, grep `worldwide|free shipping|international`
    before announcing it.
-1b-ii. **Preorder cancellation** (founder's terms): cancellable any time
-   before shipping, full refund, no reason required; the 30-day return takes
-   over once it has shipped. Stated in the buy box assurances, the homepage
-   Q&A and `faq.html` — and mirrored in the FAQPage schema, which must stay
-   1:1 with the visible `<summary>` list or Google drops the rich result.
+1b-ii. **No returns. Cancellation before shipping, plus a 1-year warranty
+   against manufacturing defects. That is the whole policy** (founder's
+   decision). Cancellation is now the only pre-purchase reassurance the site
+   offers, so it stays first in the buy box assurances and prominent in both
+   FAQs, mirrored in the FAQPage schema, which must stay 1:1 with the visible
+   `<summary>` list or Google drops the rich result. Product schema declares
+   `hasMerchantReturnPolicy: MerchantReturnNotPermitted` rather than leaving
+   it unstated. **Risk accepted knowingly:** taking preorder money with no
+   return path is the highest-exposure profile for card chargebacks, and at
+   $199 from a brand with no reviews a return policy is usually what
+   substitutes for trust not yet earned. If disputes appear after launch,
+   revisit this first.
 1c. **Lifestyle photography**: `assets/img/mood-counter.webp` (the light mood
    band, "The counter is the new café.") is a placeholder — a regraded product
    shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
