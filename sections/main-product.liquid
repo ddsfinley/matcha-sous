@@ -5,7 +5,7 @@
         {%- if product.featured_image -%}
           <img src="{{ product.featured_image | image_url: width: 1000 }}" alt="{{ product.featured_image.alt | default: product.title }}" width="750" height="1000">
         {%- else -%}
-          <img src="{{ 'photo-profile.webp' | asset_url }}" alt="{{ product.title }}" width="750" height="1000">
+          <img src="{{ 'cycle-poster.webp' | asset_url }}" alt="{{ product.title }}" width="1080" height="1440">
         {%- endif -%}
       </span>
       {%- if product.images.size > 1 -%}

@@ -6,7 +6,7 @@
         {%- if p != blank and p.featured_image -%}
           <img src="{{ p.featured_image | image_url: width: 900 }}" alt="{{ p.featured_image.alt | default: p.title }}" width="750" height="1000" loading="lazy">
         {%- else -%}
-          <img src="{{ 'photo-profile.webp' | asset_url }}" alt="Matcha Sous, matte black base with stainless cup" width="750" height="1000" loading="lazy">
+          <img src="{{ 'cycle-poster.webp' | asset_url }}" alt="Matcha Sous seen from above, finished matcha in the stainless vessel" width="1080" height="1440" loading="lazy">
         {%- endif -%}
       </span>
       <span class="buy-thumb"><img src="{{ 'photo-case.webp' | asset_url }}" alt="The Matcha Sous presentation case" width="1320" height="667" loading="lazy"></span>
@@ -73,7 +73,7 @@
     { "type": "text", "id": "variant_line", "label": "Edition line (blank to hide)", "default": "" },
     { "type": "text", "id": "price_note", "label": "Price note", "default": "free US shipping" },
     { "type": "text", "id": "closer", "label": "Line above the button", "default": "It cannot fix a bad matcha. It will not miss on a good one." },
-    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Buy now" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Reserve your Sous" },
     { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Cancel any time before it ships" },
     { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "Free shipping across the US" },
     { "type": "text", "id": "assure_3", "label": "Assurance 3", "default": "1-year warranty" }
