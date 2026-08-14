@@ -463,6 +463,16 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .sc-side{display:grid;gap:clamp(18px,2.6vw,30px);align-content:space-between}
 .sc-side .media-frame{aspect-ratio:16/9}
 .showcase figcaption{padding-top:10px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
+@media (min-width:861px){
+  /* Two side tiles, not three: at 16/9 they stopped ~230px short of the lead
+     frame and the column read unfinished. 3/2 makes two tiles plus a caption
+     each land within ~15px of the 3:4 lead, and space-between absorbs the
+     rest. Don't try to stretch the column instead: .showcase rows are
+     content-sized, so a 1fr row inside a stretched item feeds its own height
+     back into the row and both tiles grow to full height. Both cuts are 3:4
+     portrait, so the taller crop also discards less of the original. */
+  .sc-side .media-frame{aspect-ratio:3/2}
+}
 @media (max-width:860px){
   .showcase{grid-template-columns:1fr}
   /* the cut is exactly 3:4, so the frame matches it and nothing is cropped */
