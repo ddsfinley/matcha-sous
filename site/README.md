@@ -153,12 +153,21 @@ page reads as an editorial index rather than a stack of identical blocks.
    select it in the Hero and Buy box sections to switch on real checkout.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
-1b. **Price**: **$199** — set by the founder, the top of the packaging brief's
-   $179–199 band. It appears in the buy box, the CTA band, the five Journal
-   CTAs, the meta/OG descriptions and the Product schema `price`; the Shopify
-   buy-box `fallback_price` matches. `proposals/` still shows $150 and is
-   left alone deliberately — those are archived stage-1 records (noindex).
-   **Grep `$1` before changing it again**, not just the buy box.
+1b. **Price**: **$179 preorder, $199 list.** The buy box shows $179 with
+   $199 struck beside it, a copper `Preorder` label and the note "Preorder
+   price, held until the first run ships"; the CTA reads **Preorder**, not
+   Buy now. Product schema carries `price: 179.00` (the sellable price) and
+   `availability: PreOrder`. The price also appears in the CTA band, the five
+   Journal CTAs and the meta/OG descriptions; the Shopify buy-box
+   `fallback_price` matches. `proposals/` still shows $150 by design —
+   archived stage-1 records, noindex. **Grep `$1` before changing it again.**
+   The strikethrough is deliberately quiet (stone, no colour, no badge) —
+   the no-promo-language rule still applies.
+1b-i. **Ship window removed, needs restoring.** The assurance line said
+   "dispatched in 1–2 business days", which is false for a preorder, so it
+   is now just "Free shipping". **Put a real window back** ("ships March",
+   "ships within 8 weeks") once the run date is known — a preorder with no
+   stated date costs conversions and invites chargebacks.
 1c. **Lifestyle photography**: `assets/img/mood-counter.webp` (the light mood
    band, "The counter is the new café.") is a placeholder — a regraded product
    shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
@@ -213,7 +222,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=31**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=32**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
