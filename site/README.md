@@ -135,6 +135,15 @@ Three rules follow from Poiret being a light display cut:
    reading as the mark's face. Ladder the values in a browser before
    changing them.
 
+**The matcha-quality line** (founder's, and it is a positioning claim as much
+as a caveat): **Sous cannot fix a poor matcha — it brings a good one to its
+full flavour.** It says the machine is an amplifier, not a rescue, which is
+consistent with respecting the ceremony *and* protects against reviews from
+people who bought $8 culinary powder. It sits in the `#how` lead, the
+homepage Q&A "Can I use any matcha?" and `faq.html`'s "What matcha works
+best?" (+ its schema). Never let "works with any matcha" stand alone
+without it.
+
 **Layout signature**: homepage section heads sit left under a hairline rule
 (`.head--idx`) — no numerals. The "how it works" section uses `.split`
 (heading left, numbered items right).
