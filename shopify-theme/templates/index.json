@@ -43,14 +43,14 @@
         "s1": {
           "type": "shot",
           "settings": {
-            "fallback": "detail-instrument.webp",
-            "caption": "Compact proportions, flush controls"
+            "fallback": "tile-matcha.webp",
+            "caption": "Finished, ready to pour"
           }
         },
         "s2": {
           "type": "shot",
           "settings": {
-            "fallback": "photo-lines.webp",
+            "fallback": "tile-measures.webp",
             "caption": "Etched 40 · 80 · 120 ml"
           }
         }
