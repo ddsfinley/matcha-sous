@@ -176,7 +176,12 @@ starved bitrate. 760 px still under-covers that tile, which is why the tile
 must not be enlarged until a higher-resolution master arrives.
 
 **Do not enlarge the video tile** — a standing decision from the founder,
-independent of resolution. It stays at 568 CSS px in the gallery.
+independent of resolution. Small and sharp beats big and soft. Under 860px
+the tile is capped at **270 CSS px and centred**, which is 810 real pixels on
+a 3x iPhone against a 760 px master — near enough to native. On a 2x desktop
+the 568 px tile still upscales ~1.49x; fixing that needs either a
+higher-resolution master or a smaller desktop tile, and is not to be
+"fixed" by growing anything.
 
 **Wanted: a 1080p master.** The founder's 4K originals live in Drive but
 cannot be retrieved — the Drive connector caps downloads at 10 MB, the Drive
@@ -185,7 +190,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=26**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=27**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 

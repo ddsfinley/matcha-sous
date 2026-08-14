@@ -405,6 +405,12 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 @media (max-width:860px){
   .showcase{grid-template-columns:1fr}
   .sc-lead .media-frame{aspect-ratio:4/5}
+  /* The cycle's master is 760 px wide. A phone at 3x renders 3 real pixels
+     per CSS pixel, so anything past ~253 CSS px upscales it. Capped and
+     centred: small on purpose, and sharp because of it. Needs to outrank
+     `.showcase figure{margin:0}`, hence the two-class selector. */
+  .showcase .sc-lead{max-width:270px;margin-inline:auto}
+  .sc-lead .media-tag{bottom:10px;left:10px;font-size:.6rem;padding:6px 11px}
 }
 
 /* ---------- presets ---------- */
