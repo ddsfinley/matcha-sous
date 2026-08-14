@@ -84,22 +84,23 @@ the whisk.** House line for the dark mood band: **"The ceremony,
 preserved. The Sous, in service of it."** — ceremony first, the Sous
 second and subordinate; also a candidate for the box interior.
 
-**Hero**: full bleed and **moving** — `assets/vid/hero-vortex.webm` (3.0 MB)
-+ `hero-vortex.mp4` (5.3 MB), the macro vortex at full spin, 12.5 s, graded
-to match the still it replaced (warm, saturated, blended toward the
-aubergine). One element at every size: `autoplay` overrides `preload="none"`,
-so a hidden phone-only copy would still be downloaded — cheaper to show the
-one video everywhere, and being portrait it suits a phone hero better than
-the desktop band. `hero-bleed.webp` (2400x1200) stays as the poster and is
-still preloaded, so the sharp still paints first.
+**Hero**: full bleed and **moving** — `assets/vid/hero-vortex.webm` (4.1 MB)
++ `hero-vortex.mp4` (7.1 MB), **1080x1360**, 12.5 s, cut straight from the
+founder's original `IMG_2071_3.MOV` (HEVC Main 10, HLG/bt2020, 1080x1920
+with a -90 rotation flag). Pipeline: tone-map HLG->bt709
+(`zscale=t=linear:npl=100,tonemap=hable,zscale=p=bt709:t=bt709:m=bt709:r=tv`),
+`crop=1080:1360:0:140` — cup only, base off the bottom and busy counter off
+the top — then 1.25x, a restrained warm/saturation lift (tone-mapping
+flattens), mild unsharp, audio stripped.
 
-**The hero video is upscaled and it shows.** Its master is only 760 px wide
-(the founder's split clips), against 2880 real pixels on a 1440 retina
-screen — a 3.8x stretch. Motion hides some of it and the left scrim hides
-more, but it is softer than the still was. **The fix is a 1080p export of the
-macro-vortex take**, uploaded through chat the way `Matcha Sous Video 1` was;
-that would cut the stretch to 2.7x, and a 4K one would end it. Do not try to
-solve this with sharpening.
+**Always cut from the originals in `~/.claude/uploads`, never from the
+760x1226 `p1.mp4`/`p2.mp4` intermediates.** Those were downscaled early on,
+and building the hero from them threw away a third of the resolution for
+nothing: the rebuild took the retina-desktop stretch from 3.8x to 2.67x and
+the phone from 1.78x to 1.60x *while* zooming in further.
+
+`hero-bleed.webp` is the poster, cut from the same frame so there is no jump
+when the video takes over.
 
 The reading field is carved out with CSS scrims in the *same* aubergine the
 footage is graded toward, which is why there is no seam between media and
@@ -200,7 +201,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=29**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=30**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 

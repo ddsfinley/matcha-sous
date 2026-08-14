@@ -293,7 +293,17 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .assure{display:grid;gap:10px;margin-top:20px}
 .assure span{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--stone)}
 .assure svg{width:18px;height:18px;color:var(--copper);flex:none}
-@media (max-width:860px){.order{grid-template-columns:1fr}.order .stage{max-width:440px}}
+/* #order .order above is an ID selector, so the stacking rule has to match it
+   or the section stays two-column on phones and squeezes the buy box. */
+@media (max-width:860px){.order,#order .order{grid-template-columns:1fr}.order .stage{max-width:440px}}
+/* On phones the buy box is the whole point of this section — the two product
+   shots are already covered by the gallery above, so drop them and give the
+   box the full width of the screen. */
+@media (max-width:700px){
+  #order .stage{display:none}
+  #order .wrap{padding-inline:12px}
+  .buybox{padding:26px 18px}
+}
 
 /* ---------- spec plate ---------- */
 .plate{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px clamp(18px,3vw,32px);display:flex;flex-wrap:wrap;gap:10px 0;justify-content:space-between;box-shadow:var(--shadow-sm)}
