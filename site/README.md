@@ -153,7 +153,10 @@ page reads as an editorial index rather than a stack of identical blocks.
    select it in the Hero and Buy box sections to switch on real checkout.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
-1b. **Price**: **$179 preorder, $199 list.** The buy box shows $179 with
+1b. **Price**: **$179 preorder, $199 list.** The buy box opens straight on
+   the price — the product title and the "Matte Black / Stainless" line were
+   removed at the founder's request, so the section's accessible name comes
+   from `aria-label="Buy Matcha Sous"` on the `<section>`. It shows $179 with
    $199 struck beside it, a copper `Preorder` label and the note "Preorder
    price, held until the first run ships"; the CTA reads **Preorder**, not
    Buy now. Product schema carries `price: 179.00` (the sellable price) and
@@ -222,7 +225,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=32**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=33**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
