@@ -153,7 +153,7 @@ page reads as an editorial index rather than a stack of identical blocks.
    select it in the Hero and Buy box sections to switch on real checkout.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
-1b. **Price**: **$179** — set by the founder, inside the packaging brief's
+1b. **Price**: **$199** — set by the founder, the top of the packaging brief's
    $179–199 band. It appears in the buy box, the CTA band, the five Journal
    CTAs, the meta/OG descriptions and the Product schema `price`; the Shopify
    buy-box `fallback_price` matches. `proposals/` still shows $150 and is
@@ -240,4 +240,4 @@ fold at 390×844.
 - One small CSS file, no JS on home/FAQ (Q&A uses native `<details>`); ~10 lines of JS on wholesale only
 - WebP images with explicit width/height (no CLS), `fetchpriority=high` + preload on the LCP hero,
   `loading=lazy` below the fold
-- JSON-LD: Organization, WebSite, Product+Offer ($179), BreadcrumbList, FAQPage
+- JSON-LD: Organization, WebSite, Product+Offer ($199), BreadcrumbList, FAQPage
