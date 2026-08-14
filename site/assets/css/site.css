@@ -141,6 +141,10 @@ body{padding-top:var(--announce-h)}
 .hero h1 em{color:var(--copper-bright)}
 .hero .lead{margin:0 0 30px;font-size:clamp(1.05rem,1.4vw,1.28rem);color:rgba(237,228,216,.82);text-shadow:0 1px 20px rgba(20,14,27,.6)}
 .hero .lead b{color:var(--bone-bright)}
+/* When no lead sits between them, the h1's bottom margin alone leaves the
+   button cramped. Adjacent-sibling so this self-heals if a lead returns. */
+.hero h1.hero-line + .cta{margin-top:clamp(12px,2.4vh,26px)}
+.cta-band .lead:first-child{margin-top:0}
 .hero .cta{justify-content:flex-start}
 @media (max-width:760px){
   /* Portrait art direction: type on the calm top third, vortex below it. */

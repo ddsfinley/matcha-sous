@@ -191,20 +191,21 @@ machine, and this feeling is about the owner's life.
    - Close: *"Give it a month. Then try going back."*
    The interrogative is the ownable voice here. Almost nobody in DTC asks.
 
-**The close was a dare tied to a 30-day return window. That window no longer
-exists**, so it became a prediction instead: *"A month in, you won't remember
-the other way."* Do not reinstate a trial framing ("give it a month", "try
-it") — there is nothing for the buyer to fall back on if they dislike it.
+**Do not reinstate a trial framing in the close** ("give it a month", "try
+it", "then go back"). There are no returns, so there is nothing for the buyer
+to fall back on if they dislike it. An earlier close made exactly that
+mistake because it had been written against a 30-day window.
 
-**The hero lead is the counter-space line** (the founder's, verbatim):
-**"Does it count as taking up counter space if you use it every day?"**
-It replaced "Smooth, consistent matcha at the press of a button", which
-restated a spec in the most-read position on the site. This one does the
-opposite of the rest of the page: every other line describes the machine,
-this one describes the owner's life. It also answers the real objection to a
-$199 single-purpose appliance by refusing the premise rather than arguing
-with it, and it earns "Made to live on your counter" further down. Do not
-replace it with a benefit statement.
+**The hero and the closing band currently have no copy but the headline and
+the offer.** Both lines the founder had approved were pulled: the hero lead
+("Does it count as taking up counter space...") and the closing headline
+("A month in, you won't remember the other way"). The hero is now statement
+plus button; the closing band is offer plus button. Both slots are open.
+`.hero h1 + .cta` carries the extra top margin the missing lead used to
+provide, as an adjacent-sibling rule so it self-heals if a lead returns.
+The Shopify hero `benefit` and cta-band `eyebrow`/`heading` default to blank
+and are now guarded with `!= blank`, so the theme does not render empty
+elements.
 
 **No orphaned words in headings.** Founder's rule: a heading must never drop
 a single word onto its own line. `text-wrap:balance` on `h1,h2,h3` plus
@@ -341,7 +342,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=39**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=40**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
