@@ -150,6 +150,16 @@ Supporting fact used in item 03: **over-whisking draws out bitterness**
 (~15 s is the usual guidance), which is a real argument for a timed cycle.
 Big, bubbly froth is under-whisked and coarse — the opposite of the goal.
 
+**No em dashes in copy.** Founder's rule. All 145 were removed across the
+site and the theme, each sentence rewritten rather than patched: em dash to
+full stop where two clauses stood alone, to comma where an aside was
+parenthetical, to colon where a list or definition followed, to semicolon
+where the clauses were balanced. Title separators use `|`, price separators
+use `·` (already the design's separator), and `aria-label` reads
+"Matcha Sous, home". **En dashes stay** — they are correct in ranges
+(40–120 ml, 1–2 tsp) and are not what was objected to. A stray one or two
+is tolerated; do not reintroduce them wholesale.
+
 **The matcha-quality line** (founder's, and it is a positioning claim as much
 as a caveat): **Sous cannot fix a poor matcha — it brings a good one to its
 full flavour.** It says the machine is an amplifier, not a rescue, which is
