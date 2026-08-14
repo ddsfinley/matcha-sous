@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="split">
       <div>
-        <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+        {%- if section.settings.eyebrow != blank -%}<span class="eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
         <h2 class="display">{{ section.settings.heading }}</h2>
         <p class="lead">{{ section.settings.lead }}</p>
       </div>
@@ -22,7 +22,7 @@
 {
   "name": "How it works",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "How it works" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "" },
     { "type": "html", "id": "heading", "label": "Heading", "default": "Matcha doesn't dissolve. <em>It suspends.</em>" },
     { "type": "text", "id": "lead", "label": "Lead", "default": "Which is why how you move it through water matters. The difference between mixed matcha and well-made matcha is everything that happens between the first turn and the last." }
   ],

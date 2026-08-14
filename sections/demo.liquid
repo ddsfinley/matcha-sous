@@ -1,7 +1,7 @@
 <section id="steps" class="bg-paper" aria-label="{{ section.settings.heading | strip_html }}">
   <div class="wrap">
     <div class="head head--idx"><div class="head-body">
-      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      {%- if section.settings.eyebrow != blank -%}<span class="eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
       <h2 class="display">{{ section.settings.heading }}</h2>
     </div></div>
     <div class="demo">
@@ -28,7 +28,7 @@
 {
   "name": "Fill. Press. Pour.",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Three moves" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "" },
     { "type": "html", "id": "heading", "label": "Heading", "default": "Fill. Press. <em>Pour.</em>" },
     { "type": "richtext", "id": "note", "label": "Note", "default": "<p>About thirty seconds, hands-free.</p>" }
   ],
