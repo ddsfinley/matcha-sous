@@ -161,13 +161,25 @@ page reads as an editorial index rather than a stack of identical blocks.
 
 ## Video
 
-`assets/vid/cycle.mp4` (3.3 MB, H.264 only), 25.9 s at 760×1226 — the full mixing cycle,
-built from the founder's two original 1080×1920 HDR clips (IMG_2071_3/_4):
-tone-mapped HLG→bt709, joined with the concat filter at CFR 30 (the demuxer
-mis-times these variable-frame-rate files), sped 1.25×, cropped to the tall
-gallery frame, mild unsharp, audio stripped. Autoplays muted, inline and looping as Fig. 02 in the gallery. Encoded near the source's native height so the browser downscales rather
-than upscales; mild unsharp applied. The source is inherently soft (motion
-blur + phone compression), so do not enlarge the tile further.
+`assets/vid/matcha-sous-loop-hq.mp4` (8.0 MB), 25.8 s at **760x1226, 30 fps,
+2.5 Mb/s** — the full mixing cycle, built from the founder's two split clips
+(`p1.mp4`/`p2.mp4`, 12 Mb/s masters): joined with the concat filter at CFR 30
+(the demuxer mis-times these variable-frame-rate phone files), sped 1.25x,
+mild unsharp, audio stripped. Autoplays muted, inline and looping as the lead
+tile in the gallery.
+
+**Encode at the masters' native size.** The previous build downscaled to
+640x1032 at 795 kb/s and was the main cause of the softness the founder
+flagged — the gallery tile renders 568x757 CSS, which is **1136x1514 real
+pixels on a 2x display**, so 640 px was being upscaled 1.8x on top of a
+starved bitrate. 760 px still under-covers that tile, which is why the tile
+must not be enlarged until a higher-resolution master arrives.
+
+**Wanted: a 1080p master.** The founder's 4K originals live in Drive but
+cannot be retrieved — the Drive connector caps downloads at 10 MB, the Drive
+API needs an OAuth token, and every Google file-serving host is blocked by
+the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
+~1100-1200 px wide output and a larger tile.
 
 **Cache-busting**: stylesheet links carry `?v=N` (currently **v=26**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
