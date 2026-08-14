@@ -172,11 +172,12 @@ page reads as an editorial index rather than a stack of identical blocks.
    Price appears in: buy box, CTA band, five Journal CTAs, meta + OG
    descriptions, Product schema `price`, Shopify `fallback_price`.
    `proposals/` still shows $150 by design. **Grep `$1` before changing it.**
-1b-iii. **Starter matcha is in the included list but unspecified.** The line
-   reads "Starter matcha — enough to begin". **Grade, weight, origin and
-   whether it is a collab or private label are undecided**; fill them in
-   before launch, and note that a collab partner's name belongs in that line
-   (it is the credibility, so it should be visible).
+1b-iii. **No matcha in the box, and no preorder incentive at all.** The
+   founder's call: $199 flat, nothing bundled, no discount. The preorder
+   therefore offers only first-run access and free cancellation — worth
+   knowing if preorder conversion comes in low, since there is currently no
+   reason to order now rather than at launch. A bundled tin (collab or
+   private label) remains the cheapest lever if that becomes a problem.
 1b-0. **US shipping only, first run.** Stated in the buy box ("free US
    shipping" + "Free shipping across the US"), the CTA band, about,
    how-to-use, `stockists.html`, and as a Q&A on both the homepage and
