@@ -111,7 +111,11 @@ body{padding-top:var(--announce-h)}
   background:radial-gradient(120% 130% at 50% -20%,#2b2138 0%,var(--aub) 55%,var(--aub-deep) 100%);
   min-height:clamp(500px,80vh,760px);display:flex;align-items:flex-start}
 .hero-media{position:absolute;inset:0;z-index:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:58% 50%;display:block}
+.hero-media img,.hero-media video,video.hero-media{width:100%;height:100%;object-fit:cover;object-position:58% 50%;display:block}
+/* One element for every size. `autoplay` overrides `preload="none"`, so a
+   hidden phone-only copy would still be downloaded — cheaper to show the one
+   video everywhere. It is portrait, which suits a phone hero better than the
+   desktop band anyway. */
 .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
     linear-gradient(90deg,rgba(20,14,27,.97) 0%,rgba(20,14,27,.9) 22%,rgba(20,14,27,.66) 40%,rgba(20,14,27,.24) 62%,rgba(20,14,27,0) 82%),

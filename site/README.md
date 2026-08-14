@@ -84,16 +84,26 @@ the whisk.** House line for the dark mood band: **"The ceremony,
 preserved. The Sous, in service of it."** — ceremony first, the Sous
 second and subordinate; also a candidate for the box interior.
 
-**Hero**: full bleed — the type lives *inside* the photograph, no card and no
-frame. `assets/img/hero-bleed.webp` (2400×1200, landscape) and
-`hero-bleed-sm.webp` (1000×1300, portrait, art-directed via `<picture>` under
-760px) are graded from `action-01-vortex.jpg` and blended 14% toward the
-brand aubergine, so the stainless and the counter read as page ground. The
-reading field is then carved out with CSS scrims in that *same* aubergine —
-which is why there is no seam between image and page. Rebuild with
-`tools/hero_bleed.py` (point `UP` at the founder’s original uploads). Keep the photo bright: the scrims do the
-darkening, not the file. Both variants are preloaded behind matching `media`
-queries — the hero is the LCP element.
+**Hero**: full bleed and **moving** — `assets/vid/hero-vortex.webm` (3.0 MB)
++ `hero-vortex.mp4` (5.3 MB), the macro vortex at full spin, 12.5 s, graded
+to match the still it replaced (warm, saturated, blended toward the
+aubergine). One element at every size: `autoplay` overrides `preload="none"`,
+so a hidden phone-only copy would still be downloaded — cheaper to show the
+one video everywhere, and being portrait it suits a phone hero better than
+the desktop band. `hero-bleed.webp` (2400x1200) stays as the poster and is
+still preloaded, so the sharp still paints first.
+
+**The hero video is upscaled and it shows.** Its master is only 760 px wide
+(the founder's split clips), against 2880 real pixels on a 1440 retina
+screen — a 3.8x stretch. Motion hides some of it and the left scrim hides
+more, but it is softer than the still was. **The fix is a 1080p export of the
+macro-vortex take**, uploaded through chat the way `Matcha Sous Video 1` was;
+that would cut the stretch to 2.7x, and a 4K one would end it. Do not try to
+solve this with sharpening.
+
+The reading field is carved out with CSS scrims in the *same* aubergine the
+footage is graded toward, which is why there is no seam between media and
+page. Rebuild the still with `tools/hero_bleed.py`.
 
 **Type** maps onto the two halves of the wordmark. **Poiret One** is the
 display face (`--disp`) — the closest free match to the mark's SOUS: a
@@ -190,7 +200,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=28**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=29**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
