@@ -175,11 +175,15 @@ pixels on a 2x display**, so 640 px was being upscaled 1.8x on top of a
 starved bitrate. 760 px still under-covers that tile, which is why the tile
 must not be enlarged until a higher-resolution master arrives.
 
+**Do not enlarge the video tile** — a standing decision from the founder,
+independent of resolution. It stays at 568 CSS px in the gallery.
+
 **Wanted: a 1080p master.** The founder's 4K originals live in Drive but
 cannot be retrieved — the Drive connector caps downloads at 10 MB, the Drive
 API needs an OAuth token, and every Google file-serving host is blocked by
 the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
-~1100-1200 px wide output and a larger tile.
+~1100-1200 px wide output, which would finally cover the 2x tile without
+upscaling. That is the only remaining gain — the tile size is settled.
 
 **Cache-busting**: stylesheet links carry `?v=N` (currently **v=26**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
