@@ -169,6 +169,33 @@ homepage Q&A "Can I use any matcha?" and `faq.html`'s "What matcha works
 best?" (+ its schema). Never let "works with any matcha" stand alone
 without it.
 
+### Creative direction: retrospective inevitability
+
+The product's real promise is not a better bowl, it is **frequency**. Owners
+move from occasional matcha to daily matcha, and once something is daily it
+stops being an appliance and becomes part of the counter. The customer's
+realisation is therefore backward-looking: *how was I doing this before?*
+That is what the founder means by "impact", "life-changing", "never look
+back", and it is why benefit copy kept missing — benefit copy describes the
+machine, and this feeling is about the owner's life.
+
+**Two rules fall out of it.**
+1. **Never claim it.** "Life-changing", "the thing you didn't know you
+   needed" and "you'll never go back" are assertions of indispensability,
+   which is the least persuasive form of that message and is banned promo
+   language besides. The brand's job is to let the reader reach it. That
+   arrives properly with reviews, not copy.
+2. **Ask, then predict.** The page opens on a question and closes on a
+   prediction, and both hand the conclusion to the reader:
+   - Hero: *"Does it count as taking up counter space if you use it every day?"*
+   - Close: *"Give it a month. Then try going back."*
+   The interrogative is the ownable voice here. Almost nobody in DTC asks.
+
+**The close ties the claim to the guarantee.** "Give it a month" is exactly
+the 30-day return window named in the line beneath it, so the headline and
+the fine print now argue together: the return policy is the mechanism that
+makes the dare credible. Do not separate them.
+
 **The hero lead is the counter-space line** (the founder's, verbatim):
 **"Does it count as taking up counter space if you use it every day?"**
 It replaced "Smooth, consistent matcha at the press of a button", which
