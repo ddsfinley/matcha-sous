@@ -135,6 +135,17 @@ Three rules follow from Poiret being a light display cut:
    reading as the mark's face. Ladder the values in a browser before
    changing them.
 
+**The cycle is two phases, not one speed.** Founder-supplied and now the
+spine of the `#how` section: matcha does not dissolve, it **suspends**, so
+what matters is how it is moved through water. Sous starts on a fast vortex
+to suspend the powder evenly, then **slows** to work larger bubbles down
+into a finer foam. First suspension, then refinement. The old copy said
+"calibrated speeds hold the fast, shallow motion", which described a single
+sustained speed and was **wrong**. The three numbered items are now the
+sequence (suspend, refine, stop) rather than three unrelated claims.
+**Verify against the firmware before print**: this is a specific mechanical
+claim, and it should hold across all three presets or be qualified.
+
 **Microfoam is the elevation claim.** The `#how` section is framed upward
 ("A good matcha, *at its best.*"), not as loss. What separates a great bowl
 from a merely good one is **texture**: a fine microfoam gives the tea body
