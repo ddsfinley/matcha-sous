@@ -394,7 +394,9 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 @media (max-width:760px){.demo{grid-template-columns:1fr;gap:26px}}
 
 /* ---------- product showcase ---------- */
-.showcase{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(18px,2.6vw,30px);align-items:stretch}
+.showcase{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(18px,2.6vw,30px);align-items:start}
+/* start, not stretch: the lead frame is a fixed 3:4 to match the cut, so
+   stretching only added dead space beneath it. */
 .showcase figure{margin:0;display:flex;flex-direction:column}
 .showcase .media-frame{display:block;overflow:hidden}
 .showcase .media-frame img,.showcase .media-frame video{width:100%;height:100%;object-fit:cover;display:block}
@@ -404,7 +406,7 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .showcase figcaption{padding-top:10px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
 @media (max-width:860px){
   .showcase{grid-template-columns:1fr}
-  .sc-lead .media-frame{aspect-ratio:4/5}
+  /* the cut is exactly 3:4, so the frame matches it and nothing is cropped */
   /* The cycle's master is 760 px wide. A phone at 3x renders 3 real pixels
      per CSS pixel, so anything past ~253 CSS px upscales it. Capped and
      centred: small on purpose, and sharp because of it. Needs to outrank

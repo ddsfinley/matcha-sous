@@ -161,19 +161,19 @@ page reads as an editorial index rather than a stack of identical blocks.
 
 ## Video
 
-`assets/vid/matcha-sous-loop-hq.mp4` (8.0 MB), 25.8 s at **760x1226, 30 fps,
-2.5 Mb/s** — the full mixing cycle, built from the founder's two split clips
-(`p1.mp4`/`p2.mp4`, 12 Mb/s masters): joined with the concat filter at CFR 30
-(the demuxer mis-times these variable-frame-rate phone files), sped 1.25x,
-mild unsharp, audio stripped. Autoplays muted, inline and looping as the lead
-tile in the gallery.
+`assets/vid/cycle-1080.webm` (2.7 MB, VP9) + `cycle-1080.mp4` (4.8 MB, H.264
+Main) — **1080x1440, 30 fps, 11.9 s**, from the founder's 1080x1920 upload.
+3:4 crop at y=380 keeps the cup and the lit countdown on the base; mild warm
+lift so the grey counter sits with the bone page; audio stripped; natural
+speed (the countdown reads in real seconds, so do not speed it up).
 
-**Encode at the masters' native size.** The previous build downscaled to
-640x1032 at 795 kb/s and was the main cause of the softness the founder
-flagged — the gallery tile renders 568x757 CSS, which is **1136x1514 real
-pixels on a 2x display**, so 640 px was being upscaled 1.8x on top of a
-starved bitrate. 760 px still under-covers that tile, which is why the tile
-must not be enlarged until a higher-resolution master arrives.
+**Two sources, WebM first.** Chromium builds without proprietary codecs
+cannot decode H.264 at all — `canPlayType('video/mp4; codecs="avc1..."')`
+returns empty — which is why local playback checks silently "failed" for
+months while the file was fine. The WebM makes playback verifiable here and
+adds a smaller, faster source for Chrome/Firefox; the MP4 covers Safari/iOS.
+**Verify with `readyState === 4` and a advancing `currentTime`, not a
+screenshot** — a screenshot only proves the poster rendered.
 
 **Do not enlarge the video tile** — a standing decision from the founder,
 independent of resolution. Small and sharp beats big and soft. Under 860px
@@ -190,7 +190,7 @@ the proxy. A 1080x1920 export uploaded through chat (under 30 MB) would allow
 ~1100-1200 px wide output, which would finally cover the 2x tile without
 upscaling. That is the only remaining gain — the tile size is settled.
 
-**Cache-busting**: stylesheet links carry `?v=N` (currently **v=27**).
+**Cache-busting**: stylesheet links carry `?v=N` (currently **v=28**).
 GitHub Pages caches CSS aggressively — **bump N on every `site.css`
 change**, or edits will not reach returning visitors.
 
