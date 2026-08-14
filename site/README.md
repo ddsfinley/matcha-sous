@@ -153,9 +153,12 @@ page reads as an editorial index rather than a stack of identical blocks.
    select it in the Hero and Buy box sections to switch on real checkout.
 1. **Checkout**: replace `https://checkout.matchasous.com/matcha-sous` (marked `TODO`)
    in `index.html` with the real hosted checkout URL.
-1b. **Price**: the site sells at $150; the packaging brief anticipates
-   $179–199 retail. Reconcile before launch (price appears in buy box, nav,
-   CTAs, Product schema and meta description).
+1b. **Price**: **$179** — set by the founder, inside the packaging brief's
+   $179–199 band. It appears in the buy box, the CTA band, the five Journal
+   CTAs, the meta/OG descriptions and the Product schema `price`; the Shopify
+   buy-box `fallback_price` matches. `proposals/` still shows $150 and is
+   left alone deliberately — those are archived stage-1 records (noindex).
+   **Grep `$1` before changing it again**, not just the buy box.
 1c. **Lifestyle photography**: `assets/img/mood-counter.webp` (the light mood
    band, "The counter is the new café.") is a placeholder — a regraded product
    shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
@@ -237,4 +240,4 @@ fold at 390×844.
 - One small CSS file, no JS on home/FAQ (Q&A uses native `<details>`); ~10 lines of JS on wholesale only
 - WebP images with explicit width/height (no CLS), `fetchpriority=high` + preload on the LCP hero,
   `loading=lazy` below the fold
-- JSON-LD: Organization, WebSite, Product+Offer ($150), BreadcrumbList, FAQPage
+- JSON-LD: Organization, WebSite, Product+Offer ($179), BreadcrumbList, FAQPage
