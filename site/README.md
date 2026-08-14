@@ -15,6 +15,12 @@ only at small scale. Poiret One (display) + Jost (utility). Lives in
 - `journal/` — SEO article hub + 4 posts (Article schema)
 - `about.html` — Our story (founder narrative, values, craft — the sous chef framing)
 - `faq.html` — FAQ & support (native `<details>`, zero JS) + matching FAQPage JSON-LD
+- `stockists.html` — **Where to buy**. Direct-purchase box + a stockist list
+  that is currently empty. `noindex` while empty (thin pages drag the whole
+  site); the file's own comment says exactly what to switch on when the first
+  stockist lands — add an `<li>`, delete the `.empty` paragraph, flip robots
+  to `index, follow`, add it to the primary `<nav>` and to `sitemap.xml`.
+  It is in every footer already.
 - `wholesale.html` — hospitality pitch + enquiry form (composes a mailto; no backend)
 - `proposals/` — Stage-1 design directions (kept for the record, noindex)
 
@@ -171,6 +177,11 @@ page reads as an editorial index rather than a stack of identical blocks.
    is now just "Free shipping". **Put a real window back** ("ships March",
    "ships within 8 weeks") once the run date is known — a preorder with no
    stated date costs conversions and invites chargebacks.
+1b-ii. **Preorder cancellation** (founder's terms): cancellable any time
+   before shipping, full refund, no reason required; the 30-day return takes
+   over once it has shipped. Stated in the buy box assurances, the homepage
+   Q&A and `faq.html` — and mirrored in the FAQPage schema, which must stay
+   1:1 with the visible `<summary>` list or Google drops the rich result.
 1c. **Lifestyle photography**: `assets/img/mood-counter.webp` (the light mood
    band, "The counter is the new café.") is a placeholder — a regraded product
    shot. Replace with a real home-counter scene at 1400×786 WebP and revisit the
