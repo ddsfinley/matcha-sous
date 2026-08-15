@@ -6,7 +6,10 @@
         {%- if p != blank and p.featured_image -%}
           <img src="{{ p.featured_image | image_url: width: 900 }}" alt="{{ p.featured_image.alt | default: p.title }}" width="750" height="1000" loading="lazy">
         {%- else -%}
-          <img src="{{ 'cycle-poster-v2.webp' | asset_url }}" alt="Matcha Sous seen from above, finished matcha in the stainless vessel" width="1080" height="1440" loading="lazy">
+          <video class="loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="{{ 'cycle-poster-v2.webp' | asset_url }}" width="1080" height="1440" aria-label="A full mixing cycle in the Matcha Sous cup">
+            <source src="{{ 'cycle-1080-v3.webm' | asset_url }}" type="video/webm">
+            <source src="{{ 'cycle-1080-v3.mp4' | asset_url }}" type="video/mp4">
+          </video>
         {%- endif -%}
       </span>
       <span class="buy-thumb"><img src="{{ 'photo-case.webp' | asset_url }}" alt="The Matcha Sous presentation case" width="1320" height="667" loading="lazy"></span>
