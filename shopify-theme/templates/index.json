@@ -106,45 +106,6 @@
     "story": {
       "type": "story"
     },
-    "uses": {
-      "type": "use-cases",
-      "blocks": {
-        "u1": {
-          "type": "use",
-          "settings": {
-            "title": "Straight",
-            "text": "2 g, 80 ml at 80°C, Preset II. Fine standing foam."
-          }
-        },
-        "u2": {
-          "type": "use",
-          "settings": {
-            "title": "Hot latte",
-            "text": "3 g on Preset III, then steamed milk over the top."
-          }
-        },
-        "u3": {
-          "type": "use",
-          "settings": {
-            "title": "Iced",
-            "text": "A 40 ml concentrate poured over a full glass of ice."
-          }
-        },
-        "u4": {
-          "type": "use",
-          "settings": {
-            "title": "Concentrate",
-            "text": "Make it ahead. It keeps in the fridge through the week."
-          }
-        }
-      },
-      "block_order": [
-        "u1",
-        "u2",
-        "u3",
-        "u4"
-      ]
-    },
     "buy": {
       "type": "buy-box",
       "blocks": {
@@ -368,7 +329,6 @@
     "presets",
     "buy",
     "specs",
-    "uses",
     "story",
     "faq",
     "journal",
