@@ -363,6 +363,17 @@ page reads as an editorial index rather than a stack of identical blocks.
 - **One verb for one action.** "Buy now", "Preorder" and "Reserve your Sous"
   all pointed at the same anchor. Three labels read as three offers.
 
+## Image caching
+
+**Version the filename whenever an image's content changes.** Three different
+cut-outs shipped as `tile-matcha.webp` in one afternoon, and the browser kept
+serving the first one, which was the badly cropped version. Every re-cut looked
+identical on the live site because the bytes never got refetched. It cost three
+rounds of the founder telling me the picture was wrong while the repo held the
+right one. The file is now `tile-matcha-v3.webp`; `cycle-1080-v2.*` carries the
+same suffix for the same reason. CSS has `?v=NN`; images and video get a
+suffix in the name.
+
 ## Video
 
 `assets/vid/cycle-1080-v2.webm` / `.mp4` (1080x1440, 7.93 s, 30 fps) is the

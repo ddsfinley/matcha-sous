@@ -43,7 +43,7 @@
         "s1": {
           "type": "shot",
           "settings": {
-            "fallback": "tile-matcha.webp",
+            "fallback": "tile-matcha-v3.webp",
             "caption": "Finished, ready to pour"
           }
         }
