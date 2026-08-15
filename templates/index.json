@@ -39,18 +39,8 @@
     },
     "showcase": {
       "type": "showcase",
-      "blocks": {
-        "s1": {
-          "type": "shot",
-          "settings": {
-            "fallback": "tile-matcha-v3.webp",
-            "caption": "Finished, ready to pour"
-          }
-        }
-      },
-      "block_order": [
-        "s1"
-      ]
+      "blocks": {},
+      "block_order": []
     },
     "how": {
       "type": "how-it-works",
