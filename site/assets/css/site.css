@@ -457,15 +457,28 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 @media (max-width:760px){.demo{grid-template-columns:1fr;gap:26px}}
 
 /* ---------- product showcase ---------- */
-.showcase{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(18px,2.6vw,30px);align-items:start}
+/* Diptych: the cycle video and the finished cup, both 3:4 and both uncropped.
+   Equal columns so the two panels match in height. The old 1.05/.95 split
+   existed to give the lead video more room than a stack of small tiles. */
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6vw,30px);align-items:start}
 /* start, not stretch: the lead frame is a fixed 3:4 to match the cut, so
    stretching only added dead space beneath it. */
 .showcase figure{margin:0;display:flex;flex-direction:column}
 .showcase .media-frame{display:block;overflow:hidden}
 .showcase .media-frame img,.showcase .media-frame video{width:100%;height:100%;object-fit:cover;display:block}
 .sc-lead .media-frame{aspect-ratio:3/4}
+/* Cut-out panel: the cup is masked off its background, so it floats on the page
+   ground instead of sitting in a photographic frame. No fill, no shadow, no
+   crop - object-fit:contain, because cropping is exactly what we removed. */
+.sc-cut .media-frame{background:none;box-shadow:none;border-radius:0;display:grid;place-items:center;padding:clamp(4px,1.4vw,20px)}
+.sc-cut .media-frame img{width:100%;height:100%;object-fit:contain}
+.sc-lead figcaption{padding-top:10px}
 .sc-side{display:grid;gap:clamp(18px,2.6vw,30px);align-content:space-between}
 .sc-side .media-frame{aspect-ratio:16/9}
+.wide-detail{margin:clamp(28px,4vh,44px) 0 0}
+.wide-detail .media-frame{display:block;overflow:hidden;border-radius:var(--radius-lg);aspect-ratio:3/2}
+.wide-detail img{width:100%;height:100%;object-fit:cover;display:block}
+.wide-detail figcaption{padding-top:10px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
 .showcase figcaption{padding-top:10px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
 @media (min-width:861px){
   /* Two side tiles, not three: at 16/9 they stopped ~230px short of the lead
