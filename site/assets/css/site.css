@@ -1,7 +1,10 @@
 /* ============================================================
    MATCHA SOUS — bone & aubergine system
    Bright warm ground; the wordmark's deep aubergine carries the
-   type, buttons and feature bands; copper appears only at small
+   type; --plum (one step up) carries every dark SURFACE - buttons,
+   announce bar, CTA band, footer, showcase band - while --aub and
+   --aub-deep stay as TEXT colours and as the button hover/pressed
+   state; copper appears only at small
    scale (eyebrows, links, rules, markers). Poiret One (the
    wordmark's voice) + Jost, self-hosted. No framework.
    ============================================================ */
@@ -37,7 +40,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(var(--announce-h) + 74px)}
 body{background:var(--bone-page);color:var(--aub-ink);font-family:var(--util);font-weight:300;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%;height:auto}
-::selection{background:var(--aub);color:var(--bone)}
+::selection{background:var(--plum);color:var(--bone)}
 :focus-visible{outline:2px solid var(--copper);outline-offset:3px;border-radius:2px}
 .wrap{max-width:var(--w);margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}
 
@@ -75,7 +78,7 @@ h1 em,h2 em{font-style:normal;color:var(--copper)}
 .muted{color:var(--stone)}
 
 /* ---------- announce + header ---------- */
-.announce{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--aub-deep);color:var(--bone);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:.72em 1em;height:var(--announce-h)}
+.announce{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--plum);color:var(--bone);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:.72em 1em;height:var(--announce-h)}
 body{padding-top:var(--announce-h)}
 .top{position:sticky;top:var(--announce-h);z-index:40;background:rgba(246,244,240,.88);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line-soft)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
@@ -86,8 +89,8 @@ body{padding-top:var(--announce-h)}
 .nav a{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;font-weight:400;color:var(--aub-ink);position:relative;padding:6px 0;white-space:nowrap}
 .nav a:not(.buy)::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--copper);transition:width .4s var(--ease)}
 .nav a:not(.buy):hover::after,.nav a[aria-current="page"]::after{width:100%}
-.nav .buy{background:var(--aub);color:var(--bone);padding:12px 22px;border-radius:var(--radius);transition:background .3s var(--ease)}
-.nav .buy:hover{background:var(--aub-deep)}
+.nav .buy{background:var(--plum);color:var(--bone);padding:12px 22px;border-radius:var(--radius);transition:background .3s var(--ease)}
+.nav .buy:hover{background:var(--aub)}
 @media (max-width:820px){.nav a:not(.buy){display:none}.top .wrap{height:64px}.brand img{height:38px}}
 .subnav{display:none}
 @media (max-width:820px){
@@ -98,12 +101,12 @@ body{padding-top:var(--announce-h)}
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;padding:1.05em 2.2em;border-radius:var(--radius);border:1px solid transparent;transition:all .4s var(--ease);text-align:center}
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--aub);color:var(--bone)}
-.btn-primary:hover{background:var(--aub-deep);box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.btn-gold{background:var(--aub);color:var(--bone)}
-.btn-gold:hover{background:var(--aub-deep);color:var(--bone-bright);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.btn-primary{background:var(--plum);color:var(--bone)}
+.btn-primary:hover{background:var(--aub);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.btn-gold{background:var(--plum);color:var(--bone)}
+.btn-gold:hover{background:var(--aub);color:var(--bone-bright);box-shadow:var(--shadow-md);transform:translateY(-2px)}
 .btn-outline{background:transparent;color:var(--aub-ink);border-color:rgba(26,19,34,.4)}
-.btn-outline:hover{background:var(--aub);color:var(--bone);border-color:var(--aub)}
+.btn-outline:hover{background:var(--plum);color:var(--bone);border-color:var(--aub)}
 .btn-block{display:flex;width:100%}
 .btn-lg{padding:1.2em 2.6em;font-size:.84rem}
 .textlink{display:inline-flex;align-items:center;gap:.5em;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);border-bottom:1px solid transparent;padding-bottom:2px;transition:all .4s var(--ease)}
@@ -187,7 +190,7 @@ body{padding-top:var(--announce-h)}
 .moment .mnum{font-family:var(--disp);font-weight:500;font-size:clamp(2.1rem,3.2vw,2.9rem);color:var(--aub);line-height:1}
 .moment h3{font-family:var(--disp);font-size:1.35rem;margin:auto 0 8px;padding-top:34px}
 .moment p{font-size:.95rem;color:var(--stone)}
-.moment.dusk{background:var(--aub);border-color:transparent}
+.moment.dusk{background:var(--plum);border-color:transparent}
 .moment.dusk .mnum,.moment.dusk h3{color:var(--bone-bright)}
 .moment.dusk p{color:rgba(237,228,216,.7)}
 @media (max-width:900px){.moments{grid-template-columns:1fr}.moment{min-height:0}.moment h3{padding-top:20px}}
@@ -222,7 +225,7 @@ body{padding-top:var(--announce-h)}
 section{padding-block:clamp(56px,9vh,120px)}
 section.tight{padding-block:clamp(40px,6vh,80px)}
 .bg-paper{background:var(--paper)}
-.bg-deep{background:var(--aub-deep);color:var(--bone)}
+.bg-deep{background:var(--plum);color:var(--bone)}
 /* Plum band for the showcase: --aub is the wordmark's own aubergine, one step
    up from --aub-deep so it reads as colour rather than black. Used to throw
    the video and the cut-out cup forward. */
@@ -379,7 +382,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .qa .a a{color:var(--copper);border-bottom:1px solid var(--copper-soft)}
 
 /* ---------- CTA band ---------- */
-.cta-band{background:var(--aub-deep);color:var(--bone);position:relative;overflow:hidden;text-align:center}
+.cta-band{background:var(--plum);color:var(--bone);position:relative;overflow:hidden;text-align:center}
 .cta-band h2{color:var(--bone-bright)}
 .cta-band h2 em{color:var(--copper-soft)}
 .cta-band .lead{color:rgba(237,228,216,.7)}
@@ -412,7 +415,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .formcard{background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--radius-lg);padding:clamp(24px,4vw,40px);box-shadow:var(--shadow-sm)}
 
 /* ---------- footer ---------- */
-footer{background:var(--aub-deep);color:var(--bone);padding-block:clamp(46px,7vh,80px);margin-top:clamp(30px,6vh,70px)}
+footer{background:var(--plum);color:var(--bone);padding-block:clamp(46px,7vh,80px);margin-top:clamp(30px,6vh,70px)}
 footer .cols{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start;padding-bottom:36px;border-bottom:1px solid rgba(237,228,216,.14)}
 footer .brand img{height:48px}
 footer .brand .wordmark{color:var(--bone)}
