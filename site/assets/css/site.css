@@ -315,7 +315,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 #order .stage{max-width:440px;justify-self:center;width:100%}
 /* The cut-out carries its own transparency, so it wants the page ground rather
    than a filled, shadowed photo frame, and contain rather than cover. */
-.stage--cut .media-frame{background:none;box-shadow:none;border-radius:0;aspect-ratio:1301/1400}
+.stage--cut .media-frame{background:none;box-shadow:none;border-radius:0;aspect-ratio:1303/1400}
 .stage--cut .media-frame img{width:100%;height:100%;object-fit:contain}
 .buybox{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,4vw,44px);box-shadow:var(--shadow-sm)}
 .buybox .no{font-family:var(--quote);font-style:italic;color:var(--copper);font-size:1.05rem}

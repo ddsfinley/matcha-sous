@@ -382,6 +382,16 @@ GrabCut. Three things decide whether the edge looks clean:
   bite off the light colour fringe, and sigma 1.6 for a ~2px anti-aliased
   alpha ramp. Save with `exact=True` so WebP keeps the ramp.
 
+- **Fill dents in polar, not in 2D.** Blur-and-rethreshold smooths the edge but
+  leaves inward dents where GrabCut clipped the rim. Take the boundary as a
+  radius profile r(theta) around the centroid, run a circular grey closing over
+  it (~11 degrees wide), then a light circular smooth. Closing can only raise a
+  value, so dents fill and the spout, a +22px positive feature, is untouched.
+  On the last pass this took the lower-right dent from -8.2 to -0.6 and the
+  left from -8.2 to -3.8, in thousandths of the mean radius.
+  The residual readings near 259 and 301 degrees are not defects: they are the
+  concave shoulders either side of the spout, which are real.
+
 What does **not** work: suppressing dark pixels near the mask edge to remove
 the black base showing past the rim. The rim in shadow is as dark as the base,
 so it bites notches out of the cup.
