@@ -223,6 +223,11 @@ section{padding-block:clamp(56px,9vh,120px)}
 section.tight{padding-block:clamp(40px,6vh,80px)}
 .bg-paper{background:var(--paper)}
 .bg-deep{background:var(--aub-deep);color:var(--bone)}
+/* Plum band for the showcase: --aub is the wordmark's own aubergine, one step
+   up from --aub-deep so it reads as colour rather than black. Used to throw
+   the video and the cut-out cup forward. */
+.bg-plum{background:var(--aub);color:var(--bone)}
+.bg-plum .showcase figcaption{color:rgba(237,228,216,.62)}
 .bg-deep h1,.bg-deep h2,.bg-deep h3{color:var(--bone-bright)}
 .bg-deep .lead,.bg-deep .muted{color:rgba(237,228,216,.68)}
 .bg-deep .eyebrow{color:var(--copper-soft)}
