@@ -234,6 +234,10 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
    the hero's radial gradient. */
 .bg-plum{background:var(--plum);color:var(--bone)}
 .bg-plum .showcase figcaption{color:rgba(237,228,216,.62)}
+/* One panel left in the showcase. :has rather than a modifier class so the
+   Shopify section, whose panels come from blocks, follows the same rule. */
+.showcase:has(>figure:only-child){grid-template-columns:1fr}
+.showcase>figure:only-child{max-width:620px;margin-inline:auto}
 .bg-deep h1,.bg-deep h2,.bg-deep h3{color:var(--bone-bright)}
 .bg-deep .lead,.bg-deep .muted{color:rgba(237,228,216,.68)}
 .bg-deep .eyebrow{color:var(--copper-soft)}
