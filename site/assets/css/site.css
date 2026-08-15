@@ -18,7 +18,7 @@
 
 :root{
   --bone-page:#f6f4f0; --paper:#fcfbf8; --bone-deep:#efece7;
-  --aub:#1a1322; --aub-deep:#140e1b; --aub-ink:#251d30;
+  --aub:#1a1322; --aub-deep:#140e1b; --aub-ink:#251d30; --plum:#2b2138;
   --bone:#ede4d8; --bone-bright:#f6f0e5;
   --copper:#b0714f; --copper-deep:#96593a; --copper-soft:#d9b49e; --copper-bright:#cf9268;
   --stone:#635c56; --mat:#eeeae3;
@@ -226,7 +226,10 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 /* Plum band for the showcase: --aub is the wordmark's own aubergine, one step
    up from --aub-deep so it reads as colour rather than black. Used to throw
    the video and the cut-out cup forward. */
-.bg-plum{background:var(--aub);color:var(--bone)}
+/* One step lighter than --aub so the images' sunlit grounds do not jump so
+   hard against it. Not a new colour: #2b2138 is already the top stop of
+   the hero's radial gradient. */
+.bg-plum{background:var(--plum);color:var(--bone)}
 .bg-plum .showcase figcaption{color:rgba(237,228,216,.62)}
 .bg-deep h1,.bg-deep h2,.bg-deep h3{color:var(--bone-bright)}
 .bg-deep .lead,.bg-deep .muted{color:rgba(237,228,216,.68)}
