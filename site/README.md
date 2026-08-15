@@ -363,6 +363,29 @@ page reads as an editorial index rather than a stack of identical blocks.
 - **One verb for one action.** "Buy now", "Preorder" and "Reserve your Sous"
   all pointed at the same anchor. Three labels read as three offers.
 
+## Cutting the matcha silhouette
+
+`tile-matcha-v4.webp` is `IMG_2146` with its background masked off, via
+GrabCut. Three things decide whether the edge looks clean:
+
+- **Seed with a mask, not a rectangle.** The cup fills almost the whole frame,
+  so a rect-initialised GrabCut clings to the seed rectangle down one side and
+  flattens the cup's edge. Certain background in a 1.5% border, certain
+  foreground in the middle third, everything else probable, twelve iterations.
+- **Never `approxPolyDP` the contour.** It turns a curve into line segments and
+  the facets show. The earlier `epsilon=1.2` pass is what made the edge look
+  chipped.
+- **Smooth by blur-and-rethreshold, not by eroding.** GrabCut runs at half
+  resolution, so every mask pixel is 2px at full size and the boundary
+  stair-steps. Upscale with `INTER_LINEAR`, Gaussian sigma 18, rethreshold at
+  127. That rounds the steps off without moving the shape. Then a 5px erode to
+  bite off the light colour fringe, and sigma 1.6 for a ~2px anti-aliased
+  alpha ramp. Save with `exact=True` so WebP keeps the ramp.
+
+What does **not** work: suppressing dark pixels near the mask edge to remove
+the black base showing past the rim. The rim in shadow is as dark as the base,
+so it bites notches out of the cup.
+
 ## Image caching
 
 **Version the filename whenever an image's content changes.** Three different
