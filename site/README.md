@@ -370,35 +370,35 @@ cut-outs shipped as `tile-matcha.webp` in one afternoon, and the browser kept
 serving the first one, which was the badly cropped version. Every re-cut looked
 identical on the live site because the bytes never got refetched. It cost three
 rounds of the founder telling me the picture was wrong while the repo held the
-right one. The file is now `tile-matcha-v3.webp`; `cycle-1080-v2.*` carries the
+right one. The file is now `tile-matcha-v3.webp`; `cycle-1080-v3.*` carries the
 same suffix for the same reason. CSS has `?v=NN`; images and video get a
 suffix in the name.
 
 ## Video
 
-`assets/vid/cycle-1080-v2.webm` / `.mp4` (1080x1440, 7.93 s, 30 fps) is the
-showcase clip, cut from `Matcha_Sous_Video_1.mp4` (1080x1920, 11.89 s) with
-`crop=1080:1440:0:380,setpts=PTS/1.5` and `-r 30`, audio dropped.
+`assets/vid/cycle-1080-v3.webm` / `.mp4` (1080x1440, 8.80 s, 30 fps) is the
+showcase clip, cut from `matcha_short10.mov` (1080x1920 HEVC, 8.77 s) with
+`crop=1080:1440:0:140` and `-r 30`, audio dropped, at **native speed**.
 
-Two things that will bite if you redo this:
+- **Crop offset 140** of the 480 available. It keeps the spout fully in frame
+  with headroom above it and leaves the base and its countdown visible along
+  the bottom. 230 also frames the cup but pushes the spout tip against the top
+  edge; past 320 the spout is cut off.
+- **No speed change on this clip.** Its predecessor was sped up 1.5x because
+  11.9 s dragged. This one is 8.8 s in the can, within a second of what that
+  1.5x version ran at, so it is already the right pace.
+- **Lock the frame rate anyway.** `setpts` rewrites timestamps but sets no
+  output rate: on the previous clip VP9 emitted 45 fps while x264 defaulted to
+  25 and discarded a third of the frames. Pass `-r 30` whether or not the
+  speed changes.
 
-- **Lock the frame rate.** `setpts=PTS/1.5` rewrites timestamps but does not
-  set an output rate. Left alone, VP9 emitted 45 fps (every source frame kept,
-  fine but nonstandard) while x264 defaulted to 25 fps and threw away a third
-  of the frames. `-r 30` gives both encoders the same, standard rate.
-- **The crop offset is 380 px, recovered by template-matching** the old
-  1080x1440 render against the 1080x1920 source, not guessed. The full frame
-  has dead grey above and below the cup; 380 is the offset that frames the cup
-  with the base and its timer.
+The poster (`assets/img/cycle-poster-v2.webp`) is **frame 0 of the encoded
+video**, so nothing jumps when playback starts. It is also the buy-box primary
+image and one of the four Product schema images, so it changes in three places
+at once. Regenerate it whenever the video changes.
 
-The poster (`assets/img/cycle-poster.webp`) is **frame 0 of the encoded
-video**, so there is no visible jump when playback starts. Regenerate it
-whenever the video changes. It doubles as the buy-box primary image, so a
-change there shows up in two places.
-
-Filenames carry `-v2` on purpose: videos are cached hard, and a same-named
-replacement can serve stale bytes for a long time. Version the filename
-rather than trusting revalidation.
+Filenames carry a version suffix on purpose. Videos and images are cached hard
+and a same-named replacement serves stale bytes; see the caching section above.
 
 `assets/vid/cycle-1080.webm` (2.7 MB, VP9) + `cycle-1080.mp4` (4.8 MB, H.264
 Main) — **1080x1440, 30 fps, 11.9 s**, from the founder's 1080x1920 upload.
