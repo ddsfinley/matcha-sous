@@ -8,12 +8,12 @@
         <p style="margin-top:18px"><a class="textlink" href="{{ section.settings.link }}">{{ section.settings.link_label }} &rarr;</a></p>
       {%- endif -%}
     </div>
-    <figure class="stage">
+    <figure class="stage stage--cut">
       <span class="media-frame">
         {%- if section.settings.image != blank -%}
           <img src="{{ section.settings.image | image_url: width: 1400 }}" alt="{{ section.settings.image.alt | default: shop.name }}" width="1400" height="873" loading="lazy">
         {%- else -%}
-          <img src="{{ 'photo-kit.webp' | asset_url }}" alt="The Matcha Sous box, opened, with the mixer seated in its insert" width="1200" height="1000" loading="lazy">
+          <img src="{{ 'tile-matcha-v3.webp' | asset_url }}" alt="Finished matcha in the stainless Matcha Sous vessel, seen from above" width="1293" height="1400" loading="lazy">
         {%- endif -%}
       </span>
     </figure>

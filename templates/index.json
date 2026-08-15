@@ -37,11 +37,6 @@
         "b3"
       ]
     },
-    "showcase": {
-      "type": "showcase",
-      "blocks": {},
-      "block_order": []
-    },
     "how": {
       "type": "how-it-works",
       "blocks": {
@@ -370,7 +365,6 @@
     "hero",
     "how",
     "demo",
-    "showcase",
     "presets",
     "buy",
     "specs",
