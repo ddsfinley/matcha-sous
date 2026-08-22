@@ -342,6 +342,19 @@ page reads as an editorial index rather than a stack of identical blocks.
 
 ## Editorial rules learned the hard way
 
+- **Use contractions.** The landing page ran with exactly one contraction on
+  it, and that one was a possessive. No rule required this; it happened by
+  default, and it is the single loudest tell that copy was not written by a
+  person. "You don't touch it" and "you do not touch it" carry the same
+  meaning and completely different temperatures.
+- **Break the symmetry.** Tricolons, `X, not Y` antitheses and premise /
+  contrast / conclusion arguments read as assembled. The page had four of the
+  antitheses and five tricolons at once. One is a flourish. Five is a machine.
+- **Do not state the moral.** "So that is the part Sous takes" explains the
+  conclusion the reader was about to reach on their own, which kills it.
+- **Sensation before argument.** "Foam fine enough to hold a line" does more
+  than any sentence explaining why consistency matters.
+
 - **Say a thing once.** The homepage carried four sections making the same
   argument: "The Experience", "The Chasen", "The Tea" and "Why Sous" each
   ended on some form of *you choose the tea, Sous handles its part* — the
