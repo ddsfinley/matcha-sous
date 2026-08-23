@@ -284,6 +284,21 @@ page reads as an editorial index rather than a stack of identical blocks.
    Price appears in: buy box, CTA band, five Journal CTAs, meta + OG
    descriptions, Product schema `price`, Shopify `fallback_price`.
    `proposals/` still shows $150 by design. **Grep `$1` before changing it.**
+1b-PRICE. **$179, changed from $199 on the founder's call.** Landed cost is
+   **$62**, so $179 is a **2.9x multiple**, below the 3-4x DTC floor and down
+   from 3.2x at $199. The wholesale maths is the thing to watch: a 50%-of-MSRP
+   stockist deal leaves **$27.50 a unit**, which cannot fund a stockist
+   programme. If wholesale becomes a real channel, list has to rise. Raised
+   this before the change and the founder chose $179 anyway; recorded here so
+   the trade-off is not rediscovered later.
+1b-BOX. **Box contents confirmed from the packaging insert, and the box is
+   authoritative.** Mixing base, stainless steel mixing cup, **mixing rod**,
+   **USB-C charging cable**, full manual + recipes. Two things this corrected
+   on the site: the mixing rod appeared nowhere at all, and "Powered USB-C"
+   implied a cord. It **charges**, so it runs cordless, which is a selling
+   point the site had never claimed. Also retired "Nothing goes in the cup"
+   from the mechanism copy: the mixing element sits in the cup, so the true
+   claim is that no whisk and no hand do.
 1b-iii. **No matcha in the box, and no preorder incentive at all.** The
    founder's call: $199 flat, nothing bundled, no discount. The preorder
    therefore offers only first-run access and free cancellation — worth
