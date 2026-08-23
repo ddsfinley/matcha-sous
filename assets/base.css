@@ -280,6 +280,17 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 @media (max-width:1100px){.features{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.features{grid-template-columns:1fr}}
 
+/* box marks -----------------------------------------------------------
+   The four icons printed down the side panel of the box, redrawn as line
+   art on plum. No cards, no borders, no body copy: on the box these are
+   four marks in a column with nothing explaining them, and the whole point
+   of putting them here is that the packaging and the page agree. Labels
+   carry a hard <br> because the box breaks them the same way.            */
+.marks{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3.4vw,52px);list-style:none;text-align:center}
+.mark svg{display:block;margin:0 auto 20px;width:clamp(44px,4.4vw,60px);height:clamp(44px,4.4vw,60px);color:var(--bone-bright);opacity:.9}
+.mark span{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.85;color:rgba(237,228,216,.72)}
+@media (max-width:720px){.marks{grid-template-columns:repeat(2,1fr);gap:36px 20px}}
+
 /* gallery */
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.4vw,30px)}
 .gallery figure{display:flex;flex-direction:column;margin:0}
