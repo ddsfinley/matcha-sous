@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/poiret-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=61">
+<link rel="stylesheet" href="assets/css/site.css?v=62">
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -235,6 +235,18 @@
         <details>
           <summary>What are the shipping, cancellation and warranty terms?</summary>
           <p class="a">We ship within the United States only for now, and US shipping is free. Preorders can be cancelled any time before they ship, for a full refund. Once a unit has shipped we do not accept returns for change of mind. Every unit carries a 1-year warranty against manufacturing defects in materials and workmanship. If yours arrives faulty or fails within the year, write to <a href="mailto:care@matchasous.com">care@matchasous.com</a> and we will make it right.</p>
+        </details>
+        <!-- PROP 65: this answer explains the warning; it does not replace it.
+             The warning itself is in the buy box on index.html and
+             stockists.html, where the regulation requires it. Deliberately
+             NOT added to the FAQPage JSON-LD above: an FAQ rich result reading
+             "why is there a cancer warning" is not something to invite into a
+             search listing, and marking up a subset of the page is expected.
+             The sentence naming the chemical must be revisited when the
+             supplier's test report confirms which chemical actually applies. -->
+        <details>
+          <summary>Why is there a California Proposition 65 warning?</summary>
+          <p class="a">California requires a warning before a business exposes anyone in the state to any chemical on a list of roughly 900, at thresholds set well below the level at which harm has been observed. It is not a recall, a safety notice, or a finding about this product in particular, and the requirement applies to a great many ordinary household appliances. Because the warning attaches to the product as sold, it appears wherever the product is sold rather than only in California. The chemical we name is one associated with the flexible PVC used in cables and cords, not with the stainless-steel vessel or with anything that touches your matcha. You can read California&rsquo;s own explanation at <a href="https://www.P65Warnings.ca.gov" rel="nofollow noopener" target="_blank">P65Warnings.ca.gov</a>.</p>
         </details>
       </div>
 

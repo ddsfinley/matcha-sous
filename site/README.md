@@ -300,9 +300,19 @@ page reads as an editorial index rather than a stack of identical blocks.
    Raised both points; the founder chose $150. Not a blocker — it is a
    coherent strategy for an organic-first launch — but the wholesale page is
    now writing a cheque the price cannot cash.
-1b-BOX. **Box contents confirmed from the packaging insert, and the box is
-   authoritative.** Mixing base, stainless steel mixing cup, **mixing rod**,
-   **USB-C charging cable**, full manual + recipes. Two things this corrected
+1b-BOX-CONFLICT. **The two box renders disagree with each other, and the site
+   currently follows the insert card.** `assets/images/launch-guide.jpg` shows
+   the printed back panel, whose WHAT'S INCLUDED reads: Mixer Base, Matcha Cup,
+   **Power Adapter**, USB-C Cable, User Manual — **no mixing rod**, and no
+   recipes. The insert card the site was built from lists a mixing rod and
+   "full manual + recipes" instead. The buy box says "Mixing rod · included".
+   One of the two is wrong and only the founder can say which. **If the printed
+   carton is the one going out, the buy box is promising an item that is not in
+   it**, which is the kind of small untruth that generates support tickets and
+   chargebacks. Settle it before the run ships. (The back panel also carries
+   **6 W low power**, a spec that appears nowhere on the site.)
+1b-BOX. **Box contents per the packaging insert.** Mixing base, stainless steel
+   mixing cup, **mixing rod**, **USB-C charging cable**, full manual + recipes. Two things this corrected
    on the site: the mixing rod appeared nowhere at all, and "Powered USB-C"
    implied a cord. It **charges**, so it runs cordless, which is a selling
    point the site had never claimed. Also retired "Nothing goes in the cup"
@@ -406,6 +416,63 @@ page reads as an editorial index rather than a stack of identical blocks.
   "colour" were all live. Grep before shipping copy.
 - **One verb for one action.** "Buy now", "Preorder" and "Reserve your Sous"
   all pointed at the same anchor. Three labels read as three offers.
+
+## California Proposition 65
+
+**This is the one part of the site that is legally operative. Do not edit it
+for tone, length or rhythm.** The wording is the safe-harbor text from
+27 CCR 25603(a)(2); departing from it forfeits the safe harbor.
+
+**Where it is.** Inside `.buybox` on `index.html` and `stockists.html`, plus a
+`p65_chemical` / `p65_harm` setting pair on `sections/buy-box.liquid`. It is in
+the buy box, not the footer and not behind a toggle, because 27 CCR 25602(b)
+requires an internet warning to reach the buyer **before the purchase
+completes, without them having to seek it out**. `faq.html` carries a Q&A that
+*explains* the warning; that answer is not a substitute for the warning and
+must never become one. It is deliberately kept out of the FAQPage JSON-LD — an
+FAQ rich result reading "why is there a cancer warning" is not something to
+invite into a search listing.
+
+**The symbol** is the regulation's, not the brand's: black exclamation mark in
+a yellow equilateral triangle with a bold black outline, to the left of the
+text, at a height no smaller than the word WARNING. `.p65-mark` is sized in
+`em` so it tracks the type. Do not recolour it to the palette.
+
+### Two things that must be settled before launch
+
+1. **THE CHEMICAL NAMED IS A PLACEHOLDER.** The warning currently names
+   **DEHP**, which is the most probable candidate for this product class — the
+   usual exposure route for a small appliance is the plasticiser in a
+   PVC-jacketed cable or power adapter, and DEHP is listed for both cancer and
+   reproductive harm, so one name covers both endpoints. **It has not been
+   confirmed.** Settle it by getting the factory's Prop 65 / CA compliance
+   statement and test report, or by sending a unit for a lab screen (SGS,
+   Bureau Veritas, Intertek; roughly $300–800). Then change the name in **all
+   four places at once**: `index.html`, `stockists.html`, the Shopify setting,
+   and the FAQ answer's sentence about which part the chemical comes from.
+2. **The retail box carries FCC, CE and RoHS but no Prop 65 warning.** If a
+   warning is required, it is required on the package too, not only on the
+   website, and the box art is already finished. The cheap fix everyone uses
+   when they find this late is a label on the carton; the expensive fix is a
+   reprint. Decide before the run, not after.
+
+### Things worth knowing before spending money on this
+
+- **Under 10 employees is a real exemption.** Prop 65 applies to businesses
+  with 10 or more employees. A smaller company is outside the statute. That
+  exemption evaporates the moment you sell through Amazon or a chain retailer,
+  because they impose compliance contractually regardless, and it does not
+  stop a bounty-hunter firm sending a 60-day notice you then have to answer.
+- **Warning when you did not have to is cheap; not warning when you had to is
+  not.** Private enforcers can seek up to $2,500 per violation per day plus
+  fees, and most Prop 65 activity is plaintiff-firm driven.
+- **The short-form warning changed on 1 Jan 2025** and now has to name a
+  chemical. Products manufactured and labelled before **1 Jan 2028** may still
+  use the old short form. The site uses the **long form**, which is a valid
+  safe harbor either way and does not depend on what the box ends up saying.
+
+*Not legal advice. This section is a build note. Have a products lawyer confirm
+before the first run ships.*
 
 ## The box marks
 

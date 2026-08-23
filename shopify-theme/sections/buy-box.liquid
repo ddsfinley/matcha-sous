@@ -65,6 +65,22 @@
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> {{ section.settings.assure_1 }}</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> {{ section.settings.assure_2 }}</span>
       </div>
+      {%- comment -%}
+        PROP 65. A legal statement, not copy. It is a setting so a merchant can
+        correct the chemical name without editing Liquid, but the default is
+        the safe-harbor wording from 27 CCR 25603(a)(2) and the symbol is the
+        regulation's own - do not restyle either. Blanking `p65_chemical`
+        removes the whole block, which is the right behaviour only once someone
+        has established that no warning is required. It sits inside the buy box
+        because 27 CCR 25602(b) requires the warning to reach the buyer before
+        the purchase completes, without them going looking for it.
+      {%- endcomment -%}
+      {%- if section.settings.p65_chemical != blank -%}
+        <p class="p65">
+          <svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>
+          <span><b>WARNING:</b> This product can expose you to chemicals including {{ section.settings.p65_chemical }}, which is known to the State of California to cause {{ section.settings.p65_harm }}. For more information go to <a href="https://www.P65Warnings.ca.gov" rel="nofollow noopener" target="_blank">www.P65Warnings.ca.gov</a>.</span>
+        </p>
+      {%- endif -%}
     </div>
   </div>
 </section>
@@ -81,7 +97,11 @@
     { "type": "text", "id": "cta_label", "label": "Button label", "default": "Reserve your Sous" },
     { "type": "text", "id": "paynote", "label": "Note under the button", "default": "Nothing is charged until your Sous ships. Cancel any time before then." },
     { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Free US shipping" },
-    { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "One-year warranty" }
+    { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "One-year warranty" },
+    { "type": "header", "content": "California Proposition 65" },
+    { "type": "paragraph", "content": "Legally operative text. The chemical must match the supplier's Prop 65 test report, and must match the wording used on the package and on the static site. Clearing the chemical field removes the warning entirely — only do that if you have established no warning is required." },
+    { "type": "text", "id": "p65_chemical", "label": "Chemical named in the warning", "default": "DEHP", "info": "Placeholder pending a test report. Leave blank to hide the warning." },
+    { "type": "text", "id": "p65_harm", "label": "Harm wording", "default": "cancer and birth defects or other reproductive harm", "info": "Use exactly: 'cancer', 'birth defects or other reproductive harm', or 'cancer and birth defects or other reproductive harm'." }
   ],
   "blocks": [
     {
