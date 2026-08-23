@@ -12,7 +12,7 @@ ground, aubergine anchors, copper accents, Cormorant Garamond + Jost.
 ## First-run checklist
 
 1. **Create the product** — Products → Add product → "Matcha Sous", price
-   $179, upload the photography, set inventory. Then in the theme editor open
+   $150, upload the photography, set inventory. Then in the theme editor open
    the **Buy box** and **Hero** sections and select that product; the buy box
    switches to a real add-to-cart form and Shopify's checkout.
    Until a product is selected the buy box shows the fallback price and links

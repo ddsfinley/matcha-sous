@@ -271,26 +271,35 @@ page reads as an editorial index rather than a stack of identical blocks.
    anchor to `#order`, so nothing else needs touching.
    The reservation copy also answers "when does it ship", which nothing on the
    site did before: no date is claimed, but no money moves until one exists.
-1b. **Price**: **$199, one price.** No preorder discount — the $20 off was
-   ~35% of net profit at a realistic CAC while being too small to move
-   anyone, and it broke the wholesale maths. The preorder benefit is instead
-   **first-run access + starter matcha in the box**, which costs a fraction
-   of $20 and is worth more. Landed cost is **$62**, so $199 is a 3.2x
-   multiple — barely inside the 3-4x DTC floor. **Do not discount below
-   $199 without redoing the unit economics**; at $179 the multiple is 2.9x
-   and a 50%-of-MSRP wholesale deal leaves $27.50/unit, which cannot fund a
-   stockist programme. If wholesale becomes a real channel, list should rise
-   to **$229-249** (at $249, keystone leaves $62.50 = 2x landed).
-   Price appears in: buy box, CTA band, five Journal CTAs, meta + OG
-   descriptions, Product schema `price`, Shopify `fallback_price`.
-   `proposals/` still shows $150 by design. **Grep `$1` before changing it.**
-1b-PRICE. **$179, changed from $199 on the founder's call.** Landed cost is
-   **$62**, so $179 is a **2.9x multiple**, below the 3-4x DTC floor and down
-   from 3.2x at $199. The wholesale maths is the thing to watch: a 50%-of-MSRP
-   stockist deal leaves **$27.50 a unit**, which cannot fund a stockist
-   programme. If wholesale becomes a real channel, list has to rise. Raised
-   this before the change and the founder chose $179 anyway; recorded here so
-   the trade-off is not rediscovered later.
+1b. **Price: $150, one price.** Set by the founder. History: $199 →
+   $179 → **$150**. No preorder discount and nothing bundled.
+
+   Where it lives — **grep `$1` before changing it**: buy box, Product schema
+   `price` (as `150.00`), the `mailto:` reservation body (URL-encoded
+   `%24150`), meta + OG + Twitter descriptions, `stockists.html`, five Journal
+   CTAs, Shopify `fallback_price` and the CTA-band default, `SHOPIFY-SETUP.md`.
+   `proposals/` also shows $150, but by coincidence now rather than by design —
+   those are superseded comps and stay `Disallow:`ed in `robots.txt`.
+
+   **The economics, recorded plainly so they are not rediscovered later.**
+   Landed cost is **$62**. At $150 that is a **2.4x multiple**, below the 3-4x
+   DTC floor (it was 3.2x at $199 and 2.9x at $179). Two consequences:
+   - **DTC**: $88 gross a unit has to cover CAC, payment fees, support,
+     returns-in-practice and overhead. Paid acquisition for a $150 first-time
+     countertop appliance from an unknown brand rarely comes in under $50-70,
+     so paid is close to break-even from day one. This price works if the
+     channel is organic, owned audience and word of mouth; it does not
+     self-fund a paid engine.
+   - **Wholesale is off the table at this price.** A 50%-of-MSRP stockist
+     deal is $75 against $62 landed — **$13 a unit**, which does not cover
+     the cost of servicing a stockist, let alone fund the programme. The site
+     still has a `wholesale.html`. If wholesale is ever meant to be a real
+     channel, list has to rise (at $249, keystone leaves $62.50 = 2x landed)
+     or landed cost has to fall.
+
+   Raised both points; the founder chose $150. Not a blocker — it is a
+   coherent strategy for an organic-first launch — but the wholesale page is
+   now writing a cheque the price cannot cash.
 1b-BOX. **Box contents confirmed from the packaging insert, and the box is
    authoritative.** Mixing base, stainless steel mixing cup, **mixing rod**,
    **USB-C charging cable**, full manual + recipes. Two things this corrected
@@ -300,7 +309,7 @@ page reads as an editorial index rather than a stack of identical blocks.
    from the mechanism copy: the mixing element sits in the cup, so the true
    claim is that no whisk and no hand do.
 1b-iii. **No matcha in the box, and no preorder incentive at all.** The
-   founder's call: $199 flat, nothing bundled, no discount. The preorder
+   founder's call: one flat price, nothing bundled, no discount. The preorder
    therefore offers only first-run access and free cancellation — worth
    knowing if preorder conversion comes in low, since there is currently no
    reason to order now rather than at launch. A bundled tin (collab or
@@ -369,6 +378,13 @@ page reads as an editorial index rather than a stack of identical blocks.
   conclusion the reader was about to reach on their own, which kills it.
 - **Sensation before argument.** "Foam fine enough to hold a line" does more
   than any sentence explaining why consistency matters.
+- **No puns.** "Sousper smooth" closed the opening section for one deploy and
+  was cut on the founder's call. The reason is structural, not taste: it was
+  the only joke on an otherwise straight-faced page, so it did not read as
+  wit, it read as a lapse in a voice that is otherwise completely composed.
+  A brand can be funny or it can be composed; one pun buys neither. The
+  section now closes by bolding the end of the line above it, which keeps the
+  visual full stop without inventing a third sentence to carry it.
 
 - **Say a thing once.** The homepage carried four sections making the same
   argument: "The Experience", "The Chasen", "The Tea" and "Why Sous" each
@@ -390,6 +406,41 @@ page reads as an editorial index rather than a stack of identical blocks.
   "colour" were all live. Grep before shipping copy.
 - **One verb for one action.** "Buy now", "Preorder" and "Reserve your Sous"
   all pointed at the same anchor. Three labels read as three offers.
+
+## The box marks
+
+The band above the buy box (`.marks`, `section.bg-plum`) is the four icons
+printed down the side panel of the retail box, redrawn as line art: spiral /
+fingertip / cup / droplet, labelled **Smooth, uniform texture · One-touch
+operation · Consistent results · Easy-clean design**. Same four, same order,
+same words as the print.
+
+- **Why it exists.** The alternative on the table was an "In the box" contents
+  section built from the insert card. That was rejected: a contents list is
+  logistics, and the site already lists what the thing does in the buy box. The
+  icons are the only part of the packaging that makes an *argument*, and
+  repeating them verbatim is what makes the box feel like it came from the same
+  place as the site. Buy the product and the unboxing confirms the page.
+- **Drawn, not traced.** `assets/images/box.jpg` and `launch-guide.jpg` are
+  renders; the icons in them are ~40 px tall in a progressive JPEG, so there is
+  no usable line art to extract. All four are hand-authored SVG on a 48 grid,
+  `stroke-width:1.4`, round caps. **If real vector art ever arrives from the
+  packaging designer, replace the paths and keep the labels and order.**
+- **The spiral is the brand mark.** Its path is `assets/images/logo-enso.svg`
+  scaled 64→48 (×0.75), not a new drawing. Do not redraw it freehand.
+- **Optically centred, not nominally.** Each icon's raw path centres somewhere
+  other than (24,24), so each sits in a `<g transform="translate(…)">` that
+  pulls its measured bounding box onto the grid centre. Measured in-browser
+  with `getBBox()`; a translate is used rather than a scale **on purpose**,
+  because scaling scales the stroke and a 1.30 stroke next to a 1.52 stroke is
+  visible at 60 px. To resize an icon, edit its path numbers, not the
+  transform — that is why the cup's geometry is larger than the box render's.
+- **No heading and no body copy**, by design: the box does not explain them
+  either, and the whole point is that the two artefacts agree.
+- **Mirrored in Shopify** as `sections/box-marks.liquid`, wired into
+  `templates/index.json` between `presets` and `buy`. The icon is a `select`
+  block setting rather than an image upload so a merchant cannot break the set
+  by dropping in a mismatched graphic.
 
 ## Cutting the matcha silhouette
 

@@ -238,6 +238,49 @@
     },
     "closing": {
       "type": "cta-band"
+    },
+    "marks": {
+      "type": "box-marks",
+      "blocks": {
+        "m1": {
+          "type": "mark",
+          "settings": {
+            "icon": "spiral",
+            "line_one": "Smooth,",
+            "line_two": "uniform texture"
+          }
+        },
+        "m2": {
+          "type": "mark",
+          "settings": {
+            "icon": "touch",
+            "line_one": "One-touch",
+            "line_two": "operation"
+          }
+        },
+        "m3": {
+          "type": "mark",
+          "settings": {
+            "icon": "cup",
+            "line_one": "Consistent",
+            "line_two": "results"
+          }
+        },
+        "m4": {
+          "type": "mark",
+          "settings": {
+            "icon": "drop",
+            "line_one": "Easy-clean",
+            "line_two": "design"
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4"
+      ]
     }
   },
   "order": [
@@ -245,6 +288,7 @@
     "how",
     "demo",
     "presets",
+    "marks",
     "buy",
     "specs",
     "story",

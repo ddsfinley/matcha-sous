@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
-# Superseded design explorations. Kept in the repo for reference, but they still
-# carry an obsolete $150 price and must never be indexed.
+# Superseded design explorations. Kept in the repo for reference only: they run
+# their own stylesheet, point at a checkout URL that does not resolve, and would
+# compete with the real pages in search. Never index them.
 Disallow: /proposals/
 
 Sitemap: https://matchasous.com/sitemap.xml
