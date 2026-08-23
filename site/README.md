@@ -447,6 +447,54 @@ page reads as an editorial index rather than a stack of identical blocks.
 - **One verb for one action.** "Buy now", "Preorder" and "Reserve your Sous"
   all pointed at the same anchor. Three labels read as three offers.
 
+## The Acaia x Blue Bottle pass
+
+The founder's brief was "copy Acaia and Blue Bottle vibes and rebuild the copy
+and site." Those two references pull in opposite directions — **Acaia is a
+laboratory instrument, Blue Bottle is a café** — and the resolution is the
+brand itself: a sous chef is precision in the service of hospitality. The
+target became **Acaia's precision delivered at Blue Bottle's pace.**
+
+**Nothing was copied.** No Acaia or Blue Bottle asset, layout, or line is in
+this repo. What was taken is register, which is what a moodboard is for.
+
+Four moves, in order of how much they changed:
+
+1. **Light.** The largest single divergence from both references. The site was
+   carrying a dark full-bleed video hero, a plum marks band, a plum founder
+   note and a plum CTA band. All are now light. **Plum retreats to buttons,
+   the announce bar and the footer** — the "one accent on cream" that both
+   references run. `.cta-band` and `.pagehero` were lightened in CSS, so
+   `about.html` and `how-to-use.html` inherited it without editing either file.
+2. **Air.** The most imitated thing about Blue Bottle is how little is on
+   screen at once. `section.air` roughly doubles the vertical rhythm.
+3. **Numbers as typography.** Acaia's signature. `.figures` sets 18 / 3 /
+   40·80·120 / 30s at display scale with hairline labels. Every numeral is
+   **bottom-aligned inside a common row height** (`min-height` on `.fig b`),
+   because the figures are deliberately different sizes and the labels
+   otherwise sit on four different baselines. `40 · 80 · 120` is `nowrap` at a
+   reduced size for the same reason.
+4. **Fewer words: 540 → 374.** The argumentative structure is gone — the page
+   used to run problem → mechanism → objection → concession. Neither reference
+   argues. They describe and then stop talking. The page also used to end
+   three times (founder quote, CTA band, newsletter block); it now ends once.
+
+**What was deliberately kept.** Poiret One stays: it is the closest free face
+to the wordmark's SOUS and dropping it would break the site's link to its own
+logo, which no moodboard is worth. The bone palette stays — it was already
+Blue Bottle adjacent. The box marks stay, and moved from plum to **dark on
+light**, which is both the Acaia treatment and how they are actually printed
+on the kraft side panel, so the change made them *more* faithful to the box.
+
+**Dead but kept:** `.hero`, `.bg-deep`, `.bg-plum`, `.founder`, `.moment`,
+`.trust`, `.mood-line` are no longer used by any page in `/site`, but
+`shopify-theme/sections/` still references them. Check there before deleting.
+
+**The Shopify theme has now drifted further.** `hero.liquid` still renders the
+old two-column dark hero and `index.json` has no `figures` or `close` section.
+The theme picks up the new CSS but not the new structure. It needs a re-port
+before it is used.
+
 ## California Proposition 65
 
 **This is the one part of the site that is legally operative. Do not edit it
