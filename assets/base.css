@@ -280,6 +280,21 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 @media (max-width:1100px){.features{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.features{grid-template-columns:1fr}}
 
+/* California Proposition 65 -------------------------------------------
+   27 CCR 25603. The yellow is the regulation's, not the brand's: the symbol
+   has to be a black exclamation mark in a yellow equilateral triangle with a
+   bold black outline, placed left of the text at a height no smaller than the
+   word WARNING. Do not restyle it into the palette and do not shrink it below
+   1em. The block sits inside .buybox on purpose - for internet sales the
+   warning must reach the buyer before the purchase completes without them
+   seeking it out (27 CCR 25602(b)), so it cannot live in the footer or behind
+   a disclosure toggle.                                                     */
+.p65{display:flex;gap:9px;align-items:flex-start;margin-top:20px;padding-top:18px;border-top:1px solid var(--line-soft);font-size:.74rem;line-height:1.6;color:var(--stone)}
+.p65-mark{flex:none;width:1.31em;height:1.2em;margin-top:.06em}
+.p65 b{font-weight:600;letter-spacing:.04em;color:var(--aub-ink)}
+.p65 a{color:var(--stone);text-decoration:underline;text-underline-offset:2px}
+.p65 a:hover{color:var(--aub-ink)}
+
 /* box marks -----------------------------------------------------------
    The four icons printed down the side panel of the box, redrawn as line
    art on plum. No cards, no borders, no body copy: on the box these are
