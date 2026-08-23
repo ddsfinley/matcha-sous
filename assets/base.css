@@ -280,6 +280,79 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 @media (max-width:1100px){.features{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.features{grid-template-columns:1fr}}
 
+/* =====================================================================
+   ACAIA x BLUE BOTTLE PASS
+   The brief was "Acaia and Blue Bottle vibes". Those two pull in opposite
+   directions - Acaia is a laboratory instrument, Blue Bottle is a cafe -
+   and the resolution is the brand itself: a sous chef is precision in the
+   service of hospitality. So the target is Acaia's precision delivered at
+   Blue Bottle's pace. Four moves, in order of how much they changed:
+
+   1. LIGHT. Both references are overwhelmingly light. This site was
+      carrying a dark full-bleed video hero, a plum marks band, a plum
+      founder note and a plum CTA band. All four are now light; plum
+      retreats to buttons, the announce bar and the footer, which is the
+      "one accent on cream" both references run.
+   2. AIR. The most copied thing about Blue Bottle is how little is on
+      screen at once. `section.air` roughly doubles the vertical rhythm.
+   3. NUMBERS AS TYPOGRAPHY. Acaia's signature. This product has good
+      numbers, so `.figures` sets them at display scale with hairline
+      labels instead of burying them in a spec list.
+   4. FEWER WORDS. 540 -> 374 on the landing page, and the argumentative
+      structure (problem -> mechanism -> objection -> concession) is gone.
+      Neither reference argues; they describe and then stop talking.
+
+   NOT copied: any actual Acaia or Blue Bottle asset, layout or line. This
+   is their register, written from scratch.
+
+   Dead-but-kept: `.hero`, `.bg-deep`, `.bg-plum`, `.founder`, `.moment`,
+   `.trust`, `.mood-line` are no longer used by any page in /site, but the
+   Shopify theme's sections still reference them. Do not delete without
+   checking shopify-theme/sections first.
+   ===================================================================== */
+
+section.air{padding-block:clamp(84px,13vh,180px)}
+
+/* light hero. Centred type on bone, product contained below it rather than
+   staged behind it - both references put the object on a clean ground. */
+.hero-light{background:var(--bone-page);text-align:center;padding-block:clamp(52px,8vh,104px) clamp(64px,10vh,140px)}
+.hero-light h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.5rem,6vw,5rem);line-height:1.06;letter-spacing:.004em;color:var(--aub);max-width:15ch;margin-inline:auto;-webkit-text-stroke-width:.016em;text-wrap:balance}
+.hero-light h1 em{font-style:normal;color:var(--copper)}
+.hero-light .lead{margin:clamp(18px,2.6vh,28px) auto clamp(28px,4vh,40px);max-width:44ch}
+.hero-light .cta{justify-content:center}
+.hero-still{margin:clamp(50px,9vh,110px) auto 0;max-width:min(480px,82%)}
+.hero-still .media-frame{display:block}
+.hero-still video{width:100%;height:auto;display:block}
+
+/* the Blue Bottle block: centred, narrow, few words, much air */
+.statement{max-width:min(780px,100%);margin-inline:auto;text-align:center}
+.statement h2.display{font-size:clamp(2.05rem,5vw,3.6rem);line-height:1.1;margin-bottom:clamp(26px,4vh,40px);text-wrap:balance}
+.statement p{max-width:48ch;margin-inline:auto;font-size:clamp(1.02rem,1.4vw,1.2rem);color:var(--stone);text-wrap:pretty}
+.statement p+p{margin-top:15px}
+
+/* the Acaia block: the numbers are the design, not a spec table */
+.figures{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(26px,4vw,60px);list-style:none;border-top:1px solid var(--line);padding-top:clamp(32px,5vh,52px)}
+.fig b{display:flex;align-items:flex-end;min-height:clamp(3rem,7vw,5.6rem);font-family:var(--disp);font-weight:400;font-size:clamp(3rem,7vw,5.6rem);line-height:.92;color:var(--aub);white-space:nowrap;-webkit-text-stroke-width:.012em}
+.fig b i{font-style:normal;font-family:var(--util);font-weight:300;font-size:.26em;letter-spacing:.04em;margin-left:.06em;color:var(--stone)}
+.fig--wide b{font-size:clamp(1.3rem,2.5vw,2.1rem);line-height:1.1}
+.fig span{display:block;margin-top:16px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
+.figures-note{margin-top:clamp(34px,5vh,54px);max-width:46ch;font-size:1.02rem;color:var(--stone)}
+@media (max-width:820px){.figures{grid-template-columns:repeat(2,1fr);gap:40px 24px}.fig--wide b{font-size:clamp(1.5rem,6vw,2rem)}}
+
+/* the box marks, now dark on light - which is also how they are actually
+   printed on the kraft side panel, so this is the more faithful treatment */
+.marks-band{background:var(--paper);border-block:1px solid var(--line-soft);padding-block:clamp(60px,9vh,110px)}
+.marks--light .mark svg{color:var(--aub);opacity:1}
+.marks--light .mark span{color:var(--stone)}
+
+/* one closer, not three. The page used to end on a founder quote, a dark
+   CTA band and a newsletter block in a row. Blue Bottle ends once. */
+.close{background:var(--bone-page);text-align:center;padding-block:clamp(84px,13vh,170px)}
+.close h2.display{font-size:clamp(2rem,4.6vw,3.4rem);max-width:18ch;margin:0 auto clamp(26px,4vh,38px);text-wrap:balance}
+.close h2.display em{font-style:normal;color:var(--copper)}
+.close .cta{justify-content:center}
+.close-note{margin-top:clamp(26px,4vh,38px);font-size:.92rem;line-height:1.9;color:var(--stone)}
+
 /* California Proposition 65 -------------------------------------------
    27 CCR 25603. The yellow is the regulation's, not the brand's: the symbol
    has to be a black exclamation mark in a yellow equilateral triangle with a
@@ -417,22 +490,24 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .qa .a a{color:var(--copper);border-bottom:1px solid var(--copper-soft)}
 
 /* ---------- CTA band ---------- */
-.cta-band{background:var(--plum);color:var(--bone);position:relative;overflow:hidden;text-align:center}
-.cta-band h2{color:var(--bone-bright)}
+.cta-band{background:var(--bone-page);color:var(--aub-ink);position:relative;overflow:hidden;text-align:center}
+.cta-band h2{color:var(--aub)}
+.cta-band h2 em{color:var(--copper)}
+.cta-band .lead{color:var(--stone)}
 .cta-band h2 em{color:var(--copper-soft)}
 .cta-band .lead{color:rgba(237,228,216,.7)}
 .cta-band .eyebrow{color:var(--copper-soft)}
-.cta-band .btn-outline{color:var(--bone);border-color:rgba(237,228,216,.45)}
-.cta-band .btn-outline:hover{background:var(--bone);color:var(--aub-deep);border-color:var(--bone)}
-.cta-band .btn-gold,.cta-band .btn-primary{background:var(--bone);color:var(--aub-deep)}
-.cta-band .btn-gold:hover,.cta-band .btn-primary:hover{background:var(--bone-bright);color:var(--aub-deep)}
-.cta-band .glow{position:absolute;inset:0;background:radial-gradient(50% 80% at 50% 0%,rgba(237,228,216,.1),transparent 70%);pointer-events:none}
+.cta-band .btn-outline{color:var(--aub-ink);border-color:var(--line)}
+.cta-band .btn-outline:hover{background:var(--plum);color:var(--bone);border-color:var(--plum)}
+.cta-band .btn-gold,.cta-band .btn-primary{background:var(--plum);color:var(--bone)}
+.cta-band .btn-gold:hover,.cta-band .btn-primary:hover{background:var(--aub);color:var(--bone-bright)}
+.cta-band .glow{display:none}
 .cta-band .inner{position:relative;max-width:640px;margin-inline:auto}
 .cta-band h2{margin-bottom:14px}
 .cta-band .lead{margin-bottom:30px}
 
 /* ---------- subpage hero ---------- */
-.pagehero{background:linear-gradient(180deg,var(--paper),var(--bone-deep));border-bottom:1px solid var(--line-soft);padding-block:clamp(52px,8vh,100px);text-align:center}
+.pagehero{background:var(--paper);border-bottom:1px solid var(--line-soft);padding-block:clamp(68px,11vh,140px);text-align:center}
 .pagehero .inner{max-width:none}
 .pagehero .inner>.lead,.pagehero .inner>p{max-width:680px;margin-inline:auto}
 .pagehero h1.display{max-width:22ch;margin-inline:auto;font-size:clamp(1.85rem,8.2vw,4.4rem)}
@@ -524,7 +599,7 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 /* Supporting detail, not a hero: full-bleed it ran ~740px tall under the
    stats and dominated the section. Capped to the width of a showcase
    panel so it reads as one more image on the page. */
-.wide-detail{margin:clamp(28px,4vh,44px) 0 0;max-width:min(360px,100%)}
+.wide-detail{margin:clamp(44px,7vh,80px) auto 0;max-width:min(560px,100%)}
 /* the cropped photograph's own ratio, so nothing is cropped again in CSS */
 .wide-detail .media-frame{display:block;overflow:hidden;border-radius:var(--radius-lg);aspect-ratio:1200/1124}
 .wide-detail img{width:100%;height:100%;object-fit:cover;display:block}
