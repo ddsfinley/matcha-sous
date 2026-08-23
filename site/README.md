@@ -271,35 +271,64 @@ page reads as an editorial index rather than a stack of identical blocks.
    anchor to `#order`, so nothing else needs touching.
    The reservation copy also answers "when does it ship", which nothing on the
    site did before: no date is claimed, but no money moves until one exists.
-1b. **Price: $150, one price.** Set by the founder. History: $199 →
-   $179 → **$150**. No preorder discount and nothing bundled.
+1b. **Price: $179, one price.** Set by the founder. History: $199 → $179 →
+   $150 → **$179**. No preorder discount and nothing bundled.
+   **Landed cost is $60, confirmed by the founder** (not FOB — landed).
 
    Where it lives — **grep `$1` before changing it**: buy box, Product schema
-   `price` (as `150.00`), the `mailto:` reservation body (URL-encoded
-   `%24150`), meta + OG + Twitter descriptions, `stockists.html`, five Journal
+   `price` (as `179.00`), the `mailto:` reservation body (URL-encoded
+   `%24179`), meta + OG + Twitter descriptions, `stockists.html`, five Journal
    CTAs, Shopify `fallback_price` and the CTA-band default, `SHOPIFY-SETUP.md`.
-   `proposals/` also shows $150, but by coincidence now rather than by design —
-   those are superseded comps and stay `Disallow:`ed in `robots.txt`.
+   `proposals/` still shows $150; those are superseded comps carrying an
+   obsolete price and stay `Disallow:`ed in `robots.txt`.
 
-   **The economics, recorded plainly so they are not rediscovered later.**
-   Landed cost is **$62**. At $150 that is a **2.4x multiple**, below the 3-4x
-   DTC floor (it was 3.2x at $199 and 2.9x at $179). Two consequences:
-   - **DTC**: $88 gross a unit has to cover CAC, payment fees, support,
-     returns-in-practice and overhead. Paid acquisition for a $150 first-time
-     countertop appliance from an unknown brand rarely comes in under $50-70,
-     so paid is close to break-even from day one. This price works if the
-     channel is organic, owned audience and word of mouth; it does not
-     self-fund a paid engine.
-   - **Wholesale is off the table at this price.** A 50%-of-MSRP stockist
-     deal is $75 against $62 landed — **$13 a unit**, which does not cover
-     the cost of servicing a stockist, let alone fund the programme. The site
-     still has a `wholesale.html`. If wholesale is ever meant to be a real
-     channel, list has to rise (at $249, keystone leaves $62.50 = 2x landed)
-     or landed cost has to fall.
+   **The unit economics, so they are not rediscovered later.** At $60 landed,
+   $179 is a **3.0x multiple** — the first price in this product's history that
+   clears the 3-4x DTC floor rather than sitting under it. Per unit:
 
-   Raised both points; the founder chose $150. Not a blocker — it is a
-   coherent strategy for an organic-first launch — but the wholesale page is
-   now writing a cheque the price cannot cash.
+   | | $150 | **$179** | $199 | $249 |
+   |---|---|---|---|---|
+   | Landed | 60.00 | 60.00 | 60.00 | 60.00 |
+   | Fulfilment + outbound | 12.00 | 12.00 | 12.00 | 12.00 |
+   | Payment fees (2.9%+30c) | 4.65 | 5.49 | 6.07 | 7.52 |
+   | Warranty/damage reserve (5%) | 7.50 | 8.95 | 9.95 | 12.45 |
+   | Support | 3.00 | 3.00 | 3.00 | 3.00 |
+   | **Left to acquire a customer** | **62.85** | **89.56** | **107.98** | **154.03** |
+
+   Blended CAC for a design-led countertop appliance from a brand with no
+   reviews realistically lands **$50-90**. That is why $150 was a problem: it
+   broke even against its own CAC, so the business could only ever be organic.
+   $179 leaves roughly $20-40 a unit after acquisition, which is thin but is a
+   business.
+
+   **Wholesale is still off the table.** 50% of MSRP is $89.50 against $60
+   landed = **$29.50 a unit**, which does not cover the cost of servicing a
+   stockist. **$249 is the first list price where wholesale works** ($124.50
+   less $60 = $64.50, 2.1x landed). `wholesale.html` is live and promising a
+   channel this price cannot fund. Either it comes down or list rises when
+   wholesale becomes real. Raised twice; not yet resolved.
+
+1b-PRICE-CEILING. **$179 is the right number today; $199 is the right number
+   once there is proof — and that ordering matters.** Judged as an object
+   rather than as a cost-plus calculation, the buyer's reference set is a
+   chasen at $25, a handheld frother at $20, and an Aeroccino at ~$100 that
+   also *heats*. What lifts Matcha Sous above them is that nothing else runs a
+   matcha-specific two-stage cycle, and that the buyer is someone who already
+   spends $40 on a tin — for that person the reference price is the other
+   objects on the shelf, which is how Fellow holds $199 for a kettle.
+
+   The object can carry $199. **The listing cannot, yet**, because the site has
+   no reviews, no press, no ship date, no photograph of a person, and no
+   photograph of the finished drink in a bowl someone is about to pick up. At
+   $179 a stranger will take that on faith. At $199 they want evidence.
+   Raising $179 to $199 after reviews exist is easy; cutting is not.
+
+   **The live risk to any price above ~$120: if this is an ODM base rather
+   than exclusive tooling**, a near-identical unit will surface on Amazon at
+   $69-89 under three brand names, and one Reddit thread does the damage. If
+   the tooling, the drive spec or the two-stage firmware is genuinely
+   exclusive, $199 is safe and the price can rise. **This has not been
+   confirmed and is the single biggest open question on pricing.**
 1b-BOX-CONFLICT. **The two box renders disagree with each other, and the site
    currently follows the insert card.** `assets/images/launch-guide.jpg` shows
    the printed back panel, whose WHAT'S INCLUDED reads: Mixer Base, Matcha Cup,
@@ -340,7 +369,7 @@ page reads as an editorial index rather than a stack of identical blocks.
    `hasMerchantReturnPolicy: MerchantReturnNotPermitted` rather than leaving
    it unstated. **Risk accepted knowingly:** taking preorder money with no
    return path is the highest-exposure profile for card chargebacks, and at
-   $199 from a brand with no reviews a return policy is usually what
+   $179 from a brand with no reviews a return policy is usually what
    substitutes for trust not yet earned. If disputes appear after launch,
    revisit this first.
 1c. **Photography is the biggest remaining gap, and it is a commercial one,
@@ -348,7 +377,7 @@ page reads as an editorial index rather than a stack of identical blocks.
    flash-lit phone shots: textured wall, brass rail, scratched counter, and a
    terracotta sleeve that reads as a mismatched accessory. `photo-profile` was
    the **primary buy-box image** — the frame a buyer stares at while deciding
-   whether to spend $199. Both are now **retired from the homepage** in favour
+   whether to spend $179. Both are now **retired from the homepage** in favour
    of `cycle-poster.webp` (top-down, machine plus finished matcha) and
    `detail-instrument.webp` (top-down, clean). They remain in the repo.
    The packaging shoot (`photo-kit`, `photo-case`) is genuinely good, which
@@ -356,8 +385,9 @@ page reads as an editorial index rather than a stack of identical blocks.
    shot properly. **Still missing entirely: any photograph of a person, and any
    photograph of the finished drink in a glass someone would want.** Zero of
    the homepage images contain a human being. That, plus the absence of any
-   review, testimonial or press mention, means the site currently asks for $199
-   on typography alone. A day of proper product photography would move
+   review, testimonial or press mention, means the site currently asks for $179
+   on typography alone. It is also the reason $179 rather than $199: the
+   object can carry the higher number, the evidence cannot. A day of proper product photography would move
    conversion more than every other open item combined.
 1d. **Claim verification**: contactless magnetic drive and backlit touch
    controls — both **confirmed by the founder**. Box-verified facts: 18 speed
@@ -370,7 +400,7 @@ page reads as an editorial index rather than a stack of identical blocks.
 4. Emails `care@` / `wholesale@matchasous.com` must exist (or edit them).
    **`care@` now receives the reservations**, so it must exist before launch or
    the buy button is dead again.
-5. `proposals/` is superseded design exploration that still shows **$150**.
+5. `proposals/` is superseded design exploration carrying an obsolete price.
    Kept for reference, but `noindex` on every page *and* `Disallow: /proposals/`
    in `robots.txt`. Do not link to it, and do not let it into the sitemap.
 
@@ -644,4 +674,4 @@ fold at 390×844.
 - One small CSS file, no JS on home/FAQ (Q&A uses native `<details>`); ~10 lines of JS on wholesale only
 - WebP images with explicit width/height (no CLS), `fetchpriority=high` + preload on the LCP hero,
   `loading=lazy` below the fold
-- JSON-LD: Organization, WebSite, Product+Offer ($199), BreadcrumbList, FAQPage
+- JSON-LD: Organization, WebSite, Product+Offer ($179), BreadcrumbList, FAQPage
