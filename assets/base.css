@@ -280,6 +280,14 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 @media (max-width:1100px){.features{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.features{grid-template-columns:1fr}}
 
+/* ship window. Commented out in index.html until a real month exists; the rule
+   ships now so that turning the line on is a one-step edit rather than two. It
+   sits directly under the buy button and is deliberately the only copper line
+   in the buy box, because "when does it arrive" is the last question a preorder
+   buyer asks before they close the tab. */
+.shipwindow{margin-top:14px;text-align:center;font-size:.86rem;color:var(--copper-deep)}
+.shipwindow b{font-weight:400;color:var(--aub-ink)}
+
 /* California Proposition 65 -------------------------------------------
    27 CCR 25603. The yellow is the regulation's, not the brand's: the symbol
    has to be a black exclamation mark in a yellow equilateral triangle with a
