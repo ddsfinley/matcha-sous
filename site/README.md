@@ -516,7 +516,8 @@ angle, or goes.**
    answer was cut by two-thirds to a direct answer instead of a second
    philosophy paragraph.
 2. **The two-stage mechanism, explained fresh five times.** `index.html`
-   ("Mix first. Foam second."), `how-to-use.html` ("A change of pace, by
+   ("Mix first. Foam second.", later changed to "Two-speed, automatic
+   cycle."), `how-to-use.html` ("A change of pace, by
    design."), and three separate FAQ entries ("Why two speeds?", "What is
    the second speed doing?", "Will it create a mirror finish?") all
    re-derived the same fast-then-slow, settle-the-bubbles explanation.
