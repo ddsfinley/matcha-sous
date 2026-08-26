@@ -415,6 +415,81 @@ page reads as an editorial index rather than a stack of identical blocks.
    Kept for reference, but `noindex` on every page *and* `Disallow: /proposals/`
    in `robots.txt`. Do not link to it, and do not let it into the sitemap.
 
+## Accessibility (WCAG 2.1/2.2 AA)
+
+**Audited with axe-core (real Playwright render of every page, not static
+text parsing) rather than eyeballed.** axe-core is the same engine behind
+most professional accessibility tools; it catches roughly half of real WCAG
+issues automatically and cannot judge the rest (motion, reading order,
+whether alt text is actually accurate) — treat a clean run as a floor, not
+a certificate. Re-run before any future launch:
+
+```
+cd site/tools && npm install axe-core && python3 axe_audit.py
+```
+
+See `site/tools/axe_audit.py` for the harness itself.
+
+**Findings, first pass: 55 violations, one root cause, on every single
+page.** `--copper` (`#b0714f`) is the link/accent color, and at normal text
+size it fails 4.5:1 against both light backgrounds — 3.59:1 on
+`--bone-page`, 3.81:1 on `--paper`. This hit `.textlink`, `.jhome .go`,
+`.recipe figcaption .num`, `.buybox .preorder`, `.article a`, and the
+footer's `.fine` copyright line (a *different* failure — `rgba(bone,.5)`
+over plum computed to 4.15:1). Fixed both as **token swaps, not new
+colors**: the four `--copper` text uses now read `--copper-deep`
+(`#96593a`, already in the palette, 5.05–5.36:1 against both light
+backgrounds — nobody had to invent anything), and `.fine`'s alpha went
+`.5` → `.6` (4.5:1 was reachable at .55; .6 leaves margin). **55 → 0**,
+confirmed by re-running the same audit, not assumed. `--copper` itself is
+untouched — it still exists and is still used for large-scale/decorative
+elements (button underlines, `h1 em`/`h2 em`) where the lower contrast
+either doesn't apply (non-text) or the failing rule was never on a light
+background to begin with. Don't restyle `.textlink` etc. back to plain
+`var(--copper)` without re-running the audit first.
+
+**Two more, real, that automated tooling cannot fully catch on its own —
+found by knowing what to look for, not by the tool flagging them:**
+
+1. **No skip link (2.4.1 Bypass Blocks).** Added `<a class="skip-link"
+   href="#main">` as the first element inside every page's `<body>`, and
+   `id="main"` on every page's `<main>`. Off-screen (`top:-100px`) until
+   `:focus` moves it to `top:12px` — standard pattern, verified with an
+   actual `Tab` keypress in Playwright, not just present-in-the-DOM.
+2. **Two autoplaying, looping, unpausable videos (2.2.2 Pause/Stop/Hide) —
+   both on `index.html`.** WCAG requires a way to stop moving content that
+   autoplays past 5 seconds, full stop, regardless of whether the content
+   is muted or decorative. Added a real `<button class="vid-toggle">` next
+   to each `<video class="loopvid">`, wired by DOM proximity
+   (`btn.previousElementSibling`) rather than ids, so it is copy-pasteable
+   to a future third video with zero JS changes. Verified functionally in
+   Playwright: click pauses the actual `<video>` element, swaps the icon,
+   swaps `aria-label` to "Play video"; click again resumes. **Separately**,
+   the page now checks `matchMedia('(prefers-reduced-motion: reduce)')` on
+   load and pauses + un-loops both videos before first paint for anyone who
+   has that OS-level preference set — verified with Playwright's
+   `reduced_motion: 'reduce'` context option, not just read off the CSS.
+   The button and the reduced-motion check are independent: the button
+   exists for everyone; reduced-motion is a stronger default for the
+   subset of visitors who asked for it.
+
+**Not yet ported to `shopify-theme/`** — that theme already has its own
+"drifted, needs a re-port" note elsewhere in this file; carry all of the
+above (token swap, skip link, video toggle + reduced-motion check) into it
+when that re-port happens, not before, since the theme's markup structure
+for video is not identical to `/site`'s.
+
+**On "accessibility overlay" widgets (accessiBe, UserWay and similar), for
+the record**: do not install one in place of the above. They patch the
+rendered DOM at runtime and do not fix the underlying markup assistive
+technology actually reads. The accessibility and legal-compliance
+communities do not treat them as evidence of compliance — several 2025
+lawsuits were filed against sites that had one installed, and the FTC
+fined a major vendor in April 2025 for falsely claiming its widget made any
+site WCAG compliant. If a "compliant in one script tag" pitch resurfaces,
+it is being sold to founders precisely because writing the underlying fix
+(see above) is what actually works and a widget is not a shortcut around it.
+
 ## Site-wide redundancy pass
 
 A full re-read across all 11 pages (not just single-page edits) found the

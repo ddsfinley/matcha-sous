@@ -42,6 +42,22 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%;height:auto}
 ::selection{background:var(--plum);color:var(--bone)}
 :focus-visible{outline:2px solid var(--copper);outline-offset:3px;border-radius:2px}
+/* WCAG 2.4.1 Bypass Blocks. Off-screen until Tab reaches it, then snaps into
+   view above the announce bar (z-index above its 50) so a keyboard user can
+   jump straight to <main id="main"> instead of tabbing through the full nav
+   on every single page load. */
+.skip-link{position:absolute;top:-100px;left:12px;z-index:100;background:var(--plum);color:var(--bone);padding:12px 22px;border-radius:var(--radius);font-size:.8rem;letter-spacing:.08em;transition:top .2s var(--ease)}
+.skip-link:focus{top:12px}
+
+/* WCAG 2.2.2 Pause, Stop, Hide. Both .loopvid instances autoplay and loop
+   indefinitely, which requires a way to stop them regardless of duration.
+   Subtle by default (this is decorative product footage, not content), but
+   a real <button> with a visible :focus-visible ring for keyboard users -
+   see the toggle wiring script at the bottom of index.html. */
+.vid-toggle{position:absolute;bottom:14px;right:14px;z-index:2;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:none;background:rgba(20,14,27,.45);backdrop-filter:blur(4px);color:var(--bone);cursor:pointer;opacity:.55;transition:opacity .3s var(--ease)}
+.vid-toggle:hover,.vid-toggle:focus-visible{opacity:1}
+.vid-toggle svg{width:16px;height:16px}
+.vid-toggle .ic-play{margin-left:2px}
 .wrap{max-width:var(--w);margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}
 
 /* ---------- type ---------- */
@@ -109,7 +125,7 @@ body{padding-top:var(--announce-h)}
 .btn-outline:hover{background:var(--plum);color:var(--bone);border-color:var(--aub)}
 .btn-block{display:flex;width:100%}
 .btn-lg{padding:1.2em 2.6em;font-size:.84rem}
-.textlink{display:inline-flex;align-items:center;gap:.5em;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);border-bottom:1px solid transparent;padding-bottom:2px;transition:all .4s var(--ease)}
+.textlink{display:inline-flex;align-items:center;gap:.5em;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-deep);border-bottom:1px solid transparent;padding-bottom:2px;transition:all .4s var(--ease)}
 .textlink:hover{border-color:var(--copper)}
 
 /* ---------- hero (full bleed: the type lives inside the photograph) ---------
@@ -216,7 +232,7 @@ body{padding-top:var(--announce-h)}
 .jhome a:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
 .jhome h3{font-family:var(--disp);font-size:1.3rem;margin-bottom:8px}
 .jhome p{font-size:.9rem;color:var(--stone)}
-.jhome .go{display:inline-block;margin-top:14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper)}
+.jhome .go{display:inline-block;margin-top:14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-deep)}
 @media (max-width:900px){.jhome{grid-template-columns:1fr}}
 
 /* ---------- trust bar ---------- */
@@ -363,7 +379,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .recipes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,36px);margin-top:clamp(28px,4vh,44px)}
 .recipes .media-frame{display:block;aspect-ratio:1/1;margin-bottom:18px}
 .recipes .media-frame img{width:100%;height:100%;object-fit:cover;display:block}
-.recipe figcaption .num{font-family:var(--disp);font-size:1.15rem;color:var(--copper);display:block;margin-bottom:2px}
+.recipe figcaption .num{font-family:var(--disp);font-size:1.15rem;color:var(--copper-deep);display:block;margin-bottom:2px}
 .recipe figcaption h3{font-family:var(--disp);font-size:1.3rem;margin-bottom:8px}
 .recipe .spec{font-size:.82rem;color:var(--stone);margin-bottom:8px}
 .recipe .spec b{color:var(--aub-ink);font-weight:400}
@@ -397,7 +413,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 /* Preorder: the list price sits quietly beside the live one — a fact, not
    a discount shout. No badge, no colour, per the no-promo-language rule. */
 .price s{font-family:var(--disp);font-size:1.4rem;color:var(--stone);opacity:.7;text-decoration-thickness:1px}
-.buybox .preorder{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--copper)}
+.buybox .preorder{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--copper-deep)}
 .inc{margin:20px 0 24px;padding:0;list-style:none;border-top:1px solid var(--line)}
 .inc li{display:flex;justify-content:space-between;gap:16px;padding:11px 2px;border-bottom:1px solid var(--line-soft);font-size:.92rem}
 .inc li span{color:var(--stone);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
@@ -502,7 +518,7 @@ footer .tag{color:rgba(237,228,216,.62);font-size:.92rem;max-width:300px;margin-
 footer .fnav{display:flex;gap:clamp(16px,3vw,34px);flex-wrap:wrap}
 footer .fnav a{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,228,216,.66);transition:color .3s var(--ease)}
 footer .fnav a:hover{color:var(--copper-soft)}
-footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(237,228,216,.5)}
+footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(237,228,216,.6)}
 
 /* ---------- founder note / story ---------- */
 .founder{text-align:center;max-width:780px;margin-inline:auto}
@@ -522,7 +538,7 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .article p{color:var(--stone);margin-bottom:14px}
 .article b,.article strong{color:var(--aub-ink);font-weight:400}
 .article ul,.article ol{margin:6px 0 18px 20px;color:var(--stone);display:grid;gap:8px}
-.article a{color:var(--copper);border-bottom:1px solid var(--copper-soft)}
+.article a{color:var(--copper-deep);border-bottom:1px solid var(--copper-soft)}
 .article table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:.92rem}
 .article th,.article td{border:1px solid var(--line);padding:10px 12px;text-align:left;color:var(--stone)}
 .article th{color:var(--aub-ink);font-weight:400;background:var(--paper)}

@@ -27,7 +27,7 @@
 <link rel="preload" href="assets/fonts/poiret-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/hero-bleed.webp" as="image">
-<link rel="stylesheet" href="assets/css/site.css?v=78">
+<link rel="stylesheet" href="assets/css/site.css?v=81">
 
 <script type="application/ld+json">
 {
@@ -104,6 +104,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="announce">The Hands-Free Matcha Mixer</div>
 
@@ -126,13 +127,20 @@
   <a href="#order">Shop</a><a href="how-to-use.html">How it works</a><a href="faq.html">FAQ</a><a href="journal/index.html">Journal</a>
 </nav>
 
-<main>
+<main id="main">
   <!-- ============ HERO ============ -->
   <section class="hero" aria-label="Matcha Sous">
     <video class="hero-media loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/img/hero-bleed.webp" width="1080" height="1360" aria-label="Matcha turning in a vivid green vortex inside the Matcha Sous cup">
       <source src="assets/vid/hero-vortex.webm" type="video/webm">
       <source src="assets/vid/hero-vortex.mp4" type="video/mp4">
     </video>
+    <!-- WCAG 2.2.2: this video autoplays and loops indefinitely, so a way to
+         stop it has to exist somewhere on the page regardless of duration.
+         Wired up by the vid-toggle script at the bottom of this file. -->
+    <button class="vid-toggle" type="button" aria-label="Pause video">
+      <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><path d="M8 5v14l11-7z"/></svg>
+    </button>
     <div class="wrap hero-inner">
       <h1 class="display hero-line"><span class="l1">Behind every great matcha</span><br>is a <em>Sous.</em></h1>
       <!-- The line above is the brand line and does the feeling. It also assumes
@@ -240,6 +248,10 @@
             <source src="assets/vid/cycle-1080-v3.webm" type="video/webm">
             <source src="assets/vid/cycle-1080-v3.mp4" type="video/mp4">
           </video>
+          <button class="vid-toggle" type="button" aria-label="Pause video">
+            <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+            <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><path d="M8 5v14l11-7z"/></svg>
+          </button>
         </span>
         <span class="buy-thumb"><img src="assets/img/photo-case.webp" alt="The Matcha Sous presentation case" width="1320" height="667" loading="lazy"></span>
       </figure>
@@ -371,9 +383,18 @@
 
 <script>
 // Some browsers (iOS Low Power Mode, data saver, autoplay settings) reject the
-// initial muted play(). Retry once the visitor interacts. No controls needed.
+// initial muted play(). Retry once the visitor interacts.
+var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('video.loopvid').forEach(function(v){
   v.muted = true;
+  if (reduceMotion) {
+    // WCAG 2.2.2 / a real accessibility preference, not just a nice-to-have:
+    // someone who has set this at the OS level gets the poster frame, not
+    // looping motion, without needing to find and press the toggle button.
+    v.loop = false;
+    v.pause();
+    return;
+  }
   var go = function(){ v.play().catch(function(){}); };
   var p = v.play();
   if (p && p.catch) p.catch(function(){
@@ -381,6 +402,26 @@ document.querySelectorAll('video.loopvid').forEach(function(v){
       window.addEventListener(e, go, {once:true, passive:true});
     });
   });
+});
+
+// Pause/play toggle for the two autoplaying loops (WCAG 2.2.2, Pause/Stop/
+// Hide) - each button lives next to its video in the DOM, so no ids needed.
+document.querySelectorAll('.vid-toggle').forEach(function(btn){
+  var vid = btn.previousElementSibling;
+  if (!vid || vid.tagName !== 'VIDEO') return;
+  var pauseIcon = btn.querySelector('.ic-pause'), playIcon = btn.querySelector('.ic-play');
+  var sync = function(){
+    var playing = !vid.paused;
+    pauseIcon.hidden = !playing;
+    playIcon.hidden = playing;
+    btn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
+  };
+  btn.addEventListener('click', function(){
+    if (vid.paused) { vid.play().catch(function(){}); } else { vid.pause(); }
+  });
+  vid.addEventListener('play', sync);
+  vid.addEventListener('pause', sync);
+  sync();
 });
 </script>
 </body>

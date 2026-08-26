@@ -1,0 +1,8 @@
+{
+  "name": "matcha-sous-site-tools",
+  "private": true,
+  "description": "axe-core dependency for axe_audit.py. Not pinned via lockfile on purpose - an accessibility auditor should run the current ruleset, not a stale one.",
+  "dependencies": {
+    "axe-core": "^4.13.0"
+  }
+}
