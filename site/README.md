@@ -415,6 +415,78 @@ page reads as an editorial index rather than a stack of identical blocks.
    Kept for reference, but `noindex` on every page *and* `Disallow: /proposals/`
    in `robots.txt`. Do not link to it, and do not let it into the sitemap.
 
+## Site-wide redundancy pass
+
+A full re-read across all 11 pages (not just single-page edits) found the
+same claims restated in multiple places — some across pages, some on the
+very same page. Fixed with a consistent rule: **keep the fullest statement
+in the section built for it; every other instance either earns its own new
+angle, or goes.**
+
+1. **"Sous doesn't take over" — said four times, two of them on the same
+   page.** `about.html`'s Restraint card, `about.html`'s "Sous stays second
+   in command" section, `index.html`'s "Keep the chasen. Choose the tea.",
+   and `faq.html`'s "Does it replace a chasen?" all made the identical
+   claim. Kept `about.html`'s "second in command" section as the fullest
+   version (it is the section built for exactly this idea) and
+   `index.html`'s chasen section untouched (different job — it is an
+   objection-handler on the page where someone is about to buy, not a
+   restatement of brand philosophy). **Retargeted, not deleted**: the
+   Restraint card no longer discusses authorship at all — see item 3 below,
+   it now covers something the page said nowhere else. The FAQ chasen
+   answer was cut by two-thirds to a direct answer instead of a second
+   philosophy paragraph.
+2. **The two-stage mechanism, explained fresh five times.** `index.html`
+   ("Mix first. Foam second."), `how-to-use.html` ("A change of pace, by
+   design."), and three separate FAQ entries ("Why two speeds?", "What is
+   the second speed doing?", "Will it create a mirror finish?") all
+   re-derived the same fast-then-slow, settle-the-bubbles explanation.
+   Kept `index.html`'s version as the primary/anchor. `how-to-use.html`
+   keeps its own explanation — that page's whole reason for existing is to
+   go deeper — but now states something index does not: the ~30 second
+   total cycle time, previously buried in this page's own HowTo JSON-LD
+   and never stated in the visible copy. The three FAQ entries collapsed
+   into one ("Why does Sous use two speeds?"), absorbing the one genuinely
+   useful fact from the other two (finish quality depends on tea/dose/
+   water) before deleting them — **both from the visible `<details>` list
+   and the FAQPage JSON-LD**, which must stay in exact parity: run
+   `grep -c '<summary>' faq.html` against the JSON-LD question count before
+   shipping any FAQ edit. (The Prop 65 question is the one deliberate
+   exception — 12 visible, 11 in JSON-LD, by design; see that section.)
+3. **Consistency, stated twice on `about.html`.** The Origin story and the
+   Consistency value card both argued the same point: results hold up under
+   time pressure / at service volume. Kept the Origin story (it is the
+   founding narrative, the highest-value telling of it) and rewrote the
+   Consistency card down to a single line — *"The same cup, every time."*
+   — deliberately shorter than what it replaced, on the founder's direction
+   to cut rather than pad once a section stops adding anything new.
+   **The Restraint card was retargeted rather than left stating the same
+   thing as item 1.** Its old copy ("No app, no subscription, no opinion
+   about your tea") was flagged by the founder as answering a question
+   nobody asked — nobody assumes a matcha mixer needs an app, so denying it
+   isn't restraint, it's a non-answer. Renamed the card **Restraint →
+   Finish** and gave it real content the page states nowhere else: *"Smooth
+   microfoam, mixed evenly, every single time."* The heading changed
+   because the content changed — a card's name has to match what it now
+   says, not what it used to.
+4. **The Journal blurb, copy-pasted verbatim across two pages.** *"Tea,
+   water, temperature, cultivar, milk, ratios, tools and the details that
+   separate matcha from matcha properly prepared"* appeared word-for-word
+   in both `about.html`'s Journal teaser and `journal/index.html`'s own
+   hero. Kept the Journal page's own hero unchanged (it is the canonical
+   home for its own tagline) and rewrote the `about.html` teaser to
+   something shorter that still does the teaser's actual job — sending a
+   reader from About to Journal — without repeating the destination's own
+   headline: *"What we've learned about tea, water and technique, written
+   up as we go."*
+
+**What this pass did not touch, on purpose**: the brand line ("Behind every
+great matcha is a Sous") recurring in hero/footer/CTA bands, the Prop 65
+warning appearing in multiple buy boxes, and price/shipping/warranty near
+every buy button. All three are expected repetition — a tagline, a legal
+requirement, and standard commerce practice — not the kind this pass was
+looking for.
+
 ## Editorial rules learned the hard way
 
 - **Use contractions.** The landing page ran with exactly one contraction on
