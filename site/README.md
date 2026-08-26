@@ -458,6 +458,46 @@ page reads as an editorial index rather than a stack of identical blocks.
 - **One verb for one action.** "Buy now", "Preorder" and "Reserve your Sous"
   all pointed at the same anchor. Three labels read as three offers.
 
+## Starting recipes photos (how-to-use.html)
+
+Three files, one shared 1:1 crop convention, three different origins:
+
+- `recipe-straight-v1.webp` — center-square crop of `tile-matcha-v5.webp`,
+  the GrabCut cutout hero shot from the earlier photography pass (see
+  "Cutting the matcha silhouette" above). Founder-supplied, sourced via
+  Google Drive early in the project.
+- `recipe-hot-v1.webp` — founder's own photo, emailed directly (mug shot,
+  steaming, on a wood table). **Do not confuse this with "straight" by
+  filename** — an earlier pass mapped these two backwards (the mug photo
+  was briefly `recipe-straight-v1.webp`) before the founder caught it. The
+  fix was a rename, not a re-crop; the crop itself was already correct.
+- `recipe-iced-v1.webp` — Unsplash, "a green drink with ice cubes in it" by
+  Daniel Stiel. Free commercial license, no attribution required, confirmed
+  against unsplash.com/license before use.
+
+**Why the founder's own emailed photos needed a detour through Gmail's raw
+MIME rather than a normal file save**: in this session, an image pasted
+directly into chat never landed on any filesystem path the agent could
+read, and Google Drive access hit a permission wall that repeated retries
+didn't clear. Gmail was already connected with no auth prompt, but its
+`get_message`/`get_thread` tools return only attachment *metadata*
+(filename, id, mime type), not bytes — there was no exposed
+"download attachment" call. `messageFormat: RAW` was the way through: it
+returns the full RFC822 MIME message as one base64 blob, which Python's
+`email` stdlib parses directly, handing back each attachment's real bytes
+to write to disk. If a future session hits the same "user sent a photo but
+there's no file for it" wall, this is the path: have them email it to an
+already-connected inbox, fetch RAW, parse with `email.message_from_bytes`.
+
+**Why 1:1 square, specifically**: a 4:5 portrait crop was tried first and
+rejected — on the mug photo it cropped away the rim entirely and read as an
+abstract green blur with no cup visible. Tested side by side against a
+square crop before deciding. Square keeps all three source photos legible
+despite wildly different native shapes (a tight landscape mug shot, a tall
+portrait glass shot, a near-square cutout). If a fourth recipe or a reshoot
+ever changes these files, keep the 1:1 convention rather than sizing each
+photo to its own best crop — the point is that the three read as one set.
+
 ## California Proposition 65
 
 **This is the one part of the site that is legally operative. Do not edit it
