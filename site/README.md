@@ -523,14 +523,30 @@ same words as the print.
   no usable line art to extract. All four are hand-authored SVG on a 48 grid,
   `stroke-width:1.4`, round caps. **If real vector art ever arrives from the
   packaging designer, replace the paths and keep the labels and order.**
-- **The spiral is the brand mark.** Its path is `assets/images/logo-enso.svg`
-  scaled 64→48 (×0.75), not a new drawing. Do not redraw it freehand. The
-  first cut only carried the main arc chain and read as concentric rings
-  instead of a coiling vortex — the enso's small terminal curl (`q.75-3
-  3.75-3.375`, continuing the last arc rather than a new `M`) and its filled
-  center dot (`cx="24.75" cy="22.125" r="2.4"`) are what give a spiral an
-  actual vanishing point. Both are back in; if this icon is ever redrawn,
-  keep them.
+- **The spiral is generated, not drawn: `site/tools/swirl.py`.** Run it to
+  reprint the exact path that ships. It went through two failed cuts first, and
+  both failures were the same root cause, so they are worth knowing:
+  1. Scaling `assets/images/logo-enso.svg` 64→48 produced a **uniform hairline
+     built from perfect circular arcs**, which reads as concentric rings.
+  2. Restoring the enso's terminal curl and centre dot helped but did not fix
+     it, because the actual problem is that **SVG cannot vary stroke-width
+     along a path.** An enso reads as brushed because the stroke tapers.
+
+  So the mark is a **filled ribbon**, not a stroke: a logarithmic spiral
+  centreline sampled `n` times, offset perpendicular by ±w(t)/2, with width
+  running from `w_max` at the head to zero at the tail. The tail comes to a
+  real point the way a lifted brush does, so no centre dot is needed, and the
+  head gets a true semicircular cap (**sweep-flag 0** — flag 1 bites a concave
+  notch out of it, which is what the first attempt did).
+
+  `w_max=3.0` is not arbitrary: a ribbon tapering 3.0→0 averages ≈1.4, which is
+  exactly the `stroke-width` of the three sibling icons, so the spiral reads as
+  brushed without out-weighting the row. Above ~3.4 it dominates. `n=80` is the
+  smallest sampling that stays smooth at 5× display size.
+
+  It is `fill="currentColor"` with **no stroke**, unlike its three siblings.
+  Its `translate(-4.25 -3.4)` was measured with `getBBox()`, not eyeballed —
+  **re-measure if any generator parameter changes.**
 - **Optically centred, not nominally.** Each icon's raw path centres somewhere
   other than (24,24), so each sits in a `<g transform="translate(…)">` that
   pulls its measured bounding box onto the grid centre. Measured in-browser
