@@ -421,6 +421,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .buybox .closer{margin:0 0 20px;color:var(--aub-ink);font-size:.95rem;line-height:1.5}
 .paynote{margin:12px 0 0;font-size:.84rem;line-height:1.5;color:var(--stone);text-align:center}
 .assure{display:grid;gap:10px;margin-top:20px}
+.assure a{text-decoration:underline;text-underline-offset:2px}
 .assure span{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--stone)}
 .assure svg{width:18px;height:18px;color:var(--copper);flex:none}
 /* #order .order above is an ID selector, so the stacking rule has to match it
@@ -450,6 +451,9 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 /* ---------- prose blocks (the longer narrative sections) ---------- */
 .prose{max-width:64ch}
 .prose p+p{margin-top:16px}
+.warranty-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:14px}
+.warranty-list li{position:relative;padding-left:22px}
+.warranty-list li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--copper-deep)}
 .prose b{color:var(--aub-ink);font-weight:400}
 .mood-sub{margin-top:18px;max-width:52ch;color:rgba(237,228,216,.72);font-size:clamp(.95rem,1.3vw,1.1rem)}
 .mood--light .mood-sub{color:var(--stone)}
