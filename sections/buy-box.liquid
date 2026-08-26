@@ -70,15 +70,25 @@
         correct the chemical name without editing Liquid, but the default is
         the safe-harbor wording from 27 CCR 25603(a)(2) and the symbol is the
         regulation's own - do not restyle either. Blanking `p65_chemical`
-        removes the whole block, which is the right behaviour only once someone
-        has established that no warning is required. It sits inside the buy box
-        because 27 CCR 25602(b) requires the warning to reach the buyer before
-        the purchase completes, without them going looking for it.
+        removes this link, which is the right behaviour only once someone has
+        established that no warning is required - blank the matching setting
+        in the Footer section too, or it will show a warning this link no
+        longer points at.
+
+        This is a LINK, not the full text. 27 CCR 25602(b) treats the internet
+        warning as a distinct requirement from the on-product one - the full
+        text lives once, in sections/footer.liquid, at the bottom of the page.
+        The regulation's own safe harbor for splitting it this way is method
+        (2): a link on the product display page, clearly marked with the word
+        WARNING, pointing to the full text. That is this link. Do not delete
+        it on the theory that the footer alone covers it - it does not, and
+        do not let the footer's p65_chemical/p65_harm drift out of sync with
+        this section's, since the link's destination has to say what the link
+        promised.
       {%- endcomment -%}
       {%- if section.settings.p65_chemical != blank -%}
-        <p class="p65">
-          <svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>
-          <span><b>WARNING:</b> This product can expose you to chemicals including {{ section.settings.p65_chemical }}, which is known to the State of California to cause {{ section.settings.p65_harm }}. For more information go to <a href="https://www.P65Warnings.ca.gov" rel="nofollow noopener" target="_blank">www.P65Warnings.ca.gov</a>.</span>
+        <p class="p65-link">
+          <a href="#prop65"><svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>WARNING: California Prop 65</a>
         </p>
       {%- endif -%}
     </div>
