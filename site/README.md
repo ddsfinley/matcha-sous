@@ -664,11 +664,25 @@ photo to its own best crop — the point is that the three read as one set.
 for tone, length or rhythm.** The wording is the safe-harbor text from
 27 CCR 25603(a)(2); departing from it forfeits the safe harbor.
 
-**Where it is — split across two places on purpose, not one.** A short link
-reading **"WARNING: California Prop 65"** sits in `.buybox` on `index.html`
-and `stockists.html`, right beside the button. The full paragraph lives once,
-at the very bottom of the page, inside `<footer>` as `#prop65` (and inside the
-Shopify `sections/footer.liquid`, which renders on every page).
+**As of August 2026, this warning no longer appears anywhere on `index.html`.**
+Both the buy-box link and the footer's full-text block were removed per
+founder direction, together rather than one at a time - the link only stays
+compliant as long as it points at the full text somewhere, so deleting either
+half without the other would have left a dead link or an unreferenced
+warning, neither of which is a valid state. `stockists.html` was
+deliberately left untouched and still carries the complete, compliant pair
+described below. The two pages are no longer symmetrical on this. That's a
+real asymmetry, not an oversight - revisit only if asked to make the same
+change on `stockists.html`.
+
+**Where it is now — split across two places on purpose, not one, on the one
+page that still carries it.** A short link reading **"WARNING: California
+Prop 65"** sits in `.buybox` on `stockists.html`, right beside the button.
+The full paragraph lives once, at the very bottom of that page, inside
+`<footer>` as `#prop65` (and inside the Shopify `sections/footer.liquid`,
+which renders on every page in the Shopify theme - that theme was not
+touched by the `index.html` removal above, so it still carries both halves
+everywhere it renders).
 
 This split is a founder request, and it is compliant **only because of how
 it's built** — do not "simplify" it back into one block without re-reading
@@ -713,8 +727,9 @@ text, at a height no smaller than the word WARNING. `.p65-mark` is sized in
    confirmed.** Settle it by getting the factory's Prop 65 / CA compliance
    statement and test report, or by sending a unit for a lab screen (SGS,
    Bureau Veritas, Intertek; roughly $300–800). Then change the name in **all
-   four places at once**: `index.html`, `stockists.html`, the Shopify setting,
+   three remaining places at once**: `stockists.html`, the Shopify setting,
    and the FAQ answer's sentence about which part the chemical comes from.
+   (`index.html` no longer carries this warning - see the callout above.)
 2. **The retail box carries FCC, CE and RoHS but no Prop 65 warning.** If a
    warning is required, it is required on the package too, not only on the
    website, and the box art is already finished. The cheap fix everyone uses

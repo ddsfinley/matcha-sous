@@ -291,27 +291,11 @@
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> Free US shipping</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> <a href="warranty.html">One-year warranty</a></span>
         </div>
-        <!-- PROP 65: a legal statement, not copy. Do not rewrite it for tone.
-     This is a LINK, not the warning - the full text is in <footer> at the very
-     bottom of this page (id="prop65"). Splitting it this way is deliberate,
-     not a shortcut: see README "California Proposition 65" for why a bare
-     relocation to the footer would fail 27 CCR 25602(b), and why this link
-     (safe-harbor method 2 - a link on the page, marked WARNING, pointing to
-     the full text) is what makes it compliant instead.
-
-     THINGS TO CHECK BEFORE LAUNCH - see the README section:
-     1. THE CHEMICAL NAMED IS A PLACEHOLDER. DEHP is the most likely candidate
-        for this product class (the PVC-jacketed USB-C cable and power adapter
-        are the usual exposure route), but it has NOT been confirmed against a
-        supplier test report or a lab screen. The same string now appears in
-        FOUR places that must stay equal: this link's destination text below,
-        the footer block it points to, stockists.html (both halves), and the
-        Shopify buy-box + footer settings.
-     2. The retail box carries FCC, CE and RoHS but NO Prop 65 warning. If a
-        warning is required, it is required on the package too, not only here. -->
-        <p class="p65-link">
-          <a href="#prop65"><svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>WARNING: California Prop 65</a>
-        </p>
+        <!-- PROP 65: removed from this page (link + the footer block it
+     pointed to) per founder direction. This used to be the one legally
+     operative part of the site - see README "California Proposition 65"
+     for the full compliance reasoning and what removing it means. Not
+     mirrored to stockists.html, which still carries both halves. -->
       </div>
     </div>
   </section>
@@ -342,7 +326,6 @@
   <section class="cta-band" aria-label="Buy">
     <div class="glow"></div>
     <div class="wrap inner">
-      <h2 class="display">Behind every great matcha <em>is a Sous.</em></h2>
       <div class="cta" style="justify-content:center">
         <a class="btn btn-gold btn-lg" href="#order">Reserve your Sous</a>
         <a class="btn btn-outline btn-lg" href="how-to-use.html">How to use it</a>
@@ -365,10 +348,6 @@
     <div class="fine">
       <span>© 2026 Matcha Sous™. All rights reserved.</span>
       <span>VISA · MC · AMEX · PAYPAL · APPLE PAY</span>
-    </div>
-    <div class="p65-full" id="prop65">
-      <svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>
-      <span><b>WARNING:</b> This product can expose you to chemicals including DEHP, which is known to the State of California to cause cancer and birth defects or other reproductive harm. For more information go to <a href="https://www.P65Warnings.ca.gov" rel="nofollow noopener" target="_blank">www.P65Warnings.ca.gov</a>.</span>
     </div>
   </div>
 </footer>
