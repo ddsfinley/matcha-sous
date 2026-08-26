@@ -524,7 +524,13 @@ same words as the print.
   `stroke-width:1.4`, round caps. **If real vector art ever arrives from the
   packaging designer, replace the paths and keep the labels and order.**
 - **The spiral is the brand mark.** Its path is `assets/images/logo-enso.svg`
-  scaled 64→48 (×0.75), not a new drawing. Do not redraw it freehand.
+  scaled 64→48 (×0.75), not a new drawing. Do not redraw it freehand. The
+  first cut only carried the main arc chain and read as concentric rings
+  instead of a coiling vortex — the enso's small terminal curl (`q.75-3
+  3.75-3.375`, continuing the last arc rather than a new `M`) and its filled
+  center dot (`cx="24.75" cy="22.125" r="2.4"`) are what give a spiral an
+  actual vanishing point. Both are back in; if this icon is ever redrawn,
+  keep them.
 - **Optically centred, not nominally.** Each icon's raw path centres somewhere
   other than (24,24), so each sits in a `<g transform="translate(…)">` that
   pulls its measured bounding box onto the grid centre. Measured in-browser
