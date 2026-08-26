@@ -462,15 +462,23 @@ page reads as an editorial index rather than a stack of identical blocks.
 
 Three files, one shared 1:1 crop convention, three different origins:
 
-- `recipe-straight-v1.webp` — center-square crop of `tile-matcha-v5.webp`,
+- `recipe-straight-v2.webp` — center-square crop of `tile-matcha-v5.webp`,
   the GrabCut cutout hero shot from the earlier photography pass (see
   "Cutting the matcha silhouette" above). Founder-supplied, sourced via
-  Google Drive early in the project.
+  Google Drive early in the project. **v2, not v1** — an earlier pass
+  mapped this file backwards (see below) and fixed it by overwriting
+  `recipe-straight-v1.webp` *in place*, which is exactly the caching bug
+  this project's own "Image caching" section warns about: same filename,
+  new bytes, and a browser or GitHub's CDN can keep serving the stale ones
+  indefinitely. The filename is versioned now specifically so that mistake
+  can't repeat silently — **always bump the version suffix when a file's
+  content changes, never overwrite in place**, even for a same-session fix.
 - `recipe-hot-v1.webp` — founder's own photo, emailed directly (mug shot,
   steaming, on a wood table). **Do not confuse this with "straight" by
   filename** — an earlier pass mapped these two backwards (the mug photo
   was briefly `recipe-straight-v1.webp`) before the founder caught it. The
   fix was a rename, not a re-crop; the crop itself was already correct.
+  This file's own name never changed, so it carried no cache risk.
 - `recipe-iced-v1.webp` — Unsplash, "a green drink with ice cubes in it" by
   Daniel Stiel. Free commercial license, no attribution required, confirmed
   against unsplash.com/license before use.
