@@ -22,6 +22,8 @@ only at small scale. Poiret One (display) + Jost (utility). Lives in
   to `index, follow`, add it to the primary `<nav>` and to `sitemap.xml`.
   It is in every footer already.
 - `wholesale.html` — hospitality pitch + enquiry form (composes a mailto; no backend)
+- `warranty.html` — Magnuson-Moss Limited Warranty disclosure: coverage, exclusions,
+  claims process, implied-warranty and liability terms. See "Warranty page" below.
 - `proposals/` — Stage-1 design directions (kept for the record, noindex)
 
 ## Brand
@@ -733,6 +735,56 @@ text, at a height no smaller than the word WARNING. `.p65-mark` is sized in
 
 *Not legal advice. This section is a build note. Have a products lawyer confirm
 before the first run ships.*
+
+## Warranty page
+
+`warranty.html` is a legal disclosure, built to satisfy the Magnuson-Moss
+Warranty Act (15 U.S.C. §2301) requirement that any written consumer
+warranty on a product over $15 be labelled **FULL** or **LIMITED** and
+disclose its terms "in simple and readily understood language." It is
+labelled **Limited** throughout, on purpose — repair/replace/refund at
+Matcha Sous's discretion doesn't meet the Act's stricter definition of a
+Full warranty, which requires a no-cost remedy with no conditions attached.
+
+**It doesn't introduce a single new fact.** Every number on the page —
+one year, manufacturing defects, US-only, care@matchasous.com — already
+exists on `faq.html`, `about.html`, `how-to-use.html`, `index.html` and
+`stockists.html`. This page is the one place that spells out what those
+numbers mean contractually; it isn't a second source of truth for them. If
+the term or the contact address ever changes, change it everywhere at once,
+same discipline as the Prop 65 numbers above.
+
+**It's disclosed purely online, which is deliberate and compliant.** The
+FTC's Pre-Sale Availability Rule (16 CFR 702) and the E-Warranty Act of 2015
+allow a warranty to be posted online-only, as long as a non-internet way to
+*get* the terms is also offered. That's what the "prefer a printed copy...
+write to care@matchasous.com" line near the bottom is for — remove it and
+the page stops covering that requirement.
+
+**Linked from four places**: both buy-box `.assure` lines (`index.html`,
+`stockists.html`), the FAQ's shipping/warranty answer, and the footer nav on
+every page. All four should keep pointing at `warranty.html` rather than
+restating its terms in their own words.
+
+### Two things intentionally left as placeholders
+
+1. **No governing-law / venue state is named.** "The legal fine print"
+   section covers implied-warranty limits and the liability disclaimer but
+   never says which state's law governs a dispute. That's a founder
+   decision (typically wherever the company is incorporated or
+   headquartered), not a copywriting one — add a line naming the state once
+   it's decided.
+2. **Commercial and hospitality units carry the same one-year term as
+   consumer units.** `about.html` and `wholesale.html` both actively market
+   Sous for café and hotel use, where duty cycles run far heavier than a
+   home kitchen. It's common for small-appliance warranties to shorten
+   coverage for commercial use (90 days is a typical figure) rather than
+   extend the consumer term to it unchanged. Left alone until the founder
+   decides whether wholesale accounts need their own clause, here or in
+   `wholesale.html`'s enquiry terms.
+
+*Not legal advice. Have a products lawyer read this page before the first
+unit ships, same as the Prop 65 section above.*
 
 ## The box marks
 
