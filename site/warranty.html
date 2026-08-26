@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/poiret-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=82">
+<link rel="stylesheet" href="assets/css/site.css?v=83">
 
 <script type="application/ld+json">
 {
@@ -73,12 +73,25 @@
        already state - this page does not introduce a new number, it is the
        one place that spells out what those numbers actually mean. See
        README "Warranty page" for the two items intentionally left as
-       placeholders and why. -->
+       placeholders and why.
+
+       The ".legal-caps" block further down is styled uppercase in CSS rather
+       than typed in caps in the markup, on purpose - some screen readers
+       spell out literal ALL-CAPS text letter by letter, so the visual effect
+       belongs in CSS, not the source text. That block states implied
+       warranties are LIMITED IN DURATION to one year, not excluded -
+       Magnuson-Moss prohibits fully disclaiming implied warranties whenever a
+       written warranty is given (15 U.S.C. §2308). Generic small-appliance
+       warranty boilerplate you'll find elsewhere often says implied
+       warranties "are hereby expressly excluded" - that line is void as
+       applied to a product sold with a written warranty like this one.
+       Don't reintroduce it here. -->
 
   <section aria-label="Coverage">
     <div class="wrap">
       <div class="prose">
-        <p><b>This is a limited warranty, not a full warranty as that term is defined by the Magnuson-Moss Warranty Act.</b> It covers defects in materials and workmanship, with the exclusions listed below.</p>
+        <p><b>This is a limited warranty, not a full warranty as that term is defined by the Magnuson-Moss Warranty Act.</b> It extends only to the original purchaser of a Matcha Sous bought directly from matchasous.com or from an authorized stockist, for use within the United States.</p>
+        <p>Proof of purchase, such as your order confirmation email, is required before any warranty service is performed. Our obligation under this warranty is limited to repairing the unit, replacing it, or refunding what you paid, at our option. All claims must be preauthorized: write to us before sending anything back. No warranty service will be provided for a unit that has been opened, modified, or otherwise tampered with, unless we've directed you to do so.</p>
       </div>
     </div>
   </section>
@@ -103,12 +116,14 @@
       <div class="prose">
         <ul class="warranty-list">
           <li><b>Normal wear</b>, including matcha staining the steel over time.</li>
+          <li><b>Damage from negligent use, misuse, or use contrary to the instructions in the product manual.</b></li>
           <li><b>The stainless vessel and mixing rod</b>, if damaged by drop or impact.</li>
           <li><b>Water damage from submerging the base.</b> Rinse the vessel, wipe the base, never submerge it.</li>
           <li><b>Damage from anything but matcha and water run through it</b>, including other liquids, ice, or foreign objects.</li>
           <li><b>Damage from a non-original charging cable, incorrect voltage, or a power surge.</b></li>
-          <li><b>Opening, modifying, or attempting your own repair of the base.</b></li>
+          <li><b>Disassembly, repair, or alteration by anyone other than us</b>, unless we've directed it.</li>
           <li><b>Units bought secondhand or from an unauthorized reseller.</b> Coverage is for the original purchaser, on units bought directly from us or from a listed stockist.</li>
+          <li><b>Damage from fire, flood, or other events beyond our control.</b></li>
           <li><b>Cosmetic wear that doesn't affect function</b>: light scuffing, minor discoloration.</li>
         </ul>
       </div>
@@ -121,8 +136,8 @@
         <h2 class="display">If something's <em>actually wrong.</em></h2>
       </div></div>
       <div class="prose">
-        <p>Write to <a class="textlink" href="mailto:care@matchasous.com">care@matchasous.com</a> with your order confirmation, a description of the problem, and a photo or short video if the issue is visible. We'll get back to you within one business day.</p>
-        <p>If the unit is faulty through no fault of your own, <b>we'll repair it, replace it, or refund what you paid, whichever gets you back to a working Sous soonest.</b> That choice is ours to make.</p>
+        <p>Write to <a class="textlink" href="mailto:care@matchasous.com">care@matchasous.com</a> with your order confirmation, a description of the problem, and a photo or short video if the issue is visible. Do not send anything back before hearing from us. We'll get back to you within one business day.</p>
+        <p>If we determine the unit is defective under the terms of this warranty, <b>we'll repair it, replace it, or refund what you paid, whichever gets you back to a working Sous soonest,</b> and we'll cover the cost of return shipping. That choice is ours to make. If we determine the issue isn't covered, we'll tell you before any work is done, and return shipping is yours to arrange.</p>
       </div>
     </div>
   </section>
@@ -133,9 +148,9 @@
         <h2 class="display">The legal <em>fine print.</em></h2>
       </div></div>
       <div class="prose">
-        <p>This warranty is in addition to any implied warranties that apply under the law of your state, including the implied warranty of merchantability. We do not disclaim those. We can't. Where the law allows it, implied warranties on this product are limited to the same one-year duration as the warranty above. Some states don't allow a limit on how long an implied warranty lasts, or the exclusion of incidental or consequential damages, so that limitation may not apply to you.</p>
-        <p>To the extent the law allows, we're not liable for incidental or consequential damages arising from a defect, such as lost matcha or lost time. <b>This warranty gives you specific legal rights, and you may have other rights that vary from state to state.</b></p>
-        <p>This warranty applies to units shipped within the United States. <a class="textlink" href="faq.html">See the FAQ</a> for current shipping, cancellation and pre-order terms.</p>
+        <p>This warranty is in addition to any implied warranties that apply under the law of your state, including the implied warranty of merchantability. We do not disclaim those. We can't.</p>
+        <p class="legal-caps">The remedies described in this warranty are your sole and exclusive remedy for any defect covered by it. Our liability, if any, for a defective unit or part is limited to repairing it, replacing it, or refunding what you paid, and will not exceed the price you paid for a comparable replacement. Except where prohibited by law, any implied warranty on this product, including the implied warranties of merchantability and fitness for a particular purpose, is limited in duration to the one-year term stated above. We are not liable for indirect, special, or consequential damages arising from the use or performance of this product, including lost time or lost enjoyment of it. Some states don't allow a limit on how long an implied warranty lasts, or the exclusion of incidental or consequential damages, so the limitations above may not apply to you. This warranty gives you specific legal rights, and you may have other rights that vary from state to state.</p>
+        <p>This warranty applies to units purchased and used within the United States. <a class="textlink" href="faq.html">See the FAQ</a> for current shipping, cancellation and pre-order terms.</p>
         <p style="margin-top:18px">Want a printed copy of this warranty? Write to <a class="textlink" href="mailto:care@matchasous.com">care@matchasous.com</a> and we'll send you one.</p>
       </div>
     </div>
@@ -164,7 +179,7 @@
         </a>
         <p class="tag">Behind every great matcha is a Sous.</p>
       </div>
-      <nav class="fnav" aria-label="Footer"><a href="index.html#order">Shop</a><a href="how-to-use.html">How it works</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="faq.html">FAQ</a><a href="stockists.html">Where to buy</a><a href="wholesale.html">Wholesale</a><a href="warranty.html">Warranty</a><a href="mailto:care@matchasous.com">care@matchasous.com</a></nav>
+      <nav class="fnav" aria-label="Footer"><a href="index.html#order">Shop</a><a href="how-to-use.html">How it works</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="faq.html">FAQ</a><a href="stockists.html">Where to buy</a><a href="wholesale.html">Wholesale</a><a href="warranty.html">Warranty</a><a href="privacy-policy.html">Privacy</a><a href="mailto:care@matchasous.com">care@matchasous.com</a></nav>
     </div>
     <div class="fine">
       <span>© 2026 Matcha Sous™. All rights reserved.</span>

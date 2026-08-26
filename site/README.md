@@ -24,6 +24,8 @@ only at small scale. Poiret One (display) + Jost (utility). Lives in
 - `wholesale.html` — hospitality pitch + enquiry form (composes a mailto; no backend)
 - `warranty.html` — Magnuson-Moss Limited Warranty disclosure: coverage, exclusions,
   claims process, implied-warranty and liability terms. See "Warranty page" below.
+- `privacy-policy.html` — what's collected, how it's used, who it's shared with,
+  cookies, Shopify hosting/payment security. See "Privacy Policy" below.
 - `proposals/` — Stage-1 design directions (kept for the record, noindex)
 
 ## Brand
@@ -757,14 +759,34 @@ same discipline as the Prop 65 numbers above.
 **It's disclosed purely online, which is deliberate and compliant.** The
 FTC's Pre-Sale Availability Rule (16 CFR 702) and the E-Warranty Act of 2015
 allow a warranty to be posted online-only, as long as a non-internet way to
-*get* the terms is also offered. That's what the "prefer a printed copy...
-write to care@matchasous.com" line near the bottom is for — remove it and
-the page stops covering that requirement.
+*get* the terms is also offered. That's what the "want a printed copy of
+this warranty" line near the bottom is for — remove it and the page stops
+covering that requirement.
 
 **Linked from four places**: both buy-box `.assure` lines (`index.html`,
 `stockists.html`), the FAQ's shipping/warranty answer, and the footer nav on
 every page. All four should keep pointing at `warranty.html` rather than
 restating its terms in their own words.
+
+**Rewritten into a more formal register on request**, closer to a
+traditional appliance-manufacturer warranty than the site's usual
+conversational voice. Added along with the tone shift: eligibility and
+preauthorization language up front (original purchaser only, proof of
+purchase required, claims must be preauthorized before anything is shipped
+back), a negligent-use and Acts-of-God exclusion, and a `.legal-caps` block
+carrying the sole-remedy / liability-cap / implied-warranty / damages-
+exclusion language a formal warranty is expected to have — see the long
+HTML comment directly above that section in `warranty.html` for why it's
+styled uppercase in CSS rather than typed in caps (screen readers can spell
+out literal caps letter by letter), and for the specific Magnuson-Moss trap
+it was written to avoid: generic warranty templates often fully exclude
+implied warranties, which is void once a written warranty like this one
+exists. One judgment call made along the way that the founder hasn't
+confirmed: **who pays return shipping on a claim.** The page now says Matcha
+Sous covers it once a claim is approved as a genuine defect, and the
+customer arranges it if a claim turns out not to be covered. That's a
+reasonable, common default, not a founder decision on record — revisit if a
+different split is wanted.
 
 ### Two things intentionally left as placeholders
 
@@ -785,6 +807,47 @@ restating its terms in their own words.
 
 *Not legal advice. Have a products lawyer read this page before the first
 unit ships, same as the Prop 65 section above.*
+
+## Privacy Policy
+
+`privacy-policy.html` follows the same rule as the warranty page: match the
+requested format, but don't state anything about this business that isn't
+actually true. Two places where that mattered:
+
+**Cookies.** The page says plainly that the site runs no analytics,
+advertising or tracking scripts today, because that's a fact you can verify
+with one grep (`rg -i "gtag|analytics|pixel|dataLayer|klaviyo|hotjar" site/`
+turns up nothing). A generic privacy-policy template usually assumes a
+cookie-consent banner exists; this site doesn't have one, so the page
+doesn't claim one. It describes the *future* state instead — the checkout
+cart cookies that will exist once Shopify checkout is live — clearly framed
+as forward-looking, not as something happening today.
+
+**Shopify.** Unlike the cookie section, this part isn't a stretch:
+`shopify-theme/` is a real, maintained parallel deploy target for this
+brand (see `shopify-theme/SHOPIFY-SETUP.md`), so the "runs on Shopify" and
+PCI-DSS payment-processing language is accurate as a statement of what the
+business runs on, not aspirational copy. What *is* still forward-looking is
+payment processing itself — per the Launch checklist above, the buy button
+is currently a `mailto:` reservation, not a live Shopify order, so nothing
+is actually being charged or processed yet. The policy is written to be
+correct on the day checkout switches on, not only in some hypothetical
+future rewrite.
+
+**No legal entity name is asserted anywhere on this page**, same as
+`warranty.html` — it says "Matcha Sous" throughout because no registered
+company name exists yet anywhere in this repo to state accurately. If one
+gets registered, this is one of the places that should name it.
+
+Effective date is set to the date this page was written (**August 26,
+2026**); update it any time the policy's substance changes, not on every
+unrelated site edit.
+
+Linked from the footer nav on every page, same placement as Warranty
+(footer only, not the primary nav, to keep the primary nav to six items).
+
+*Not legal advice. Have a products lawyer read this page before the first
+unit ships.*
 
 ## The box marks
 

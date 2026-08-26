@@ -454,6 +454,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .warranty-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:14px}
 .warranty-list li{position:relative;padding-left:22px}
 .warranty-list li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--copper-deep)}
+.legal-caps{margin-top:20px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;line-height:1.7;text-transform:uppercase}
 .prose b{color:var(--aub-ink);font-weight:400}
 .mood-sub{margin-top:18px;max-width:52ch;color:rgba(237,228,216,.72);font-size:clamp(.95rem,1.3vw,1.1rem)}
 .mood--light .mood-sub{color:var(--stone)}
