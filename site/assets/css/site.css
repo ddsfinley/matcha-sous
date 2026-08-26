@@ -354,6 +354,26 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 }
 
 /* steps */
+/* starting recipes - three photo-led cards, one shared square frame so a mug
+   shot, a glass shot and whatever fills the third slot read as one set. See
+   the HOUSE DRINKS comment in how-to-use.html for why the frame is forced to
+   1:1 rather than sized to each source photo: a 4:5 portrait crop on the mug
+   photo lost the rim and read as an abstract green blur, tested side by side
+   against the square crop before deciding - keep 1:1 if new photos are added. */
+.recipes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,36px);margin-top:clamp(28px,4vh,44px)}
+.recipes .media-frame{aspect-ratio:1/1;margin-bottom:18px}
+.recipes .media-frame img{width:100%;height:100%;object-fit:cover;display:block}
+/* Honest placeholder for a recipe card with no photo yet - the frame's own
+   --mat background shows through, no fake image, no broken-image icon. */
+.recipe-pending{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.recipe-pending::after{content:"Photo pending";font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
+.recipe figcaption .num{font-family:var(--disp);font-size:1.15rem;color:var(--copper);display:block;margin-bottom:2px}
+.recipe figcaption h3{font-family:var(--disp);font-size:1.3rem;margin-bottom:8px}
+.recipe .spec{font-size:.82rem;color:var(--stone);margin-bottom:8px}
+.recipe .spec b{color:var(--aub-ink);font-weight:400}
+.recipe figcaption p:last-child{font-size:.94rem}
+@media (max-width:820px){.recipes{grid-template-columns:1fr;max-width:420px;margin-inline:auto}}
+
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,34px)}
 .step{position:relative}
 .step .num{font-family:var(--disp);font-size:2.9rem;font-weight:500;color:var(--aub);line-height:1;display:block;margin-bottom:12px}

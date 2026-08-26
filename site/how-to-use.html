@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/poiret-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=73">
+<link rel="stylesheet" href="assets/css/site.css?v=74">
 
 <script type="application/ld+json">
 {
@@ -113,27 +113,49 @@
       </div>
   </section>
 
-  <!-- ============ HOUSE DRINKS ============ -->
+  <!-- ============ HOUSE DRINKS ============
+       Rebuilt around three photos instead of three paragraphs. All three
+       recipes used to open with the same sentence ("Add water first, sift
+       the matcha, start Sous") restated nearly word for word - that line now
+       runs once, above the grid, and each card keeps only the spec and the
+       one sentence that's actually different about it: what happens after
+       the cycle ends. Photos share one square frame (`.recipe .media-frame`)
+       so three very differently-shaped source images - a mug shot, a glass
+       shot, and whatever fills card iii - read as one consistent set rather
+       than three random crops. Card iii has no image yet; see README. -->
   <section class="bg-paper" aria-label="Three house drinks">
     <div class="wrap">
       <div class="head center">
         <h2 class="display">Starting <em>recipes.</em></h2>
-        
+        <p class="lead">Every recipe starts the same way: water first, matcha sifted over it, then Sous. What changes is the finish.</p>
       </div>
-      <div class="steps">
-        <div class="step">
-          <span class="num">i.</span><h3>Matcha, straight</h3>
-          <p><b>2 g</b> matcha &middot; <b>80 ml</b> water.<br>Add the water first, sift the matcha directly over it and select your setting. Once the cycle is complete, pour and taste. Adjust the temperature or ratio according to the tea.</p>
-        </div>
-        <div class="step">
-          <span class="num">ii.</span><h3>Iced matcha latte</h3>
-          <p><b>4 g</b> matcha &middot; <b>40 ml</b> water &middot; milk &middot; ice &middot; sweetener if desired.<br>Add water first, sift in the matcha and start Sous. Build the glass with milk and ice, then pour the prepared matcha over the top.</p>
-        </div>
-        <div class="step">
-          <span class="num">iii.</span><h3>Hot matcha latte</h3>
-          <p><b>4 g</b> matcha &middot; <b>40 ml</b> water &middot; steamed milk &middot; sweetener if desired.<br>Add the water first, sift in the matcha and run Sous. Finish with steamed milk and sweeten to taste, if desired.</p>
-        </div>
+      <div class="recipes">
+        <figure class="recipe">
+          <span class="media-frame"><img src="assets/img/recipe-straight-v1.webp" alt="Matcha Sous straight, no milk or ice" width="1333" height="1333" loading="lazy"></span>
+          <figcaption>
+            <span class="num">i.</span><h3>Matcha, straight</h3>
+            <p class="spec"><b>2 g</b> matcha &middot; <b>80 ml</b> water</p>
+            <p>Pour and taste. Adjust the ratio to the tea.</p>
+          </figcaption>
+        </figure>
+        <figure class="recipe">
+          <span class="media-frame"><img src="assets/img/recipe-iced-v1.webp" alt="Iced matcha latte, matcha poured over milk and ice" width="1400" height="1400" loading="lazy"></span>
+          <figcaption>
+            <span class="num">ii.</span><h3>Iced matcha latte</h3>
+            <p class="spec"><b>4 g</b> matcha &middot; <b>40 ml</b> water &middot; milk &middot; ice</p>
+            <p>Build the glass with milk and ice, then pour Sous over the top.</p>
+          </figcaption>
+        </figure>
+        <figure class="recipe">
+          <span class="media-frame recipe-pending"></span>
+          <figcaption>
+            <span class="num">iii.</span><h3>Hot matcha latte</h3>
+            <p class="spec"><b>4 g</b> matcha &middot; <b>40 ml</b> water &middot; steamed milk</p>
+            <p>Finish with steamed milk and sweeten to taste, if desired.</p>
+          </figcaption>
+        </figure>
       </div>
+    </div>
   </section>
 
   <!-- ============ CARE ============ -->
