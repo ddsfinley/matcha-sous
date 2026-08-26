@@ -302,6 +302,26 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .p65 b{font-weight:600;letter-spacing:.04em;color:var(--aub-ink)}
 .p65 a{color:var(--stone);text-decoration:underline;text-underline-offset:2px}
 .p65 a:hover{color:var(--aub-ink)}
+/* The buy-box copy above is the FULL warning, at the very bottom of the page
+   (inside <footer>, after .fine). 27 CCR 25602(b) treats a website warning as
+   a distinct requirement from the on-product one - it is not satisfied by
+   relocating it somewhere the buyer has to go looking. The regulation's own
+   safe harbor for this is method (2): a link on the product display page,
+   clearly marked with the word WARNING, pointing to the full text. That is
+   what .p65-link is - it stays in the buy box, right by the button, so the
+   requirement is met at the point of decision even though the paragraph
+   itself now lives at the bottom of the document. Do not delete this link
+   thinking the footer copy alone covers it: it does not. */
+.p65-link{display:flex;gap:8px;align-items:center;margin-top:18px;padding-top:16px;border-top:1px solid var(--line-soft)}
+.p65-link a{display:flex;gap:8px;align-items:center;font-size:.72rem;letter-spacing:.03em;color:var(--stone);text-decoration:underline;text-underline-offset:2px}
+.p65-link a:hover{color:var(--aub-ink)}
+.p65-link .p65-mark{flex:none;width:1.2em;height:1.1em}
+/* Full warning as it sits at the bottom of <footer>, on the plum surface. */
+.p65-full{display:flex;gap:9px;align-items:flex-start;max-width:64ch;margin:26px auto 0;padding-top:20px;border-top:1px solid rgba(237,228,216,.16);font-size:.72rem;line-height:1.65;color:rgba(237,228,216,.68)}
+.p65-full .p65-mark{flex:none;width:1.31em;height:1.2em;margin-top:.06em}
+.p65-full b{font-weight:500;color:var(--bone-bright)}
+.p65-full a{color:rgba(237,228,216,.68);text-decoration:underline;text-underline-offset:2px}
+.p65-full a:hover{color:var(--bone-bright)}
 
 /* box marks -----------------------------------------------------------
    The four icons printed down the side panel of the box, redrawn as line

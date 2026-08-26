@@ -464,15 +464,39 @@ page reads as an editorial index rather than a stack of identical blocks.
 for tone, length or rhythm.** The wording is the safe-harbor text from
 27 CCR 25603(a)(2); departing from it forfeits the safe harbor.
 
-**Where it is.** Inside `.buybox` on `index.html` and `stockists.html`, plus a
-`p65_chemical` / `p65_harm` setting pair on `sections/buy-box.liquid`. It is in
-the buy box, not the footer and not behind a toggle, because 27 CCR 25602(b)
-requires an internet warning to reach the buyer **before the purchase
-completes, without them having to seek it out**. `faq.html` carries a Q&A that
-*explains* the warning; that answer is not a substitute for the warning and
-must never become one. It is deliberately kept out of the FAQPage JSON-LD — an
-FAQ rich result reading "why is there a cancer warning" is not something to
-invite into a search listing.
+**Where it is — split across two places on purpose, not one.** A short link
+reading **"WARNING: California Prop 65"** sits in `.buybox` on `index.html`
+and `stockists.html`, right beside the button. The full paragraph lives once,
+at the very bottom of the page, inside `<footer>` as `#prop65` (and inside the
+Shopify `sections/footer.liquid`, which renders on every page).
+
+This split is a founder request, and it is compliant **only because of how
+it's built** — do not "simplify" it back into one block without re-reading
+this section. 27 CCR 25602(b) treats the internet warning as **a distinct
+requirement from the one on the physical product** (27 CCR 25602(a)); one does
+not satisfy the other. A plain relocation of the full text to the footer with
+nothing near the buy button would fail the regulation's own test, which says a
+warning is **not** "prominently displayed" if the purchaser has to search for
+it in the general content of the page. What makes the footer placement legal
+is that the regulation names a second safe harbor, **method (2): a link on the
+product display page, clearly marked with the word WARNING, that leads to the
+full text.** That is exactly what the buy-box link is. Delete the link while
+keeping only the footer text, and the site is out of compliance again — the
+footer paragraph existing somewhere on the domain is not enough; the *link*
+next to the purchase decision is the part doing the legal work.
+
+`p65_chemical` / `p65_harm` now exist as **two setting pairs** — on
+`sections/buy-box.liquid` (which renders the link) and on
+`sections/footer.liquid` (which renders the destination) — and they **must be
+kept identical**, because the link promises a specific warning and the footer
+has to deliver the one promised. Blanking one without the other either points
+the link at nothing or shows a warning nobody referenced.
+
+`faq.html` carries a Q&A that *explains* the warning; that answer is not a
+substitute for either half of it and must never become one. It is
+deliberately kept out of the FAQPage JSON-LD — an FAQ rich result reading
+"why is there a cancer warning" is not something to invite into a search
+listing.
 
 **The symbol** is the regulation's, not the brand's: black exclamation mark in
 a yellow equilateral triangle with a bold black outline, to the left of the

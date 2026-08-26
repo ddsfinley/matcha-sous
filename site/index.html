@@ -27,7 +27,7 @@
 <link rel="preload" href="assets/fonts/poiret-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/hero-bleed.webp" as="image">
-<link rel="stylesheet" href="assets/css/site.css?v=72">
+<link rel="stylesheet" href="assets/css/site.css?v=73">
 
 <script type="application/ld+json">
 {
@@ -278,23 +278,25 @@
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> One-year warranty</span>
         </div>
         <!-- PROP 65: a legal statement, not copy. Do not rewrite it for tone.
-     The text is the safe-harbor wording from 27 CCR 25603(a)(2); the symbol
-     is the regulation's own (black exclamation mark in a yellow equilateral
-     triangle, bold black outline, no smaller than the word WARNING).
+     This is a LINK, not the warning - the full text is in <footer> at the very
+     bottom of this page (id="prop65"). Splitting it this way is deliberate,
+     not a shortcut: see README "California Proposition 65" for why a bare
+     relocation to the footer would fail 27 CCR 25602(b), and why this link
+     (safe-harbor method 2 - a link on the page, marked WARNING, pointing to
+     the full text) is what makes it compliant instead.
 
-     TWO THINGS MUST BE CHECKED BEFORE LAUNCH - see README "California
-     Proposition 65":
-     1. THE CHEMICAL NAMED HERE IS A PLACEHOLDER. DEHP is the most likely
-        candidate for this product class (the PVC-jacketed USB-C cable and
-        power adapter are the usual exposure route), but it has NOT been
-        confirmed against a supplier test report or a lab screen. Naming the
-        wrong chemical is its own problem. The same string appears in
-        stockists.html, faq.html and the Shopify buy-box; keep all four equal.
+     THINGS TO CHECK BEFORE LAUNCH - see the README section:
+     1. THE CHEMICAL NAMED IS A PLACEHOLDER. DEHP is the most likely candidate
+        for this product class (the PVC-jacketed USB-C cable and power adapter
+        are the usual exposure route), but it has NOT been confirmed against a
+        supplier test report or a lab screen. The same string now appears in
+        FOUR places that must stay equal: this link's destination text below,
+        the footer block it points to, stockists.html (both halves), and the
+        Shopify buy-box + footer settings.
      2. The retail box carries FCC, CE and RoHS but NO Prop 65 warning. If a
         warning is required, it is required on the package too, not only here. -->
-        <p class="p65">
-          <svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>
-          <span><b>WARNING:</b> This product can expose you to chemicals including DEHP, which is known to the State of California to cause cancer and birth defects or other reproductive harm. For more information go to <a href="https://www.P65Warnings.ca.gov" rel="nofollow noopener" target="_blank">www.P65Warnings.ca.gov</a>.</span>
+        <p class="p65-link">
+          <a href="#prop65"><svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>WARNING: California Prop 65</a>
         </p>
       </div>
     </div>
@@ -358,6 +360,10 @@
     <div class="fine">
       <span>© 2026 Matcha Sous™. All rights reserved.</span>
       <span>VISA · MC · AMEX · PAYPAL · APPLE PAY</span>
+    </div>
+    <div class="p65-full" id="prop65">
+      <svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>
+      <span><b>WARNING:</b> This product can expose you to chemicals including DEHP, which is known to the State of California to cause cancer and birth defects or other reproductive harm. For more information go to <a href="https://www.P65Warnings.ca.gov" rel="nofollow noopener" target="_blank">www.P65Warnings.ca.gov</a>.</span>
     </div>
   </div>
 </footer>

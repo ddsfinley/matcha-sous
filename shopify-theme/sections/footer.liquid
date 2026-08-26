@@ -20,6 +20,22 @@
       <span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}&trade;. All rights reserved.</span>
       <span>{{ section.settings.payments }}</span>
     </div>
+    {%- comment -%}
+      PROP 65 full text. The buy box carries a short link marked WARNING that
+      points at #prop65 - this is what it points to. Footer.liquid renders on
+      every page, which is correct here: the id has to exist wherever the link
+      might be clicked from, and a buyer can land on the product page directly.
+      Keep p65_chemical/p65_harm identical to the matching settings in
+      sections/buy-box.liquid - the link's destination has to say what the
+      link promised. Blanking this hides the block; also blank the link in
+      buy-box.liquid so it stops pointing at nothing.
+    {%- endcomment -%}
+    {%- if section.settings.p65_chemical != blank -%}
+      <div class="p65-full" id="prop65">
+        <svg class="p65-mark" viewBox="0 0 24 22" role="img" aria-label="Warning symbol"><path d="M12 1.6 22.6 20H1.4Z" fill="#ffed00" stroke="#000" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7.7v6.1" stroke="#000" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="17.1" r="1.3"/></svg>
+        <span><b>WARNING:</b> This product can expose you to chemicals including {{ section.settings.p65_chemical }}, which is known to the State of California to cause {{ section.settings.p65_harm }}. For more information go to <a href="https://www.P65Warnings.ca.gov" rel="nofollow noopener" target="_blank">www.P65Warnings.ca.gov</a>.</span>
+      </div>
+    {%- endif -%}
   </div>
 </footer>
 
@@ -30,7 +46,11 @@
     { "type": "text", "id": "tagline", "label": "Tagline", "default": "Behind every great matcha is a Sous." },
     { "type": "link_list", "id": "menu", "label": "Menu", "default": "footer" },
     { "type": "text", "id": "email", "label": "Contact email", "default": "care@matchasous.com" },
-    { "type": "text", "id": "payments", "label": "Payment line", "default": "VISA · MC · AMEX · PAYPAL · APPLE PAY" }
+    { "type": "text", "id": "payments", "label": "Payment line", "default": "VISA · MC · AMEX · PAYPAL · APPLE PAY" },
+    { "type": "header", "content": "California Proposition 65" },
+    { "type": "paragraph", "content": "Full warning text, linked from the buy box's WARNING link. Must match that section's chemical/harm settings exactly - this is the destination, not a second, independent warning." },
+    { "type": "text", "id": "p65_chemical", "label": "Chemical named in the warning", "default": "DEHP", "info": "Must match the buy box section. Leave blank to hide." },
+    { "type": "text", "id": "p65_harm", "label": "Harm wording", "default": "cancer and birth defects or other reproductive harm", "info": "Must match the buy box section exactly." }
   ]
 }
 {% endschema %}
