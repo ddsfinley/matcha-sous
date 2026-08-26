@@ -363,10 +363,6 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .recipes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,36px);margin-top:clamp(28px,4vh,44px)}
 .recipes .media-frame{aspect-ratio:1/1;margin-bottom:18px}
 .recipes .media-frame img{width:100%;height:100%;object-fit:cover;display:block}
-/* Honest placeholder for a recipe card with no photo yet - the frame's own
-   --mat background shows through, no fake image, no broken-image icon. */
-.recipe-pending{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
-.recipe-pending::after{content:"Photo pending";font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
 .recipe figcaption .num{font-family:var(--disp);font-size:1.15rem;color:var(--copper);display:block;margin-bottom:2px}
 .recipe figcaption h3{font-family:var(--disp);font-size:1.3rem;margin-bottom:8px}
 .recipe .spec{font-size:.82rem;color:var(--stone);margin-bottom:8px}
