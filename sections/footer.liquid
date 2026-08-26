@@ -5,7 +5,9 @@
         <a class="brand" href="{{ routes.root_url }}" aria-label="{{ shop.name }}, home">
           <img src="{{ 'wordmark.png' | asset_url }}" alt="{{ shop.name }}" width="136" height="48">
         </a>
-        <p class="tag">{{ section.settings.tagline }}</p>
+        {%- if section.settings.tagline != blank -%}
+          <p class="tag">{{ section.settings.tagline }}</p>
+        {%- endif -%}
       </div>
       <nav class="fnav" aria-label="Footer">
         {%- for link in section.settings.menu.links -%}
@@ -43,7 +45,7 @@
 {
   "name": "Footer",
   "settings": [
-    { "type": "text", "id": "tagline", "label": "Tagline", "default": "Behind every great matcha is a Sous." },
+    { "type": "text", "id": "tagline", "label": "Tagline" },
     { "type": "link_list", "id": "menu", "label": "Menu", "default": "footer" },
     { "type": "text", "id": "email", "label": "Contact email", "default": "care@matchasous.com" },
     { "type": "text", "id": "payments", "label": "Payment line", "default": "VISA · MC · AMEX · PAYPAL · APPLE PAY" },
