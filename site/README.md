@@ -5,6 +5,20 @@ wordmark's deep aubergine carrying type, buttons and feature bands, copper
 only at small scale. Poiret One (display) + Jost (utility). Lives in
 `/site`; the legacy storefront at the repo root is untouched.
 
+## Deployment
+
+`.github/workflows/deploy-pages.yml` (manual `workflow_dispatch` only)
+deploys `/site` as the GitHub Pages root — **not the repo root.** This
+matters because of the line above: the repo root carries its own older,
+unrelated build of this site (its own `index.html`, `checkout.html`,
+`cart.html`, etc.). Uploading the repo root as-is would make the plain
+Pages URL serve that stale version instead of the current one, while the
+real site sat one directory down at a `/site/` path nobody was told to
+visit. Found and fixed the same day the warranty and privacy pages
+shipped, after a working link kept not showing the current site. Don't
+change `path: "./site"` back to `path: "."` without either deleting the
+legacy root files first or accepting that regression again.
+
 ## Pages
 - `index.html` — rebuilt to the founder's full copy deck (17 sections):
   hero → brand moment → the experience → how Sous prepares matcha →

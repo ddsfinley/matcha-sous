@@ -1,9 +1,10 @@
 name: Deploy storefront to GitHub Pages
 
 on:
-  # Auto-deploy is disabled until GitHub Pages is available for this repo
-  # (make the repo public, or enable Pages on a paid plan). Trigger manually
-  # from the Actions tab, or re-add the `push` trigger once Pages is enabled.
+  # Pages is confirmed enabled on this repo (public, has_pages: true) - this
+  # is manual-only by choice at this point, not because Pages is unavailable.
+  # Trigger from the Actions tab, or add a `push` trigger to deploy on every
+  # commit once the site is further along.
   workflow_dispatch:
 
 permissions:
@@ -29,10 +30,16 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      # Deploys /site as the Pages root, not the repo root. The repo root
+      # carries an older, unrelated build of this site (its own index.html,
+      # checkout.html, etc.) - uploading "." would make the bare Pages URL
+      # serve that stale version instead of the one actively maintained in
+      # /site. This way the plain https://<user>.github.io/<repo>/ URL is
+      # the real site, no /site/ suffix needed.
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: "./site"
 
       - name: Deploy to GitHub Pages
         id: deployment
