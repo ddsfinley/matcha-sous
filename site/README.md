@@ -394,6 +394,17 @@ page reads as an editorial index rather than a stack of identical blocks.
    levels, 3 preset programs, 40–120 ml capacity, hands-free preparation,
    easy-clean design, 6 W low power; included: mixer base, matcha cup,
    power adapter, USB-C cable, user manual; marks FCC, CE, RoHS.
+1d-i. **FCC, CE and RoHS badges were added to the footer, then removed on the
+   founder's call, correctly.** They are three different things: FCC is US and
+   genuinely applies (any device with a motor and digital electronics is an
+   unintentional RF emitter under Part 15); CE and RoHS are EU marks and this
+   store is US-only, so they were noise for this market regardless. More to
+   the point, a mark on a website is a claim — displaying one without the
+   underlying test report / Declaration of Conformity on file is a liability,
+   not "free credibility." **FCC is still a real, open item**: get the
+   Supplier's Declaration of Conformity or test report from the manufacturer.
+   It belongs in a compliance/support doc a buyer can request, not as a footer
+   badge. Do not re-add CE or RoHS unless the store starts shipping to the EU.
 2. Deploy `/site` contents at the **domain root** of matchasous.com — canonicals,
    OG URLs, `sitemap.xml` and `robots.txt` already point there.
 3. Submit `sitemap.xml` in Google Search Console.
