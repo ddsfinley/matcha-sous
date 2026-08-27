@@ -38,6 +38,13 @@
       {%- endif -%}
 
       {%- if p != blank -%}
+        {%- comment -%}
+          name="checkout" is Shopify's standard "buy now" pattern - adds the
+          item and redirects straight to checkout, skipping the cart. Works
+          on every plan. Matches sections/main-product.liquid's button;
+          don't let the two drift apart, since this is the same button label
+          promising the same behaviour from two different entry points.
+        {%- endcomment -%}
         {%- form 'product', p, id: 'buy-form' -%}
           {%- if p.variants.size > 1 -%}
             <div class="form" style="margin-bottom:18px">
@@ -51,7 +58,7 @@
           {%- else -%}
             <input type="hidden" name="id" value="{{ p.selected_or_first_available_variant.id }}">
           {%- endif -%}
-          <button class="btn btn-primary btn-lg btn-block" type="submit" {% unless p.available %}disabled{% endunless %}>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" name="checkout" {% unless p.available %}disabled{% endunless %}>
             {% if p.available %}{{ section.settings.cta_label }}{% else %}Sold out{% endif %}
           </button>
         {%- endform -%}
@@ -105,7 +112,7 @@
     { "type": "text", "id": "variant_line", "label": "Descriptor line (blank to hide)", "default": "" },
     { "type": "text", "id": "closer", "label": "Line above the spec list", "default": "A two-speed automatic matcha mixer designed to bring matcha and water together evenly, then change pace to refine the finish." },
     { "type": "text", "id": "cta_label", "label": "Button label", "default": "Reserve your Sous" },
-    { "type": "text", "id": "paynote", "label": "Note under the button", "default": "Nothing is charged until your Sous ships. Cancel any time before then." },
+    { "type": "text", "id": "paynote", "label": "Note under the button", "default": "Payment is collected when you reserve. Cancel any time before it ships, for a full refund." },
     { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Free US shipping" },
     { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "One-year warranty" },
     { "type": "header", "content": "California Proposition 65" },
