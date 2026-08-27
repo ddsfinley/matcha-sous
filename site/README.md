@@ -279,8 +279,11 @@ page reads as an editorial index rather than a stack of identical blocks.
    select it in the Hero and Buy box sections to switch on real checkout.
 1. **Checkout**: the buy button is now a **working reservation**, not a dead
    link. It opens a pre-filled email to `care@matchasous.com` and is labelled
-   "Reserve your Sous", with `Nothing is charged until your Sous ships.`
-   underneath. The previous `https://checkout.matchasous.com/matcha-sous`
+   "Reserve your Sous", with `Payment is collected when you reserve. Cancel
+   any time before it ships, for a full refund.` underneath - payment timing
+   was corrected from "nothing is charged until it ships" to "charged at
+   order" site-wide on founder direction; see "Payment timing" below for
+   every place that touched. The previous `https://checkout.matchasous.com/matcha-sous`
    placeholder did not resolve, so the single most important button on the
    site did nothing when clicked. **There is exactly one place this action is
    defined** — the `<!-- CHECKOUT: -->` comment in `index.html` inside
@@ -432,6 +435,68 @@ page reads as an editorial index rather than a stack of identical blocks.
 5. `proposals/` is superseded design exploration carrying an obsolete price.
    Kept for reference, but `noindex` on every page *and* `Disallow: /proposals/`
    in `robots.txt`. Do not link to it, and do not let it into the sitemap.
+
+## Payment timing
+
+**Payment is collected when an order is placed, not when it ships.** This
+reverses the promise the site made from its very first draft through most of
+this project's history: "Nothing is charged until your Sous ships." That
+line was accurate for the mailto-reservation flow (no payment processor was
+attached to it, so nothing *could* be charged), but it stopped being
+accurate the moment real checkout enters the picture, since Shopify's
+standard checkout charges at the point of purchase by default. Corrected
+site-wide on founder direction rather than left as a landmine for whenever
+checkout goes live:
+
+- `site/index.html` — the buy-box `paynote` and the mailto reservation
+  body text (both said "nothing is charged").
+- `site/about.html`, `site/warranty.html`, `site/privacy-policy.html` — all
+  three share the same CTA-band lead line, which made the same claim.
+- `shopify-theme/sections/buy-box.liquid` — the `paynote` setting's
+  default value.
+
+**What didn't need to change**: `faq.html`'s cancellation answers already
+said "cancelled any time before they ship, for a full refund" — a refund
+promise, not a deferred-charge claim, so it was correct all along and stays
+that way. The corrected wording everywhere else follows the same pattern:
+state that payment happens now, and that cancelling before shipment still
+gets a full refund. Don't recombine these into "nothing is charged" again;
+that is no longer true anywhere real checkout exists.
+
+**The reservation flow (`mailto:`) still doesn't charge anyone anything** -
+there is no payment processor attached to a `mailto:` link. The corrected
+copy describes the policy that will be true once Shopify checkout is live,
+which is also the more honest framing for the reservation flow itself:
+someone clicking "Reserve your Sous" today is agreeing to a policy, not
+completing a transaction, and the copy should say what happens when they
+actually do transact, not what technically happens with today's stand-in.
+
+### Two things this surfaced, still open
+
+1. **No ship date exists anywhere in this project.** Already flagged once
+   in `index.html`'s own `SHIP WINDOW` comment near the reservation button,
+   and worth repeating here because charging at order without stating a
+   ship window is a materially bigger gap than charging at ship time
+   without one - a customer paying today reasonably wants to know when
+   the product arrives. `shopify-theme/sections/main-product.liquid` has a
+   `shipping_estimate` setting wired up and ready, deliberately left blank.
+   Fill it in the moment there's a real timeframe; don't put a placeholder
+   in it before then.
+2. **Shopify's actual checkout page cannot carry custom messaging on a
+   standard plan.** The founder asked for the shipping timeframe and
+   cancellation line to appear "on the payment page." Real Shopify
+   checkout (`/checkout`) is a locked template on non-Plus plans - no
+   custom body text without Shopify Plus (`checkout.liquid`, being phased
+   out) or a Checkout UI Extension (a separate app-like build, not a
+   theme edit). Since the store isn't live yet and the plan tier is
+   unconfirmed, neither was attempted. What's built instead: both
+   assurance lines live on the product page directly above the button
+   (the real "Reserve your Sous" click happens right there), and the
+   `name="checkout"` submit pattern sends the customer straight to
+   checkout afterward, skipping the cart page - so the messaging is seen
+   immediately before the redirect rather than during it. Revisit if the
+   store goes Plus, or if Shopify's non-Plus checkout customization
+   options change.
 
 ## Accessibility (WCAG 2.1/2.2 AA)
 
