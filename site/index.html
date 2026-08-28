@@ -130,8 +130,8 @@
   <!-- ============ HERO ============ -->
   <section class="hero" aria-label="Matcha Sous">
     <video class="hero-media loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/img/hero-bleed.webp" width="1080" height="1360" aria-label="Matcha turning in a vivid green vortex inside the Matcha Sous cup">
-      <source src="assets/vid/hero-vortex.webm" type="video/webm">
-      <source src="assets/vid/hero-vortex.mp4" type="video/mp4">
+      <source src="assets/vid/hero-vortex-v2.webm" type="video/webm">
+      <source src="assets/vid/hero-vortex-v2.mp4" type="video/mp4">
     </video>
     <!-- WCAG 2.2.2: this video autoplays and loops indefinitely, so a way to
          stop it has to exist somewhere on the page regardless of duration.
@@ -212,15 +212,20 @@
        Added per founder direction: the strongest authentic proof on the
        site, so it belongs on the landing page rather than staying confined
        to about.html. Same origin story as about.html's "Where it began"
-       section, condensed - keep the two in sync on the facts (behind a
-       café bar, the mixing was the variable) if either one changes. -->
+       section, condensed - but not scrubbed down to generic "we" language.
+       Carries over the one specific, first-person detail that makes the
+       story land ("I could never get that silky microfoam on my own") -
+       a first condensation of this section dropped it entirely and read
+       as a generic founder-story template as a result. Keep the two pages
+       in sync on the facts (behind a café bar, the mixing was the
+       variable) if either one changes. -->
   <section class="bg-paper" aria-label="Born from repetition">
     <div class="wrap">
       <div class="head head--idx"><div class="head-body">
         <h2 class="display">Born from <em>repetition.</em></h2>
       </div></div>
       <div class="prose">
-        <p>Matcha Sous began behind the caf&eacute; bar, where making the same preparation again and again revealed the variable we wanted to solve: the mixing.</p>
+        <p>Matcha Sous began behind the caf&eacute; bar. I could never get that silky microfoam on my own, not reliably, and never in a hurry, and making the same drink again and again made the variable impossible to ignore: the mixing.</p>
         <p>We designed Sous to support that one step. You still choose the tea, measure the water and define the finished drink. Sous brings them together and refines the texture, hands-free.</p>
       </div>
     </div>
@@ -259,8 +264,8 @@
       <figure class="stage">
         <span class="media-frame">
           <video class="loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/img/cycle-poster-v2.webp" width="1080" height="1440" aria-label="Matcha Sous finishing its cycle: the vortex turning in the cup while the timer counts down on the base">
-            <source src="assets/vid/cycle-1080-v3.webm" type="video/webm">
-            <source src="assets/vid/cycle-1080-v3.mp4" type="video/mp4">
+            <source src="assets/vid/cycle-1080-v4.webm" type="video/webm">
+            <source src="assets/vid/cycle-1080-v4.mp4" type="video/mp4">
           </video>
           <button class="vid-toggle" type="button" aria-label="Pause video">
             <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
@@ -272,7 +277,7 @@
       <div class="buybox">
         <p class="preorder">Matcha Sous</p>
         <div class="price"><b>$179</b></div>
-        <p class="closer">A hands-free matcha mixer with a programmable two-stage cycle.</p>
+        <p class="closer">A hands-free matcha mixer, designed to earn a permanent spot on your counter.</p>
         <ul class="inc">
           <li>Stainless-steel mixing cup</li>
           <li>Three saved settings</li>
@@ -318,17 +323,26 @@
     </div>
   </section>
 
-  <!-- ============ THE RITUAL (closing line) ============
-       Replaces the former "Keep the chasen. Choose the tea." section, which
-       read as defensive (explaining at length that Sous doesn't replace the
-       whisk or the tradition, when nobody had objected yet) - cut to one
-       line per founder direction. The longer philosophy stays on about.html.
-       The separate "A Sous in service of the ritual." founder-note section
-       that used to follow this was removed outright, not shortened - two
-       reflective beats in a row before the final CTA was one too many. -->
-  <section class="tight" aria-label="The ritual">
-    <div class="wrap" style="text-align:center;max-width:640px">
-      <p class="lead">The ritual remains yours. Sous handles the mixing.</p>
+  <!-- ============ THE CHASEN ============
+       This went through three shapes. Original: two paragraphs plus a bold
+       closer, explaining at length that Sous doesn't replace the whisk or
+       the tradition - correctly flagged as defensive, since nobody had
+       objected. Cut to a single bare line ("The ritual remains yours. Sous
+       handles the mixing.") - correctly flagged back as washed out, since
+       it dropped the countertop-object pride and the separate founder-note
+       blockquote ("A Sous in service of the ritual.") that used to close
+       the page entirely. This version keeps it to one section, one belief
+       about the object, one line of reassurance, and that same closing
+       line - restoring the warmth without the original's over-explaining. -->
+  <section class="bg-paper" aria-label="What Sous leaves alone">
+    <div class="wrap">
+      <div class="head head--idx"><div class="head-body">
+        <h2 class="display">Keep the chasen. <em>Choose the tea.</em></h2>
+      </div></div>
+      <div class="prose">
+        <p>This sits on the counter like it belongs there, doing the one step that&rsquo;s hardest to get right, twice a day, every day. The tea is still yours to choose.</p>
+        <p><b>A Sous in service of the ritual.</b></p>
+      </div>
     </div>
   </section>
 
@@ -354,7 +368,7 @@
           <img src="assets/img/wordmark.png" alt="" width="136" height="48">
         </a>
       </div>
-      <nav class="fnav" aria-label="Footer"><a href="#order">Shop</a><a href="how-to-use.html">How it works</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="faq.html">FAQ</a><a href="stockists.html">Where to buy</a><a href="wholesale.html">Wholesale</a><a href="warranty.html">Warranty</a><a href="privacy-policy.html">Privacy</a><a href="mailto:care@matchasous.com">care@matchasous.com</a></nav>
+      <nav class="fnav" aria-label="Footer"><a href="#order">Shop</a><a href="how-to-use.html">How it works</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="faq.html">FAQ</a><a href="stockists.html">Where to buy</a><a href="wholesale.html">Wholesale</a><a href="warranty.html">Warranty</a><a href="terms-of-sale.html">Terms of sale</a><a href="privacy-policy.html">Privacy</a><a href="mailto:care@matchasous.com">care@matchasous.com</a></nav>
     </div>
     <div class="fine">
       <span>© 2026 Matcha Sous™. All rights reserved.</span>

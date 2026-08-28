@@ -7,8 +7,8 @@
           <img src="{{ p.featured_image | image_url: width: 900 }}" alt="{{ p.featured_image.alt | default: p.title }}" width="750" height="1000" loading="lazy">
         {%- else -%}
           <video class="loopvid" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="{{ 'cycle-poster-v2.webp' | asset_url }}" width="1080" height="1440" aria-label="A full mixing cycle in the Matcha Sous cup">
-            <source src="{{ 'cycle-1080-v3.webm' | asset_url }}" type="video/webm">
-            <source src="{{ 'cycle-1080-v3.mp4' | asset_url }}" type="video/mp4">
+            <source src="{{ 'cycle-1080-v4.webm' | asset_url }}" type="video/webm">
+            <source src="{{ 'cycle-1080-v4.mp4' | asset_url }}" type="video/mp4">
           </video>
         {%- endif -%}
       </span>

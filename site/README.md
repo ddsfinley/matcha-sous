@@ -32,14 +32,19 @@ claims were softened per the brief's own suggested phrasing.
    qualify. Followed the newer, more explicit instruction (now "A more
    repeatable cup."), since a full prelaunch review supersedes an earlier
    pass - but this reverses a specific past decision, so it's flagged
-   here rather than silently overwritten.
+   here rather than silently overwritten. **Resolved:** on review, the
+   founder asked for this line back specifically. about.html reads "The
+   same cup, every time." again - see "Round two" below.
 2. **The brief's checkout item and an earlier instruction directly
    conflict.** This pass asks the payment page to show "the final
    post-shipment return policy." Earlier in this same project, the
    founder explicitly said "keep the we do not accept returns for change
    of mind, i dont need the 7 day return" - i.e., there is no return
    policy beyond the warranty. Nothing was added for this line pending
-   which one is actually current.
+   which one is actually current. **Resolved:** the founder's actual
+   policy (no change-of-mind returns once a unit ships, only the one-year
+   warranty) is now stated formally in terms-of-sale.html's "Returns and
+   the warranty" section, instead of living only in project history.
 3. **`/site`'s "Reserve your Sous" button still cannot lead to a real
    payment page.** It's a static site with no backend - see "Payment
    timing" below for the same constraint already documented for the
@@ -48,7 +53,11 @@ claims were softened per the brief's own suggested phrasing.
 4. **No Terms of Sale page exists.** Warranty and Privacy Policy do;
    there's no separate page covering general terms of sale (liability,
    governing law, arbitration, etc.) if one is wanted beyond what
-   warranty.html already covers for defects specifically.
+   warranty.html already covers for defects specifically. **Resolved:**
+   added terms-of-sale.html (agreement, orders and payment, cancellation,
+   shipping, returns and the warranty, product information, and the
+   liability/IP/changes-to-terms fine print), linked from every page
+   footer and the sitemap.
 5. **Conversion tracking (item 19) needs a platform decision before any
    code.** Adding analytics scripts would also require updating
    privacy-policy.html's Cookies section, which currently states
@@ -60,7 +69,48 @@ claims were softened per the brief's own suggested phrasing.
    any that aren't before launch.
 7. **`hero-vortex.mp4` is 7.2 MB**, autoplaying on every visit including
    mobile. Worth re-encoding/compressing before launch; not attempted
-   here since it needs a video pipeline, not a text edit.
+   here since it needs a video pipeline, not a text edit. **Resolved:**
+   re-encoded (H.264 CRF 27 + a matching VP9/WebM source), verified
+   frame-by-frame against the originals for no visible quality loss.
+   `hero-vortex-v2` is 4.9 MB (MP4) / 2.8 MB (WebM), down from 7.2 MB.
+   The product-cycle video got the same treatment as `cycle-1080-v4`. Old
+   files were deleted only after confirming nothing still referenced
+   them, per this file's asset-versioning convention.
+
+### Round two: restoring warmth after founder feedback
+
+The 19-point pass above was implemented close to verbatim, and on review
+it had over-corrected - clearer and more accurate, but colder, having
+quietly dropped things that mattered: the countertop-object pride in the
+"Keep the chasen" section, the separate founder-note line that used to
+close the page, and the personal, specific version of the origin story.
+Founder feedback asked for the best of both versions: keep items 1, 2, 4
+and 7 above, but bring back what made the rest feel washed out, and
+recover the sense of the product as a hero on the counter rather than
+something just being sold.
+
+Kept from the 19-point pass: the trimmed nav, terminology accuracy
+(mixing cup / mixing rod / saved settings), the qualified claims (aside
+from item 1, reverted above), and the buybox's spec-list structure.
+
+Restored or rebuilt, tighter than either earlier version:
+- **"Keep the chasen" is a full section again**, not the single bare
+  line it was cut to. One belief about the object (it belongs on the
+  counter), one line of reassurance that the tea is still the drinker's
+  choice, and the same closing line the old separate founder-note
+  blockquote used to end the page with ("A Sous in service of the
+  ritual."), now folded into the section instead of standing apart from
+  it.
+- **The origin story regained its personal detail.** "Born from
+  repetition" now opens in the first person - behind the café bar,
+  never getting silky microfoam reliably, never in a hurry - before the
+  existing "we designed Sous to support that one step" paragraph, instead
+  of starting from an impersonal "we."
+- **The buybox closer names the counter again**: "designed to earn a
+  permanent spot on your counter," replacing a line that only described
+  the cycle.
+
+Items 3, 5 and 6 above are unchanged and still open.
 
 ## Deployment
 
