@@ -594,6 +594,15 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .wide-detail .media-frame{display:block;overflow:hidden;border-radius:var(--radius-lg);aspect-ratio:1200/1124}
 .wide-detail img{width:100%;height:100%;object-fit:cover;display:block}
 .wide-detail figcaption{padding-top:10px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
+/* Two supporting photos side by side (Control section) - each keeps its own
+   source ratio rather than being force-cropped into the first one's frame. */
+.detail-row{display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,32px);margin:clamp(28px,4vh,44px) 0 0}
+.detail-row .wide-detail{margin-top:0}
+.detail-row .wide-detail:nth-child(2) .media-frame{aspect-ratio:1200/800}
+/* Closing photo on "Keep the chasen" - a little larger than the utility
+   detail shots above, since this section is carrying the page's emotional close. */
+.wide-detail--chasen{max-width:min(480px,100%)}
+.wide-detail--chasen .media-frame{aspect-ratio:1400/786}
 .showcase figcaption{padding-top:10px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
 @media (min-width:861px){
   /* Two side tiles, not three: at 16/9 they stopped ~230px short of the lead
