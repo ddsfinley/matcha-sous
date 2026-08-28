@@ -5,6 +5,63 @@ wordmark's deep aubergine carrying type, buttons and feature bands, copper
 only at small scale. Poiret One (display) + Jost (utility). Lives in
 `/site`; the legacy storefront at the repo root is untouched.
 
+## Prelaunch review pass
+
+A founder-authored, 19-point prelaunch brand/copy/conversion review was
+implemented close to verbatim: primary nav trimmed to Shop / How it works /
+Our story / FAQ / Reserve your Sous (Journal, Where to buy, Wholesale stay
+footer-only); hero gained a supporting line under the H1; the Sous Cycle
+and ritual/method sections got revised copy; the Control section was
+renamed "Three settings. Eighteen speeds." with an "Etched guides" card
+replacing "Milliliters"; a new "Born from repetition." credibility section
+was added between Control and the box marks; the buybox was trimmed to 8
+primary features plus a separate "What's included" list; the "Keep the
+chasen" and founder-note sections were replaced with one short line; the
+Final CTA got a new headline. "Vessel" became "mixing cup" and
+whisk-as-machine-action became "mix" everywhere the machine is described
+(not in journal articles about hand-whisking technique, where "whisk" is
+the correct word for what's being discussed). Several absolute-sounding
+claims were softened per the brief's own suggested phrasing.
+
+### Things this pass surfaced that needed a decision, not just a copy edit
+
+1. **"The same cup, every time." was a deliberate founder choice, not an
+   oversight** - reached after several rounds of revision earlier in this
+   project, then explicitly asked to be shortened to exactly that line.
+   This brief's item 15 named that same line as an absolute claim to
+   qualify. Followed the newer, more explicit instruction (now "A more
+   repeatable cup."), since a full prelaunch review supersedes an earlier
+   pass - but this reverses a specific past decision, so it's flagged
+   here rather than silently overwritten.
+2. **The brief's checkout item and an earlier instruction directly
+   conflict.** This pass asks the payment page to show "the final
+   post-shipment return policy." Earlier in this same project, the
+   founder explicitly said "keep the we do not accept returns for change
+   of mind, i dont need the 7 day return" - i.e., there is no return
+   policy beyond the warranty. Nothing was added for this line pending
+   which one is actually current.
+3. **`/site`'s "Reserve your Sous" button still cannot lead to a real
+   payment page.** It's a static site with no backend - see "Payment
+   timing" below for the same constraint already documented for the
+   Shopify side. The button, copy and structure are ready; only a live
+   checkout can make it literal.
+4. **No Terms of Sale page exists.** Warranty and Privacy Policy do;
+   there's no separate page covering general terms of sale (liability,
+   governing law, arbitration, etc.) if one is wanted beyond what
+   warranty.html already covers for defects specifically.
+5. **Conversion tracking (item 19) needs a platform decision before any
+   code.** Adding analytics scripts would also require updating
+   privacy-policy.html's Cookies section, which currently states
+   correctly that the site runs no tracking today - don't add one without
+   the other.
+6. **The `sameAs` social links (Instagram/TikTok/YouTube) in index.html's
+   Organization schema can't be verified as active from here** - no way
+   to check whether those accounts exist or are live. Confirm and remove
+   any that aren't before launch.
+7. **`hero-vortex.mp4` is 7.2 MB**, autoplaying on every visit including
+   mobile. Worth re-encoding/compressing before launch; not attempted
+   here since it needs a video pipeline, not a text edit.
+
 ## Deployment
 
 `.github/workflows/deploy-pages.yml` (manual `workflow_dispatch` only)
