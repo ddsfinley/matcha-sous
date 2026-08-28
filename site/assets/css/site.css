@@ -274,17 +274,12 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .head--idx h2.display{max-width:19ch}
 .head--idx h2.display{font-size:clamp(2.05rem,5vw,4rem);letter-spacing:0}
 .head--idx .lead{margin-top:14px}
-/* asymmetric editorial split: heading left, content right */
-.split{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(26px,4vw,72px);align-items:start;border-top:1px solid var(--line);padding-top:26px}
-.split h2.display{font-size:clamp(2.3rem,4.6vw,3.6rem);letter-spacing:0}
-.split .lead{margin-top:16px}
 .split-body{display:grid;gap:clamp(22px,3vh,36px)}
 .split-item{display:grid;grid-template-columns:auto 1fr;gap:0 20px;border-bottom:1px solid var(--line-soft);padding-bottom:clamp(18px,2.4vh,26px)}
 .split-item:last-child{border-bottom:0;padding-bottom:0}
 .split-item b{font-family:var(--disp);font-weight:500;font-size:1.9rem;color:var(--aub);line-height:.9}
 .split-item h3{font-family:var(--disp);font-size:1.35rem;margin-bottom:6px}
 .split-item p{font-size:.95rem;color:var(--stone)}
-@media (max-width:860px){.split{grid-template-columns:1fr;gap:26px}}
 
 /* feature cards */
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,32px)}
@@ -599,10 +594,6 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .detail-row{display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,32px);margin:clamp(28px,4vh,44px) 0 0}
 .detail-row .wide-detail{margin-top:0}
 .detail-row .wide-detail:nth-child(2) .media-frame{aspect-ratio:1200/800}
-/* Closing photo on "Keep the chasen" - a little larger than the utility
-   detail shots above, since this section is carrying the page's emotional close. */
-.wide-detail--chasen{max-width:min(480px,100%)}
-.wide-detail--chasen .media-frame{aspect-ratio:1400/786}
 .showcase figcaption{padding-top:10px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
 @media (min-width:861px){
   /* Two side tiles, not three: at 16/9 they stopped ~230px short of the lead
