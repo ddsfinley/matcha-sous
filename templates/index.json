@@ -125,7 +125,7 @@
         "i3": {
           "type": "item",
           "settings": {
-            "item": "Manual speed settings",
+            "item": "Customizable speed settings",
             "note": "eighteen"
           }
         },
