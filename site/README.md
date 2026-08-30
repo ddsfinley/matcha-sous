@@ -966,10 +966,14 @@ allow a warranty to be posted online-only, as long as a non-internet way to
 this warranty" line near the bottom is for — remove it and the page stops
 covering that requirement.
 
-**Linked from four places**: both buy-box `.assure` lines (`index.html`,
-`stockists.html`), the FAQ's shipping/warranty answer, and the footer nav on
-every page. All four should keep pointing at `warranty.html` rather than
-restating its terms in their own words.
+**Linked from every place a purchase decision or a warranty question
+happens**: two separate links in `index.html`'s own buy box now (the "Includes
+a One-Year Limited Warranty..." line directly under the price, and the
+original `.assure` trust-badge line lower down), `stockists.html`'s `.assure`
+line, the FAQ's shipping/warranty answer, and the footer nav — labelled
+"Limited Warranty" there, not just "Warranty" — on every page. All of these
+should keep pointing at `warranty.html` rather than restating its terms in
+their own words.
 
 **Rewritten into a more formal register on request**, closer to a
 traditional appliance-manufacturer warranty than the site's usual
@@ -1010,6 +1014,54 @@ different split is wanted.
 
 *Not legal advice. Have a products lawyer read this page before the first
 unit ships, same as the Prop 65 section above.*
+
+### Pre-purchase disclosure pass
+
+A founder request asked for the warranty to be surfaced before purchase in
+several specific places, matching how the FTC's Pre-Sale Availability Rule
+(16 CFR 702) is usually implemented in practice: visible near the price,
+repeated at checkout, printable, downloadable, and not buried in an FAQ or
+gated behind an account.
+
+**Done:**
+- A new line directly under the price in `index.html`'s buy box: "Includes
+  a One-Year Limited Warranty beginning on delivery," linking straight to
+  this page.
+- Footer link relabelled "Limited Warranty" (was "Warranty") on all 14
+  pages, for the more precise legal term.
+- A "Print this page" button and a real "Download PDF" link, both new,
+  directly below this page's own hero. The PDF
+  (`assets/docs/matcha-sous-limited-warranty.pdf`) is generated straight
+  from this page's own HTML via a new print stylesheet (`@media print` in
+  site.css, hides the header, footer, nav and video) run through
+  Playwright's `page.pdf()` - screen, print and PDF are one source
+  rendered three ways, not three documents that can quietly drift apart.
+  Regenerate it the same way after any future change to this page's
+  content.
+- The closing "want a printed copy" line reworded to the founder's exact
+  requested phrasing: "To request a free copy of this warranty, email
+  care@matchasous.com."
+
+**Not done, and can't be from here:**
+- **"Exactly as written on page 11 of the current user guide."** No such
+  document exists anywhere in this project - no user guide, no PDF, no
+  page 11. This page's own text (already rewritten into formal legal
+  register, see above) is the only warranty language that exists for
+  Matcha Sous anywhere available here, so it was treated as canonical
+  rather than left unwritten. If a physical printed manual exists with its
+  own warranty section, whoever maintains that document needs to either
+  confirm it already matches this page word for word, or supply the real
+  text so this page can be corrected to match it - not the reverse, since
+  this page has never claimed to be a copy of something else.
+- **"Repeat the warranty link during checkout before payment is
+  submitted."** There is no checkout to repeat it in. `/site` is a static
+  site with no backend - see "Payment timing" above, a pre-existing,
+  already-documented gap, not something new. On the Shopify side, the
+  theme's product form already routes straight to Shopify's own hosted
+  checkout (see `main-product.liquid` / `buy-box.liquid`), but that hosted
+  checkout page itself isn't part of this theme's files - it's Shopify's
+  own system, configured in Shopify admin, not something a theme file can
+  add a warranty link to.
 
 ## Privacy Policy
 

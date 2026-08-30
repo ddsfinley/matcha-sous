@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/poiret-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=86">
+<link rel="stylesheet" href="assets/css/site.css?v=87">
 
 <script type="application/ld+json">
 {
@@ -57,6 +57,19 @@
     <div class="wrap inner">
       <h1 class="display">Limited <em>warranty.</em></h1>
       <p class="lead">One year against manufacturing defects. Here's exactly what that covers, and what it doesn't.</p>
+    </div>
+  </section>
+
+  <!-- Print/download actions: no separate document exists to link to, so this
+       renders the same warranty content two other ways - a print stylesheet
+       (below in site.css) that hides chrome and prints just the legal text,
+       and a PDF generated directly from this page's own content, so the
+       three versions (screen, print, PDF) can never drift out of sync with
+       each other. -->
+  <section class="tight" aria-label="View, print or download">
+    <div class="wrap print-actions" style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap">
+      <button type="button" class="textlink" onclick="window.print()">Print this page</button>
+      <a class="textlink" href="assets/docs/matcha-sous-limited-warranty.pdf" download>Download PDF</a>
     </div>
   </section>
 
@@ -150,7 +163,7 @@
         <p>This warranty is in addition to any implied warranties that apply under the law of your state, including the implied warranty of merchantability. We do not disclaim those. We can't.</p>
         <p class="legal-caps">The remedies described in this warranty are your sole and exclusive remedy for any defect covered by it. Our liability, if any, for a defective unit or part is limited to repairing it, replacing it, or refunding what you paid, and will not exceed the price you paid for a comparable replacement. Except where prohibited by law, any implied warranty on this product, including the implied warranties of merchantability and fitness for a particular purpose, is limited in duration to the one-year term stated above. We are not liable for indirect, special, or consequential damages arising from the use or performance of this product, including lost time or lost enjoyment of it. Some states don't allow a limit on how long an implied warranty lasts, or the exclusion of incidental or consequential damages, so the limitations above may not apply to you. This warranty gives you specific legal rights, and you may have other rights that vary from state to state.</p>
         <p>This warranty applies to units purchased and used within the United States. <a class="textlink" href="faq.html">See the FAQ</a> for current shipping, cancellation and pre-order terms.</p>
-        <p style="margin-top:18px">Want a printed copy of this warranty? Write to <a class="textlink" href="mailto:care@matchasous.com">care@matchasous.com</a> and we'll send you one.</p>
+        <p style="margin-top:18px">To request a free copy of this warranty, email <a class="textlink" href="mailto:care@matchasous.com">care@matchasous.com</a>.</p>
       </div>
     </div>
   </section>
@@ -177,7 +190,7 @@
           <img src="assets/img/wordmark.png" alt="" width="136" height="48">
         </a>
       </div>
-      <nav class="fnav" aria-label="Footer"><a href="index.html#order">Shop</a><a href="how-to-use.html">How it works</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="faq.html">FAQ</a><a href="stockists.html">Where to buy</a><a href="wholesale.html">Wholesale</a><a href="warranty.html">Warranty</a><a href="terms-of-sale.html">Terms of sale</a><a href="privacy-policy.html">Privacy</a><a href="mailto:care@matchasous.com">care@matchasous.com</a></nav>
+      <nav class="fnav" aria-label="Footer"><a href="index.html#order">Shop</a><a href="how-to-use.html">How it works</a><a href="about.html">Our story</a><a href="journal/index.html">Journal</a><a href="faq.html">FAQ</a><a href="stockists.html">Where to buy</a><a href="wholesale.html">Wholesale</a><a href="warranty.html">Limited Warranty</a><a href="terms-of-sale.html">Terms of sale</a><a href="privacy-policy.html">Privacy</a><a href="mailto:care@matchasous.com">care@matchasous.com</a></nav>
     </div>
     <div class="fine">
       <span>© 2026 Matcha Sous™. All rights reserved.</span>

@@ -127,6 +127,10 @@ body{padding-top:var(--announce-h)}
 .btn-lg{padding:1.2em 2.6em;font-size:.84rem}
 .textlink{display:inline-flex;align-items:center;gap:.5em;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-deep);border-bottom:1px solid transparent;padding-bottom:2px;transition:all .4s var(--ease)}
 .textlink:hover{border-color:var(--copper)}
+/* .textlink used on a <button> (e.g. "Print this page") needs the browser's
+   own button chrome stripped first, since the class above only styles text. */
+button.textlink{background:none;border:0;border-bottom:1px solid transparent;padding:0 0 2px;font-family:inherit;cursor:pointer}
+button.textlink:hover{border-color:var(--copper)}
 
 /* ---------- hero (full bleed: the type lives inside the photograph) ---------
    The photograph is graded toward the brand aubergine and the scrims are that
@@ -414,6 +418,8 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .inc li span{color:var(--stone);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 /* the last line read before the button: humility then certainty */
 .buybox .closer{margin:0 0 20px;color:var(--aub-ink);font-size:.95rem;line-height:1.5}
+.buybox .warranty-notice{margin:0 0 20px;color:var(--aub-ink);font-size:.95rem;line-height:1.5}
+.buybox .warranty-notice .textlink{margin-left:2px}
 .paynote{margin:12px 0 0;font-size:.84rem;line-height:1.5;color:var(--stone);text-align:center}
 .assure{display:grid;gap:10px;margin-top:20px}
 .assure a{text-decoration:underline;text-underline-offset:2px}
@@ -637,3 +643,13 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 #qa .qa{max-width:760px}
 
 .sc-lead video{background:var(--aub-deep)}
+
+/* ---------- print ---------- */
+/* Used by warranty.html's "Print this page" button, but written generically
+   so any page prints its actual content instead of chrome and video. */
+@media print{
+  .skip-link,.announce,header.top,nav.subnav,.cta-band,footer,.print-actions,.vid-toggle,video{display:none!important}
+  body{background:#fff;color:#000}
+  a{color:inherit;text-decoration:underline}
+  section{padding-block:14px}
+}
