@@ -1041,10 +1041,17 @@ formal (an 18-page manual, not a box panel or insert card), which is some
 evidence it's the final, correct term - but that's a reasonable guess, not
 a confirmed fact. This page now uses "mixing whisk" in the one paragraph
 where the wording is verbatim, which is inconsistent with "mixing rod"
-everywhere else on the site. Left as-is pending a founder decision: rename
-"mixing rod" to "mixing whisk" sitewide to match the User Guide, or confirm
-"mixing rod" is the intentional public-facing name regardless of what the
-guide says, and accept that this one verbatim legal quote won't match it.
+everywhere else on the site. **Resolved by the founder: renamed "mixing
+rod" to "mixing whisk" sitewide**, to match the User Guide. Changed in
+`about.html`, `faq.html` (both the JSON-LD and visible answer), `index.html`
+(the etched-guides photo alt text and the buybox's "What's included" line),
+and both journal articles that mention the part
+(`matcha-without-a-whisk.html`, `how-to-choose-matcha.html`) - seven
+occurrences across five pages, verified as zero remaining afterward.
+`warranty.html` already said "mixing whisk" from the verbatim source text,
+so it needed no change. This also settles `1b-BOX-CONFLICT`'s naming half
+in the User Guide's favor; the box-contents half (whether the part ships
+at all) is separately supported by the spare-whisk fact two paragraphs up.
 
 The full source PDF is also saved at
 `assets/docs/matcha-sous-user-guide.pdf`, unlinked from anywhere on the
