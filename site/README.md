@@ -948,21 +948,21 @@ Warranty Act (15 U.S.C. §2301) requirement that any written consumer
 warranty on a product over $15 be labelled **FULL** or **LIMITED** and
 disclose its terms "in simple and readily understood language." It is
 labelled **Limited** throughout, on purpose — repair/replace/refund at
-Matcha Sous's discretion doesn't meet the Act's stricter definition of a
+the warrantor's discretion doesn't meet the Act's stricter definition of a
 Full warranty, which requires a no-cost remedy with no conditions attached.
 
-**It doesn't introduce a single new fact.** Every number on the page —
-one year, manufacturing defects, US-only, care@matchasous.com — already
-exists on `faq.html`, `about.html`, `how-to-use.html`, `index.html` and
-`stockists.html`. This page is the one place that spells out what those
-numbers mean contractually; it isn't a second source of truth for them. If
-the term or the contact address ever changes, change it everywhere at once,
-same discipline as the Prop 65 numbers above.
+**Its substantive clauses are copied verbatim from the real Matcha Sous
+User Guide** (page 11, "10. Support" / "One-Year Limited Warranty"),
+supplied by the founder as a PDF - see "Sourced from the real user guide"
+below for the full account of what that replaced and why. Every `.prose`
+paragraph in the warranty sections of this page should trace back to that
+document; if the guide is ever revised, this page needs the same revision,
+not an independent edit.
 
 **It's disclosed purely online, which is deliberate and compliant.** The
 FTC's Pre-Sale Availability Rule (16 CFR 702) and the E-Warranty Act of 2015
 allow a warranty to be posted online-only, as long as a non-internet way to
-*get* the terms is also offered. That's what the "want a printed copy of
+*get* the terms is also offered. That's what the "request a free copy of
 this warranty" line near the bottom is for — remove it and the page stops
 covering that requirement.
 
@@ -975,42 +975,96 @@ line, the FAQ's shipping/warranty answer, and the footer nav — labelled
 should keep pointing at `warranty.html` rather than restating its terms in
 their own words.
 
-**Rewritten into a more formal register on request**, closer to a
-traditional appliance-manufacturer warranty than the site's usual
-conversational voice. Added along with the tone shift: eligibility and
-preauthorization language up front (original purchaser only, proof of
-purchase required, claims must be preauthorized before anything is shipped
-back), a negligent-use and Acts-of-God exclusion, and a `.legal-caps` block
-carrying the sole-remedy / liability-cap / implied-warranty / damages-
-exclusion language a formal warranty is expected to have — see the long
-HTML comment directly above that section in `warranty.html` for why it's
-styled uppercase in CSS rather than typed in caps (screen readers can spell
-out literal caps letter by letter), and for the specific Magnuson-Moss trap
-it was written to avoid: generic warranty templates often fully exclude
-implied warranties, which is void once a written warranty like this one
-exists. One judgment call made along the way that the founder hasn't
-confirmed: **who pays return shipping on a claim.** The page now says Matcha
-Sous covers it once a claim is approved as a genuine defect, and the
-customer arranges it if a claim turns out not to be covered. That's a
-reasonable, common default, not a founder decision on record — revisit if a
-different split is wanted.
+### Sourced from the real user guide, not an approximation of one
 
-### Two things intentionally left as placeholders
+Earlier passes on this page (formal-register rewrite, Magnuson-Moss
+compliance framing) were written without access to the actual product
+documentation - the best available approximation at the time, built from
+general small-appliance warranty conventions and the facts already
+established elsewhere on the site. The founder then supplied the real
+`Matcha Sous User Guide` PDF, and its page 11 fully replaced that
+approximation. Two things are worth recording about that swap:
 
-1. **No governing-law / venue state is named.** "The legal fine print"
-   section covers implied-warranty limits and the liability disclaimer but
-   never says which state's law governs a dispute. That's a founder
-   decision (typically wherever the company is incorporated or
-   headquartered), not a copywriting one — add a line naming the state once
-   it's decided.
+**Clauses that existed only in the approximation, and are gone now**:
+a liability cap tied to the price paid ("will not exceed the price you
+paid for a comparable replacement"), "sole and exclusive remedy" framing,
+and an Acts-of-God / fire-or-flood exclusion. None of these appear in the
+real warranty. They were reasonable things for a warranty like this to
+say, but saying them without them actually being in the governing document
+would have been the site making a promise (or a limitation) that isn't
+real. The real document's own "Limitations" section is narrower: implied-
+warranty duration, incidental/consequential damages, and the standard
+"varies by State" line - nothing about a liability cap.
+
+**Facts that are new to this project, not just to this page**:
+- **Presso Inc.** is named as the warrantor - the first place any legal
+  entity name has appeared anywhere on this site. `index.html`'s Product
+  JSON-LD, the footer copyright line, `terms-of-sale.html` and
+  `privacy-policy.html` all currently speak generically ("we," "Matcha
+  Sous," no named company) rather than naming this entity. Whether that
+  should change sitewide is a real decision, not a copywriting one - flag
+  it to the founder rather than propagating it unprompted.
+- **Model number LHMC0110** doesn't appear anywhere else on the site
+  (buybox specs, `about.html`, `how-to-use.html`).
+- **A spare mixing whisk ships with every unit**, stored in a holder built
+  into the underside of the base ("Storage," page 8: "A spare mixing whisk
+  is stored in the holder on the underside of the base"). This is real
+  news, not just missing copy: it's evidence toward resolving
+  `1b-BOX-CONFLICT` above in favor of the part being genuinely included
+  (a spare wouldn't ship if the part itself didn't), and it's a concrete,
+  differentiating fact - most comparable mixers don't include a
+  backup part - that currently appears nowhere on the site at all.
+- **A real mailing address** - 1733 Monrovia Ave., Suite Y, Costa Mesa, CA
+  92627 - given under "Contact" in the guide as somewhere warranty
+  correspondence can be mailed, not just emailed. This is the first
+  physical address anywhere on the site. It's also the first concrete
+  data point relevant to the still-open "governing-law / venue state"
+  question below, though a support address alone doesn't establish where
+  the company is legally organized - don't write a governing-law clause
+  from this address without the founder confirming it.
+
+**A naming conflict surfaced by the real source - and it's a third data
+point on an already-open question, not a new one.** The guide consistently
+calls the removable part inside the cup the **"mixing whisk,"** including
+in the warranty's own exclusions clause ("loss of the removable mixing
+whisk or charging cable"), reproduced verbatim on this page. Every other
+page on this site - `index.html`, `about.html`, `how-to-use.html`,
+`faq.html`, journal articles, the Shopify theme - calls the same part the
+**"mixing rod."** That wasn't an arbitrary copywriting choice: see
+`1b-BOX-CONFLICT` and `1b-BOX` above, where the site was built to match a
+founder-supplied *packaging insert card* that names the part "mixing rod"
+- while a photo of the actual box back panel (`launch-guide.jpg`) omits
+the part entirely from its contents list, a conflict already flagged there
+as unresolved. This User Guide is a third, independent source, and it says
+"mixing whisk." Of the three, the User Guide is the most complete and
+formal (an 18-page manual, not a box panel or insert card), which is some
+evidence it's the final, correct term - but that's a reasonable guess, not
+a confirmed fact. This page now uses "mixing whisk" in the one paragraph
+where the wording is verbatim, which is inconsistent with "mixing rod"
+everywhere else on the site. Left as-is pending a founder decision: rename
+"mixing rod" to "mixing whisk" sitewide to match the User Guide, or confirm
+"mixing rod" is the intentional public-facing name regardless of what the
+guide says, and accept that this one verbatim legal quote won't match it.
+
+The full source PDF is also saved at
+`assets/docs/matcha-sous-user-guide.pdf`, unlinked from anywhere on the
+site for now - it wasn't asked for as a public download, only as the
+source for this page's own text.
+
+### Still open regardless of the new source
+
+1. **No governing-law / venue state is named.** The "Limitations" section
+   (verbatim from the guide) covers implied-warranty limits and the
+   damages exclusion but never says which state's law governs a dispute -
+   the real source document doesn't answer this either. That's a founder
+   decision (typically wherever the company is incorporated), not a
+   copywriting one.
 2. **Commercial and hospitality units carry the same one-year term as
    consumer units.** `about.html` and `wholesale.html` both actively market
    Sous for café and hotel use, where duty cycles run far heavier than a
-   home kitchen. It's common for small-appliance warranties to shorten
-   coverage for commercial use (90 days is a typical figure) rather than
-   extend the consumer term to it unchanged. Left alone until the founder
-   decides whether wholesale accounts need their own clause, here or in
-   `wholesale.html`'s enquiry terms.
+   home kitchen. The real warranty doesn't distinguish commercial use
+   either. Left alone until the founder decides whether wholesale accounts
+   need their own clause, here or in `wholesale.html`'s enquiry terms.
 
 *Not legal advice. Have a products lawyer read this page before the first
 unit ships, same as the Prop 65 section above.*
@@ -1042,17 +1096,13 @@ gated behind an account.
   requested phrasing: "To request a free copy of this warranty, email
   care@matchasous.com."
 
+**"Exactly as written on page 11 of the current user guide" - resolved in
+a follow-up pass.** At the time this page was first built, no such
+document was available - see "Sourced from the real user guide" above for
+the full account. The founder subsequently supplied the actual PDF, and
+this page's substantive clauses were replaced with that verbatim text.
+
 **Not done, and can't be from here:**
-- **"Exactly as written on page 11 of the current user guide."** No such
-  document exists anywhere in this project - no user guide, no PDF, no
-  page 11. This page's own text (already rewritten into formal legal
-  register, see above) is the only warranty language that exists for
-  Matcha Sous anywhere available here, so it was treated as canonical
-  rather than left unwritten. If a physical printed manual exists with its
-  own warranty section, whoever maintains that document needs to either
-  confirm it already matches this page word for word, or supply the real
-  text so this page can be corrected to match it - not the reverse, since
-  this page has never claimed to be a copy of something else.
 - **"Repeat the warranty link during checkout before payment is
   submitted."** There is no checkout to repeat it in. `/site` is a static
   site with no backend - see "Payment timing" above, a pre-existing,
