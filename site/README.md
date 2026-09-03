@@ -952,12 +952,13 @@ the warrantor's discretion doesn't meet the Act's stricter definition of a
 Full warranty, which requires a no-cost remedy with no conditions attached.
 
 **Its substantive clauses are copied verbatim from the real Matcha Sous
-User Guide** (page 11, "10. Support" / "One-Year Limited Warranty"),
-supplied by the founder as a PDF - see "Sourced from the real user guide"
-below for the full account of what that replaced and why. Every `.prose`
-paragraph in the warranty sections of this page should trace back to that
-document; if the guide is ever revised, this page needs the same revision,
-not an independent edit.
+User Guide** ("10. Sous Support" / "One-Year Limited Warranty"), supplied
+by the founder as a PDF - see "Sourced from the real user guide" and
+"Superseded again: the final print booklet" below for the full account of
+what that replaced and why, twice. Every `.prose` paragraph in the
+warranty sections of this page should trace back to that document; if the
+guide is ever revised, this page needs the same revision, not an
+independent edit.
 
 **It's disclosed purely online, which is deliberate and compliant.** The
 FTC's Pre-Sale Availability Rule (16 CFR 702) and the E-Warranty Act of 2015
@@ -1057,6 +1058,107 @@ The full source PDF is also saved at
 `assets/docs/matcha-sous-user-guide.pdf`, unlinked from anywhere on the
 site for now - it wasn't asked for as a public download, only as the
 source for this page's own text.
+
+### Superseded again: the final print booklet
+
+The founder then supplied a second document - `V1_Matcha_Sous_Booklet_
+Print_11x8.25.pdf`, the final print-ready guide, 10 pages in reader-spread
+imposition (two half-letter pages per PDF page, hence the 11x8.25" trim -
+not a 61-page document; that figure in the upload notice was wrong, and
+was double-checked against the PDF's actual page-object count before
+trusting the 10-page reading). It replaced the first PDF as source of
+record at `assets/docs/matcha-sous-user-guide.pdf` (same filename,
+overwritten - the old one wasn't kept, since the founder called this one
+"the final manual"). Diffing the two revealed the earlier PDF wasn't
+final either, so warranty.html changed a second time, verbatim again
+against the new source (every `.prose` paragraph checked programmatically,
+same discipline as the first pass):
+
+- **The warranty clock now starts at purchase, not delivery** - "one year
+  from the date of purchase" replaces "one year from the date the product
+  is delivered," in both the main coverage sentence and the implied-
+  warranty limitation. This has a real ripple effect on a preorder site:
+  payment is collected at reservation, well before the unit ships, so the
+  covered year may now start weeks or months before a customer ever
+  receives their Sous. Nothing on this site currently discloses that gap
+  explicitly - worth the founder's attention, not just a copywriting fix.
+  Fixed everywhere the site echoed "delivery" as the warranty's start:
+  `index.html`'s buybox notice ("beginning on delivery" -> "beginning on
+  purchase") and `terms-of-sale.html`'s Returns section ("within a year of
+  delivery" -> "within a year of purchase").
+- **A new sentence**: "A current list of authorized sellers is available
+  at matchasous.com." No such list exists on the site yet - `stockists.html`
+  lists physical retail locations, not an explicit "authorized online
+  sellers" list. Flagged, not built; that's a business decision (which
+  resellers are actually authorized) this project has no visibility into.
+- **A new clause**: parts bought separately (extra mixing whisks, charging
+  cables) carry their own 90-day warranty. The site doesn't currently sell
+  spare parts anywhere, so this has no home yet - worth remembering if/when
+  it does.
+- **"Beverage syrup" is now defined**: "a clear, pourable, dairy-free
+  flavoring syrup," reproduced verbatim in the exclusions paragraph.
+- **A personal-injury carve-out was added** to the damages-limitation
+  paragraph: "Nothing in this warranty limits liability for personal
+  injury to the extent such limitation is prohibited by applicable law."
+  Legally prudent boilerplate, reproduced as-is.
+- **Minor cleanup**: the charging-cable paragraph dropped a redundant
+  "Loss," (already covered by the main exclusions sentence), and "from the
+  date it is returned or delivered to you" simplified to "from the date
+  you receive it" for the replacement-product coverage window. Neither
+  changes the actual terms.
+- **"Made in China" is gone from the Contact section**, along with the
+  separate "Product identification" field the first PDF had. The model
+  number now lives in the main warranty sentence instead of a separate
+  field, so the standalone "Product: Matcha Sous, model LHMC0110. Made in
+  China." line this page used to synthesize was removed rather than kept
+  unsupported by the current source. This doesn't mean "Made in China" is
+  now false - just that it isn't in the document this page is required to
+  match verbatim, so it isn't asserted here anymore either.
+
+**Also found while cross-referencing, fixed as directly motivated by the
+new source rather than scope creep:**
+- **Recipe measurements on `how-to-use.html` didn't match the guide's own
+  Starting Recipes.** Matcha, straight: 80 ml water corrected to 70 ml.
+  Both lattes: 4 g matcha corrected to 3 g. Three spec lines fixed;
+  verified no other page states Sous-specific recipe amounts that needed
+  the same fix (`usucha-vs-koicha.html`'s numbers are general tea-ceremony
+  ratios, unrelated to Sous, and correctly left alone).
+- **A real internal contradiction in `how-to-use.html`'s HowTo JSON-LD**:
+  the "Build" step (add milk or ice) was listed *before* the "Sweeten and
+  finish" step, which itself said to stir in sweetener "before adding milk
+  or ice" - backwards from its own instruction. Restructured into three
+  steps (Pour / Sweeten / Finish) in the order that actually makes sense,
+  and made explicit that sweetening happens after pouring the concentrate
+  out of the mixing cup - the guide's safety instructions explicitly
+  prohibit putting honey, milk, ice, or anything but matcha, water and
+  beverage syrup into the appliance itself, and the old wording didn't
+  make clear where the "stir honey into the warm concentrate" step was
+  meant to happen.
+- **A new Troubleshooting section**, adapted from the guide's own
+  troubleshooting table (symptom / likely cause / what to do) into this
+  site's existing question-and-answer voice. Placed on `faq.html`, not
+  `how-to-use.html` as first planned - FAQ is already the site's support
+  hub with a working `.qa` accordion component built for exactly this,
+  and troubleshooting fits "when something's wrong" better than
+  "how it works." Added to the FAQPage JSON-LD too, unlike the Prop 65
+  answer on the same page: there's no reason to keep this out of search
+  results the way there is for a warning-label explanation.
+- **A new Specifications section on `how-to-use.html`**: model LHMC0110,
+  4 W rated power, DC 5 V/1 A charging input, 40-120 ml working capacity,
+  175°F/79°C max water temperature - none of which existed anywhere on
+  the site before. Uses `.plate`, a component that was already fully
+  styled in this file's own stylesheet and already used for this exact
+  purpose in the Shopify theme's `spec-plate.liquid`, just never
+  instantiated on the static site until now. Deliberately kept to the
+  five figures the guide's own Specifications section states, not the
+  fuller battery-chemistry/weight/IP-rating list the *first* PDF's
+  Specifications page had - this final booklet's own spec table is
+  shorter, and this page now matches what it actually says rather than
+  the superseded, longer list.
+- **The Shopify theme's own spec plate had the wrong power figure**:
+  "6 W low power" in both `spec-plate.liquid`'s preset and the live
+  `templates/index.json` override, corrected to "4 W rated power" in both
+  to match the real spec.
 
 ### Still open regardless of the new source
 

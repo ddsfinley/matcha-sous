@@ -131,6 +131,78 @@
         "@type": "Answer",
         "text": "We ship within the United States only for now, and US shipping is free. Preorders can be cancelled any time before they ship, for a full refund. Once a unit has shipped we do not accept returns for change of mind. Every unit carries a 1-year warranty against manufacturing defects in materials and workmanship. If yours arrives faulty or fails within the year, write to care@matchasous.com and we will make it right."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Sous won't turn on. What should I check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Touch the control panel to wake it. If Power/Start is blinking, press and hold it for about 2 seconds. If nothing happens, charge it fully and test the outlet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The display shows LO. What does that mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The battery is low. Charge the appliance before use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The matcha isn't moving evenly. What's wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mixing whisk is likely missing, mis-seated, damaged, or obstructed. Switch off, inspect it without touching the sharp pin, then clean and reinstall it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My matcha is still clumpy after a cycle. Why?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually the matcha went in before the water, wasn't sifted, or the dose was too high for the water volume. Add water first, sift evenly, and let the full cycle finish. If it's still clumping, reduce the matcha or add a little more water without exceeding 120 ml."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "There's too much foam. How do I fix that?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with the factory preset that matches your total volume, then adjust one variable, speed or time, at a time rather than several at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Liquid is rising or spilling out of the cup. What happened?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cup is likely overfilled, the wrong volume was selected, or something other than matcha, water or beverage syrup went in. Stop if it's safe to, let hot liquid settle, clean and dry the appliance, then restart within the 120 ml maximum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I noticed an unusual sound, vibration or movement. What should I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stop immediately. Power off, wait for movement to end, and inspect it safely. Don't continue using it if you see any damage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Liquid got into the base or the charging port. Is that a problem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Disconnect it from power and stop using it right away. Don't try to charge it, run it, or dry it with heat. Contact care@matchasous.com."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "None of this fixed it. What now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stop using the appliance and write to care@matchasous.com. Don't try to disassemble or repair it yourself."
+      }
     }
   ]
 }
@@ -233,6 +305,66 @@
       <div style="margin-top:44px;display:flex;gap:16px;flex-wrap:wrap">
         <a class="btn btn-primary" href="index.html#order">Reserve your Sous</a>
         <a class="btn btn-outline" href="wholesale.html">Wholesale enquiries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TROUBLESHOOTING ============
+       New section, sourced from the User Guide's own troubleshooting table
+       (symptom / likely cause / what to do), adapted into this page's
+       existing question-and-answer voice rather than reproduced as a
+       table - a table of this width doesn't fit this site's layout system
+       anywhere else, and the .qa accordion component already exists and
+       already means "a question, answered" to a reader of this page. One
+       row from the source ("Charge as directed in Section 9") referenced
+       the guide's own section numbering, which doesn't mean anything on a
+       webpage, so that step is just stated directly here instead. Added to
+       the FAQPage JSON-LD above, unlike the Prop 65 answer further up:
+       there's no reason to keep troubleshooting content out of search
+       results the way there is for a warning label explanation. -->
+  <section class="bg-paper" aria-label="Troubleshooting">
+    <div class="wrap">
+      <div class="head center">
+        <h2 class="display">Troubleshooting.</h2>
+        <p class="lead">If something's not working as expected, start here before writing in.</p>
+      </div>
+      <div class="qa" style="margin-inline:auto">
+        <details>
+          <summary>Sous won't turn on. What should I check?</summary>
+          <p class="a">Touch the control panel to wake it. If Power/Start is blinking, press and hold it for about 2 seconds. If nothing happens, charge it fully and test the outlet.</p>
+        </details>
+        <details>
+          <summary>The display shows LO. What does that mean?</summary>
+          <p class="a">The battery is low. Charge the appliance before use.</p>
+        </details>
+        <details>
+          <summary>The matcha isn't moving evenly. What's wrong?</summary>
+          <p class="a">The mixing whisk is likely missing, mis-seated, damaged, or obstructed. Switch off, inspect it without touching the sharp pin, then clean and reinstall it.</p>
+        </details>
+        <details>
+          <summary>My matcha is still clumpy after a cycle. Why?</summary>
+          <p class="a">Usually the matcha went in before the water, wasn't sifted, or the dose was too high for the water volume. Add water first, sift evenly, and let the full cycle finish. If it's still clumping, reduce the matcha or add a little more water without exceeding 120 ml.</p>
+        </details>
+        <details>
+          <summary>There's too much foam. How do I fix that?</summary>
+          <p class="a">Start with the factory preset that matches your total volume, then adjust one variable, speed or time, at a time rather than several at once.</p>
+        </details>
+        <details>
+          <summary>Liquid is rising or spilling out of the cup. What happened?</summary>
+          <p class="a">The cup is likely overfilled, the wrong volume was selected, or something other than matcha, water or beverage syrup went in. Stop if it's safe to, let hot liquid settle, clean and dry the appliance, then restart within the 120 ml maximum.</p>
+        </details>
+        <details>
+          <summary>I noticed an unusual sound, vibration or movement. What should I do?</summary>
+          <p class="a">Stop immediately. Power off, wait for movement to end, and inspect it safely. Don't continue using it if you see any damage.</p>
+        </details>
+        <details>
+          <summary>Liquid got into the base or the charging port. Is that a problem?</summary>
+          <p class="a">Yes. Disconnect it from power and stop using it right away. Don't try to charge it, run it, or dry it with heat. Contact <a href="mailto:care@matchasous.com">care@matchasous.com</a>.</p>
+        </details>
+        <details>
+          <summary>None of this fixed it. What now?</summary>
+          <p class="a">Stop using the appliance and write to <a href="mailto:care@matchasous.com">care@matchasous.com</a>. Don't try to disassemble or repair it yourself.</p>
+        </details>
       </div>
     </div>
   </section>

@@ -49,8 +49,9 @@
     { "@type": "HowToStep", "name": "Measure", "text": "Measure 1–2 teaspoons of matcha, about 2–4 grams. A small scale makes every bowl repeatable." },
     { "@type": "HowToStep", "name": "Sift", "text": "Sift the matcha through a fine sieve directly over the water already in the mixing cup. Sifting breaks pressed clumps so the vortex can work fastest." },
     { "@type": "HowToStep", "name": "Mix", "text": "Seat the mixing cup on the base and choose one of your three saved settings, or customize one: pick any of 18 speeds and set your own run time, then save it to return to later." },
-    { "@type": "HowToStep", "name": "Build", "text": "Drink it straight, pour the concentrate over a glass of ice, or top with hot or cold milk for a latte. Oat milk holds the foam especially well." },
-    { "@type": "HowToStep", "name": "Sweeten and finish", "text": "Stir honey, maple or simple syrup into the warm concentrate before adding milk or ice, so it dissolves fully. Taste, adjust, sip." }
+    { "@type": "HowToStep", "name": "Pour", "text": "Pour the finished matcha out of the mixing cup and into your serving cup or glass." },
+    { "@type": "HowToStep", "name": "Sweeten", "text": "Stir in honey, maple or simple syrup while it's still warm, so it dissolves fully, before adding milk or ice." },
+    { "@type": "HowToStep", "name": "Finish", "text": "Drink it straight, add ice for an iced matcha, or top with hot or cold milk for a latte. Oat milk holds the foam especially well." }
   ]
 }
 </script>
@@ -126,7 +127,7 @@
           <span class="media-frame"><img src="assets/img/recipe-straight-v2.webp" alt="Matcha Sous, finished and straight, no milk or ice" width="1303" height="1303" loading="lazy"></span>
           <figcaption>
             <span class="num">i.</span><h3>Matcha, straight</h3>
-            <p class="spec"><b>2 g</b> matcha &middot; <b>80 ml</b> water</p>
+            <p class="spec"><b>2 g</b> matcha &middot; <b>70 ml</b> water</p>
             <p>Pour and taste. Adjust the ratio to the tea.</p>
           </figcaption>
         </figure>
@@ -134,7 +135,7 @@
           <span class="media-frame"><img src="assets/img/recipe-iced-v1.webp" alt="Iced matcha latte, matcha poured over milk and ice" width="1400" height="1400" loading="lazy"></span>
           <figcaption>
             <span class="num">ii.</span><h3>Iced matcha latte</h3>
-            <p class="spec"><b>4 g</b> matcha &middot; <b>40 ml</b> water &middot; milk &middot; ice</p>
+            <p class="spec"><b>3 g</b> matcha &middot; <b>40 ml</b> water &middot; milk &middot; ice</p>
             <p>Build the glass with milk and ice, then pour Sous over the top.</p>
           </figcaption>
         </figure>
@@ -142,10 +143,35 @@
           <span class="media-frame"><img src="assets/img/recipe-hot-v1.webp" alt="Hot matcha latte, foamed and served in a mug" width="1333" height="1333" loading="lazy"></span>
           <figcaption>
             <span class="num">iii.</span><h3>Hot matcha latte</h3>
-            <p class="spec"><b>4 g</b> matcha &middot; <b>40 ml</b> water &middot; steamed milk</p>
+            <p class="spec"><b>3 g</b> matcha &middot; <b>40 ml</b> water &middot; steamed milk</p>
             <p>Finish with steamed milk and sweeten to taste, if desired.</p>
           </figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECIFICATIONS ============
+       New section, facts straight from the User Guide's own Specifications
+       table (Section 9), none of which existed anywhere on the site before -
+       not the buybox, not about.html, nowhere. Uses .plate, an existing
+       component already fully styled in this file's own stylesheet and
+       already used for exactly this purpose in the Shopify theme's
+       spec-plate.liquid section - just never instantiated on this static
+       site until now. Kept to the five figures the guide itself calls out
+       as Specifications, not the fuller battery/weight/IP-rating list an
+       earlier, superseded draft of the guide had - see README. -->
+  <section class="tight" aria-label="Specifications">
+    <div class="wrap">
+      <div class="head center">
+        <h2 class="display">Specifications.</h2>
+      </div>
+      <div class="plate">
+        <span><b>LHMC0110</b> model</span>
+        <span><b>4 W</b> rated power</span>
+        <span><b>5 V, 1 A</b> USB-C charging</span>
+        <span><b>40&ndash;120</b> ml capacity</span>
+        <span><b>175&deg;F / 79&deg;C</b> max water temp</span>
       </div>
     </div>
   </section>
