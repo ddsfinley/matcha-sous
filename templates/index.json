@@ -200,8 +200,8 @@
         "x4": {
           "type": "spec",
           "settings": {
-            "value": "6 W",
-            "label": "low power"
+            "value": "4 W",
+            "label": "rated power"
           }
         },
         "x5": {
