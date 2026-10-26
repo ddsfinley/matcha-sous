@@ -76,7 +76,7 @@ h2.display{font-size:clamp(1.9rem,3.9vw,3rem)}
 h1 em,h2 em{font-style:normal;color:var(--copper)}
 /* Poiret sets its own rhythm; the base −.01em was tuned for a serif. */
 .mood-line,.moment .mnum,.moment h3,.jhome h3,.split-item b,.split-item h3,
-.feature h3,.step .num,.step h3,.buybox h2,.price b,.article h2,.jlist .jrow h2,
+.feature h3,.step .num,.step h3,.buybox h1,.buybox h2,.price b,.article h2,.jlist .jrow h2,
 .demo-step figcaption b,.demo-step figcaption strong,.preset .pvol,.preset h3,
 .use b{letter-spacing:0}
 /* Poiret is a light cut, so the display face carries a hairline stroke to
@@ -84,7 +84,7 @@ h1 em,h2 em{font-style:normal;color:var(--copper)}
    thick/thin contrast flattens and it stops reading as the mark's face.
    Light type on photography thins optically, so those surfaces take more. */
 .display,.mood-line,.moment .mnum,.moment h3,.jhome h3,.split-item b,
-.split-item h3,.feature h3,.step .num,.step h3,.buybox h2,.price b,.article h2,
+.split-item h3,.feature h3,.step .num,.step h3,.buybox h1,.buybox h2,.price b,.article h2,
 .jlist .jrow h2,.demo-step figcaption b,.demo-step figcaption strong,
 .preset .pvol,.preset h3,.use b{-webkit-text-stroke-width:.013em}
 .mood-line,.cta-band h2{-webkit-text-stroke-width:.016em}
@@ -405,7 +405,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .stage--cut .media-frame img{width:100%;height:100%;object-fit:contain}
 .buybox{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,4vw,44px);box-shadow:var(--shadow-sm)}
 .buybox .no{font-family:var(--quote);font-style:italic;color:var(--copper);font-size:1.05rem}
-.buybox h2{font-family:var(--disp);font-size:clamp(1.7rem,3vw,2.3rem);margin:6px 0 2px}
+.buybox h1,.buybox h2{font-family:var(--disp);font-size:clamp(1.7rem,3vw,2.3rem);margin:6px 0 2px}
 .buybox .variant{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
 .price{display:flex;align-items:baseline;gap:12px;margin:20px 0 4px}
 .price b{font-family:var(--disp);font-weight:500;font-size:2.4rem;color:var(--aub-deep)}
