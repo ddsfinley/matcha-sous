@@ -112,53 +112,67 @@
         "i1": {
           "type": "item",
           "settings": {
-            "item": "Stainless-steel vessel"
+            "item": "Stainless-steel mixing cup with silicone sleeve"
           }
         },
         "i2": {
           "type": "item",
           "settings": {
-            "item": "Preset preparations",
-            "note": "three"
+            "item": "Three saved settings"
           }
         },
         "i3": {
           "type": "item",
           "settings": {
-            "item": "Customizable speed settings",
-            "note": "eighteen"
+            "item": "Eighteen adjustable speeds"
           }
         },
         "i4": {
           "type": "item",
           "settings": {
-            "item": "Etched volume guides",
-            "note": "40 / 80 / 120 ml"
+            "item": "40, 80 and 120 ml etched guides"
           }
         },
         "i5": {
           "type": "item",
           "settings": {
-            "item": "Two-speed automatic cycle"
+            "item": "Automatic Sous Cycle™"
           }
         },
         "i6": {
           "type": "item",
           "settings": {
-            "item": "Hands-free operation"
+            "item": "Cordless, USB-C charging"
           }
         },
-        "i7": {
-          "type": "item",
+        "b1": {
+          "type": "box_item",
           "settings": {
-            "item": "Powered",
-            "note": "USB-C"
+            "item": "Matcha Sous mixing base"
           }
         },
-        "i8": {
-          "type": "item",
+        "b2": {
+          "type": "box_item",
           "settings": {
-            "item": "Hand wash only"
+            "item": "Mixing cup"
+          }
+        },
+        "b3": {
+          "type": "box_item",
+          "settings": {
+            "item": "Mixing whisk"
+          }
+        },
+        "b4": {
+          "type": "box_item",
+          "settings": {
+            "item": "USB-C charging cable"
+          }
+        },
+        "b5": {
+          "type": "box_item",
+          "settings": {
+            "item": "User manual"
           }
         }
       },
@@ -169,8 +183,11 @@
         "i4",
         "i5",
         "i6",
-        "i7",
-        "i8"
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
       ]
     },
     "specs": {

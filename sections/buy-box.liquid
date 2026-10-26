@@ -29,10 +29,25 @@
         <p class="closer">{{ section.settings.closer }}</p>
       {%- endif -%}
 
-      {%- if section.blocks.size > 0 -%}
+      {%- if section.settings.warranty_notice != blank -%}
+        <p class="warranty-notice">{{ section.settings.warranty_notice }} <a class="textlink" href="{% if section.settings.warranty_page != blank %}{{ section.settings.warranty_page }}{% else %}#{% endif %}">View complete warranty</a></p>
+      {%- endif -%}
+
+      {%- assign feature_blocks = section.blocks | where: "type", "item" -%}
+      {%- if feature_blocks.size > 0 -%}
         <ul class="inc">
-          {%- for block in section.blocks -%}
+          {%- for block in feature_blocks -%}
             <li {{ block.shopify_attributes }}>{{ block.settings.item }}{% if block.settings.note != blank %} <span>{{ block.settings.note }}</span>{% endif %}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
+      {%- assign box_blocks = section.blocks | where: "type", "box_item" -%}
+      {%- if box_blocks.size > 0 -%}
+        <p style="margin-top:24px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)">{{ section.settings.box_heading }}</p>
+        <ul class="inc">
+          {%- for block in box_blocks -%}
+            <li {{ block.shopify_attributes }}>{{ block.settings.item }}</li>
           {%- endfor -%}
         </ul>
       {%- endif -%}
@@ -110,9 +125,12 @@
     { "type": "text", "id": "fallback_price", "label": "Price if no product selected", "default": "$179" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow (blank to hide)", "default": "" },
     { "type": "text", "id": "variant_line", "label": "Descriptor line (blank to hide)", "default": "" },
-    { "type": "text", "id": "closer", "label": "Line above the spec list", "default": "A two-speed automatic matcha mixer designed to bring matcha and water together evenly, then change pace to refine the finish." },
+    { "type": "text", "id": "closer", "label": "Line above the spec list", "default": "A hands-free matcha mixer, designed to earn a permanent spot on your counter." },
+    { "type": "text", "id": "warranty_notice", "label": "Warranty notice (blank to hide)", "default": "Includes a One-Year Limited Warranty beginning on purchase.", "info": "Must match the terms on the warranty page exactly - see that page's own README notes before changing the warranty start date." },
+    { "type": "url", "id": "warranty_page", "label": "Warranty page link" },
     { "type": "text", "id": "cta_label", "label": "Button label", "default": "Reserve your Sous" },
     { "type": "text", "id": "paynote", "label": "Note under the button", "default": "Payment is collected when you reserve. Cancel any time before it ships, for a full refund." },
+    { "type": "text", "id": "box_heading", "label": "“What's included” heading", "default": "What's included" },
     { "type": "text", "id": "assure_1", "label": "Assurance 1", "default": "Free nationwide shipping" },
     { "type": "text", "id": "assure_2", "label": "Assurance 2", "default": "One-year limited warranty" },
     { "type": "header", "content": "California Proposition 65" },
@@ -123,24 +141,37 @@
   "blocks": [
     {
       "type": "item",
-      "name": "Included item",
+      "name": "Feature",
       "settings": [
-        { "type": "text", "id": "item", "label": "Item", "default": "Stainless-steel mixing cup" },
+        { "type": "text", "id": "item", "label": "Item", "default": "Stainless-steel mixing cup with silicone sleeve" },
         { "type": "text", "id": "note", "label": "Note", "default": "" }
+      ]
+    },
+    {
+      "type": "box_item",
+      "name": "What's-included item",
+      "settings": [
+        { "type": "text", "id": "item", "label": "Item", "default": "Matcha Sous mixing base" }
       ]
     }
   ],
   "presets": [{
     "name": "Buy box",
+    "settings": {
+      "warranty_notice": "Includes a One-Year Limited Warranty beginning on purchase."
+    },
     "blocks": [
-      { "type": "item", "settings": { "item": "Stainless-steel mixing cup", "note": "" } },
-      { "type": "item", "settings": { "item": "Saved settings", "note": "three" } },
-      { "type": "item", "settings": { "item": "Customizable speed settings", "note": "eighteen" } },
-      { "type": "item", "settings": { "item": "Etched volume guides", "note": "40 / 80 / 120 ml" } },
-      { "type": "item", "settings": { "item": "Two-speed automatic cycle", "note": "" } },
-      { "type": "item", "settings": { "item": "Hands-free operation", "note": "" } },
-      { "type": "item", "settings": { "item": "Powered", "note": "USB-C" } },
-      { "type": "item", "settings": { "item": "Hand wash only", "note": "" } }
+      { "type": "item", "settings": { "item": "Stainless-steel mixing cup with silicone sleeve", "note": "" } },
+      { "type": "item", "settings": { "item": "Three saved settings", "note": "" } },
+      { "type": "item", "settings": { "item": "Eighteen adjustable speeds", "note": "" } },
+      { "type": "item", "settings": { "item": "40, 80 and 120 ml etched guides", "note": "" } },
+      { "type": "item", "settings": { "item": "Automatic Sous Cycle™", "note": "" } },
+      { "type": "item", "settings": { "item": "Cordless, USB-C charging", "note": "" } },
+      { "type": "box_item", "settings": { "item": "Matcha Sous mixing base" } },
+      { "type": "box_item", "settings": { "item": "Mixing cup" } },
+      { "type": "box_item", "settings": { "item": "Mixing whisk" } },
+      { "type": "box_item", "settings": { "item": "USB-C charging cable" } },
+      { "type": "box_item", "settings": { "item": "User manual" } }
     ]
   }]
 }

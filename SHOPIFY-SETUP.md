@@ -22,9 +22,16 @@ ground, aubergine anchors, copper accents, Cormorant Garamond + Jost.
    read whichever menus you pick.
 3. **Blog** — the Journal strip reads the blog handle set in that section
    (`news` by default). Create the blog and posts, or change the handle.
-4. **Pages** — create "Our story", "FAQ" and "Wholesale" pages and point the
-   menu at them; they render through `templates/page.json`.
-5. **Announcement bar** — edit the text in the theme editor.
+4. **Pages** — create "Our story", "FAQ", "Wholesale" and "Limited Warranty"
+   pages and point the menu at them; they render through `templates/page.json`.
+   Copy the warranty page's body text verbatim from `site/warranty.html`'s
+   `.prose` sections — don't rephrase it, it's a legal disclosure, not
+   marketing copy.
+5. **Buy box warranty link** — once the Limited Warranty page exists, open
+   the **Buy box** section and set "Warranty page link" to it, so the
+   buy box's "Includes a One-Year Limited Warranty..." line links somewhere
+   real instead of `#`.
+6. **Announcement bar** — edit the text in the theme editor.
 
 ## Structure
 
