@@ -19,10 +19,24 @@
       {%- if section.settings.eyebrow != blank -%}<p class="preorder">{{ section.settings.eyebrow }}</p>{%- endif -%}
       {%- if section.settings.variant_line != blank -%}<p class="variant">{{ section.settings.variant_line }}</p>{%- endif -%}
 
+      {%- comment -%}
+        Preorder pricing: the live price is the current preorder offer; the
+        list/regular price (once in stock) sits beside it, struck through,
+        per the "fact not a discount shout" rule in base.css's .price s
+        comment - no badge, no colour. For a real product, set its price to
+        the preorder amount and its Compare at price to the regular amount
+        in Shopify admin; that's what drives the <s> below automatically.
+      {%- endcomment -%}
       {%- if p != blank -%}
-        <div class="price"><b>{{ p.price | money_without_trailing_zeros }}</b></div>
+        <div class="price">
+          <b>{{ p.price | money_without_trailing_zeros }}</b>
+          {%- if p.compare_at_price > p.price -%}<s>{{ p.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
+        </div>
       {%- else -%}
-        <div class="price"><b>{{ section.settings.fallback_price }}</b></div>
+        <div class="price">
+          <b>{{ section.settings.fallback_price }}</b>
+          {%- if section.settings.fallback_compare_price != blank -%}<s>{{ section.settings.fallback_compare_price }}</s>{%- endif -%}
+        </div>
       {%- endif -%}
 
       {%- if section.settings.closer != blank -%}
@@ -122,7 +136,8 @@
   "name": "Buy box",
   "settings": [
     { "type": "product", "id": "product", "label": "Product" },
-    { "type": "text", "id": "fallback_price", "label": "Price if no product selected", "default": "$159" },
+    { "type": "text", "id": "fallback_price", "label": "Price if no product selected", "default": "$149" },
+    { "type": "text", "id": "fallback_compare_price", "label": "Regular price if no product selected (blank to hide)", "default": "$159" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow (blank to hide)", "default": "" },
     { "type": "text", "id": "variant_line", "label": "Descriptor line (blank to hide)", "default": "" },
     { "type": "text", "id": "closer", "label": "Line above the spec list", "default": "A hands-free matcha mixer, designed to earn a permanent spot on your counter." },

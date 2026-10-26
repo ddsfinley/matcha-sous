@@ -16,7 +16,10 @@
     <div class="buybox">
       <h2>{{ product.title }}</h2>
       {%- if product.metafields.custom.edition -%}<p class="variant">{{ product.metafields.custom.edition }}</p>{%- endif -%}
-      <div class="price"><b>{{ product.price | money_without_trailing_zeros }}</b></div>
+      <div class="price">
+        <b>{{ product.price | money_without_trailing_zeros }}</b>
+        {%- if product.compare_at_price > product.price -%}<s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
+      </div>
 
       {%- comment -%}
         RESERVE BUTTON: name="checkout" on a product form is Shopify's own
