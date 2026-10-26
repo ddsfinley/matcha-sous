@@ -6,6 +6,14 @@ on:
   # Trigger from the Actions tab, or add a `push` trigger to deploy on every
   # commit once the site is further along.
   workflow_dispatch:
+    inputs:
+      target:
+        description: "What to publish. 'placeholder' keeps the site hidden behind a noindex coming-soon page; choose 'site' to publish the real site again."
+        type: choice
+        options:
+          - placeholder
+          - site
+        default: placeholder
 
 permissions:
   contents: read
@@ -39,7 +47,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./site"
+          path: "./${{ inputs.target }}"
 
       - name: Deploy to GitHub Pages
         id: deployment
