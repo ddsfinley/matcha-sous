@@ -406,7 +406,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .price span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
 /* Preorder: the list price sits quietly beside the live one — a fact, not
    a discount shout. No badge, no colour, per the no-promo-language rule. */
-.price s{font-family:var(--disp);font-size:1.4rem;color:var(--stone);opacity:.7;text-decoration-thickness:1px}
+.price s{font-family:var(--disp);font-size:1.4rem;color:var(--stone);text-decoration-thickness:1px}
 .buybox .preorder{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--copper-deep)}
 .inc{margin:20px 0 24px;padding:0;list-style:none;border-top:1px solid var(--line)}
 .inc li{display:flex;justify-content:space-between;gap:16px;padding:11px 2px;border-bottom:1px solid var(--line-soft);font-size:.92rem}
@@ -503,7 +503,7 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .form{display:grid;gap:18px;max-width:560px}
 .form label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin-bottom:8px}
 .form input,.form textarea,.form select{width:100%;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);font-family:var(--util);font-size:1rem;color:var(--aub-ink);transition:border-color .3s var(--ease),box-shadow .3s var(--ease)}
-.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--copper);box-shadow:0 0 0 3px rgba(176,113,79,.14)}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--copper);box-shadow:0 0 0 3px rgba(176,113,79,.35)}
 .form ::placeholder{color:rgba(26,19,34,.35)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media (max-width:600px){.two{grid-template-columns:1fr}}

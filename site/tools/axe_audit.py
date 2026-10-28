@@ -29,7 +29,6 @@ from playwright.sync_api import sync_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..')
-CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'
 
 
 def find_axe_js():
@@ -50,7 +49,11 @@ def main():
 
     results = {}
     with sync_playwright() as p:
-        b = p.chromium.launch(executable_path=CHROME, args=['--no-sandbox'])
+        # Use whichever Chromium build is installed; the version-numbered
+        # folder changes when the environment's Playwright is updated.
+        found = sorted(glob.glob('/opt/pw-browsers/chromium-*/chrome-linux*/chrome'))
+        kw = {'executable_path': found[-1]} if found else {}
+        b = p.chromium.launch(args=['--no-sandbox'], **kw)
         for path in pages:
             rel = os.path.relpath(path, ROOT)
             pg = b.new_page(viewport={'width': 1280, 'height': 900})
