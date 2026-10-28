@@ -8,16 +8,11 @@
    scale (eyebrows, links, rules, markers). Poiret One (the
    wordmark's voice) + Jost, self-hosted. No framework.
    ============================================================ */
-/* Poiret One carries the statements — it is the closest free face to the
+/* Fonts are declared in layout/theme.liquid (asset_url). Poiret One carries the statements — it is the closest free face to the
    wordmark's SOUS: high-contrast geometric sans, circular bowls, thin joins.
    The 400–700 range points at one file on purpose, so a `font-weight:600`
    rule matches it instead of synthesising a faux bold. */
-@font-face{font-family:'Poiret One';src:url('../fonts/poiret-one-latin-400-normal.woff2') format('woff2');font-weight:400 700;font-display:swap}
 /* Cormorant italic is kept for pull quotes only — Poiret has no italic. */
-@font-face{font-family:'Cormorant Garamond';src:url('../fonts/cormorant-garamond-latin-500-italic.woff2') format('woff2');font-weight:500;font-style:italic;font-display:swap}
-@font-face{font-family:'Jost';src:url('../fonts/jost-latin-300-normal.woff2') format('woff2');font-weight:300;font-display:swap}
-@font-face{font-family:'Jost';src:url('../fonts/jost-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:'Jost';src:url('../fonts/jost-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
 
 :root{
   --bone-page:#f6f4f0; --paper:#fcfbf8; --bone-deep:#efece7;
@@ -127,6 +122,10 @@ body{padding-top:var(--announce-h)}
 .btn-lg{padding:1.2em 2.6em;font-size:.84rem}
 .textlink{display:inline-flex;align-items:center;gap:.5em;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-deep);border-bottom:1px solid transparent;padding-bottom:2px;transition:all .4s var(--ease)}
 .textlink:hover{border-color:var(--copper)}
+/* .textlink used on a <button> (e.g. "Print this page") needs the browser's
+   own button chrome stripped first, since the class above only styles text. */
+button.textlink{background:none;border:0;border-bottom:1px solid transparent;padding:0 0 2px;font-family:inherit;cursor:pointer}
+button.textlink:hover{border-color:var(--copper)}
 
 /* ---------- hero (full bleed: the type lives inside the photograph) ---------
    The photograph is graded toward the brand aubergine and the scrims are that
@@ -274,17 +273,12 @@ section.tight{padding-block:clamp(40px,6vh,80px)}
 .head--idx h2.display{max-width:19ch}
 .head--idx h2.display{font-size:clamp(2.05rem,5vw,4rem);letter-spacing:0}
 .head--idx .lead{margin-top:14px}
-/* asymmetric editorial split: heading left, content right */
-.split{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(26px,4vw,72px);align-items:start;border-top:1px solid var(--line);padding-top:26px}
-.split h2.display{font-size:clamp(2.3rem,4.6vw,3.6rem);letter-spacing:0}
-.split .lead{margin-top:16px}
 .split-body{display:grid;gap:clamp(22px,3vh,36px)}
 .split-item{display:grid;grid-template-columns:auto 1fr;gap:0 20px;border-bottom:1px solid var(--line-soft);padding-bottom:clamp(18px,2.4vh,26px)}
 .split-item:last-child{border-bottom:0;padding-bottom:0}
 .split-item b{font-family:var(--disp);font-weight:500;font-size:1.9rem;color:var(--aub);line-height:.9}
 .split-item h3{font-family:var(--disp);font-size:1.35rem;margin-bottom:6px}
 .split-item p{font-size:.95rem;color:var(--stone)}
-@media (max-width:860px){.split{grid-template-columns:1fr;gap:26px}}
 
 /* feature cards */
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,32px)}
@@ -645,14 +639,23 @@ footer .fine{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 .sc-lead video{background:var(--aub-deep)}
 
+/* ---------- print ---------- */
+/* Used by warranty.html's "Print this page" button, but written generically
+   so any page prints its actual content instead of chrome and video. */
+@media print{
+  .skip-link,.announce,header.top,nav.subnav,.cta-band,footer,.print-actions,.vid-toggle,video{display:none!important}
+  body{background:#fff;color:#000}
+  a{color:inherit;text-decoration:underline}
+  section{padding-block:14px}
+}
 
-/* ---------- Shopify theme only ---------- */
-/* hero.liquid still ships the older two-column hero (copy beside a shot)
-   rather than the site's full-bleed video. These rules exist nowhere in
-   site.css and would be lost if this file were replaced wholesale. */
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:center;text-align:left}
-.hero-copy{max-width:36ch;min-width:0}
-.hero-shot img{width:100%;border-radius:var(--radius-lg);box-shadow:0 40px 90px rgba(0,0,0,.45)}
-.hero-shot{margin:0}
-.hero h1{margin:0 0 14px;font-size:clamp(2.3rem,3.6vw,3.5rem);color:var(--bone-bright);text-wrap:balance;overflow-wrap:break-word}
-.hero::after{content:"";position:absolute;right:-14%;bottom:-46%;width:58vw;max-width:860px;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(237,228,216,.13);pointer-events:none}
+/* ---------- Shopify theme only ----------
+   Everything above is site/assets/css/site.css with the @font-face rules
+   moved to layout/theme.liquid. Keep it that way: copy site.css over this
+   file when the static site's styles change, then re-add this block. */
+/* product page title is the page's h1 (site.css only styles .buybox h2) - handled above */
+/* .split: used by sections/main-cart.liquid and how-it-works.liquid */
+.split{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(26px,4vw,72px);align-items:start;border-top:1px solid var(--line);padding-top:26px}
+.split h2.display{font-size:clamp(2.3rem,4.6vw,3.6rem);letter-spacing:0}
+.split .lead{margin-top:16px}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:26px}}

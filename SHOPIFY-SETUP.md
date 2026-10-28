@@ -26,7 +26,10 @@ ground, aubergine anchors, copper accents, Cormorant Garamond + Jost.
    pages and point the menu at them; they render through `templates/page.json`.
    Copy the warranty page's body text verbatim from `site/warranty.html`'s
    `.prose` sections — don't rephrase it, it's a legal disclosure, not
-   marketing copy.
+   marketing copy. Name the How it works page exactly "How it works" and the
+   warranty page "Limited Warranty": the homepage's "See starting recipes"
+   and "See how it works" links go to `/pages/how-it-works`, and Shopify
+   builds that address from the page title.
 5. **Buy box warranty link** — once the Limited Warranty page exists, open
    the **Buy box** section and set "Warranty page link" to it, so the
    buy box's "Includes a One-Year Limited Warranty..." line links somewhere
