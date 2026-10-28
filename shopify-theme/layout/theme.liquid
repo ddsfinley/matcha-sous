@@ -16,12 +16,12 @@
 
   {{ content_for_header }}
 
-  <link rel="preload" as="font" type="font/woff2" href="{{ 'cormorant-garamond-latin-600-normal.woff2' | asset_url }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ 'poiret-one-latin-400-normal.woff2' | asset_url }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ 'jost-latin-400-normal.woff2' | asset_url }}" crossorigin>
+  {%- if template.name == 'index' -%}<link rel="preload" as="image" href="{{ 'hero-bleed.webp' | asset_url }}">{%- endif -%}
 
   <style>
-    @font-face{font-family:'Cormorant Garamond';src:url({{ 'cormorant-garamond-latin-500-normal.woff2' | asset_url }}) format('woff2');font-weight:500;font-display:swap}
-    @font-face{font-family:'Cormorant Garamond';src:url({{ 'cormorant-garamond-latin-600-normal.woff2' | asset_url }}) format('woff2');font-weight:600;font-display:swap}
+    @font-face{font-family:'Poiret One';src:url({{ 'poiret-one-latin-400-normal.woff2' | asset_url }}) format('woff2');font-weight:400 700;font-display:swap}
     @font-face{font-family:'Cormorant Garamond';src:url({{ 'cormorant-garamond-latin-500-italic.woff2' | asset_url }}) format('woff2');font-weight:500;font-style:italic;font-display:swap}
     @font-face{font-family:'Jost';src:url({{ 'jost-latin-300-normal.woff2' | asset_url }}) format('woff2');font-weight:300;font-display:swap}
     @font-face{font-family:'Jost';src:url({{ 'jost-latin-400-normal.woff2' | asset_url }}) format('woff2');font-weight:400;font-display:swap}
@@ -59,7 +59,7 @@
 
     // Pause/play for the autoplaying loops (WCAG 2.2.2 Pause, Stop, Hide).
     document.querySelectorAll('.vid-toggle').forEach(function (btn) {
-      var frame = btn.closest('.media-frame');
+      var frame = btn.closest('.media-frame, section');
       var vid = frame && frame.querySelector('video');
       if (!vid) { btn.hidden = true; return; }
       var pauseIcon = btn.querySelector('.ic-pause'), playIcon = btn.querySelector('.ic-play');

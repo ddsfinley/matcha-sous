@@ -103,7 +103,7 @@
 
       <div class="assure">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> {{ section.settings.assure_1 }}</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> {{ section.settings.assure_2 }}</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3 5 6v5c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> {% if section.settings.warranty_page != blank %}<a href="{{ section.settings.warranty_page }}">{{ section.settings.assure_2 }}</a>{% else %}{{ section.settings.assure_2 }}{% endif %}</span>
       </div>
       {%- comment -%}
         PROP 65. A legal statement, not copy. It is a setting so a merchant can

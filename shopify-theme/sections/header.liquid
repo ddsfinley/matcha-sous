@@ -11,7 +11,7 @@
       {%- for link in section.settings.menu.links -%}
         <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
       {%- endfor -%}
-      <a class="buy" href="{{ section.settings.buy_url | default: routes.all_products_collection_url }}">{{ section.settings.buy_label }}</a>
+      <a class="buy" href="{{ section.settings.buy_url | default: '/#order' }}">{{ section.settings.buy_label }}</a>
     </nav>
   </div>
 </header>
@@ -28,8 +28,8 @@
   "settings": [
     { "type": "image_picker", "id": "logo", "label": "Wordmark (dark, for light background)" },
     { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" },
-    { "type": "url", "id": "buy_url", "label": "Buy button link" },
-    { "type": "text", "id": "buy_label", "label": "Buy button label", "default": "Buy" }
+    { "type": "url", "id": "buy_url", "label": "Buy button link (blank: the buy box on the homepage)" },
+    { "type": "text", "id": "buy_label", "label": "Buy button label", "default": "Reserve your Sous" }
   ]
 }
 {% endschema %}
