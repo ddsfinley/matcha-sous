@@ -3,7 +3,7 @@
     <p class="meta">{{ article.published_at | date: '%B %-d, %Y' }}</p>
     <h1 class="display">{{ article.title }}</h1>
     {{ article.content }}
-    <p style="margin-top:34px"><a class="textlink" href="{{ blog.url }}">All entries &rarr;</a></p>
+    <p style="margin-top:34px"><a class="textlink" href="{{ blog.url }}">All entries <span aria-hidden="true">&rarr;</span></a></p>
   </div>
 </section>
 {% schema %}{ "name": "Article" }{% endschema %}

@@ -5,7 +5,7 @@
       <h2 class="display">{{ section.settings.heading }}</h2>
       <div style="margin-top:16px">{{ section.settings.text }}</div>
       {%- if section.settings.link != blank -%}
-        <p style="margin-top:18px"><a class="textlink" href="{{ section.settings.link }}">{{ section.settings.link_label }} &rarr;</a></p>
+        <p style="margin-top:18px"><a class="textlink" href="{{ section.settings.link }}">{{ section.settings.link_label }} <span aria-hidden="true">&rarr;</span></a></p>
       {%- endif -%}
     </div>
     <figure class="stage stage--cut">

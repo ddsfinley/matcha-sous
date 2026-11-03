@@ -17,8 +17,8 @@
       <h1>{{ product.title }}</h1>
       {%- if product.metafields.custom.edition -%}<p class="variant">{{ product.metafields.custom.edition }}</p>{%- endif -%}
       <div class="price">
-        <b>{{ product.price | money_without_trailing_zeros }}</b>
-        {%- if product.compare_at_price > product.price -%}<s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
+        <b>{% if product.compare_at_price > product.price %}<span class="sr-only">Price </span>{% endif %}{{ product.price | money_without_trailing_zeros }}</b>
+        {%- if product.compare_at_price > product.price -%}<s><span class="sr-only">Regular price </span>{{ product.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
       </div>
 
       {%- comment -%}
