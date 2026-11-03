@@ -44,10 +44,19 @@ jobs:
       # serve that stale version instead of the one actively maintained in
       # /site. This way the plain https://<user>.github.io/<repo>/ URL is
       # the real site, no /site/ suffix needed.
+      # Publish only the public site. README.md (internal business and legal
+      # notes), proposals/ (old design drafts) and tools/ (audit scripts)
+      # live in /site for convenience but must never be served. HTML
+      # comments are stripped from the published copy for the same reason:
+      # the source carries internal reasoning (pricing, disputes, Prop 65)
+      # that view-source would otherwise expose. Source files are untouched.
+      - name: Build public copy
+        run: python3 .github/scripts/build_public.py "./${{ inputs.target }}" ./_public
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./${{ inputs.target }}"
+          path: "./_public"
 
       - name: Deploy to GitHub Pages
         id: deployment
