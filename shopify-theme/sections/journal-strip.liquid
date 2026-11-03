@@ -7,13 +7,13 @@
     </div></div>
     <div class="jhome">
       {%- for article in blog.articles limit: 3 -%}
-        <a href="{{ article.url }}"><h3>{{ article.title }}</h3><p>{{ article.excerpt_or_content | strip_html | truncatewords: 12 }}</p><span class="go">Read &rarr;</span></a>
+        <a href="{{ article.url }}"><h3>{{ article.title }}</h3><p>{{ article.excerpt_or_content | strip_html | truncatewords: 12 }}</p><span class="go">Read <span aria-hidden="true">&rarr;</span></span></a>
       {%- else -%}
-        <a href="{{ routes.root_url }}"><h3>Your first entry</h3><p>Publish a blog post and it appears here.</p><span class="go">Read &rarr;</span></a>
+        <a href="{{ routes.root_url }}"><h3>Your first entry</h3><p>Publish a blog post and it appears here.</p><span class="go">Read <span aria-hidden="true">&rarr;</span></span></a>
       {%- endfor -%}
     </div>
     {%- if blog != blank -%}
-      <p class="demo-note"><a class="textlink" href="{{ blog.url }}">All entries &rarr;</a></p>
+      <p class="demo-note"><a class="textlink" href="{{ blog.url }}">All entries <span aria-hidden="true">&rarr;</span></a></p>
     {%- endif -%}
   </div>
 </section>

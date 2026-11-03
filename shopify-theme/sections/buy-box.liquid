@@ -33,13 +33,13 @@
       {%- endcomment -%}
       {%- if p != blank -%}
         <div class="price">
-          <b>{{ p.price | money_without_trailing_zeros }}</b>
-          {%- if p.compare_at_price > p.price -%}<s>{{ p.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
+          <b>{% if p.compare_at_price > p.price %}<span class="sr-only">Price </span>{% endif %}{{ p.price | money_without_trailing_zeros }}</b>
+          {%- if p.compare_at_price > p.price -%}<s><span class="sr-only">Regular price </span>{{ p.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
         </div>
       {%- else -%}
         <div class="price">
           <b>{{ section.settings.fallback_price }}</b>
-          {%- if section.settings.fallback_compare_price != blank -%}<s>{{ section.settings.fallback_compare_price }}</s>{%- endif -%}
+          {%- if section.settings.fallback_compare_price != blank -%}<s><span class="sr-only">Regular price </span>{{ section.settings.fallback_compare_price }}</s>{%- endif -%}
         </div>
       {%- endif -%}
 

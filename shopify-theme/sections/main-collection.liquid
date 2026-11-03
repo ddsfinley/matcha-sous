@@ -9,7 +9,7 @@
           {%- endif -%}
           <h3>{{ product.title }}</h3>
           <p>{{ product.price | money_without_trailing_zeros }}</p>
-          <span class="go">View &rarr;</span>
+          <span class="go">View <span aria-hidden="true">&rarr;</span></span>
         </a>
       {%- endfor -%}
     </div>
